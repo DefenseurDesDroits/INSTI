@@ -1,1 +1,1 @@
-(Wiki)[https://gitlab.com/defenseurdesdroits/INSTI/wikis/]
+[https://gitlab.com/defenseurdesdroits/INSTI/wikis/](Wiki)
