@@ -45,7 +45,7 @@ regions[faq]            = 'Section - FAQ HP'
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/style_gle.css
 stylesheets[all][] = css/mobile.css
-stylesheets[print][] = css/print.css
+;stylesheets[print][] = css/print.css
 ;stylesheets[all][] = css/bootstrap.min.css
 ;stylesheets[all][] = css/bootstrap.min.css.map
 

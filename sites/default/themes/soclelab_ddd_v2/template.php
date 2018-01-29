@@ -224,7 +224,7 @@ function soclelab_ddd_v2_preprocess_page(&$variables){
   //dpm($variables);
   $node = menu_get_object();
 
-  if($node->type == 'accueil_v2'){
+  if(isset($node->type) && $node->type == 'accueil_v2'){
     $wrapper_node = entity_metadata_wrapper('node',$node);
     $image_bandeau = $wrapper_node->field_accueil_v2_bandeau->value();
     if(isset($image_bandeau)&&!empty($image_bandeau)){
@@ -491,7 +491,7 @@ function soclelab_ddd_v2_menu_link(array $variables) {
 
 function soclelab_ddd_v2_status_messages($variables) {
    
-  $display = $variables['display'];
+  /*$display = $variables['display'];
   $output = '';
 
   $status_heading = array(
@@ -547,6 +547,32 @@ function soclelab_ddd_v2_status_messages($variables) {
       $output .= $messages[0];
     }
 
+    $output .= "</div>\n";
+  }
+  return $output;*/
+    $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"messages $type\">\n";
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) > 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= reset($messages);
+    }
     $output .= "</div>\n";
   }
   return $output;

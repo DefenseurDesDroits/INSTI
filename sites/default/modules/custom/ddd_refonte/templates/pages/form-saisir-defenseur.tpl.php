@@ -1,103 +1,78 @@
 <?php
-// print drupal_render($form['name']);
-// print drupal_render($form['submit']);
+  $nodes = $form['node'];
 
-global $base_url;
-$img_url = $base_url ."/". drupal_get_path('theme', 'soclelab_ddd_v2') . '/img/content/defenseur/';
-
-
-
-
-  $firstp= "<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
+  $firstp = "<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
     <p class='subtitle-text'>Le Défenseur des Droits agit sur 5 missions distinctes.</p>
     <p class='subtitle-text'>Votre réclamation concerne:</p>
     <br><br>
-    <div class='row'>
-    <div class='col-md-2 col-sm-4 col-xs-12 disc  col-md-offset-1'>
-    <div class='thumbnail column-1' id='border-1' title='#4db6ac' >
-    <img src=".$img_url.'home-missions-picto1.png'." class='img-responsive' id='pic-1' alt='Home'>
-    <div class='caption'>
-    <h2 class='column-text' id='subtitle-1'>UNE ADMINISTRATION OU UN SERVICE PUBLIC</h2>
-    <p class='subtitle-text detail' id='detail-1'>+de détails</p>
-    <p class='hide hidden-size' id='hidden-text-1'>Une Discrimination est une inégalité de traitement fondée sur un critère interdit par la loi et dans un domaine cité par la loi.
-    A ce jour, 20 critères de discrimination sont fixés par la loi. </p>
-    </div>"
-    .drupal_render($form['radio']['1'])
-    ."</div>
-    </div>
-    <div class='col-md-2 col-sm-4 col-xs-12 disc' >
-      <div class='thumbnail column-1' id='border-2' title='#f44336'>
-        <img src=".$img_url.'home-missions-picto2.png'." id='pic-2' alt='Home'>
-        <div class='caption'>
-          <h2 class='column-text' id='subtitle-2' >UNE DISCRIMINATION</h2>
-          <p class='subtitle-text detail' style='margin-top:38px;' id='detail-2'>+de détails</p>
-          <p class='hide hidden-size' id='hidden-text-2' style='margin-bottom:25px;'>Une Discrimination est une inégalité de traitement fondée sur un critère interdit par la loi et dans un domaine cité par la loi.
-        A ce jour, 20 critères de discrimination sont fixés par la loi. </p>
-        </div>"
-        .drupal_render($form['radio']['2'])
+    <div class='row wrapper-etape-1'>";
+
+    for ($i=0; $i < sizeof($nodes['#value']); $i++) {
+        if (is_string($form['state']['#value'][2]['radio'][$i])) {
+            $firstp .= "<div class='col-lg-15 col-md-4 col-sm-6 col-xs-12 disc checkedbtn'>";
+        } else {
+            $firstp .= "<div class='col-lg-15 col-md-4 col-sm-6 col-xs-12 disc'>";
+        }
+        $firstp .= "<div class='thumbnail column-1' id='border-".$i."' color='".$nodes['#value'][$i]->field_bordercolor['und']['0']['value']."'>
+          <img src=".file_create_url($nodes['#value'][$i]->field_image['und']['0']['uri'])." class='img-responsive' id='pic-".$i."' alt='Home'>
+              <div class='caption'>
+                <h2 class='column-text' id='subtitle-".$i."'>".$nodes['#value'][$i]->title."</h2>
+                <p class='subtitle-text detail' id='detail-".$i."'>+ de détails</p>
+                <p class='hide hidden-size' id='hidden-text-".$i."'>".$nodes['#value'][$i]->body['und']['0']['value']."</p>
+              </div>"
+            .drupal_render($form['radio'][$i])
         ."</div>
-        </div>
-    <div class='col-md-2 col-sm-4 col-xs-12 disc'>
-      <div class='thumbnail column-1' id='border-3' title='#FFE27D'>
-        <img src=".$img_url.'home-missions-picto3.png'." id='pic-3' alt='Home'>
-        <div class='caption'>
-          <h2 class='column-text' id='subtitle-3'>UN ENFANT OU UN ADOLESCENT</h2>
-          <p class='subtitle-text detail' id='detail-3' >+de détails</p>
-          <p class='hide hidden-size' id='hidden-text-3'>Une Discrimination est une inégalité de traitement fondée sur un critère interdit par la loi et dans un domaine cité par la loi.
-        A ce jour, 20 critères de discrimination sont fixés par la loi. </p>
-        </div>"
-       .drupal_render($form['radio']['3'])
-       ."</div>
-    </div>
-    <div class='col-md-2 col-sm-4 col-xs-12 disc'>
-      <div class='thumbnail column-1' id='border-4' title='#673AB7'>
-        <img src=".$img_url.'home-missions-picto4.png'." id='pic-4' lt='Home'>
-        <div class='caption'>
-          <h2 class='column-text' id='subtitle-4'>UN COMPORTEMENT DES FORCES DE SECURITE</h2>
-          <p class='subtitle-text detail' id='detail-4' >+de détails</p>
-          <p class='hide hidden-size' id='hidden-text-4'>Une Discrimination est une inégalité de traitement fondée sur un critère interdit par la loi et dans un domaine cité par la loi.
-        A ce jour, 20 critères de discrimination sont fixés par la loi. </p>
-        </div>"
-        .drupal_render($form['radio']['4'])
-        ."</div>
-       </div>
-      <div class='col-md-2 col-sm-4 col-xs-12 disc'>
-      <div class='thumbnail column-1' id='border-5' title='#FFA726'>
-        <img src=".$img_url."home-missions-picto5.png"." id='pic-5' alt='Home'>
-        <div class='caption'>
-          <h2 class='column-text' id='subtitle-5'>LOREM IPSUM DOLOR SIT AMET</h2>
-          <p class='subtitle-text detail' id='detail-5'>+de détails</p>
-          <p class='hide hidden-size' id='hidden-text-5'>Une Discrimination est une inégalité de traitement fondée sur un critère interdit par la loi et dans un domaine cité par la loi.
-        A ce jour, 20 critères de discrimination sont fixés par la loi. </p>
-        </div>"
-         .drupal_render($form['radio']['5'])
-        ."</div>
-        </div>
-    </div>
-    <div class='col-md-offset-4 col-md-12'>"
+      </div>";
+    }
+
+
+  $firstp.= "</div> <div class='col-md-10 col-sm-10 col-lg-12'>"
     .drupal_render($form['next'])
     ."</div>
     <br><br><br>";
 
 
 $secondp ="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
-        <p class='subtitle-text'>Dans quel domaine pensez-vous avoir été victime de discrimination ?</p>
-        <p class='subtitle-text'>(plusieurs choix possibles)</p>
+        <p class='subtitle-text'>".drupal_render($form['title'])."</p>
+        <p class='subtitle-text'>".drupal_render($form['multi'])."</p>
         <br><br>
-        <div class='row col-md-12 text-center'>";
-    for ($j=0; $j < $form['btnsize']['#value']; $j++) {
-            $secondp .= "<button class='btstyle form-submit' type='button' id='check".$j."'>"
-            .$form['check'][$j]['#title']
-            ."<div class='none'>"
-            .drupal_render($form['check'][$j])
-            ."</div>
-            </button>";
-          }
+        <div class='row col-md-8 col-md-offset-2 text-center'>";
+        $secondp .= drupal_render($form['check']).'</div>';
+        $secondp .="<br><div class='row col-md-8 col-md-offset-2 text-center'><div id='btntxt'>";
+        $secondp .= drupal_render($form['hiddentxt']).'</div></div>';
+//      $j = 0;
+//      foreach ($form['check']['#options'] as $value) {
+//        if ($j % 5 === 0) {
+//          $secondp .= "</div><div class='row col-md-12 text-center'>";
+//        }
+//        if (in_array($value ,$form['step2']['#values'])){
+//          $secondp .= "<button class='checkedbtn btstyle btmargin form-submit' type='button' value='".$value." ' id='check".$j."'>";
+//        } else {
+//          $secondp .= "<button class='btstyle btmargin form-submit' type='button' value='".$value." ' id='check".$j."'>";
+//        }
+//        $secondp .= $value
+//        ."<div class='none'>"
+//        .drupal_render($form['check'][array_keys($form['check']['#options'])[$j]])
+//        ."</div>
+//        </button>";
+//        $j++;
+//      }
+//
+//      $secondp .="<br><br><div id='btntxt'>";
+//      $i=0;
+//      foreach ($form['check']['#options'] as $value) {
+//        $secondp .= "
+//        <div class='none' id='txth".$i."'>
+//          <div class='titre-contact' style='text-align:center;margin-top:10px;'>".$value."</div>
+//          <p style='text-align:center;'>".$form['hiddentxt']['#value'][$i]."</p>
+//        </div>";
+//        $i++;
+//      }
 
-    $secondp .= "</div>
+    $secondp .= "<br> </div>
+                  </div>
                   <br><br>
-                  <h2 style='text-align:center;'>Bien et service</h2>
-                  <p style='text-align:center;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit rhoncus risus vel sodales. Sed sit amet vestibulum nunc, ut gravida urna. Integer pharetra velit non mattis maximus. Nam nibh elit, sagittis nec nibh non, semper consectetur dolor. In convallis dignissim turpis a auctor. Aenean varius pellentesque sem eget faucibus. Aliquam egestas viverra dui, nec euismod urna accumsan at. Fusce viverra, elit sit amet volutpat commodo, elit lectus iaculis nibh, sit amet ultricies quam eros vitae sem. Phasellus a tempor lectus. Cras a tincidunt quam. Ut ac lectus sit amet leo porttitor aliquet rutrum eu risus. Quisque at gravida sapien, ac posuere orci. Pellentesque volutpat velit nec mollis ultricies.</p>
+                  </div>
                   <br><br><br>
                   <div class='col-md-offset-3 col-md-7 col-xs-12'>"
                   .drupal_render($form['prev'])
@@ -107,73 +82,78 @@ $secondp ="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR 
 
 
 
-      $thirdp ="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
-                <p class='subtitle-text'>Dans quel domaine pensez-vous avoir été victime de discrimination ?</p>
-                <p class='subtitle-text'>(plusieurs choix possibles)</p>
-                <br><br>
-                <div class='row col-md-12'>";
-
-                for ($j=0; $j < $form['btnsize']['#value']; $j++) {
-                        $thirdp .= "<button class='btstyle form-submit' type='button' id='check".$j."'>"
-                        .$form['checksec'][$j]['#title']
-                        ."<div class='none'>"
-                        .drupal_render($form['checksec'][$j])
-                        ."</div>
-                        </button>";
-                      }
-
-    $thirdp .= "</div>
-                <br><br><br><br><br>
-                <h2 style='text-align:center;'>Bien et service</h2>
-                <p style='text-align:center;'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit rhoncus risus vel sodales. Sed sit amet vestibulum nunc, ut gravida urna. Integer pharetra velit non mattis maximus. Nam nibh elit, sagittis nec nibh non, semper consectetur dolor. In convallis dignissim turpis a auctor. Aenean varius pellentesque sem eget faucibus. Aliquam egestas viverra dui, nec euismod urna accumsan at. Fusce viverra, elit sit amet volutpat commodo, elit lectus iaculis nibh, sit amet ultricies quam eros vitae sem. Phasellus a tempor lectus. Cras a tincidunt quam. Ut ac lectus sit amet leo porttitor aliquet rutrum eu risus. Quisque at gravida sapien, ac posuere orci. Pellentesque volutpat velit nec mollis ultricies.</p>
-                <br><br><br>
-                <div class='col-md-offset-3 col-md-7'>"
-                .drupal_render($form['prev1'])
-                .drupal_render($form['next2'])
-                ."</div>
-                 <br><br><br><br>";
-
-
-$finalp .= "<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
-          <p class='subtitle-text'>Vous semblez avoir été victime de 'Discrimination'.</p>
+$finalp .="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
+          <p class='subtitle-text'>Vous semblez avoir été victime de Discrimination.</p>
           <p class='subtitle-text'>Le Défenseur des droits promeut l'égalité des droits.</p>
           <br>
-          <p class='text-center'>Vous pouvez dès à présent compléter votre demande de saisine pré-remplie au Défenseur des Droits.</p>
-          <p class='text-center'>Votre histoire est importante, nous sommes là pour vous accompagner dans vos démarches.</p>
-          <br>
-          <p class='text-center'> Vous avez trois possibilités pour contacter le Défenseur des Droits</p>
-          <br>
-          <div class='row col-lg-offset-2 col-md-12 col-xs-12 col-lg-12'>
-          "
-          .drupal_render($form['mail'])
-          .drupal_render($form['sendform'])
-          .drupal_render($form['meet'])
-          ."</div>
-           <br>
-           <br>
-           <br>
-           <br>
-           <div class='col-md-12'>
-           <p class='text-center'>Si vous avez plus de questions concernant la demande, ou la saisie en ligne,</p>
-           <p class='text-center'>vous pouvez nous contacter du lundi au vendre de 8h00 à 20h00 (coût d'un appel local) au:</p>
-           <p class='text-center'><a href='tel:0969390000'><b>09 69 39 00 00</b></a></p>
-           </div>
-           <br><br>
-           ";
-//mail sendform meet
-      switch ($form['step']['#value']) {
-        case '1':
-        print($firstp);
-          break;
-        case '2':
-        print($secondp);
-          break;
-        case '3':
-        print($thirdp);
-          break;
-        case '4':
-        print($finalp);
-          break;
+          <p class='text-center'>Votre réclamation concerne le domaine:</p>
+          <div class='col-lg-offset-5 col-md-offset-5 col-sm-offset-4 col-xs-offset-2'>";
 
-      }
+          foreach ($form['valueone']['#value']as $etape1){
+            $finalp .= "<p class='finalres'>".$etape1->title."</p>";
+          }
+          $finalp .="</div>";
+          if(isset($form['formsteps']['#value'])&&!empty($form['formsteps']['#value'])){
+            foreach ($form['formsteps']['#value'] as $formstep){
+
+              $finalp .="<br>
+              <p class='text-center'>".$formstep['type']."</p>
+              <div class='col-lg-offset-5 col-md-offset-5 col-sm-offset-4 col-xs-offset-2'>
+              <ul>";
+              foreach ($formstep['value'] as $value){
+                $finalp.="<li class='finalres'>- ".$value."</li>";
+              }
+              $finalp.="</ul></div>";
+            }
+
+          }
+
+$finalp.= "
+          <br /><br />
+          <p class='subtitle-text' style='text-decoration: underline;'><a href='#' onclick='window.print();' class='print'>Imprimer ma réclamation</a></p>
+          <br /><br />
+          <p class='text-center'>Vous pouvez des à présent compléter votre demande de saisie pré-remplie au Défenseur des Droits</p>
+          <p class='text-center'>Votre histoire est importante, nous sommes là pour vous accompagner dans vos démarches.</p>
+          <br><div class='btnanswer text-center'>"
+          .drupal_render($form['sendform'])."<br />
+          </div>
+          <div class='col-md-12 col-xs-12 col-lg-10 col-lg-offset-1'>
+          <div class='col-md-4 col-xs-12 col-lg-4'>
+          <div class='picto-mail picto'></div>
+          <h2 class='text-center titleanswer'>SAISIR PAR COURRIER</h2>
+          <p class='text-center'>Près de 400 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.
+          <div class='btnanswer text-center'>
+          <a href=''#' class='btn btn-default form-submit'>SAISIR PAR COURRIER</a>
+          </div>
+          </p>
+          </div><div class='col-md-4 col-xs-12 col-lg-4'>
+          <div class='picto-delegue picto'></div>
+          <h2 class='text-center titleanswer'>RENCONTRER UN DÉLÉGUÉ</h2>
+          <p class='text-center'>Près de 400 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.
+          <div class='btnanswer text-center'>
+          <a href=''#' class='btn btn-default form-submit'>RENCONTRER UN DÉLÉGUÉ</a>
+            </div></p>
+          </div>
+          <div class='col-md-4 col-xs-12 col-lg-4'>
+            <div class='picto-tel picto'></div>
+            <h2 class='text-center titleanswer'>DIRECTEMENT PAR TÉLÉPHONE</h2>
+            <p class='text-center'>
+            Nos conseillers ovus répondent du lundi au vendred de 8h00 à 20h00 (coût d'un appel local) au:
+            </p>
+            <h2 class='text-center titleanswer tel-color'>09 69 39 00 00</h2>
+            <br /><br /><br />
+          </div>
+          </div>
+           <br><br>";
+          //  dpm($form['state']['#value']);
+
+    if (!empty($form['page_final']['#value']) && $form['page_final']['#value'] === "true") {
+        print($finalp);
+    } else {
+        if ($form['page_num']['#value'] === 1) {
+            print($firstp);
+        } else{
+            print($secondp);
+        }
+    }
  print drupal_render_children($form);

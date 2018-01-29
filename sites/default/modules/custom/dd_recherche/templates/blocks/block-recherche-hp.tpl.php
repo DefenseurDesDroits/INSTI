@@ -8,7 +8,7 @@
   <div id="results" class="search-results" style="display:none;">
     <div class="row">
       <div class="col-sm-4 col-md-4 col-lg-4" id="Arti">
-        <h2><?php print t('Articles'); ?></h2>
+        <h2><?php print t('News'); ?></h2>
         <div id="content-article"></div>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4" id="Publi">
@@ -16,7 +16,7 @@
         <div id="content-publications"></div>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4" id="FAQ">
-        <h2><?php print t('Frequently Asked Questions'); ?></h2>
+        <h2><?php print t('Decisions and opinions'); ?></h2>
         <div id="content-faq"></div>
       </div>
     </div>

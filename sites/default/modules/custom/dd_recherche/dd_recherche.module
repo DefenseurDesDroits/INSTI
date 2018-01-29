@@ -102,7 +102,8 @@ function dd_recherche_page()
         $argument = get_tids_by_parent_tid('3');
         break;
       case 'faq':
-        $argument = get_tids_by_parent_tid('23');
+        $argument = ddd_recherche_xml_full($_GET['title']);
+        $xml = TRUE;
         break;
       case 'publications':
         $argument = get_tids_by_parent_tid('30');
@@ -112,21 +113,25 @@ function dd_recherche_page()
         break;
     }
     }
-
-    $view = views_get_view('search_categorie');
-    $view->set_display('embed_2');
-    if (!empty($argument)) {
-        $view->set_arguments(array($argument));
+    if($xml == TRUE){
+      $variables['xml'] = $argument;
+      $variables['count'] = count($argument);
+    } else {
+      $view = views_get_view('search_categorie');
+      $view->set_display('embed_2');
+      if (!empty($argument)) {
+          $view->set_arguments(array($argument));
+      }
+      if (!empty($_GET['title'])) {
+          $filter = $view->get_item('embed_2', 'filter', 'title');
+          $filter['value'] = $_GET['title'];
+          $view->set_item('embed_2', 'filter', 'title', $filter);
+      }
+      $view->pre_execute();
+      $view->execute();
+      $variables['view'] = $view->render();     
+      $variables['count'] = $view->total_rows;
     }
-    if (!empty($_GET['title'])) {
-        $filter = $view->get_item('embed_2', 'filter', 'title');
-        $filter['value'] = $_GET['title'];
-        $view->set_item('embed_2', 'filter', 'title', $filter);
-    }
-    $view->pre_execute();
-    $view->execute();
-    $variables['view'] = $view->render();
-    $variables['count'] = $view->total_rows;
     return theme('_theme_dd_recherche_page_recherche', array('vars' => $variables));
 }
 
@@ -149,12 +154,86 @@ function dd_recherche_block_view($delta = '')
 function dd_recherche_menu()
 {
     $items['ma-recherche'] = array(
-    'title' => 'My search',
-    'page callback' => 'dd_recherche_page',
-    'access arguments' => array('access content'),
-    'type' => MENU_CALLBACK
-  );
+      'title' => 'My search',
+      'page callback' => 'dd_recherche_page',
+      'access arguments' => array('access content'),
+      'type' => MENU_CALLBACK
+    );
+    $items['recherche-xml'] = array(
+      'title' => 'Search XML',
+      'page callback' => 'ddd_recherche_xml',
+      'access arguments' => array('access content'),
+      'type' => MENU_CALLBACK
+      );
     return $items;
+}
+
+function ddd_recherche_xml($recherche){
+  $content = array();
+  $values = array();
+
+  $urls = variable_get('url_xml');
+  $array_url = explode(';', $urls);
+  $count = count($array_url);
+  foreach($array_url as $key => $url){
+    $content_xml = simplexml_load_file($url);
+    $json  = json_encode($content_xml);
+    $val = json_decode($json, true);
+    $values = array_merge($values, $val['channel']['item']);
+  }
+  $i=0;
+  foreach($values as $key => $item){
+    if($i < 3){
+      if (strpos($item['title'], $_POST['search']) !== false || strpos($item['title'], $_POST['search']) && isset($_POST['search'])) {
+        $content[$i]['title'] = $item['title'];
+        $content[$i]['link'] = '<a href="'. $item['link'] . '">' . t('Read more') . '</a>'; 
+        $i++;
+      }
+    }
+  }
+  if(empty($_POST['search'])){
+    foreach($values['channel']['item'] as $key => $item){
+      if($i < 3){
+        $content[$i]['title'] = $item['title'];
+        $content[$i]['link'] = '<a href="'. $item['link'] . '">' . t('Read more') . '</a>'; 
+        $i++;
+      }
+    }
+  }
+  return drupal_json_output($content);
+}
+
+function ddd_recherche_xml_full($recherche){
+  $content = array();
+  $values = array();
+  $urls = variable_get('url_xml');
+  $array_url = explode(';', $urls);
+  $count = count($array_url);
+  foreach($array_url as $key => $url){
+    $content_xml = simplexml_load_file($url);
+    $json  = json_encode($content_xml);
+    $val = json_decode($json, true);
+    $values = array_merge($values, $val['channel']['item']);
+  }
+  foreach($values as $key => $item){
+    if (strpos($item['title'], $recherche) !== false || strpos($item['title'], $recherche) && isset($recherche)) {
+      $content[$i]['title'] = $item['title'];
+      $content[$i]['description'] = $item['description'];
+      $content[$i]['link'] = '<a href="'. $item['link'] . '">' . t('Read more') . '</a>'; 
+      $content[$i]['content_link'] = $item['link'];
+      $i++;
+    }
+  }
+  if(empty($recherche)){
+    foreach($values as $key => $item){
+        $content[$i]['title'] = $item['title'];
+        $content[$i]['description'] = $item['description'];
+        $content[$i]['link'] = '<a href="'. $item['link'] . '">' . t('Read more') . '</a>';
+        $content[$i]['content_link'] = $item['link'];  
+        $i++;
+    }
+  }
+  return $content;
 }
 
 /**

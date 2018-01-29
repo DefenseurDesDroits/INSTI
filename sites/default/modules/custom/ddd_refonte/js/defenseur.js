@@ -1,89 +1,121 @@
 (function($) {
-    Drupal.behaviors.faq = {
-        attach: function(context, settings) {
+  Drupal.behaviors.faq = {
+    attach: function(context, settings) {
 
-            $(document).ready(function() {
+      $(document).ready(function() {
+          $('#edit-sendform').on('click',function (e) {
+              e.preventDefault();
+              $('#fire-form').click();
+          });
+
+        //Bouton checked ou pas
+
+          stylecheck();
+          function stylecheck(){
+              $('input.wrapper-check').each(function( index ) {
+                  var id = $(this).val();
+                  if ($(this).prop('checked')) {
+                      //$(this).closest('.control-label').addClass('active');
+                      $(this).closest('.form-item').find('label').addClass('active');
+                      $('#txth'+id).removeClass('none');
+                  } else {
+                      //$(this).closest('.control-label').removeClass('active');
+                      $(this).closest('.form-item').find('label').removeClass('active');
+                      $('#txth'+id).addClass('none');
+                  }
+              });
+          }
+            $('.wrapper-check').each(function( index ) {
+                //$(this).closest('.control-label').addClass('wrapper-check-label');
+            });
+          $("input.wrapper-check").click(function() {
+              stylecheck();
+              //$(this).closest('.control-label').toggleClass('active');
+          });
+
+        //Cartes cliqué ou pas
+
+        $(".disc").click(function() {
+
+          let radio = $(this).find("input").attr('id');
+
+          if (!$("#" + radio).prop('checked')) {
+
+            $("#" + radio).prop("checked", true);
+
+            transformcard(this);
+
+          } else if ($("#" + radio).prop('checked')) {
+
+            $("#" + radio).prop("checked", false);
+
+            let img = $(this).find("img").attr('id');
+            $("#" + img).animate({width: '233px'});
+
+            let txthide = $(this).find(".hidden-size").attr('id');
+            $("#" + txthide).addClass('hide');
+            let detail = $(this).find(".subtitle-text").attr('id');
+            $("#" + detail).removeClass('hidden');
+
+            let border = $(this).find(".column-1").attr('id');
+
+            $("#" + border).css("border", "1px solid #ddd");
+            $("#" + border).css("border-width", "1px");
+            $("#" + border).removeClass("check-active");
+            var active = false;
+              $(".wrapper-etape-1 .column-1").each(function( index ) {
+                  if($(this).hasClass("check-active")){
+                      active = true;
+                  }
+              });
+              if(!active){
+                  $(".wrapper-etape-1 .column-1").each(function( index ) {
+                      $(this).removeClass("active");
+                  });
+              }
+          }
+
+        });
+
+        function transformbtn(btn){
+
+        }
 
 
-              $(".btstyle").click(function(){
 
-                var btn = this.id;
-                var chk = $("#"+btn).find("input").attr('id');
-                if($('#'+chk).prop('checked')){
-                  $('#'+chk).prop('checked', false);
-                  $('#'+btn).removeClass('btstylepressed');
+        function transformcard(card){
+
+            let img = $(card).find("img").attr('id');
+            $("#" + img).animate({width: '135px'});
+
+            let txthide = $(card).find(".hidden-size").attr('id');
+            $("#" + txthide).removeClass('hide');
+
+            let detail = $(card).find(".subtitle-text").attr('id');
+            $("#" + detail).addClass('hidden');
+
+            let border = $(card).find(".column-1").attr('id');
+
+            $("#" + border).css("border-color", $("#"+border).attr('color'));
+            $("#" + border).css("border-width", "5px");
+            $("#" + border).addClass("check-active");
+            $(".wrapper-etape-1 .column-1").each(function( index ) {
+                if(!$(this).hasClass("active")){
+                    $(this).addClass("active");
                 }
-                else{
-                  $('#'+chk).prop('checked', true);
-                  $('#'+btn).addClass('btstylepressed');
-
-                }
-              })
-
-                $(".disc").click(function() {
-
-                    var radio = $(this).find( "input" ).attr('id');
-                    $("#" + radio).prop("checked", true);
-
-
-                      backward(radio);
-
-                      var img = $(this).find( "img" ).attr('id');
-
-                      if ($("#" + img).width != '135px') {
-                        $("#" + img).animate({
-                          width: '135px'
-                        });
-                        var subtitle = $(this).find( "h2" ).attr('id');
-                        $("#" + subtitle).animate({
-                          'font-size': '25px'
-                        });
-                        var txthide = $(this).find( ".hidden-size" ).attr('id');
-                        $("#" + txthide).removeClass('hide');
-
-                        var detail = $(this).find( ".subtitle-text" ).attr('id');
-                        $("#" + detail).addClass('hidden');
-
-                        var border = $(this).find( ".column-1" ).attr('id');
-                        var color = $("#"+border).attr('title');
-
-                        $("#" + border).css("border-color", color);
-                        $("#" + border).css("border-width", "5px");
-                      }
-                });
-
-                function backward(radio) {
-
-                    var tab = [1, 2, 3, 4, 5];
-                    $(tab).each(function() {
-                    var here ="edit-radio-"+this;
-                        if ( here != radio) {
-
-                            var parent = $("#"+here).parents().get(2);
-
-                            var img = $(parent).find( "img" ).attr('id');
-
-                            $("#" + img).animate({
-                                width: '233px'
-                            });
-
-                            var subtitle = $(parent).find( "h2" ).attr('id');
-                            $("#" + subtitle).animate({
-                                'font-size': '26px'
-                            });
-
-                            var txthide = $(parent).find(".hidden-size").attr('id');
-                            $("#" + txthide).addClass('hide');
-                            var detail = $(parent).find(".subtitle-text").attr('id');
-                            $("#" + detail).removeClass('hidden');
-
-                            var border = $(parent).find(".column-1").attr('id');
-                            $("#" + border).css("border", "1px solid #ddd");
-                            $("#" + border).css("border-width", "1px");
-                        }
-                    })
-                };
             });
         }
+
+
+
+
+
+
+
+
+
+
+      });
     }
+  }
 })(jQuery);

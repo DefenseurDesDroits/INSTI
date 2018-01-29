@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ddd_saisir feature.
+ */
+
+include_once 'ddd_saisir.features.inc';

@@ -113,14 +113,19 @@
                 }
                 if(name == 'publications'){
                     var url = '/' + lang + '/search-pub/' + title;
-                }   
+                }
+                if(name == 'faq'){
+                    var url = '/' + lang + '/recherche-xml';
+                } 
                 $.ajax({
-                    type: 'GET',
+                    type: 'POST',
                     url: url,
+                    data: {search: title},
                     beforeSend: function() {
                         $('#content-' + name).append('<i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i>');
                     },
                     success: function(data) {
+                        console.log(data);
                         // console.log(data.length);
                         $.each(data, function(index, value) {
                             if ($(window).width() < 768) {
