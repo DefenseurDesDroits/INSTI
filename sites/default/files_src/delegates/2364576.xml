@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2364576" login="JYONNET">
+        <identite civilite="Monsieur" codeDep="41">
+            <nom>YONNET</nom>
+            <prenom>Jean-Louis</prenom>
+        </identite>
+        <email>jean-louis.yonnet@defenseurdesdroits.fr</email>
+        <photo>JYONNET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Blois</libelle>
+                <libelleSecondaire />
+                <adresse>3, place Lorjou</adresse>
+                <boitePostale />
+                <tel>02 54 45 16 16</tel>
+                <fax />
+                <ville cp="41000"><value>BLOIS</value></ville>
+                <poi>
+                    <longitude>1.307438</longitude>
+                    <latitude>47.589696</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

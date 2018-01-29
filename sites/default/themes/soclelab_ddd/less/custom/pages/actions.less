@@ -1,0 +1,152 @@
+
+/*.page-actions #page-main-content{
+  .select-date, .select-theme{
+    background-color: @bg_actions_filtre;
+  }
+  label{
+    margin: 22px auto 15px auto;
+    color: @txt_actions_label;
+    font-size: 1.55em;
+    font-weight: normal;
+  }
+  .form-select{
+    margin: 0 auto;
+    width: 198px;
+    height: 30px;
+    border: 1px solid @bor_actions_select;
+    #shaddow > .no-shaddow();
+    #border > .border-radius(0);
+  }
+  .form-group{
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+  .block-title{
+    background-color: @bg_actions_block_title;
+    color: @txt_actions_block_title;
+    margin: 0 0 28px 0;
+    padding: 30px 15px 17px 15px;
+  }
+  
+  p, .content-decision{
+    max-width: 75%;
+    margin: 0 auto 15px auto;
+    font-size: 0.95em;
+    line-height: 1.81em;  
+    color: @txt_actions_block;
+    font-family: @font-family-lato-reg;
+  }
+  
+  .region-content{
+    .row;
+    
+    .block{
+      .make-xs-column(12);
+      .make-sm-column(6);
+      .make-md-column(6);
+      .make-lg-column(6);
+      background-color: @bg_actions_block;
+      margin-bottom: 48px;
+      text-align: center;
+      border-left: 15px solid @bor_actions_block;
+      border-right: 15px solid @bor_actions_block;
+      padding: 0;
+    }
+  }
+  #block-system-main{
+    display: none; // ?
+  }
+  .act_dossiers_doc{
+    .block-title{
+      margin-bottom: 0;
+    }
+    p{
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  .act_acces_droits{
+    .block-title{
+      margin-bottom: 0;
+    }
+    p{
+      margin-top: 15px;
+      padding-left: 30%;
+    }
+    .container-img{
+      max-width: 35%;
+      float: left;
+      margin-top: 0;
+      padding-left: 0px;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.page-actions .select-date{
+  padding-bottom: 20px;
+}*/
+
+/* Page décisions */
+.page-decisions {
+
+  // Header
+  .view-header {
+    background-color: @color_home_map_text;
+  
+    // Bloc theme
+    .view-display-id-block_theme {
+      .view-content {
+        .section-dec {
+          padding-top: 1em;
+          background-color: #98b8d3; //Onglet actif : 1f6bb9 - 
+          border: 1px groove @color_home_map_text;
+  
+          font-size: 1em;
+          text-align: center;
+  
+          height: 60px;
+          
+          &.actif {
+            background-color: #1f6bb9;
+            transform: scale(1, 1.5);
+          }
+        }
+      }
+  
+      a {
+        color: @color_home_map_text;
+        vertical-align: middle;
+      }
+    }
+    
+    // Bloc autorite
+    .view-display-id-block_autorite, .view-display-id-block_sub_theme {
+      background-color: #e6eff6;
+      color: #697076;
+            
+      a {
+        &[disabled] {
+          cursor: default;
+          pointer-events: none;
+          color: #0B4C5F;
+        }
+      }
+
+    }
+    .view-display-id-block_autorite {
+      .views-field-name:after {
+        content: ":";
+      }
+    }
+  }
+}
+
+.page-decisionslink, .page-decisionsdate, #block-ddd-blocks-block-header-decision, .view-display-id-page_reglement {
+  .page-decisions;
+}

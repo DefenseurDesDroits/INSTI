@@ -1,0 +1,10 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' accessibility.
+ */
+
+ function sl_accessibility_preprocess_page(&$vars, $hook) {
+   $module_path = drupal_get_path('module', 'sl_accessibility');
+   drupal_add_js($module_path . '/js/text_redim.js');
+ }

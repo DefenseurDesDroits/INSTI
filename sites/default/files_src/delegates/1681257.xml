@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681257" login="SBAMANA">
+        <identite civilite="Madame" codeDep="976">
+            <nom>BAMANA</nom>
+            <prenom>Souniati</prenom>
+        </identite>
+        <email>souniati.bamana@defenseurdesdroits.fr</email>
+        <photo>SBAMANA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>IREPS</libelle>
+                <libelleSecondaire>Instance régionale d&apos;éducation et de promotion de la santé</libelleSecondaire>
+                <adresse>Rue du dispensaire M&apos;Tsapéré</adresse>
+                <boitePostale />
+                <tel>06 39 27 60 00</tel>
+                <fax />
+                <ville cp="97600"><value>MAMOUDZOU</value></ville>
+                <poi>
+                    <longitude>45.221708</longitude>
+                    <latitude>-12.786705</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

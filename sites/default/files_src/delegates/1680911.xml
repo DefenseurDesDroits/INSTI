@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680911" login="JPPROUST">
+        <identite civilite="Monsieur" codeDep="17">
+            <nom>PROUST</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.proust@defenseurdesdroits.fr</email>
+        <photo>JPPROUST.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la Charente-Maritime</libelle>
+                <libelleSecondaire />
+                <adresse>37 rue de l&apos;Alma</adresse>
+                <boitePostale>CS 80307</boitePostale>
+                <tel>05 46 97 55 15 </tel>
+                <fax />
+                <ville cp="17107"><value>SAINTES CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.654778</longitude>
+                    <latitude>45.745691</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

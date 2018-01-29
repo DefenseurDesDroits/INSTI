@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681310" login="GMOUNIER">
+        <identite civilite="Monsieur" codeDep="69">
+            <nom>MOUNIER</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.mounier@defenseurdesdroits.fr</email>
+        <photo>GMOUNIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie du 3ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>215, rue Duguesclin</adresse>
+                <boitePostale />
+                <tel>04 78 95 83 50</tel>
+                <fax />
+                <ville cp="69003"><value>LYON</value></ville>
+                <poi>
+                    <longitude>4.849017</longitude>
+                    <latitude>45.760214</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

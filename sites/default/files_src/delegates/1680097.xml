@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680097" login="AMIGALE">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>MIGALE</nom>
+            <prenom>Antoine</prenom>
+        </identite>
+        <email>antoine.migale@defenseurdesdroits.fr</email>
+        <photo>AMIGALE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Nice</libelle>
+                <libelleSecondaire />
+                <adresse>12, rue de la Gendarmerie</adresse>
+                <boitePostale>BP 1709</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="06000"><value>NICE</value></ville>
+                <poi>
+                    <longitude>7.280472</longitude>
+                    <latitude>43.712354</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 2e et 4e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Nice-l&apos;Ariane</libelle>
+                <libelleSecondaire />
+                <adresse>52, rue Anatole de Monzie</adresse>
+                <boitePostale />
+                <tel>04 97 00 03 90</tel>
+                <fax>04 97 00 03 99</fax>
+                <ville cp="06300"><value>NICE</value></ville>
+                <poi>
+                    <longitude>7.303187</longitude>
+                    <latitude>43.737846</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

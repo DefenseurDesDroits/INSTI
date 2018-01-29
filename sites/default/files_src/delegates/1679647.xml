@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679647" login="GLAFONT">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>LAFONT</nom>
+            <prenom>Guy</prenom>
+        </identite>
+        <email>guy.lafont@defenseurdesdroits.fr</email>
+        <photo>GLAFONT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Argenteuil</libelle>
+                <libelleSecondaire />
+                <adresse>14, rue Alfred Labrière</adresse>
+                <boitePostale />
+                <tel>01 34 34 62 30</tel>
+                <fax>01 39 47 96 01</fax>
+                <ville cp="95100"><value>ARGENTEUIL</value></ville>
+                <poi>
+                    <longitude>2.254761</longitude>
+                    <latitude>48.944670</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680488" login="SLEVEL">
+        <identite civilite="Madame" codeDep="62">
+            <nom>LEVEL</nom>
+            <prenom>Sophie</prenom>
+        </identite>
+        <email>sophie.level@defenseurdesdroits.fr</email>
+        <photo>SLEVEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie de Boulogne-sur-Mer</libelle>
+                <libelleSecondaire />
+                <adresse>Place Godefroy de Bouillon</adresse>
+                <boitePostale />
+                <tel>03 21 87 80 80</tel>
+                <fax />
+                <ville cp="62200"><value>BOULOGNE-SUR-MER</value></ville>
+                <poi>
+                    <longitude>1.613252</longitude>
+                    <latitude>50.724918</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

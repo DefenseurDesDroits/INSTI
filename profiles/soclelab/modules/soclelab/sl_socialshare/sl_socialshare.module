@@ -1,0 +1,289 @@
+<?php
+
+/*
+ * hook_social_media_links_iconset_info_alter
+ */
+ 
+function sl_socialshare_social_media_links_iconset_info_alter(&$iconsets) {
+  $module_path = drupal_get_path('module', 'sl_socialshare');
+  $icons['socialshare_lab'] = array(
+    'name' => 'SocleLAB Social Share Theme',
+    'publisher' => 'Capgemini - Lab\'innovation/DigitalFactory',
+    'publisher url' => 'http://www.fr.capgemini.com/',
+    'styles' => array(
+      '32' => 'SL-Blue-43x43',
+    ),
+    'path' => $module_path . '/libraries/socialshare_lab',
+    'path callback' => 'sl_socialshare_path_socialshare_lab',
+    'download url' => '',
+  );
+
+  $iconsets['socialshare_lab'] = $icons['socialshare_lab'];
+}
+
+function sl_socialshare_path_socialshare_lab($platform = 'twitter', $style = '32') {
+  $info = social_media_links_iconset('socialshare_lab');
+
+  $path = isset($info['path']) ? $info['path'] . '/PNG/' . $platform . '.png' : '';
+  
+  return $path;
+}
+
+function sl_socialshare_init() {
+  drupal_add_css(drupal_get_path('module', 'sl_socialshare') . '/css/sl_social.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+}
+
+function sl_socialshare_theme_registry_alter(&$theme_registry) {
+  $module_path = drupal_get_path('module', 'sl_socialshare');
+  $theme_registry['sharethis']['theme path'] = $module_path;
+  $theme_registry['sharethis']['function'] = 'theme_sl_socialshare_sharethis';
+}
+
+
+/**
+ * Theme function for ShareThis code based on settings.
+ */
+function theme_sl_socialshare_sharethis($variables) {
+  $data_options = $variables['data_options'];
+  $m_path = $variables['m_path'];
+  $m_title = $variables['m_title'];
+
+  // Inject the extra services.
+  foreach ($data_options['option_extras'] as $service) {
+    $data_options['services'] .= ',"' . $service . '"';
+  }
+
+  // The share buttons are simply spans of the form class='st_SERVICE_BUTTONTYPE' -- "st" stands for ShareThis.
+  $type = drupal_substr($data_options['buttons'], 4);
+  $type = $type == "_" ? "" : check_plain($type);
+  $service_array = explode(",", $data_options['services']);
+  $st_spans = "";
+  foreach ($service_array as $service_full) {
+    // Strip the quotes from the element in the array (They are there for javascript)
+    $service = explode(":", $service_full);
+
+    // Service names are expected to be parsed by Name:machine_name. If only one
+    // element in the array is given, it's an invalid service.
+    if (count($service) < 2) {
+      continue;
+    }
+
+    // Find the service code name.
+    $serviceCodeName = drupal_substr($service[1], 0, -1);
+
+    // Switch the title on a per-service basis if required.
+    $title = $m_title;
+    switch ($serviceCodeName) {
+      case 'twitter':
+        $title = empty($data_options['twitter_suffix']) ? $title : check_plain($title) . ' ' . check_plain($data_options['twitter_suffix']);
+        break;
+    }
+
+    // Sanitize the service code for display.
+    $display = check_plain($serviceCodeName);
+
+    // Put together the span attributes.
+    $attributes = array(
+      'st_url' => $m_path,
+      'st_title' => $title,
+      'class' => 'st_' . $display . $type,
+    );
+    if ($serviceCodeName == 'twitter') {
+      if (!empty($data_options['twitter_handle'])) {
+        $attributes['st_via'] = $data_options['twitter_handle'];
+        $attributes['st_username'] = $data_options['twitter_recommends'];
+      }
+    }
+    // Only show the display text if the type is set.
+    if (!empty($type)) {
+      $attributes['displayText'] = check_plain($display);
+    }
+    
+    switch ($serviceCodeName) {
+      case 'print':
+        unset($attributes['st_url']);
+        $attributes['onClick'] = "window.print();return false";
+        $attributes['title'] = t("Print this page");
+        break;
+    }
+    // Render the span tag.
+    $st_spans .= theme('html_tag', array(
+      'element' => array(
+        '#tag' => 'a',
+        '#attributes' => $attributes,
+        '#value' => '', // It's an empty span tag.
+      ),
+    ));
+  }
+
+
+  // Output the embedded JavaScript.
+  sharethis_include_js();
+  return '<div class="sharethis-wrapper">' . $st_spans . '</div>';
+}
+
+
+function sl_socialshare_preprocess_page(&$variables) {
+
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+
+    $content = NULL;
+    $main_image = NULL;
+    $chapo = "";
+	
+    //Gestion des balises meta pour la publication via twitter et facebook
+    if (isset($node->type) && isset($node->nid) && isset($node->title)) {
+      switch ($node->type) {
+        case "article":
+          $content = 'article';
+          
+          if (isset($node->field_article_logo['und'][0]['sid'])) {
+            $main_image = slutil_get_img_path($node->field_article_logo['und'][0]['sid'], 'social_share'); 
+          } else { $main_image = theme_get_setting('logo'); }
+          
+          if (isset($node->field_article_descriptif) && isset($node->field_article_body)) {
+            $chapo = slutil_get_txtvignette($node->field_article_descriptif, $node->field_article_body, 200);
+          } else { $chapo = ""; }
+          break;
+  
+        case "evenement":
+          $content = 'article';
+          
+          if (isset($node->field_event_logo['und'][0]['sid'])) {
+            $main_image = slutil_get_img_path($node->field_event_logo['und'][0]['sid'], 'social_share'); 
+          } else { $main_image = theme_get_setting('logo'); }
+          
+          if (isset($node->field_event_descriptif) && isset($node->field_event_body)) {
+            $chapo = slutil_get_txtvignette($node->field_event_descriptif, $node->field_event_body, 200);
+          } else { $chapo = ""; }
+          break;
+          
+        case "faq":
+          $content = 'article';
+          $main_image = theme_get_setting('logo');
+          
+          if (isset($node->body)) {
+            $chapo = slutil_get_txtvignette($node->body, $node->body, 200);
+          } else { $chapo = ""; }
+          break;
+          
+        case "accueil":
+          $content = 'website';
+          $main_image = theme_get_setting('logo');
+          $chapo = variable_get('site_slogan');
+          break;
+          
+        case "page":
+          $content = 'article';
+          
+          if (isset($node->field_page_logo['und'][0]['sid'])) {
+            $main_image = slutil_get_img_path($node->field_page_logo['und'][0]['sid'], 'social_share'); 
+          } else { $main_image = theme_get_setting('logo'); }
+          
+          if (isset($node->field_page_body)) {
+            $chapo = slutil_get_txtvignette($node->field_page_body, $node->field_page_body, 200);
+          } else { $chapo = ""; }
+          break;
+      }
+      
+      $nid = $node->nid;  // Get the nid
+
+      //Meta facebook pour afficher le type de page (requis)
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'og:type',
+          'content' => $content,
+        ),
+      );
+      drupal_add_html_head($element, 'og_type');
+
+      //Meta facebook pour afficher l'URL canonique (requis)
+      $canonical_url = $GLOBALS['base_url'] . url(drupal_get_path_alias( 'node/' . $node->nid));   //Get the canonical URL
+      if($node->type == "page_accueil"){ $canonical_url = $GLOBALS['base_url']; }
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'og:url',
+          'content' => $canonical_url,
+        ),
+      );
+      drupal_add_html_head($element, 'og_url');
+
+      //Meta pour afficher l'image principale
+      if (isset($main_image)) {
+        $element = array(
+          '#tag' => 'meta',
+          '#attributes' => array(
+            'property' => 'og:image',
+            'content' => $main_image,
+          ),
+        );
+        drupal_add_html_head($element, 'og_image');
+
+        $element = array(
+          '#tag' => 'meta',
+          '#attributes' => array(
+            'name' => 'twitter:image',
+            'content' => $main_image,
+          ),
+        );
+        drupal_add_html_head($element, 'twitter_image');
+      }
+
+      //Affichage des chapo pour la description
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'property' => 'og:description',
+          'content' => $chapo,
+        ),
+      );
+      drupal_add_html_head($element, 'og_description');
+
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'twitter:description',
+          'content' => $chapo,
+        ),
+      );
+      drupal_add_html_head($element, 'twitter_description');
+      
+
+      //Meta spécifique à Twitter pour indiquer le format : summary
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'twitter:card',
+          'content' => 'summary',
+        ),
+      );
+      drupal_add_html_head($element, 'twitter_card');
+
+      //Meta twitter pour afficher le titre de l'article
+      $node_title = $node->title;
+      if($node->type == "page_accueil"){ $node_title = variable_get('site_name'); }
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'twitter:title',
+          'content' => $node_title,
+        ),
+      );
+      drupal_add_html_head($element, 'twitter_title');
+
+      $element = array(
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'property' => 'og:title',
+          'content' => $node_title,
+        ),
+      );
+      drupal_add_html_head($element, 'og_title');
+    }
+  }
+
+}
+

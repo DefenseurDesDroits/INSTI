@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679594" login="JPERICAT">
+        <identite civilite="Monsieur" codeDep="77">
+            <nom>PÉRICAT</nom>
+            <prenom>Jacques</prenom>
+        </identite>
+        <email>jacques.pericat@defenseurdesdroits.fr</email>
+        <photo>JPERICAT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Cité administrative de Melun</libelle>
+                <libelleSecondaire />
+                <adresse>20, quai Hippolyte Rossignol</adresse>
+                <boitePostale />
+                <tel>09 63 45 51 66</tel>
+                <fax />
+                <ville cp="77010"><value>MELUN CEDEX</value></ville>
+                <poi>
+                    <longitude>2.654097</longitude>
+                    <latitude>48.535343</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680802" login="GDEZAN">
+        <identite civilite="Madame" codeDep="42">
+            <nom>DE ZAN</nom>
+            <prenom>Gisèle</prenom>
+        </identite>
+        <email>gisele.dezan@defenseurdesdroits.fr</email>
+        <photo>GDEZAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Montbrison</libelle>
+                <libelleSecondaire />
+                <adresse>Square Honoré d&apos;Urfé</adresse>
+                <boitePostale />
+                <tel>04 77 96 37 11</tel>
+                <fax />
+                <ville cp="42600"><value>MONTBRISON</value></ville>
+                <poi>
+                    <longitude>4.063295</longitude>
+                    <latitude>45.609756</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

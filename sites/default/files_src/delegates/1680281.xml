@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680281" login="MCLAUSSE">
+        <identite civilite="Madame" codeDep="68">
+            <nom>CLAUSSE</nom>
+            <prenom>Monique</prenom>
+        </identite>
+        <email>monique.clausse@defenseurdesdroits.fr</email>
+        <photo>MCLAUSSE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Mulhouse</libelle>
+                <libelleSecondaire />
+                <adresse>31, Grand&apos;Rue</adresse>
+                <boitePostale />
+                <tel>03 89 36 80 30</tel>
+                <fax>03 89 36 80 39</fax>
+                <ville cp="68100"><value>MULHOUSE</value></ville>
+                <poi>
+                    <longitude>7.330674</longitude>
+                    <latitude>47.745586</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

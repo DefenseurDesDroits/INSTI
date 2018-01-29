@@ -1,0 +1,774 @@
+<?php
+require_once(conf_path() . '/libraries/xml_function/xml_function.php');
+require_once('decision_import.define.inc');
+
+/**
+ * Implements hook_permission().
+ */
+function decision_import_permission() {
+  return array(
+    'decision_import' => array(
+      'title' => t('Decision import'),
+      'description' => t('Can import decison')
+    )
+  );
+}
+
+/**
+ * Implements hook_cron().
+ */
+function decision_import_cron() {
+  $files = files_into_directory(DECISION_PATH);
+  $queue = DrupalQueue::get('decisionCronQueue');
+  foreach ($files as $file) {
+    $queue->createItem($file);
+  }
+
+  $files = files_into_directory(RA_PATH);
+  $queue = DrupalQueue::get('RaCronQueue');
+  foreach ($files as $file) {
+    $queue->createItem($file);
+  }
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ */
+function decision_import_cron_queue_info() {
+  $queues = array();
+  $queues['decisionCronQueue'] = array(
+    'worker callback' => 'decision_decision_import_queue',
+    //function to call for each item
+    //seconds to spend working on the queue
+  );
+  $queues['RaCronQueue'] = array(
+    'worker callback' => 'decision_ra_import_queue',
+    //function to call for each item
+    //seconds to spend working on the queue
+  );
+  return $queues;
+}
+
+function decision_decision_import_queue($file) {
+  decision_import_queue($file, 'decision');
+}
+
+function decision_ra_import_queue($file) {
+  decision_import_queue($file, 'ra');
+}
+
+function decision_import_queue($file, $type) {
+  //run tâche cron
+  if (strcmp($type, 'decision') == 0) {
+    $var = variable_get('decision_import_last_run');
+  }
+  else {
+    $var = variable_get('ra_import_last_run');
+  }
+
+  if (isset($var) && !is_null($var) && is_array($var)) {
+
+    // Si le tableau contient des éléments alors on recherche une corresponance
+    if (count($var) > 0) {
+      $i = 0;
+      // Recherche d'une correspondance existante
+      while ($i < count($var)) {
+        if (isset($var[$i])) {
+          if (strcmp($var[$i][0], $file->uri) != 0) {
+            $i++;
+          }
+          else {
+            break;
+          }
+        }
+        else {
+          $i++;
+          continue;
+        }
+      }
+      // Cas où une correspondance a été trouvée
+      if (isset($var[$i]) && strcmp($var[$i][0], $file->uri) == 0) {
+        $arr = $var[$i];
+        $dateDernierImport = $arr[1];
+        $dateDeModifFichier = filemtime($file->uri);
+
+        if ($dateDeModifFichier >= $dateDernierImport) {
+          // Le fichier va être mis à jour
+          if (decision_read_xml_file($file->uri)) {
+            unset($var[$i]);
+            array_push($var, array($file->uri, time()));
+          }
+        }
+        // Cas où aucune correspondance n'a été trouvée
+      }
+      else {
+        // Le fichier n'a pas encore été importé
+        if (decision_read_xml_file($file->uri)) {
+          array_push($var, array($file->uri, time()));
+        }
+      }
+      // Cas du tableau existant mais vide
+    }
+    else {
+      if (decision_read_xml_file($file->uri)) {
+        array_push($var, array($file->uri, time()));
+      }
+    }
+  }
+  else {
+    // Création du tableau et ajout d'un premier élément
+    if (decision_read_xml_file($file->uri)) {
+      $var = array();
+      array_push($var, array($file->uri, time()));
+    }
+  }
+  // Mise à jour des éléments de correspondance
+  if (strcmp($type, 'decision') == 0) {
+    variable_set('decision_import_last_run', $var);
+  }
+  else {
+    variable_set('ra_import_last_run', $var);
+  }
+}
+
+/**
+ * Implement hook_menu
+ */
+function decision_import_menu() {
+  $items = array();
+
+  $items['admin/config/defenseurdesdroits'] = array(
+    'title' => 'Défenseur des droits',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array(
+      'decision_import'
+    ),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system')
+  );
+
+  $items['admin/config/defenseurdesdroits/importdecision'] = array(
+    'title' => 'import des décisions',
+    'description' => t('Import des décisions du défenseur des droits'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'decision_import_settings'
+    ),
+    'access arguments' => array(
+      'decision_import'
+    )
+  );
+
+  $items['admin/config/defenseurdesdroits/importdecision/in_progress'] = array(
+    'title' => 'import des décisions en cours',
+    'description' => t('Import des décisions du défenseur des droits en cours'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'decision_import_progress'
+    ),
+    'access arguments' => array(
+      'decision_import'
+    )
+  );
+
+  return $items;
+}
+
+/**
+ * Form builder function for decision import.
+ */
+function decision_import_settings() {
+
+  $decision_end = variable_get('decision_end');
+  empty($decision_end) ? variable_set('decison_end', 0) : '';
+  $ra_end = variable_get('ra_end');
+  empty($ra_end) ? variable_set('ra_end', 0) : '';
+
+
+  // Contenu du répertoire d'import
+  $form['content_repository'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content repository')
+  );
+
+  $form['content_repository']['decision']['decison_text'] = array(
+    '#type' => 'item',
+    '#title' => t('Decision \'s directory'),
+    '#markup' => get_directory_path_msg(DECISION_PATH)
+  );
+  $form['content_repository']['decision']['decision_import'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('Run decision import'),
+    '#submit' => array(
+      '_decision_import_run'
+    ),
+    '#disabled' => !files_into_directory(DECISION_PATH)
+  );
+  $form['content_repository']['decision']['decision_import_reset'] = array(
+    '#type' => 'button',
+    '#title' => 'reset_decision',
+    '#value' => t('Reset count decision'),
+    '#executes_submit_callback' => TRUE,
+    '#submit' => array('_decision_reset_count'),
+  );
+
+  $form['content_repository']['ra']['ra_text'] = array(
+    '#type' => 'item',
+    '#title' => t('Decision \'s directory'),
+    '#markup' => get_directory_path_msg(RA_PATH)
+  );
+  $form['content_repository']['ra']['ra_import'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('Run ra import'),
+    '#submit' => array(
+      '_ra_import_run'
+    ),
+    '#disabled' => !files_into_directory(RA_PATH)
+  );
+
+  $form['content_repository']['ra']['ra_import_reset'] = array(
+    '#type' => 'button',
+    '#title' => 'reset_ra',
+    '#value' => t('Reset count ra'),
+    '#executes_submit_callback' => TRUE,
+    '#submit' => array('_ra_reset_count'),
+  );
+
+  $form['reset_historique'] = array(
+    '#type' => 'button',
+    '#title' => 'reset_historique',
+    '#value' => t('Supprimier l\'historique des imports'),
+    '#executes_submit_callback' => TRUE,
+    '#submit' => array('_reset_historique'),
+  );
+  return $form;
+}
+
+function _decision_reset_count() {
+  variable_set('decision_end', 0);
+}
+
+
+function _ra_reset_count() {
+  variable_set('ra_end', 0);
+}
+
+
+function _reset_historique() {
+  $var = array();
+  variable_set('decision_import_last_run', $var);
+  variable_set('ra_import_last_run', $var);
+}
+/**
+ * Form builder function for decision import.
+ */
+function decision_import_progress() {
+
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'decision_import') . '/loop_import.js',
+  );
+  // Contenu du répertoire d'import
+  $form['content_repository'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Actions :')
+  );
+
+  $form['content_repository']['decision']['decision_continue'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('continue decision import'),
+    '#submit' => array(
+      '_import_run'
+    ),
+  );
+
+  $form['content_repository']['decision']['decision_stop'] = array(
+    '#type' => 'submit',
+    '#title' => 'stop',
+    '#value' => t('stop'),
+    '#submit' => array(
+      '_stop_import'
+    ),
+  );
+
+  return $form;
+}
+
+function _stop_import() {
+  drupal_goto('/admin/config/defenseurdesdroits/importdecision');
+}
+
+/**
+ * Import all XML files into directory_path
+ * @param unknown $form
+ * @param unknown $form_state
+ */
+function decision_import_run($file_path, $type, $imported_files = 0, $updated_files = 0) {
+
+
+  $files = files_into_directory($file_path);
+  $nb_files = count($files);
+  $var = null;
+
+  if (strcmp($type, 'decision') == 0) {
+    $var = variable_get('decision_import_last_run');
+    $end = variable_get('decision_end');
+  }
+  else {
+    $var = variable_get('ra_import_last_run');
+    $end = variable_get('ra_end');
+  }
+
+  $start = $end == 0 ? $end : $end + 1;
+  $end += 30;
+  $end >= $nb_files ? $end = $nb_files : '';
+
+  for ($f = $start; $f <= $end && $f < $nb_files; $f++) {
+    $files_int = array_values($files);
+    $file = $files_int[$f];
+    if (isset($var) && !is_null($var) && is_array($var)) {
+
+      // Si le tableau contient des éléments alors on recherche une corresponance
+      if (count($var) > 0) {
+        $i = 0;
+        // Recherche d'une correspondance existante
+        while ($i < count($var)) {
+          if (isset($var[$i])) {
+            if (strcmp($var[$i][0], $file->uri) != 0) {
+              $i++;
+            }
+            else {
+              break;
+            }
+          }
+          else {
+            $i++;
+            continue;
+          }
+        }
+
+        // Cas où une correspondance a été trouvée
+        if (isset($var[$i]) && strcmp($var[$i][0], $file->uri) == 0) {
+          $arr = $var[$i];
+          $dateDernierImport = $arr[1];
+          $dateDeModifFichier = filemtime($file->uri);
+
+          if ($dateDeModifFichier >= $dateDernierImport) {
+            // Le fichier va être mis à jour
+            if (decision_read_xml_file($file->uri)) {
+              unset($var[$i]);
+              array_push($var, array($file->uri, time()));
+              ++$updated_files;
+            }
+          }
+          // Cas où aucune correspondance n'a été trouvée
+        }
+        else {
+          // Le fichier n'a pas encore été importé
+          if (decision_read_xml_file($file->uri)) {
+            array_push($var, array($file->uri, time()));
+            ++$imported_files;
+          }
+        }
+        // Cas du tableau existant mais vide
+      }
+      else {
+        if (decision_read_xml_file($file->uri)) {
+          array_push($var, array($file->uri, time()));
+          ++$imported_files;
+        }
+      }
+    }
+    else {
+      // Création du tableau et ajout d'un premier élément
+      if (decision_read_xml_file($file->uri)) {
+        $var = array();
+        array_push($var, array($file->uri, time()));
+        ++$imported_files;
+      }
+    }
+    // Mise à jour des éléments de correspondance
+
+    if (strcmp($type, 'decision') == 0) {
+      variable_set('decision_import_last_run', $var);
+    }
+    else {
+      variable_set('ra_import_last_run', $var);
+    }
+
+  }
+
+  drupal_set_message(t('New import (' . $imported_files . ' files)'));
+  drupal_set_message(t('Updated (' . $updated_files . ' files)'));
+  drupal_set_message(t($start . ' files imported on ' . $nb_files));
+  (strcmp($type, 'decision') == 0) ? variable_set('decision_end', $end) : variable_set('ra_end', $end);
+
+
+  if ($end < $nb_files) {
+    drupal_goto('/admin/config/defenseurdesdroits/importdecision/in_progress', array(
+      'query' => array(
+        'type' => $type,
+        'imported_files' => $imported_files,
+        'updated_files' => $updated_files
+      )
+    ));
+  }
+  else {
+    (strcmp($type, 'decision') == 0) ? variable_set('decision_end', 0) : variable_set('ra_end', 0);
+    drupal_goto('/admin/config/defenseurdesdroits/importdecision');
+
+  }
+}
+
+
+// Lit le fichier XML $uri et créer les décisions
+function decision_read_xml_file($uri) {
+  try {
+    $dom = new DOMDocument();
+    $dom->load($uri);
+
+
+    $errors = libxml_get_errors();
+    if (!empty($errors)) {
+      foreach ($errors as $error) {
+        drupal_set_message(libxml_display_error($error), 'error');
+      }
+      libxml_clear_errors();
+      return FALSE;
+    }
+
+    // Gestion des erreurs
+    set_error_handler('error_to_excpetion');
+    try {
+      $dom->schemaValidate(DECISION_PATH . 'decisions.xsd');
+    } catch (ErrorException $e) {
+      drupal_set_message(nl2br($e->getMessage() . ' in ' . $uri), 'warning');
+      return FALSE;
+    }
+    // Retour à la gestion des erreurs par défaut
+    restore_error_handler();
+
+    $xml = simplexml_import_dom($dom);
+    _create_decision_ra($xml);
+    return TRUE;
+  } catch (Exception $e) {
+    drupal_set_message(t($e->getMessage() . 'in' . $uri), 'error');
+    return FALSE;
+  }
+}
+
+// Import des fichiers XML de type décision
+function _decision_import_run() {
+  return decision_import_run(DECISION_PATH, 'decision');
+}
+
+// Import des fichiers XML de type règlement aimiable
+function _ra_import_run() {
+  return decision_import_run(RA_PATH, 'ra');
+}
+
+function _import_run() {
+  $type = $_GET['type'];
+  return decision_import_run((strcmp($type, 'decision') == 0) ? DECISION_PATH : RA_PATH, $type, $_GET['imported_files'], $_GET['updated_files']);
+}
+
+// Création de décisions
+function _create_decision_ra($xml) {
+  $decision = new stdClass();
+  $decision->type = 'ct_decision';
+  node_object_prepare($decision);
+
+  if (strlen((string) $xml->META->META_SPEC->META_DDD->TITRE) >= 255) {
+    $decision->title = mb_substr ($xml->META->META_SPEC->META_DDD->TITRE, 0, 255);
+  }
+  else {
+    $decision->title = (string) $xml->META->META_SPEC->META_DDD->TITRE;
+  }
+
+  $decision->language = LANGUAGE_NONE;
+
+  if ($nid = node_exist($decision->type, $decision->title)) {
+    $decision = node_load($nid);
+  }
+
+  $decision->uid = 1;
+  $decision->field_article_date[LANGUAGE_NONE][0]['value'] = (string) $xml->META->META_SPEC->META_DDD->DATE_DEC;
+
+  // Type
+  $type = _get_term((string) $xml->META->META_COMMUN->NATURE, 'v_type');
+  $decision->field_article_type[LANGUAGE_NONE][0]['tid'] = $type->tid;
+
+  // Autorité
+  $author = _get_term((string) $xml->META->META_COMMUN->ORIGINE, 'autoriter');
+  $decision->field_decision_author[LANGUAGE_NONE][0]['tid'] = $author->tid;
+
+  $date_year = substr((string) $xml->META->META_SPEC->META_DDD->DATE_DEC, 0, 4);
+  $in_array = FALSE;
+  foreach ($author->field_annee[LANGUAGE_NONE] as $year) {
+    if ($year['value'] == $date_year) {
+      $in_array = TRUE;
+    }
+  }
+  if ($in_array == FALSE) {
+    $author->field_annee[LANGUAGE_NONE][]['value'] = $date_year;
+    entity_save('taxonomy_term', $author);
+  }
+
+  // Thématique
+  $thematique = taxonomy_get_term_by_name((string) $xml->META->META_COMMUN->THEMATIQUE, 'v_theme');
+
+  if (!empty($thematique)) {
+    $theme = array_pop($thematique);
+    // Classement
+    $classement = _get_term((string) $xml->META->META_SPEC->META_DDD->CLASSEMENT, 'v_theme');
+    $classement->parent = $theme->tid;
+    taxonomy_term_save($classement);
+    // $decision->field_article_theme[LANGUAGE_NONE][0]['tid'] = $theme->tid;
+    $decision->field_article_theme[LANGUAGE_NONE][0]['tid'] = $classement->tid;
+  }
+
+  // Mots clés
+  $taxonomy = taxonomy_vocabulary_machine_name_load('v_keyword');
+  $keywords = explode(', ', $xml->META->META_SPEC->META_DDD->MOTS_CLES);
+  $i = 0;
+  foreach ($keywords as $keyword) {
+    $terms = taxonomy_get_term_by_name($keyword, 'v_keyword');
+    if (empty($terms)) {
+      $term = _create_taxonomy($taxonomy->vid, $keyword);
+    }
+    else {
+      $term = array_pop($terms);
+    }
+    $decision->field_article_keyword[LANGUAGE_NONE][$i]['tid'] = $term->tid;
+    $i++;
+  }
+  // Nature qualifié
+  $decision->field_decision_nature_qualifiee[LANGUAGE_NONE][0]['value'] = (string) $xml->META->META_SPEC->META_DDD->NATURE_QUALIFIEE;
+  $decision->field_decision_nature_qualifiee[LANGUAGE_NONE][0]['format'] = 'full_html';
+
+  // Résumé
+  $decision->field_article_descriptif[LANGUAGE_NONE][0]['value'] = html_entity_decode((string) $xml->TEXTE->RESUME);
+  $decision->field_article_descriptif[LANGUAGE_NONE][0]['format'] = 'full_html';
+
+  $decision->body[LANGUAGE_NONE][0]['value'] = htmlspecialchars_decode((string) $xml->TEXTE->CONTENU);
+  $decision->body[LANGUAGE_NONE][0]['format'] = 'full_html';
+
+  // Documents
+  if ((string) $xml->META->META_SPEC->META_DDD->URL_DDD != '') {
+    $alias = parse_url((string) $xml->META->META_SPEC->META_DDD->URL_DDD, PHP_URL_PATH);
+    $alias = substr($alias, 1);
+    $destination = _get_path((string) $xml->META->META_COMMUN->NATURE, (string) $xml->META->META_SPEC->META_DDD->NUMERO);
+    $decision->field_article_document[LANGUAGE_NONE][0]['sid'] = _create_atom_file($destination, $alias);
+
+  }
+  else {
+    scald_atom_delete($decision->field_article_document[LANGUAGE_NONE][0]['sid']);
+    $decision->field_article_document[LANGUAGE_NONE][0]['sid'] = NULL;
+  }
+
+  node_submit($decision);
+  node_save($decision);
+
+  // Suivi
+  $suivis = $xml->META->META_SPEC->META_DDD->SUIVI;
+  _create_suivi($suivis, $decision, (string) $xml->META->META_COMMUN->NATURE);
+
+  node_save($decision);
+  return $decision;
+}
+
+// Création des suivis
+function _create_suivi($suivis, &$decision, $type) {
+  $destination = _get_path($type);
+
+  $query = new EntityFieldQuery();
+  $entities = $query->entityCondition('entity_type', 'field_collection_item')
+    ->entityCondition('bundle', 'field_decision_suivi')
+    ->execute();
+
+  // Supprime les anciens suivis de la décision
+  if (isset($decision->field_decision_suivi[LANGUAGE_NONE])) {
+    foreach ($decision->field_decision_suivi[LANGUAGE_NONE] as $key => $value) {
+      if ($value['value'] != NULL) {
+        $field_collection_item = field_collection_item_load($value['value']);
+        if (isset($field_collection_item) && $field_collection_item != NULL) {
+          $field_collection_item->delete();
+        }
+      }
+      unset($decision->field_decision_suivi[LANGUAGE_NONE][$key]);
+    }
+  }
+
+  $k = 0;
+  // Supprime les items du suivi
+  foreach ($suivis->ITEM as $item) {
+
+    // réinitialisation des variables (si création d'un PDF lors du précédent suivi)
+    $sid = NULL;
+    $alias = NULL;
+    $destination = _get_path('Décision', NULL);
+    $possede_pdf = FALSE;
+
+    if ((string) $item->URL_DDD != '') {
+      // Traitement du PDF (upload...)
+      $possede_pdf = TRUE;
+      $url = explode('/', (string) $item->URL_DDD);
+
+      $link = array_pop($url);
+      $isJP = array_pop($url);
+
+      $alias = parse_url((string) $item->URL_DDD, PHP_URL_PATH);
+      $alias = substr($alias, 1);
+
+
+      if ($isJP === 'jp') {
+        $destination .= $isJP . '/' . $link;
+      }
+      else {
+        $destination .= $link;
+      }
+    }
+
+    $field_entity = NULL;
+    $field_entity = entity_create('field_collection_item', array(
+      'field_name' => 'field_decision_suivi'
+    ));
+    $field_entity->setHostEntity('node', $decision);
+
+    $field_entity->field_title[LANGUAGE_NONE][0]['value'] = (string) $item->TITRE;
+    if (!empty($item->DATE)) {
+      $field_entity->field_article_date[LANGUAGE_NONE][0]['value'] = (string) $item->DATE;
+    }
+    $field_entity->field_article_descriptif[LANGUAGE_NONE][0]['value'] = (string) $item->RESUME;
+    $field_entity->field_article_descriptif[LANGUAGE_NONE][0]['format'] = 'full_html';
+
+    // Si le XML définit un PDF, on l'ajoute à l'entité en cours de création
+    if ($possede_pdf) {
+      $sid = _create_atom_file($destination, $alias);
+      $field_entity->field_article_document[LANGUAGE_NONE][0]['sid'] = $sid;
+    }
+
+    // Sauvegarde de l'entité
+    $field_entity->save();
+    $k++;
+  }
+
+  return $decision;
+}
+
+
+// Vérifie si le fichier existe
+function _file_exist_in_database($database, $field, $name) {
+  return db_select($database, 'f')->fields('f')
+    ->condition($field, $name, 'LIKE')
+    ->execute()
+    ->fetchAssoc();
+}
+
+// Création du document et d'atome s'il n'existe pas déjà.
+function _create_atom_file($destination, $uri) {
+
+  $file = plupload_file_uri_to_object($destination);
+  $file_pointer = _file_exist_in_database('file_managed', 'filename', $file->filename);
+
+  if (!$file_pointer) {
+    $file_pointer = file_save($file);
+    if (!$file_pointer) {
+      return NULL;
+    }
+  }
+  else {
+    if ($file_pointer['uri'] != $destination) {
+      $result = db_delete('file_managed')
+        ->condition('filename', $file->filename, 'LIKE')
+        ->execute();
+      $file_pointer = file_save($file);
+
+    }
+  }
+
+
+  if (is_object($file_pointer)) {
+    $file_pointer->display = 1;
+  }
+  else {
+    $file_pointer['display'] = 1;
+  }
+
+  $atom = _file_exist_in_database('scald_atoms', 'title', $file->filename);
+
+  if (!$atom) {
+    $atom = new ScaldAtom('file', 'scald_file');
+    $atom->title = $file->filename; // @see scald_file.module
+    $atom->base_id = is_object($file_pointer) ? $file_pointer->fid : $file_pointer['fid']; // @see scald_file.module
+    $atom->description = NULL;
+    $atom->format = NULL;
+    $atom->publisher = NULL;
+    $atom->scald_file[LANGUAGE_NONE][0] = (array) $file_pointer;
+
+    scald_file_scald_fetch($atom, 'atom');
+    $sid = scald_atom_save($atom);
+  }
+  else {
+    $fileid = is_object($file_pointer) ? $file_pointer->fid : $file_pointer['fid'];
+    $sid = $atom['sid'];
+
+    if ($fileid != $atom['base_id']) {
+      $atom = scald_atom_load($atom['sid']);
+      $atom->base_id = is_object($file_pointer) ? $file_pointer->fid : $file_pointer['fid']; // @see scald_file.module
+      scald_file_scald_fetch($atom, 'atom');
+      $sid = scald_atom_save($atom);
+    }
+  }
+
+  // Création des alias des pdf
+  $file_fid = is_object($file_pointer) ? $file_pointer->fid : $file_pointer['fid'];
+
+  $path = array('source' => 'filefield_paths/alias/' . $file_fid);
+
+  $alias = drupal_get_path_alias($path['source']);
+
+  if ($alias !== $path['source']) {
+    path_delete($path);
+  }
+
+  $path['alias'] = $uri;
+
+  path_save($path);
+
+  return $sid;
+}
+
+function _get_term($term_name, $vocabulary_name) {
+  $terms = taxonomy_get_term_by_name($term_name, $vocabulary_name);
+  if (empty($terms)) {
+    $taxonomy = taxonomy_vocabulary_machine_name_load($vocabulary_name);
+    $term = _create_taxonomy($taxonomy->vid, $term_name);
+  }
+  else {
+    $term = array_pop($terms);
+  }
+  return $term;
+}
+
+// Créer un term de taxonomy
+function _create_taxonomy($vid, $name) {
+  $term = new StdClass();
+  $term->name = $name;
+  $term->vid = $vid;
+  taxonomy_term_save($term);
+  return $term;
+}
+
+// Donne le chemin suivant le type
+function _get_path($type, $name = NULL) {
+  $destination = ($type === 'Décision') ? DECISION_PATH : RA_PATH;
+  // $destination = DECISION_PATH;
+  $destination .= 'pdf/';
+  if ($name) {
+    $destination .= $name . '.pdf';
+  }
+  return $destination;
+}

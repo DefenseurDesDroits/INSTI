@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680787" login="XDELAMBERT">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>LAMBERT (de)</nom>
+            <prenom>Xavier</prenom>
+        </identite>
+        <email>xavier.de-lambert@defenseurdesdroits.fr</email>
+        <photo>XDELAMBERT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Gironde</libelle>
+                <libelleSecondaire />
+                <adresse>17 ter, rue Vital Carles</adresse>
+                <boitePostale />
+                <tel>05 56 90 63 15</tel>
+                <fax>05 56 90 63 18</fax>
+                <ville cp="33000"><value>BORDEAUX</value></ville>
+                <poi>
+                    <longitude>-0.578408</longitude>
+                    <latitude>44.840559</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

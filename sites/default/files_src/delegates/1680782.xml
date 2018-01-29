@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680782" login="MROUX">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>ROUX</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.roux@defenseurdesdroits.fr</email>
+        <photo>MROUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Alpes-Maritimes</libelle>
+                <libelleSecondaire>Centre Administratif Départemental </libelleSecondaire>
+                <adresse>147, route de Grenoble</adresse>
+                <boitePostale />
+                <tel>04 93 72 22 74</tel>
+                <fax>04 93 72 24 53</fax>
+                <ville cp="06000"><value>NICE</value></ville>
+                <poi>
+                    <longitude>7.198548</longitude>
+                    <latitude>43.672463</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI
+</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

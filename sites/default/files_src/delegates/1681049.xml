@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681049" login="PBAUDELOT">
+        <identite civilite="Monsieur" codeDep="03">
+            <nom>BAUDELOT</nom>
+            <prenom>Pascal</prenom>
+        </identite>
+        <email>pascal.baudelot@defenseurdesdroits.fr</email>
+        <photo>PBAUDELOT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de Lignerolles</libelle>
+                <libelleSecondaire />
+                <adresse>Place des Droits de l&apos;Homme</adresse>
+                <boitePostale />
+                <tel>04 70 51 51 05</tel>
+                <fax />
+                <ville cp="03410"><value>LIGNEROLLES</value></ville>
+                <poi>
+                    <longitude>2.567021</longitude>
+                    <latitude>46.279825</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Allier</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Michel de l&apos;Hospital</adresse>
+                <boitePostale>CS 31649</boitePostale>
+                <tel>04 70 48 30 47</tel>
+                <fax />
+                <ville cp="03016"><value>MOULINS CEDEX</value></ville>
+                <poi>
+                    <longitude>3.334577</longitude>
+                    <latitude>46.567514</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Vichy</libelle>
+                <libelleSecondaire />
+                <adresse>17, rue Alquié</adresse>
+                <boitePostale />
+                <tel>04 70 30 13 50</tel>
+                <fax />
+                <ville cp="03200"><value>VICHY</value></ville>
+                <poi>
+                    <longitude>3.417928</longitude>
+                    <latitude>46.124555</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

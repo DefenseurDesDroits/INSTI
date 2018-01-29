@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680944" login="LSIX">
+        <identite civilite="Madame" codeDep="78">
+            <nom>SIX</nom>
+            <prenom>Laurence</prenom>
+        </identite>
+        <email>laurence.six@defenseurdesdroits.fr</email>
+        <photo>LSIX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Yvelines</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Jean Houdon</adresse>
+                <boitePostale />
+                <tel>01 39 49 76 92</tel>
+                <fax />
+                <ville cp="78010"><value>VERSAILLES CEDEX</value></ville>
+                <poi>
+                    <longitude>2.133919</longitude>
+                    <latitude>48.802957</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

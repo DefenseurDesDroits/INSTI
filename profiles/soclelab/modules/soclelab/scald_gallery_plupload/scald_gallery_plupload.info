@@ -1,0 +1,13 @@
+name = Scald: Gallery plupload
+description = Provides Gallery atoms from any atom types. Image can be import by plupload to generate a gallery.
+package = Scald Providers
+core = 7.x
+dependencies[] = atom_reference
+dependencies[] = libraries
+dependencies[] = plupload
+
+version = "7.x-1.0-rc1"
+core = "7.x"
+project = "scald_gallery_plupload"
+datestamp = "1416402737"
+

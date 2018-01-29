@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681334" login="CPRADEL">
+        <identite civilite="Monsieur" codeDep="01">
+            <nom>PRADEL</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.pradel@defenseurdesdroits.fr</email>
+        <photo>CPRADEL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Bourg-en-Bresse</libelle>
+                <libelleSecondaire />
+                <adresse>20, chemin de la Providence</adresse>
+                <boitePostale>BP 90321</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="01000"><value>BOURG-EN-BRESSE</value></ville>
+                <poi>
+                    <longitude>5.241445</longitude>
+                    <latitude>46.205197</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus sur RDV JEUDI
+LUNDI
+MARDI
+VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Bourg-en-Bresse</libelle>
+                <libelleSecondaire />
+                <adresse>34, cours de Verdun</adresse>
+                <boitePostale />
+                <tel>04 74 14 01 40</tel>
+                <fax />
+                <ville cp="01000"><value>BOURG-EN-BRESSE</value></ville>
+                <poi>
+                    <longitude>5.227105</longitude>
+                    <latitude>46.206274</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Ain</libelle>
+                <libelleSecondaire>Bureau A 301 </libelleSecondaire>
+                <adresse>45, avenue Alsace Lorraine</adresse>
+                <boitePostale />
+                <tel>04 74 32 30 45</tel>
+                <fax>04 74 32 30 07</fax>
+                <ville cp="01000"><value>BOURG-EN-BRESSE</value></ville>
+                <poi>
+                    <longitude>5.222124</longitude>
+                    <latitude>46.202182</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,13 @@
+name = DdD - View Marché Public
+description = Vue sur les marchés publics
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_marche
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = marche
+features_exclude[dependencies][ctools] = ctools
+mtime = 1442840187
+project path = sites/default/modules/features

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681260" login="JSIRVENS">
+        <identite civilite="Monsieur" codeDep="48">
+            <nom>SIRVENS</nom>
+            <prenom>Jacques</prenom>
+        </identite>
+        <email>jacques.sirvens@defenseurdesdroits.fr</email>
+        <photo>JSIRVENS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de Langogne</libelle>
+                <libelleSecondaire />
+                <adresse>Boulevard des Capucins</adresse>
+                <boitePostale />
+                <tel>04 66 69 10 33</tel>
+                <fax />
+                <ville cp="48300"><value>LANGOGNE</value></ville>
+                <poi>
+                    <longitude>3.855708</longitude>
+                    <latitude>44.727619</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Lozère</libelle>
+                <libelleSecondaire />
+                <adresse>Faubourg Montbel</adresse>
+                <boitePostale />
+                <tel>04 66 49 67 58</tel>
+                <fax />
+                <ville cp="48000"><value>MENDE</value></ville>
+                <poi>
+                    <longitude>3.498890</longitude>
+                    <latitude>44.517791</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

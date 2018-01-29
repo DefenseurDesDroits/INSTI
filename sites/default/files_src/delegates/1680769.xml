@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680769" login="MMLAPEYRERE">
+        <identite civilite="Madame" codeDep="13">
+            <nom>LAPEYRERE</nom>
+            <prenom>Marie-Madeleine</prenom>
+        </identite>
+        <email>marie-madeleine.lapeyrere@defenseurdesdroits.fr</email>
+        <photo>MMLAPEYRERE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Salon-de-Provence</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale>BP 369</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="13300"><value>SALON-DE-PROVENCE</value></ville>
+                <poi>
+                    <longitude>5.085174</longitude>
+                    <latitude>43.643274</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Salon-de-Provence</libelle>
+                <libelleSecondaire />
+                <adresse>Place André Passelaige</adresse>
+                <boitePostale />
+                <tel>04 90 45 32 80</tel>
+                <fax>04 90 45 32 88</fax>
+                <ville cp="13300"><value>SALON-DE-PROVENCE</value></ville>
+                <poi>
+                    <longitude>5.098487</longitude>
+                    <latitude>43.639529</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

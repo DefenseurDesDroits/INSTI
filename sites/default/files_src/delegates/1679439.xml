@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679439" login="FCOLIN">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>COLIN</nom>
+            <prenom>Frédéric</prenom>
+        </identite>
+        <email>frederic.colin@defenseurdesdroits.fr</email>
+        <photo>FCOLIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Aubagne</libelle>
+                <libelleSecondaire />
+                <adresse>26, cours Voltaire</adresse>
+                <boitePostale />
+                <tel>04 42 36 98 10</tel>
+                <fax />
+                <ville cp="13400"><value>AUBAGNE</value></ville>
+                <poi>
+                    <longitude>5.569257</longitude>
+                    <latitude>43.295529</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de services publics Les Matagots</libelle>
+                <libelleSecondaire />
+                <adresse>1222 avenue Guillaume Dulac</adresse>
+                <boitePostale />
+                <tel>04 42 01 60 60</tel>
+                <fax />
+                <ville cp="13600"><value>LA CIOTAT</value></ville>
+                <poi>
+                    <longitude>5.612550</longitude>
+                    <latitude>43.195603</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de La Ciotat</libelle>
+                <libelleSecondaire />
+                <adresse>167 boulevard Jean Jaurès</adresse>
+                <boitePostale />
+                <tel>04 96 18 54 17</tel>
+                <fax />
+                <ville cp="13600"><value>LA CIOTAT</value></ville>
+                <poi>
+                    <longitude>5.609369</longitude>
+                    <latitude>43.177497</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

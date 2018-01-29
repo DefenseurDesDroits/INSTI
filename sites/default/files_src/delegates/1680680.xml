@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680680" login="CAUZAS">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>AUZAS</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.auzas@defenseurdesdroits.fr</email>
+        <photo>CAUZAS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Plateforme du service au public</libelle>
+                <libelleSecondaire>Centre commercial de Saige</libelleSecondaire>
+                <adresse>1, rue de l&apos;Horloge</adresse>
+                <boitePostale />
+                <tel>05 56 15 25 60</tel>
+                <fax />
+                <ville cp="33600"><value>PESSAC</value></ville>
+                <poi>
+                    <longitude>-0.633424</longitude>
+                    <latitude>44.790951</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

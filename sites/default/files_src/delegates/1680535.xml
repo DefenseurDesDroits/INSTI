@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680535" login="NOTTOLINI">
+        <identite civilite="Monsieur" codeDep="82">
+            <nom>OTTOLINI</nom>
+            <prenom>Norbert</prenom>
+        </identite>
+        <email>norbert.ottolini@defenseurdesdroits.fr</email>
+        <photo>NOTTOLINI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Direction départementale de la cohésion sociale et de la protection des populations (DDCSPP)</libelle>
+                <libelleSecondaire />
+                <adresse>140, avenue Marcel Unal </adresse>
+                <boitePostale>BP 730</boitePostale>
+                <tel>05 63 21 18 06</tel>
+                <fax />
+                <ville cp="82013"><value>MONTAUBAN CEDEX</value></ville>
+                <poi>
+                    <longitude>1.437498</longitude>
+                    <latitude>44.444107</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

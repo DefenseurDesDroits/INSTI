@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679529" login="RBOULIER">
+        <identite civilite="Monsieur" codeDep="57">
+            <nom>BOULIER</nom>
+            <prenom>René</prenom>
+        </identite>
+        <email>rene.boulier@defenseurdesdroits.fr</email>
+        <photo>RBOULIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Centre communal d&apos;action sociale</libelle>
+                <libelleSecondaire />
+                <adresse>29, boulevard Jeanne d&apos;Arc</adresse>
+                <boitePostale />
+                <tel>03 82 34 00 77</tel>
+                <fax />
+                <ville cp="57100"><value>THIONVILLE</value></ville>
+                <poi>
+                    <longitude>6.158840</longitude>
+                    <latitude>49.356467</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Hayange</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue de Wendel</adresse>
+                <boitePostale />
+                <tel>03 82 55 01 44</tel>
+                <fax />
+                <ville cp="57700"><value>HAYANGE</value></ville>
+                <poi>
+                    <longitude>6.077371</longitude>
+                    <latitude>49.325416</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

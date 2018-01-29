@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680876" login="LMILLOT">
+        <identite civilite="Madame" codeDep="77">
+            <nom>MILLOT</nom>
+            <prenom>Lucette</prenom>
+        </identite>
+        <email>lucette.millot@defenseurdesdroits.fr</email>
+        <photo>LMILLOT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Melun</libelle>
+                <libelleSecondaire />
+                <adresse>10, quai de la Courtille</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="77000"><value>MELUN</value></ville>
+                <poi>
+                    <longitude>2.660301</longitude>
+                    <latitude>48.536533</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1e et 3e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Centre Pénitentiaire du Sud-Francilien</libelle>
+                <libelleSecondaire />
+                <adresse>Le Plessis Picard</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="77550"><value>RÉAU</value></ville>
+                <poi>
+                    <longitude>2.476237</longitude>
+                    <latitude>49.333163</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Savigny-le-Temple</libelle>
+                <libelleSecondaire />
+                <adresse>34, place Elisée Reclus </adresse>
+                <boitePostale>BP 50</boitePostale>
+                <tel>01 64 19 10 60</tel>
+                <fax />
+                <ville cp="77176"><value>SAVIGNY-LE-TEMPLE</value></ville>
+                <poi>
+                    <longitude>2.582966</longitude>
+                    <latitude>48.594229</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681106" login="GCUGNEY">
+        <identite civilite="Monsieur" codeDep="21">
+            <nom>CUGNEY</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.cugney@defenseurdesdroits.fr</email>
+        <photo>GCUGNEY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de Justice et du droit de Chenôve</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue des Clématites</adresse>
+                <boitePostale />
+                <tel>03 80 51 78 30</tel>
+                <fax />
+                <ville cp="21300"><value>CHENÔVE</value></ville>
+                <poi>
+                    <longitude>5.010519</longitude>
+                    <latitude>47.299666</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680098" login="JCDELAMARE">
+        <identite civilite="Monsieur" codeDep="94">
+            <nom>DELAMARE</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.delamare@defenseurdesdroits.fr</email>
+        <photo>JCDELAMARE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Val-de-Marne</libelle>
+                <libelleSecondaire />
+                <adresse>21-29, avenue du Général de Gaulle</adresse>
+                <boitePostale />
+                <tel>01 49 56 63 75</tel>
+                <fax>01 48 99 38 04</fax>
+                <ville cp="94000"><value>CRÉTEIL</value></ville>
+                <poi>
+                    <longitude>2.447244</longitude>
+                    <latitude>48.796186</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

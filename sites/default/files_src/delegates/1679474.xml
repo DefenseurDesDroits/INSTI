@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679474" login="ADARIES">
+        <identite civilite="Monsieur" codeDep="31">
+            <nom>DARIES</nom>
+            <prenom>André</prenom>
+        </identite>
+        <email>andre.daries@defenseurdesdroits.fr</email>
+        <photo>ADARIES.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Tournefeuille</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue Paul Valéry</adresse>
+                <boitePostale />
+                <tel>05 61 78 69 18</tel>
+                <fax>05 61 78 69 38</fax>
+                <ville cp="31170"><value>TOURNEFEUILLE</value></ville>
+                <poi>
+                    <longitude>1.333899</longitude>
+                    <latitude>43.586733</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

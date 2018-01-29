@@ -1,0 +1,326 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the SocleLab' install profile.
+ */
+
+include_once 'soclelab.install_callbacks.inc';
+
+
+/**
+ * Implements hook_requirements().
+ */
+function soclelab_requirements($phase) {
+  $requirements = array();
+  // Ensure translations don't break during installation.
+  $t = get_t();
+  if($phase == 'install') {
+
+    // Test PHP minimum execution time
+    $requirements['php_max_execution_time'] = array(
+      'title' => $t('PHP Max Execution Time'),
+      'value' => ini_get('max_execution_time'),
+    );
+    $max_execution_time = (int)ini_get('max_execution_time');
+    // Don't set the error when max_execution_time is 0 (Infinite).
+    if ($max_execution_time && $max_execution_time < DRUPAL_MINIMUM_MAX_EXECUTION_TIME) {
+      $requirements['php_max_execution_time']['description'] = $t('Your PHP execution time is too low, please set it greater than or equal to %time seconds.', array('%time' => DRUPAL_MINIMUM_MAX_EXECUTION_TIME));
+      $requirements['php_max_execution_time']['severity'] = REQUIREMENT_ERROR;
+    }
+
+    if(ini_get('apc.shm_size') != NULL) {
+      // Check for apc.shm_size = 96mb
+      $requirements['apc_shm_size'] = array(
+        'title' => $t('APC shim size'),
+        'value' => ini_get('apc.shm_size'),
+      );
+
+      $shm_size = preg_split('/[a-zA-Z]/', ini_get('apc.shm_size'));
+      $shm_size = $shm_size[0];
+
+      // only check if APC var is being set somewhere (usually apc.ini).
+      // throw error if there is less than 96MB available
+      if ($shm_size && $shm_size < SOCLELAB_MINIMUM_APC_CACHE) {
+        $requirements['apc_shm_size']['description'] = $t('APC is installed but %shm_size is not enough APC cache to successfully install Drupal SocleLAb\'.
+           Find your <em>apc.ini</em> file and change the <em>apc.shm_size</em> value to at least <em>%min_shm_size</em>.', array('%shm_size' => $shm_size . 'M', '%min_shm_size' => SOCLELAB_MINIMUM_APC_CACHE . 'M'));
+        $requirements['apc_shm_size']['severity'] = REQUIREMENT_ERROR;
+      }
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function soclelab_install_tasks() {
+  //make sure we have more memory than 196M. if not lets try to increase it.
+  if (ini_get('memory_limit') != '-1' && ini_get('memory_limit') <= '196M' && ini_get('memory_limit') >= '128M') {
+    ini_set('memory_limit', '196M');
+  }
+
+  $selected_extras = variable_get('soclelab_selected_extras', array());
+
+  return array(
+   // 'soclelab_revert_features' => array(
+   //   'display' => FALSE,
+   // ),
+/*    'soclelab_install_add_users' => array(
+      'display_name' =>  st('Ajout des users'),
+      'display' => TRUE,
+      'type' => 'normal',
+      'run' => INSTALL_TASK_RUN_IF_REACHED,
+      'function' => '_soclelab_create_demo_users'
+    ),
+    'soclelab_install_add_taxo' => array(
+      'display_name' =>  st('Ajout des taxonomies'),
+      'display' => TRUE,
+      'type' => 'normal',
+      'run' => INSTALL_TASK_RUN_IF_REACHED,
+      'function' => '_soclelab_create_demo_taxonomy_terms'
+    ),
+    'soclelab_install_add_content' => array(
+      'display_name' =>  st('Ajout de contenus'),
+      'display' => TRUE,
+      'type' => 'normal',
+      'run' => INSTALL_TASK_RUN_IF_REACHED,
+      'function' => '_soclelab_create_demo_content',
+    ),*/
+  );
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function soclelab_install_tasks_alter(&$tasks, $install_state) {
+  global $install_state;
+  $tasks['install_profile_modules']['display_name'] = st('Install SocleLab');
+
+  // Skip profile selection step.
+  $tasks['install_select_profile']['display'] = FALSE;
+
+  // Skip language selection install step and default language to French.
+  $tasks['install_select_locale']['display'] = FALSE;
+  $tasks['install_select_locale']['run'] = INSTALL_TASK_SKIP;
+  $install_state['parameters']['locale'] = 'fr';
+  
+  // Override "install_finished" task to redirect people to home page.
+  $tasks['install_finished']['function'] = 'soclelab_install_finished';
+}
+
+/**
+ * Override of install_finished() without the useless text.
+ */
+function soclelab_install_finished(&$install_state) {
+  drupal_set_title(st('@drupal installation complete', array('@drupal' => drupal_install_profile_distribution_name())), PASS_THROUGH);
+  $messages = drupal_set_message();
+
+  // Remember the profile which was used.
+  variable_set('install_profile', drupal_get_profile());
+  variable_set('install_task', 'done');
+
+  // Flush all caches to ensure that any full bootstraps during the installer
+  // do not leave stale cached data, and that any content types or other items
+  // registered by the installation profile are registered correctly.
+  drupal_flush_all_caches();
+
+  // Installation profiles are always loaded last
+  db_update('system')
+    ->fields(array('weight' => 1000))
+    ->condition('type', 'module')
+    ->condition('name', drupal_get_profile())
+    ->execute();
+
+  // Cache a fully-built schema.
+  drupal_get_schema(NULL, TRUE);
+
+  // Run cron to populate update status tables (if available) so that users
+  // will be warned if they've installed an out of date Drupal version.
+  // Will also trigger indexing of profile-supplied content or feeds.
+  drupal_cron_run();
+
+  variable_set('title_node', array(
+    'auto_attach' => array('title' => 'title'),
+    'hide_label' => array('page' => 0, 'entity' => 0),
+  ));
+
+  if (isset($messages['error'])) {
+    $output = '<p>' . (isset($messages['error']) ? st('Review the messages above before visiting <a href="@url">your new site</a>.', array('@url' => url(''))) : st('<a href="@url">Visit your new site</a>.', array('@url' => url('')))) . '</p>';
+    return $output;
+  }
+  else {
+    // Since any module can add a drupal_set_message, this can bug the user
+    // when we redirect him to the front page. For a better user experience,
+    // remove all the message that are only "notifications" message.
+    drupal_get_messages('status', TRUE);
+    drupal_get_messages('completed', TRUE);
+    // Migrate adds its messages under the wrong type, see #1659150.
+    drupal_get_messages('ok', TRUE);
+
+    // If we don't install drupal using Drush, redirect the user to the front
+    // page.
+    if (!drupal_is_cli()) {
+      drupal_goto('');
+    }
+  }
+}
+
+/*
+ * Revert Features after the installation.
+ */
+function soclelab_revert_features() {
+  // Revert Features components to ensure that they are in their default states.
+  $revert = array(
+    'sl_content' => array(''),
+    'sl_blocks' => array(''),
+    'sl_forms' => array(''),
+    'sl_search' => array(''),
+    'sl_socialshare' => array(''),
+    'sl_utilities' => array(''),
+    'sl_cf_sociaux' => array(''),
+    'sl_cf_stylesimages' => array(''),
+    'sl_contact' => array(''),
+    'sl_ct_accueil' => array(''),
+    'sl_ct_article' => array(''),
+    'sl_ct_event' => array(''),
+    'sl_ct_faq' => array(''),
+    'sl_ct_page' => array(''),
+    'sl_galerie' => array(''),
+    'sl_taxonomy' => array(''),
+    'sl_tx_themes' => array(''),
+    'sl_tx_typecontenu' => array(''),
+    'sl_vu_actualites' => array(''),
+    'sl_vu_backoffice' => array(''),
+    'sl_vu_events' => array(''),
+    'sl_vu_publications' => array(''),
+    'sl_vu_taxonomy' => array(''),
+  );
+  
+  features_revert($revert);
+}
+
+/**
+ * Task callback: uses Batch API to enable modules based on user selection.
+ *
+ * Creates all demo content if requested and installs optional modules that
+ * providing additional functionality to the base install.
+ */
+function soclelab_install_additional_modules() {
+  $selected_extras = variable_get('soclelab_selected_extras', array());
+
+  $modules = array();
+
+  // Resolve the dependencies now, so that module_enable() doesn't need
+  // to do it later for each individual module (which kills performance).
+  $files = system_rebuild_module_data();
+  $modules_sorted = array();
+  foreach ($modules as $module) {
+    if ($files[$module]->requires) {
+      // Create a list of dependencies that haven't been installed yet.
+      $dependencies = array_keys($files[$module]->requires);
+      $dependencies = array_filter($dependencies, '_soclelab_filter_dependencies');
+      // Add them to the module list.
+      $modules = array_merge($modules, $dependencies);
+    }
+  }
+  $modules = array_unique($modules);
+  foreach ($modules as $module) {
+    $modules_sorted[$module] = $files[$module]->sort;
+  }
+  arsort($modules_sorted);
+
+  $operations = array();
+
+  // Enable the selected modules.
+  foreach ($modules_sorted as $module => $weight) {
+    $operations[] = array('_soclelab_enable_module', array($module, $files[$module]->info['name']));
+  }
+
+  // Create the example content.
+  //if (!empty($selected_extras['example_content'])) {
+  /*  // Create the demo users.
+    $operations[] = array('_soclelab_create_demo_users', array(t('Created demo users.')));
+
+    // Create the demo taxonomy terms.
+    $operations[] = array('_soclelab_create_demo_taxonomy_terms', array(t('Created taxonomy terms.')));
+
+    // Create the demo content.
+    $operations[] = array('_soclelab_create_demo_content', array(t('Created demo content.')));*/
+  //}
+
+  $batch = array(
+    'title' => !empty($selected_extras['example_content']) ? st('Installing example content') : st('Installing additional functionality'),
+    'operations' => $operations,
+    'file' => drupal_get_path('profile', 'soclelab') . '/soclelab.install_callbacks.inc',
+  );
+
+  return $batch;
+}
+
+/**
+ * array_filter() callback used to filter out already installed dependencies.
+ */
+function _soclelab_filter_dependencies($dependency) {
+  return !module_exists($dependency);
+}
+
+/**
+ * This function rebuild node access.
+ */
+function soclelab_rebuild_node_access() {
+  // Copied from node_access_rebuild() which sets its own batch while we need to
+  // return a batch which will be automatically run by the installer.
+  $batch = array(
+    'title' => t('Rebuilding content access permissions'),
+    'operations' => array(
+      array('_node_access_rebuild_batch_operation', array()),
+    ),
+    'finished' => '_node_access_rebuild_batch_finished',
+  );
+
+  return $batch;
+}
+
+/**
+ * Helper function to generate a machine name similar to the user's full name.
+ */
+function soclelab_normalize_name($name) {
+  return drupal_strtolower(str_replace(' ','_', $name));
+}
+
+/**
+ * Implements hook_install().
+ */
+function soclelab_install() {
+  // Enable the Socle lab theme and set it as the default.
+  theme_enable(array('bootstrap', 'socle_lab'));
+
+    // The Bartik theme is automatically enabled during installation. Disable it.
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  // Set the default and administration themes.
+  variable_set('theme_default', 'socle_lab');
+  // Set a default administrative theme:
+  variable_set('admin_theme', 'seven');
+  variable_set('node_admin_theme', TRUE);
+
+  // Do not use the administration theme when editing or creating content.
+  variable_set('node_admin_theme', '1');
+
+  // SocleLab requires that the system theme settings form
+  // be submitted in order for its themes' settings to be properly set
+  // and the resulting css files generated.
+  // For more background, see http://drupal.org/node/1776730.
+  module_load_include('inc', 'system', 'system.admin');
+  foreach (array('bootstrap', 'socle_lab') as $theme_name) {
+    $form_state = form_state_defaults();
+    $form_state['build_info']['args'][0] = $theme_name;
+    $form_state['values'] = array();
+    drupal_form_submit('system_theme_settings', $form_state);
+  }
+}

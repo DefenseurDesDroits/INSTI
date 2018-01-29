@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2792044" login="SSERENO">
+        <identite civilite="Madame" codeDep="13">
+            <nom>SERENO</nom>
+            <prenom>Sophie</prenom>
+        </identite>
+        <email>sophie.sereno@defenseurdesdroits.fr</email>
+        <photo>SSERENO.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Espace du citoyen</libelle>
+                <libelleSecondaire />
+                <adresse>39 avenue du Port</adresse>
+                <boitePostale />
+                <tel>04 42 86 37 97</tel>
+                <fax />
+                <ville cp="13230"><value>PORT ST LOUIS DU RHONE</value></ville>
+                <poi>
+                    <longitude>4.801918</longitude>
+                    <latitude>43.389514</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison du citoyen</libelle>
+                <libelleSecondaire>bât. de l&apos;Istrium</libelleSecondaire>
+                <adresse>CEC les Heures Claires
+2 chemin de la Combe aux Fées</adresse>
+                <boitePostale />
+                <tel>04 13 29 56 20</tel>
+                <fax />
+                <ville cp="13800"><value>ISTRES</value></ville>
+                <poi>
+                    <longitude>4.995290</longitude>
+                    <latitude>43.502375</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison du droit</libelle>
+                <libelleSecondaire />
+                <adresse>Place des Vents-Provençaux</adresse>
+                <boitePostale />
+                <tel>04 90 50 30 96</tel>
+                <fax />
+                <ville cp="13140"><value>MIRAMAS</value></ville>
+                <poi>
+                    <longitude>5.009013</longitude>
+                    <latitude>43.593593</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>2e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

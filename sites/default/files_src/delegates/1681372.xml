@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681372" login="PCHAMPOD">
+        <identite civilite="Monsieur" codeDep="61">
+            <nom>CHAMPOD</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.champod@defenseurdesdroits.fr</email>
+        <photo>PCHAMPOD.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention d&apos;Argentan</libelle>
+                <libelleSecondaire>Le Frichot</libelleSecondaire>
+                <adresse>Route de Tercei</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="61200"><value>ARGENTAN</value></ville>
+                <poi>
+                    <longitude>-0.014168</longitude>
+                    <latitude>48.729754</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus MARDI</jour>
+                        <horaire />
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison du citoyen</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue des Pervenches</adresse>
+                <boitePostale />
+                <tel>02 33 80 62 18</tel>
+                <fax>02 33 80 62 16</fax>
+                <ville cp="61200"><value>ARGENTAN</value></ville>
+                <poi>
+                    <longitude>-0.004837</longitude>
+                    <latitude>48.741954</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679679" login="PPUECH">
+        <identite civilite="Monsieur" codeDep="30">
+            <nom>PUECH</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.puech@defenseurdesdroits.fr</email>
+        <photo>PPUECH.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Hôtel de ville </libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Hôtel de ville</adresse>
+                <boitePostale />
+                <tel>04 66 76 70 01</tel>
+                <fax />
+                <ville cp="30000"><value>NÎMES</value></ville>
+                <poi>
+                    <longitude>4.360015</longitude>
+                    <latitude>43.836582</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Mairie annexe (CAM)</libelle>
+                <libelleSecondaire>Mas de Mingue</libelleSecondaire>
+                <adresse>251, avenue Monseigneur Claverie </adresse>
+                <boitePostale />
+                <tel>04 30 06 77 20</tel>
+                <fax>04 66 02 12 49</fax>
+                <ville cp="30000"><value>NÎMES</value></ville>
+                <poi>
+                    <longitude>4.398760</longitude>
+                    <latitude>43.855293</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Nîmes</libelle>
+                <libelleSecondaire />
+                <adresse>19, place Pythagore</adresse>
+                <boitePostale />
+                <tel>04 66 23 73 90</tel>
+                <fax>04 66 64 58 08</fax>
+                <ville cp="30900"><value>NÎMES</value></ville>
+                <poi>
+                    <longitude>4.327797</longitude>
+                    <latitude>43.830441</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

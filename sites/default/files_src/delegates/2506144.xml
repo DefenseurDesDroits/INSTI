@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2506144" login="GGANTOU">
+        <identite civilite="Monsieur" codeDep="81">
+            <nom>GANTOU</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.gantou@defenseurdesdroits.fr</email>
+        <photo>GGANTOU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de la Citoyenneté</libelle>
+                <libelleSecondaire />
+                <adresse>26, avenue Bouloc Torcatis</adresse>
+                <boitePostale />
+                <tel>05 63 36 39 39</tel>
+                <fax />
+                <ville cp="81400"><value>CARMAUX</value></ville>
+                <poi>
+                    <longitude>1.446630</longitude>
+                    <latitude>43.578698</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison des services publics</libelle>
+                <libelleSecondaire>Quartier Cantepau </libelleSecondaire>
+                <adresse>18, square Bonaparte</adresse>
+                <boitePostale />
+                <tel>05 63 49 15 00</tel>
+                <fax>05 63 77 83 95</fax>
+                <ville cp="81000"><value>ALBI</value></ville>
+                <poi>
+                    <longitude>2.155611</longitude>
+                    <latitude>43.942901</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

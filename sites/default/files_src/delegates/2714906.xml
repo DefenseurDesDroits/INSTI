@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2714906" login="MSALAHEDDINE">
+        <identite civilite="Madame" codeDep="13">
+            <nom>SALAH-EDDINE</nom>
+            <prenom>Myriam</prenom>
+        </identite>
+        <email>myriam.salah-heddine@defenseurdesdroits.fr</email>
+        <photo>MSALAHEDDINE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Centre social La Bricarde (CCO)</libelle>
+                <libelleSecondaire />
+                <adresse>Rés. La Bricarde Bât. P1
+159 bld Henri Barnier</adresse>
+                <boitePostale />
+                <tel>04 91 51 31 76</tel>
+                <fax />
+                <ville cp="13015"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.345612</longitude>
+                    <latitude>43.369936</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

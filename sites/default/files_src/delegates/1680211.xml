@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680211" login="RHANDOUS">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>HANDOUS</nom>
+            <prenom>Raoul</prenom>
+        </identite>
+        <email>raoul.handous@defenseurdesdroits.fr</email>
+        <photo>RHANDOUS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Paris Nord-Est</libelle>
+                <libelleSecondaire />
+                <adresse>15/17, rue du Buisson St-Louis</adresse>
+                <boitePostale />
+                <tel>01 53 38 62 80</tel>
+                <fax>01 42 01 89 25</fax>
+                <ville cp="75010"><value>PARIS - 10</value></ville>
+                <poi>
+                    <longitude>2.373537</longitude>
+                    <latitude>48.872538</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

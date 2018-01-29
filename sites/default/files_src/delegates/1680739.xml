@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680739" login="GDELAVIEUVILLE">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>LA VIEUVILLE (de)</nom>
+            <prenom>Gilles</prenom>
+        </identite>
+        <email>gilles.de-la-vieuville@defenseurdesdroits.fr</email>
+        <photo>GDELAVIEUVILLE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 13ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>33, boulevard Kellermann</adresse>
+                <boitePostale />
+                <tel>01 55 78 20 56</tel>
+                <fax>01 44 68 08 17</fax>
+                <ville cp="75013"><value>PARIS - 13</value></ville>
+                <poi>
+                    <longitude>2.354949</longitude>
+                    <latitude>48.820288</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

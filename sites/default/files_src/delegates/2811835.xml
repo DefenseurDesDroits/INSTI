@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2811835" login="JCHIARONI">
+        <identite civilite="Madame" codeDep="2B">
+            <nom>CHIARONI</nom>
+            <prenom>Josette</prenom>
+        </identite>
+        <email>josette.chiaroni@defenseurdesdroits.fr</email>
+        <photo>JCHIARONI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Corse</libelle>
+                <libelleSecondaire />
+                <adresse>Rond-Point du Maréchal Leclerc</adresse>
+                <boitePostale />
+                <tel>04 95 34 51 55</tel>
+                <fax />
+                <ville cp="20401"><value>BASTIA CEDEX 9</value></ville>
+                <poi>
+                    <longitude>9.447789</longitude>
+                    <latitude>42.703078</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

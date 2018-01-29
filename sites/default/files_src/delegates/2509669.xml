@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2509669" login="MLEGOFF">
+        <identite civilite="Madame" codeDep="44">
+            <nom>LE GOFF</nom>
+            <prenom>MARTINE</prenom>
+        </identite>
+        <email>martine.le-goff@defenseurdesdroits.fr</email>
+        <photo>MLEGOFF.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Espace Civique Jacques Dubé</libelle>
+                <libelleSecondaire>Point d&apos;accès au droit</libelleSecondaire>
+                <adresse>1 bis, rue des Ajoncs</adresse>
+                <boitePostale />
+                <tel>02 28 55 99 73</tel>
+                <fax />
+                <ville cp="44600"><value>SAINT-NAZAIRE</value></ville>
+                <poi>
+                    <longitude>-2.249666</longitude>
+                    <latitude>47.267097</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

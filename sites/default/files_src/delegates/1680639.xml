@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680639" login="GLAGAY">
+        <identite civilite="Monsieur" codeDep="91">
+            <nom>LAGAY</nom>
+            <prenom>Georges</prenom>
+        </identite>
+        <email>georges.lagay@defenseurdesdroits.fr</email>
+        <photo>GLAGAY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>7, Le Clos de la Cathédrale</adresse>
+                <boitePostale />
+                <tel>01 60 91 07 88</tel>
+                <fax />
+                <ville cp="91000"><value>ÉVRY</value></ville>
+                <poi>
+                    <longitude>2.428418</longitude>
+                    <latitude>48.623161</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

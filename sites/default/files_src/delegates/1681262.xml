@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681262" login="JCDEMAR">
+        <identite civilite="Monsieur" codeDep="972">
+            <nom>DEMAR</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.demar@defenseurdesdroits.fr</email>
+        <photo>JCDEMAR.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice</libelle>
+                <libelleSecondaire>Quartier Bas Mission</libelleSecondaire>
+                <adresse>36, rue Pierre Zobda-Quitmann</adresse>
+                <boitePostale />
+                <tel>0596 51 31 28</tel>
+                <fax>0596 51 20 74</fax>
+                <ville cp="97232"><value>LE LAMENTIN</value></ville>
+                <poi>
+                    <longitude>6.565081</longitude>
+                    <latitude>46.072589</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Ducos</libelle>
+                <libelleSecondaire />
+                <adresse>Quartier Champigny</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="97224"><value>DUCOS</value></ville>
+                <poi>
+                    <longitude>-60.976044</longitude>
+                    <latitude>14.576001</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

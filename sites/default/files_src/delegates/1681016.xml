@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681016" login="CTILLIE">
+        <identite civilite="Madame" codeDep="46">
+            <nom>TILLIE</nom>
+            <prenom>Christine</prenom>
+        </identite>
+        <email>christine.tillie@defenseurdesdroits.fr</email>
+        <photo>CTILLIE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Direction départementale de la cohésion sociale et de la protection des populations (DDCSPP)</libelle>
+                <libelleSecondaire />
+                <adresse>304, rue Victor Hugo</adresse>
+                <boitePostale />
+                <tel>05 65 20 56 73</tel>
+                <fax />
+                <ville cp="46000"><value>CAHORS</value></ville>
+                <poi>
+                    <longitude>1.437498</longitude>
+                    <latitude>44.444107</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

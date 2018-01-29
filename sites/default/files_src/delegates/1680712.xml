@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680712" login="FBIGET">
+        <identite civilite="Monsieur" codeDep="80">
+            <nom>BIGET</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.biget@defenseurdesdroits.fr</email>
+        <photo>FBIGET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt d&apos;Amiens</libelle>
+                <libelleSecondaire />
+                <adresse>85, avenue de la Défense Passive</adresse>
+                <boitePostale>BP 3005</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="80000"><value>AMIENS</value></ville>
+                <poi>
+                    <longitude>2.323757</longitude>
+                    <latitude>49.908924</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Amiens</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Léo Lagrange</adresse>
+                <boitePostale />
+                <tel>03 22 22 29 90 </tel>
+                <fax>03 22 43 91 12</fax>
+                <ville cp="80000"><value>AMIENS</value></ville>
+                <poi>
+                    <longitude>2.311327</longitude>
+                    <latitude>49.910409</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2517859" login="BREVILSIGNORAT">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>REVIL-SIGNORAT</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.revil-signorat@defenseurdesdroits.fr</email>
+        <photo>BREVILSIGNORAT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Isère</libelle>
+                <libelleSecondaire />
+                <adresse>12, place Verdun </adresse>
+                <boitePostale>CS 71046</boitePostale>
+                <tel>04 76 60 32 83</tel>
+                <fax />
+                <ville cp="38021"><value>GRENOBLE CEDEX 1</value></ville>
+                <poi>
+                    <longitude>5.733005</longitude>
+                    <latitude>45.188443</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680926" login="RBLANC">
+        <identite civilite="Monsieur" codeDep="67">
+            <nom>BLANC</nom>
+            <prenom>Robert</prenom>
+        </identite>
+        <email>robert.blanc@defenseurdesdroits.fr</email>
+        <photo>RBLANC.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Hôtel de Ville de Schiltigheim</libelle>
+                <libelleSecondaire />
+                <adresse>110, route de Bischwiller</adresse>
+                <boitePostale />
+                <tel>03 88 83 90 00</tel>
+                <fax>03 88 83 84 98</fax>
+                <ville cp="67300"><value>SCHILTIGHEIM</value></ville>
+                <poi>
+                    <longitude>7.748340</longitude>
+                    <latitude>48.605407</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Strasbourg</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue Engelmann</adresse>
+                <boitePostale>BP 25</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="67000"><value>STRASBOURG</value></ville>
+                <poi>
+                    <longitude>7.730875</longitude>
+                    <latitude>48.565566</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

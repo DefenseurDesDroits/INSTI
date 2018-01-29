@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681039" login="JJEROME">
+        <identite civilite="Monsieur" codeDep="49">
+            <nom>JÉROME</nom>
+            <prenom>Jack</prenom>
+        </identite>
+        <email>jack.jerome@defenseurdesdroits.fr</email>
+        <photo>JJEROME.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Angers - Loire Métropole</libelle>
+                <libelleSecondaire>Centre commercial du Chapeau de Gendarme</libelleSecondaire>
+                <adresse>Avenue Winston Churchill</adresse>
+                <boitePostale />
+                <tel>02 41 45 34 00</tel>
+                <fax />
+                <ville cp="49000"><value>ANGERS</value></ville>
+                <poi>
+                    <longitude>-0.555953</longitude>
+                    <latitude>47.451206</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>sur RDV et JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

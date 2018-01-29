@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679759" login="BPOLLETGERARD">
+        <identite civilite="Madame" codeDep="51">
+            <nom>POLLET-GÉRARD</nom>
+            <prenom>Bernadette</prenom>
+        </identite>
+        <email>bernadette.pollet-gerard@defenseurdesdroits.fr</email>
+        <photo>BPOLLETGERARD.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Antenne municipale Croix-Rouge</libelle>
+                <libelleSecondaire />
+                <adresse>1 bis, avenue du Général Bonaparte</adresse>
+                <boitePostale />
+                <tel>03 26 35 60 20</tel>
+                <fax />
+                <ville cp="51100"><value>REIMS</value></ville>
+                <poi>
+                    <longitude>4.007658</longitude>
+                    <latitude>49.230558</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accueil multi-services de Bernon</libelle>
+                <libelleSecondaire />
+                <adresse>25, avenue Middelkerke</adresse>
+                <boitePostale />
+                <tel>03 26 55 76 60</tel>
+                <fax>03 26 55 76 64</fax>
+                <ville cp="51200"><value>ÉPERNAY</value></ville>
+                <poi>
+                    <longitude>3.969824</longitude>
+                    <latitude>49.036731</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

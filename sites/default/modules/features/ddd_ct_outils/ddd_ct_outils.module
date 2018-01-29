@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD ct_outils feature.
+ */
+
+include_once 'ddd_ct_outils.features.inc';

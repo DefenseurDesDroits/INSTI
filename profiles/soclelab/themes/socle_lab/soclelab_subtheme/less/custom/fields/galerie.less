@@ -1,0 +1,56 @@
+.list-img-galerie{
+  .clearfix;
+  margin-bottom: 56px;
+}
+
+.image-mini-galerie{
+  padding: 0;
+  overflow: hidden;
+  vertical-align: top;
+  height: 140px;
+  border: 1px solid @bor_galerie;
+  z-index: 10;
+  line-height: 157px;
+  
+  @media @scr_mobile{
+    height: 100px;
+  }
+  @media @scr_tablet{
+    height: 158px;
+  }
+  @media @scr_wide{
+    height: 158px;
+  }
+  
+  a{
+    display: block;
+  }
+  img{
+    max-width: 100%;
+    height: auto !important; 
+    #transition > .all(0.20s);
+  }  
+  
+  &:hover{
+    border-color: @bor_galerie_h;
+    img{
+      max-width: 120%;
+      margin-left: -10%;
+      margin-top: -6%;
+    }
+    .overlay-shaddow{
+      display: none;
+    }
+  }
+  .overlay-shaddow{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("@{dir_img}/content/galerie-mini-shaddow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}

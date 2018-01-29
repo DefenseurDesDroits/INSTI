@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679624" login="MPREVOST">
+        <identite civilite="Monsieur" codeDep="91">
+            <nom>PRÉVOST</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.prevost@defenseurdesdroits.fr</email>
+        <photo>MPREVOST.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de Massy</libelle>
+                <libelleSecondaire />
+                <adresse>1, avenue du Général de Gaulle</adresse>
+                <boitePostale />
+                <tel>01 60 13 30 00</tel>
+                <fax />
+                <ville cp="91300"><value>MASSY</value></ville>
+                <poi>
+                    <longitude>2.271722</longitude>
+                    <latitude>48.730901</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Fleury-Mérogis</libelle>
+                <libelleSecondaire />
+                <adresse>Avenue des Peupliers</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="91700"><value>FLEURY-MÉROGIS</value></ville>
+                <poi>
+                    <longitude>2.375309</longitude>
+                    <latitude>48.639328</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit des Ulis</libelle>
+                <libelleSecondaire>Groupe scolaire des Bergères</libelleSecondaire>
+                <adresse>Rue des Bergères</adresse>
+                <boitePostale />
+                <tel>01 64 86 14 05</tel>
+                <fax />
+                <ville cp="91940"><value>LES ULIS</value></ville>
+                <poi>
+                    <longitude>2.167449</longitude>
+                    <latitude>48.684757</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

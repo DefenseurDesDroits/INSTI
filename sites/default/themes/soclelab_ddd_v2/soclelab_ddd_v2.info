@@ -1,0 +1,92 @@
+name = Défenseur des Droits
+description = Boostrap sub-theme.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[header]             = 'Section - Header'
+regions[header_second]      = 'Section - Header 2'
+regions[header_language]    = 'Section - Header Language'
+regions[highlighted_banner] = 'Section - Bannière mise en avant'
+regions[highlighted]    = 'Section - Mis en avant'
+regions[before_content]        = 'Section - Before Content'
+regions[content]        = 'Section - Contenu principal'
+regions[baspage]        = 'Section - Bas de page'
+regions[footer_before]  = 'Section - Footer - Bannière avant'
+regions[footer]         = 'Section - Footer'
+regions[footer_first]   = 'Section - Footer 1'
+regions[footer_second]  = 'Section - Footer 2'
+regions[footer_third]   = 'Section - Footer 3'
+regions[footer_fourth]  = 'Section - Footer 4'
+regions[footer_fifth]   = 'Section - Footer 5'
+regions[footer_sixth]   = 'Section - Footer 6'
+regions[footer_after]   = 'Section - Footer - Bannière après'
+regions[page_bottom_first]  = 'Section - Bottom 1'
+regions[page_bottom_second] = 'Section - Bottom 2'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions HP
+;;;;;;;;;;;;;;;;;;;;;
+regions[banners]        = 'Section - Bannière HP'
+regions[competence]     = 'Section - Competences HP'
+regions[actualites]     = 'Section - Actualite HP'
+regions[histoires]      = 'Section - Histoires HP'
+regions[faq]            = 'Section - FAQ HP'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/style_gle.css
+stylesheets[all][] = css/mobile.css
+stylesheets[print][] = css/print.css
+;stylesheets[all][] = css/bootstrap.min.css
+;stylesheets[all][] = css/bootstrap.min.css.map
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010
+
+; ;----------------------------------
+; ; METHOD 1: Bootstrap Source Files
+; ;----------------------------------
+; 
+; ;;;;;;;;;;;;;;;;;;;;;
+; ;; Scripts
+; ;;;;;;;;;;;;;;;;;;;;;
+; 
+scripts[] = 'jquery.bxslider/jquery.bxslider.min.js'
+scripts[] = 'jquery.matchHeight/jquery.matchHeight-min.js'
+scripts[] = 'js/soclelab_ddd_v2.js'
+;;scripts[] = 'js/menu.js'
+;scripts[] = 'js/bootstrap.min.js'
+;scripts[] = 'bootstrap/js/affix.js'
+;scripts[] = 'bootstrap/js/alert.js'
+;scripts[] = 'bootstrap/js/button.js'
+;scripts[] = 'bootstrap/js/carousel.js'
+;scripts[] = 'bootstrap/js/collapse.js'
+;scripts[] = 'bootstrap/js/dropdown.js'
+;scripts[] = 'bootstrap/js/modal.js'
+;scripts[] = 'bootstrap/js/tooltip.js'
+;scripts[] = 'bootstrap/js/popover.js'
+;scripts[] = 'bootstrap/js/scrollspy.js'
+;scripts[] = 'bootstrap/js/tab.js'
+;scripts[] = 'bootstrap/js/transition.js'
+;
+; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
+;settings[bootstrap_cdn] = ''
+
+
+; ;-------------------------
+; ; METHOD 2: Bootstrap CDN
+; ;-------------------------
+;
+; Method 2 uses BootstrapCDN, the only thing you might need to provide here
+; is overrides to Bootstrap theme settings. Copy them here from the base theme
+; to override.

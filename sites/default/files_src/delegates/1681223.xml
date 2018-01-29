@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681223" login="LDEGASTINES">
+        <identite civilite="Madame" codeDep="72">
+            <nom>GASTINES (de)</nom>
+            <prenom>Laurence</prenom>
+        </identite>
+        <email>laurence.degastines@defenseurdesdroits.fr</email>
+        <photo>LDEGASTINES.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Allonnes</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue Georges Bizet</adresse>
+                <boitePostale>BP 62</boitePostale>
+                <tel>02 43 39 05 85</tel>
+                <fax />
+                <ville cp="72703"><value>ALLONNES CEDEX</value></ville>
+                <poi>
+                    <longitude>0.162543</longitude>
+                    <latitude>47.970257</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des adolescents</libelle>
+                <libelleSecondaire />
+                <adresse>15, rue Gougeard</adresse>
+                <boitePostale />
+                <tel>02 43 24 75 74</tel>
+                <fax />
+                <ville cp="72000"><value>LE MANS</value></ville>
+                <poi>
+                    <longitude>0.202192</longitude>
+                    <latitude>48.004815</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

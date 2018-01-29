@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2691892" login="PMATHEY">
+        <identite civilite="Monsieur" codeDep="01">
+            <nom>MATHEY</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.mathey@defenseurdesdroits.fr</email>
+        <photo>PMATHEY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Bourg-en-Bresse</libelle>
+                <libelleSecondaire />
+                <adresse>34, cours de Verdun</adresse>
+                <boitePostale />
+                <tel>04 74 14 01 40</tel>
+                <fax />
+                <ville cp="01000"><value>BOURG EN BRESSE</value></ville>
+                <poi>
+                    <longitude>5.227116</longitude>
+                    <latitude>46.206304</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

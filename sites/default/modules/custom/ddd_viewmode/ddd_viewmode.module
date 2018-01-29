@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the DdD view mode.
+ */
+
+ /**
+* Implements hook_entity_info_alter().
+*/
+function ddd_viewmode_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['liste_accueil_small'] = array(
+    'label' => t('DdD - Homepage thumbnail small'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['vignette_related'] = array(
+    'label' => t('DdD - Related thumbnail'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['search_index'] = array(
+    'label' => t('DdD - Search index'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['included_section'] = array(
+      'label' => t('DdD - Included Section'),
+      'custom settings' => TRUE,
+  );
+}

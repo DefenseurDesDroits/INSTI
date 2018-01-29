@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature article feature.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function sl_taxonomy_init() {
+  $args =  arg();
+
+  if(isset($args[0]) && $args[0] === "taxonomy" && !(isset($args[3]) && ($args[3] === "edit" || $args[3] === "translate" || $args[3] === "display"))){
+    if(isset($args[2])){
+      $taxonomy = taxonomy_term_load($args[2]);
+      $parents = taxonomy_get_parents_all($args[2]);
+
+      if(!isset($parents[count($parents)-1])){ return; }
+      $value = $parents[count($parents)-1];
+
+      if(isset($value->name)){
+        $temp_name = $value->name;
+        $temp_name = strtolower($temp_name);
+        if($temp_name === "publications" || $temp_name === "publication"){
+          drupal_goto($GLOBALS['base_url']. (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . "publications?term_node_tid_depth_1=".$args[2], array('external' => TRUE));
+        }
+        if($temp_name === "actualite" || $temp_name === "actualites" || $temp_name === "actualité" ||$temp_name === "actualités"){
+          drupal_goto($GLOBALS['base_url']. (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . "actualites?term_node_tid_depth_1=".$args[2], array('external' => TRUE));
+        }
+        if($temp_name === "blog" || $temp_name === "blogs"){
+        	drupal_goto($GLOBALS['base_url']. (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . "blog?term_node_tid_depth_1=".$args[2], array('external' => TRUE));
+        }
+        if($temp_name === "outils"){
+        	drupal_goto($GLOBALS['base_url']. (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . "outils?term_node_tid_depth_1=".$args[2], array('external' => TRUE));
+        }
+      }
+    }
+  }   
+}

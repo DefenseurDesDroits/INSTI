@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680632" login="GLINDACHER">
+        <identite civilite="Monsieur" codeDep="67">
+            <nom>LINDACHER</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.lindacher@defenseurdesdroits.fr</email>
+        <photo>GLINDACHER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de Hoenheim</libelle>
+                <libelleSecondaire />
+                <adresse>28, rue de la République</adresse>
+                <boitePostale />
+                <tel>03 88 19 23 67</tel>
+                <fax>03 88 21 23 33</fax>
+                <ville cp="67800"><value>HOENHEIM</value></ville>
+                <poi>
+                    <longitude>7.755246</longitude>
+                    <latitude>48.620936</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Bas-Rhin</libelle>
+                <libelleSecondaire />
+                <adresse>5, place de la République</adresse>
+                <boitePostale />
+                <tel>03 88 21 67 68</tel>
+                <fax>03 88 21 23 33</fax>
+                <ville cp="67010"><value>STRASBOURG</value></ville>
+                <poi>
+                    <longitude>7.754827</longitude>
+                    <latitude>48.587922</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679675" login="PMAYET">
+        <identite civilite="Monsieur" codeDep="84">
+            <nom>MAYET</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.mayet@defenseurdesdroits.fr</email>
+        <photo>PMAYET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point service aux particuliers</libelle>
+                <libelleSecondaire>Club FACE Grand Avignon</libelleSecondaire>
+                <adresse>1 rue Antoine de Saint-Exupéry</adresse>
+                <boitePostale />
+                <tel>04 86 81 32 39</tel>
+                <fax />
+                <ville cp="84000"><value>AVIGNON</value></ville>
+                <poi>
+                    <longitude>4.844186</longitude>
+                    <latitude>43.931270</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de Vaucluse</libelle>
+                <libelleSecondaire />
+                <adresse>2, avenue de la Folie</adresse>
+                <boitePostale />
+                <tel>04 86 81 32 39</tel>
+                <fax />
+                <ville cp="84905"><value>AVIGNON CEDEX 9</value></ville>
+                <poi>
+                    <longitude>4.819284</longitude>
+                    <latitude>43.948394</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

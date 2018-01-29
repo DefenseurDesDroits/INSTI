@@ -1,0 +1,17 @@
+name = DdD - View Agenda
+description = Vue Agenda pour lister les évenements
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_agenda
+dependencies[] = ctools
+dependencies[] = ddd_agenda
+dependencies[] = entity
+dependencies[] = fe_block
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = ddd_agenda-block_agenda
+features[features_api][] = api:2
+features[views_view][] = agenda
+mtime = 1443013164
+project path = sites/default/modules/features

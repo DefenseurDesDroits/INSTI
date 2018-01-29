@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function ddd_tx_decision_block_info() {
+  $blocks['block_autorite_selected'] = array(
+    'info' => t('Filter selected autorite block')
+  );
+
+  $blocks['block_theme_selected'] = array(
+    'info' => t('Filter selected theme block')
+  );
+
+  $blocks['block_autorite_selected_ra'] = array(
+    'info' => t('Filter selected autorite block')
+  );
+
+  $blocks['block_theme_selected_ra'] = array(
+    'info' => t('Filter selected theme block')
+  );
+
+  return $blocks;
+}
+
+function ddd_tx_decision_get_url_decision(){
+  $views_base = views_get_view("decisions"); 
+  if(isset($views_base->display['page_decison']->display_options['path'])) { 
+     $url_views = "/" . getCurLang() . "/" . $views_base->display['page_decison']->display_options['path']; 
+  } else { $url_views = "/" . getCurLang() . "/decisions"; } 
+  return $url_views;
+}
+function ddd_tx_decision_get_url_decision_date(){
+  $views_base = views_get_view("decisions"); 
+  if(isset($views_base->display['date_filter']->display_options['path'])) { 
+     $url_views_date = "/" . getCurLang() . "/" . $views_base->display['date_filter']->display_options['path']; 
+  } else { $url_views_date = "/" . getCurLang() . "/decisions/date"; } 
+  return $url_views_date;
+}
+function ddd_tx_decision_get_url_reglement(){
+  $views_base = views_get_view("decisions"); 
+  if(isset($views_base->display['page_reglement']->display_options['path'])) { 
+     $url_views = "/" . getCurLang() . "/" . $views_base->display['page_reglement']->display_options['path']; 
+  } else { $url_views = "/" . getCurLang() . "/reglement-amiable"; } 
+  return $url_views;  
+}
+function ddd_tx_decision_get_url_reglement_date(){
+  $views_base = views_get_view("decisions"); 
+  if(isset($views_base->display['filter_date_reglement']->display_options['path'])) { 
+     $url_views_date = "/" . getCurLang() . "/" . $views_base->display['filter_date_reglement']->display_options['path']; 
+  } else { $url_views_date = "/" . getCurLang() . "/reglement-amiable/date"; } 
+  return $url_views_date;  
+}
+/**
+ * Implements hook_block_view().
+ */
+function ddd_tx_decision_block_view($delta = '') {
+  $block = array();
+  
+  switch ($delta) {
+    case 'block_autorite_selected':
+      $view = views_get_view('ddd_vu_theme');
+      $view->set_display('block_autorite');
+      $view->pre_execute();
+      $view->execute();
+  
+      $block['subject'] = '';
+      $block['content'] = theme('block--block-autorite-selected', array(
+        'rows' => $view->result,
+        'type' => ddd_tx_decision_get_url_decision_date()
+      ));
+      break;
+      
+    case 'block_theme_selected':
+      $view = views_get_view('ddd_vu_theme');
+      $view->set_display('block_theme');
+      $view->pre_execute();
+      $view->execute();
+  
+      $block['subject'] = '';
+      $block['content'] = theme('block--block-theme-selected', array(
+        'rows' => $view->result,
+        'type' => ddd_tx_decision_get_url_decision()
+      ));
+      break;
+      
+    case 'block_autorite_selected_ra':
+      $view = views_get_view('ddd_vu_theme');
+      $view->set_display('block_autorite_reg');
+      $view->pre_execute();
+      $view->execute();
+  
+      $block['subject'] = '';
+      $block['content'] = theme('block--block-autorite-selected-ra', array(
+        'rows' => $view->result,
+        'type' => ddd_tx_decision_get_url_reglement_date()
+      ));
+      break;
+      
+    case 'block_theme_selected_ra':
+      $view = views_get_view('ddd_vu_theme');
+      $view->set_display('block_theme_reg');
+      $view->pre_execute();
+      $view->execute();
+  
+      $block['subject'] = '';
+      $block['content'] = theme('block--block-theme-selected-ra', array(
+        'rows' => $view->result,
+        'type' => ddd_tx_decision_get_url_reglement()
+      ));
+      break;
+    default:
+      break;
+  }
+  
+  drupal_add_js(drupal_get_path('module', 'ddd_tx_decision') . '/js/ddd_tx_decision.js');
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ddd_tx_decision_theme($existing, $type, $theme, $path) {
+  return array(
+    'block--block-autorite-selected' => array(
+      'template' => 'themes/block--block-autorite-selected',
+      'variables' => array(
+        'rows' => NULL,
+        'type' => NULL
+      )
+    ),
+    'block--block-theme-selected' => array(
+      'template' => 'themes/block--block-theme-selected',
+      'variables' => array(
+        'rows' => NULL,
+        'type' => NULL
+      )
+    ),
+    'block--block-autorite-selected-ra' => array(
+      'template' => 'themes/block--block-autorite-selected-ra',
+      'variables' => array(
+        'rows' => NULL,
+        'type' => NULL
+      )
+    ),
+    'block--block-theme-selected-ra' => array(
+      'template' => 'themes/block--block-theme-selected-ra',
+      'variables' => array(
+        'rows' => NULL,
+        'type' => NULL
+      )
+    )
+  );
+}
+?>

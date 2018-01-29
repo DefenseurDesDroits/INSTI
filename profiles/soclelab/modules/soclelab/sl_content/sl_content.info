@@ -1,0 +1,7 @@
+name = Socle Lab' content
+description = Module de gestion des contenus du socle
+core = 7.x
+package = SocleLAB
+version = 7.x-1.0
+project = sl_content
+project path = sites/all/modules/custom

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679493" login="AMARINO">
+        <identite civilite="Monsieur" codeDep="35">
+            <nom>MARINO</nom>
+            <prenom>Antoine</prenom>
+        </identite>
+        <email>antoine.marino@defenseurdesdroits.fr</email>
+        <photo>AMARINO.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Rennes-Vézin le Coquet</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue du Petit Pré</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="35132"><value>VEZIN-LE-COQUET</value></ville>
+                <poi>
+                    <longitude>55.503586</longitude>
+                    <latitude>-20.918858</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux par mois
+Réservée aux détenus JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Direction de quartiers Nord-Est</libelle>
+                <libelleSecondaire>Centre commercial Europe </libelleSecondaire>
+                <adresse>32, rue de Trégain</adresse>
+                <boitePostale />
+                <tel>02 23 62 19 88</tel>
+                <fax>02 23 62 19 99</fax>
+                <ville cp="35700"><value>RENNES</value></ville>
+                <poi>
+                    <longitude>-1.658443</longitude>
+                    <latitude>48.126613</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

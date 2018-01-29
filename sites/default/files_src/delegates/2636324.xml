@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2636324" login="CMAILLOT">
+        <identite civilite="Monsieur" codeDep="974">
+            <nom>MAILLOT</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.maillot@defenseurdesdroits.fr</email>
+        <photo>CMAILLOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit</libelle>
+                <libelleSecondaire />
+                <adresse>155, avenue de l&apos;Europe - ZAC Chatoire</adresse>
+                <boitePostale />
+                <tel>02 62 57 31 26</tel>
+                <fax />
+                <ville cp="97430"><value>LE TAMPON</value></ville>
+                <poi>
+                    <longitude>4.906654</longitude>
+                    <latitude>45.733730</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

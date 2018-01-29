@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Recherche feature.
+ */
+
+include_once 'ddd_ct_search.features.inc';

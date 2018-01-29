@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681161" login="LPERU">
+        <identite civilite="Madame" codeDep="59">
+            <nom>PERU-PIROTTE</nom>
+            <prenom>Laurence</prenom>
+        </identite>
+        <email>laurence.peru-pirotte@defenseurdesdroits.fr</email>
+        <photo>LPERU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Tourcoing</libelle>
+                <libelleSecondaire>1er étage</libelleSecondaire>
+                <adresse>54, rue Gabriel Péri </adresse>
+                <boitePostale />
+                <tel>03 59 69 71 90</tel>
+                <fax>03 59 69 71 91</fax>
+                <ville cp="59200"><value>TOURCOING</value></ville>
+                <poi>
+                    <longitude>3.158213</longitude>
+                    <latitude>50.724706</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

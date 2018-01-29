@@ -1,0 +1,60 @@
+
+#page-highlighted{
+  background-color: @bg_highlighted;
+  padding-top: 35px;
+  
+  #block-sl-feature-accueil-block-carousel{
+    margin-bottom: 75px;
+    @media @scr_mobile{
+      margin: 0px -15px;
+    }
+    .carousel-text{
+      left: 40px;
+      @media @scr_mobile{
+        left: 0px;
+      }
+    }
+    .carousel-inner, .carousel-inner .node{
+      height: 415px;
+    }
+  }
+  
+  .nav-tabs{    // Menu d'administration
+    margin-bottom: 0px;
+    margin-top: 15px;
+    
+    @media @scr_mobile{
+      padding: 0;  
+    }
+    
+    a{
+      padding: 7px 20px 5px 20px;
+      font-size: 16px;
+      color: @bg_admin_tab_h;
+      display: block;
+    }
+    
+    li{
+      display: inline-block;
+      list-style: none;
+      background-color: @bg_admin_tab;
+      
+      &:hover{
+        background-color: @bg_admin_tab_h;
+        color: @bg_admin_tab_h;
+        a{ color: @bg_admin_tab_a; }
+      }
+    }
+    
+    .active{
+      background-color: @bg_admin_tab_a;
+      a{ color: @col_txt; }
+      
+      &:hover{
+        background-color: @bg_admin_tab_a;
+        a{ color: @col_txt; text-decoration: none; cursor: default;}
+      }
+    }
+  }
+}
+

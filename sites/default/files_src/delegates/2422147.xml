@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2422147" login="MLELEK">
+        <identite civilite="Madame" codeDep="62">
+            <nom>LELEK</nom>
+            <prenom>Marie-Paule</prenom>
+        </identite>
+        <email>marie-paule.lelek@defenseurdesdroits.fr</email>
+        <photo>MLELEK.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie</libelle>
+                <libelleSecondaire>Guichet d&apos;accès au droit et de prévention des litiges</libelleSecondaire>
+                <adresse>39, rue Pierre Bérégovoy</adresse>
+                <boitePostale />
+                <tel>03 59 41 34 13</tel>
+                <fax />
+                <ville cp="62700"><value>BRUAY-LA-BUISSIÈRE</value></ville>
+                <poi>
+                    <longitude>2.545773</longitude>
+                    <latitude>50.482020</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Béthune</libelle>
+                <libelleSecondaire />
+                <adresse>181, rue Gambetta</adresse>
+                <boitePostale />
+                <tel>03 21 61 50 50</tel>
+                <fax>03 21 55 30 30</fax>
+                <ville cp="62400"><value>BÉTHUNE</value></ville>
+                <poi>
+                    <longitude>2.637192</longitude>
+                    <latitude>50.532985</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 4e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

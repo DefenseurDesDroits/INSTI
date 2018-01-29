@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679460" login="PBERNARD">
+        <identite civilite="Monsieur" codeDep="26">
+            <nom>BERNARD</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.bernard@defenseurdesdroits.fr</email>
+        <photo>PBERNARD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Drôme</libelle>
+                <libelleSecondaire />
+                <adresse>3, boulevard Vauban</adresse>
+                <boitePostale />
+                <tel>04 75 79 28 57</tel>
+                <fax>04 75 79 28 55</fax>
+                <ville cp="26000"><value>VALENCE</value></ville>
+                <poi>
+                    <longitude>4.893546</longitude>
+                    <latitude>44.935599</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

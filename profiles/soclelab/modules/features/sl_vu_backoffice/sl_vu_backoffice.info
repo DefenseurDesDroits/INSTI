@@ -1,0 +1,13 @@
+name = Socle Lab' feature - views backoffice
+description = Feature de gestion des vues spécifiques aux backoffice
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_backoffice
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = vue_backoffice
+features_exclude[dependencies][ctools] = ctools
+mtime = 1453108132
+project path = profiles/soclelab/modules/features

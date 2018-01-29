@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679651" login="SHONORE">
+        <identite civilite="Monsieur" codeDep="972">
+            <nom>HONORÉ</nom>
+            <prenom>Serge</prenom>
+        </identite>
+        <email>serge.honore@defenseurdesdroits.fr</email>
+        <photo>SHONORE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Martinique</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Victor Sévère</adresse>
+                <boitePostale />
+                <tel>05 96 39 39 67</tel>
+                <fax>05 96 71 40 29</fax>
+                <ville cp="97200"><value>FORT-DE-FRANCE</value></ville>
+                <poi>
+                    <longitude>-61.072581</longitude>
+                    <latitude>14.609355</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI
+</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

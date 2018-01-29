@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681166" login="DPONRAMON">
+        <identite civilite="Madame" codeDep="42">
+            <nom>PONRAMON</nom>
+            <prenom>Dolorés</prenom>
+        </identite>
+        <email>dolores.ponramon@defenseurdesdroits.fr</email>
+        <photo>DPONRAMON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>ARRAVEM</libelle>
+                <libelleSecondaire />
+                <adresse>15, rue d&apos;Albon</adresse>
+                <boitePostale />
+                <tel>06 12 64 79 47</tel>
+                <fax />
+                <ville cp="42300"><value>ROANNE</value></ville>
+                <poi>
+                    <longitude>4.066392</longitude>
+                    <latitude>46.039414</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

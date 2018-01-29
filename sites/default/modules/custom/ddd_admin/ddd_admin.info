@@ -1,0 +1,7 @@
+name = DdD - Admin
+description = Module de gestion admin
+core = 7.x
+package = DdD
+version = 7.x-1.0
+project = ddd_admin
+project path = sites/default/modules/custom

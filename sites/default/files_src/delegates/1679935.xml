@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679935" login="GCAMPS">
+        <identite civilite="Monsieur" codeDep="56">
+            <nom>CAMPS</nom>
+            <prenom>Georges</prenom>
+        </identite>
+        <email>georges.camps@defenseurdesdroits.fr</email>
+        <photo>GCAMPS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre communal d&apos;action sociale (CCAS)</libelle>
+                <libelleSecondaire>Maison du droit</libelleSecondaire>
+                <adresse>22, avenue Victor Hugo</adresse>
+                <boitePostale />
+                <tel>02 97 01 63 80</tel>
+                <fax />
+                <ville cp="56000"><value>VANNES</value></ville>
+                <poi>
+                    <longitude>-2.757296</longitude>
+                    <latitude>47.660690</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Morbihan</libelle>
+                <libelleSecondaire />
+                <adresse>Place du Général de Gaulle</adresse>
+                <boitePostale>BP 501</boitePostale>
+                <tel>02 97 54 85 92</tel>
+                <fax>02 97 54 87 77</fax>
+                <ville cp="56000"><value>VANNES</value></ville>
+                <poi>
+                    <longitude>-2.754069</longitude>
+                    <latitude>47.658476</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

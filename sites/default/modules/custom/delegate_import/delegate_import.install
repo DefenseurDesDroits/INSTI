@@ -1,0 +1,34 @@
+<?php
+require_once('delegate_import.define.inc');
+
+/**
+ * Implements hook_install().
+ */
+function delegate_import_install() {
+  _create_directory(DELEGATES_PATH, 'delegates');
+  // _create_directory(PICTURES_PATH, 'pictures');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function delegate_import_uninstall() {
+  _delete_directory(DELEGATES_PATH, 'delegates');
+  // _delete_directory(PICTURES_PATH, 'pictures');
+}
+
+/**
+ * @param string $directory
+ * @param string $type
+ */
+function _delete_directory($directory, $type) {
+  (drupal_rmdir($directory)) ? drupal_set_message(t('Delete ' . $type . ' directory success.')) : drupal_set_message(t('Delete ' . $type . ' directory fail.'), 'error');
+}
+
+/**
+ * @param string $directory
+ * @param string $type
+ */
+function _create_directory($directory, $type) {
+  (drupal_mkdir($directory)) ? drupal_set_message(t('Create ' . $type . ' directory success.')) : drupal_set_message(t('Create ' . $type . ' directory fail.'), 'error');
+}

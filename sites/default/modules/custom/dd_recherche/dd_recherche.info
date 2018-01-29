@@ -1,0 +1,6 @@
+name = recherche
+description = Permet de rechercher parmis les views et articles selon l'argument envoyer.
+core = 7.x
+package = dd
+version = 7.x-1.0
+project path = sites/default/modules/custom

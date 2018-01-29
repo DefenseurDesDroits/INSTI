@@ -1,0 +1,36 @@
+<?php
+require_once('decision_import.define.inc');
+
+/**
+ * Implements hook_install().
+ */
+function decision_import_install() {
+  _decision_create_directory(XML_DEC_RA_PATH, 'XML');
+  _decision_create_directory(DECISION_PATH, 'decision');
+  _decision_create_directory(RA_PATH, 'reglement amiable');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function decision_import_uninstall() {
+  _decision_delete_directory(DECISION_PATH, 'decision');
+  _decision_delete_directory(RA_PATH, 'reglement amiable');
+  _decision_delete_directory(XML_DEC_RA_PATH, 'XML');
+}
+
+/**
+ * @param string $directory
+ * @param string $type
+ */
+function _decision_delete_directory($directory, $type) {
+  (drupal_rmdir($directory)) ? drupal_set_message(t('Delete ' . $type . ' directory success.')) : drupal_set_message(t('Delete ' . $type . ' directory fail.'), 'error');
+}
+
+/**
+ * @param string $directory
+ * @param string $type
+ */
+function _decision_create_directory($directory, $type) {
+  (drupal_mkdir($directory)) ? drupal_set_message(t('Create ' . $type . ' directory success.')) : drupal_set_message(t('Create ' . $type . ' directory fail.'), 'error');
+}

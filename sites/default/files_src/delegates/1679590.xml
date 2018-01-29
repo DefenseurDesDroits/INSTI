@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679590" login="CNOUALI">
+        <identite civilite="Madame" codeDep="76">
+            <nom>SIAB-NOUALI</nom>
+            <prenom>Christelle</prenom>
+        </identite>
+        <email>christelle.siab-nouali@defenseurdesdroits.fr</email>
+        <photo>CNOUALI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de St-Etienne du Rouvray</libelle>
+                <libelleSecondaire />
+                <adresse>Place Jean Prévost</adresse>
+                <boitePostale />
+                <tel>02 32 95 83 60</tel>
+                <fax />
+                <ville cp="76800"><value>SAINT-ÉTIENNE-DU-ROUVRAY</value></ville>
+                <poi>
+                    <longitude>1.072753</longitude>
+                    <latitude>49.397045</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

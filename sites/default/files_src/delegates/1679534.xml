@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679534" login="YKROUCHI">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>KROUCHI</nom>
+            <prenom>Yassine</prenom>
+        </identite>
+        <email>yassine.krouchi@defenseurdesdroits.fr</email>
+        <photo>YKROUCHI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>29, rue Jean Jaurès</adresse>
+                <boitePostale />
+                <tel>03 61 76 08 52</tel>
+                <fax>03 61 76 08 48</fax>
+                <ville cp="59280"><value>ARMENTIÈRES</value></ville>
+                <poi>
+                    <longitude>2.886560</longitude>
+                    <latitude>50.686788</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

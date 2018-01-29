@@ -1,0 +1,278 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ */
+function ddd_purge_permission() {
+  return array(
+    'purge' => array(
+      'title' => t('Purge'),
+      'description' => t('Can purge')
+    )
+  );
+}
+
+/**
+ * Implement hook_menu
+ */
+function ddd_purge_menu() {
+  $items = array();
+
+  $items['admin/config/defenseurdesdroits'] = array(
+    'title' => 'Défenseur des droits',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array(
+      'purge'
+    ),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system')
+  );
+
+  $items['admin/config/defenseurdesdroits/purge'] = array(
+    'title' => t('Nodes and atoms purge'),
+    'description' => t('Atoms and unpublished nodes purge'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'purge_settings'
+    ),
+    'access arguments' => array(
+      'purge'
+    )
+  );
+
+  return $items;
+}
+
+/**
+ * Form builder function for purge atoms.
+ */
+function purge_settings() {
+  // Contenu du répertoire de purge
+  $form['content_repository'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content repository')
+  );
+
+  $form['content_repository']['atoms']['atoms_text'] = array(
+    '#type' => 'item',
+    '#title' => t('Purge Atoms')
+  );
+  $form['content_repository']['purge_atoms']['purge_atoms'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('Run purge atoms'),
+    '#submit' => array(
+      '_purge_atoms_run'
+    )
+  );
+
+  $form['content_repository']['purge_content']['purge_content_text'] = array(
+    '#type' => 'item',
+    '#title' => t('Contents purge (nodes) to execute only after purging atoms')
+  );
+
+  $form['content_repository']['purge_content']['purge_content'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('Run purge content'),
+    '#submit' => array(
+      '_purge_content_run'
+    )
+  );
+
+  return $form;
+}
+
+/**
+ * fonction qui permet de purger les atomes dont les noeuds ne sont pas publiés
+ */
+function _purge_atoms_run(){
+  //création des deux tableaux de sids
+  $sids_non_publies = array();
+  $sids_non_publies = createAtomsList(0);
+  $sids_publies = array();
+  $sids_publies = createAtomsList(1);
+  $sids_a_suppr = array_diff($sids_non_publies, $sids_publies);
+  //calcul du nombre d'itération à faire
+  $taille_suppr = count($sids_a_suppr);
+  $sids_a_afficher = implode(",", $sids_a_suppr);
+  drupal_set_message('Vous allez supprimer : '.$taille_suppr.'éléments <pre>'.$sids_a_afficher.'</pre>');
+  //découpage en tableau de longueur 10
+  $sids_a_suppr = array_chunk($sids_a_suppr, 10);
+  $nbr_iteration = ceil(($taille_suppr)/10.0)-1;
+  //dans le cas où le cron n'est pas terminé
+  $indice_suppression = variable_get('indice_suppression');
+
+  if(!isset($indice_suppression)){
+    $indice_suppression = 0;
+  }
+
+  while($indice_suppression <= $nbr_iteration){
+    drupal_set_message('Etape : '.$indice_suppression.'/'.$nbr_iteration);
+    scald_atom_delete_multiple($sids_a_suppr[$indice_suppression]);
+    $sids_a_afficher = implode(",", $sids_a_suppr[$indice_suppression]);
+    drupal_set_message('Vous avez supprimé : <pre>'.$sids_a_afficher.'</pre>');
+    $indice_suppression++;
+    variable_set('indice_suppression', $indice_suppression);
+  }
+
+  drupal_set_message('Tâche effectuée');
+  variable_set('indice_suppression',0);
+}
+
+/**
+ * Foncion permettant de créer une liste d'atomes non publiés ou publié
+ * @param $status entier 0 si non publié 1 sinon
+ * @return Tableau de sids d'atomes non publiés
+ */
+function createAtomsList($status){
+  //Récupération de la liste des noeuds
+  $uid = 1;
+  $query = db_query('SELECT n.nid FROM {node} n WHERE status = '.$status, array(':uid'=>$uid));
+  $nids = $query->fetchCol();
+
+  //création du tableau de sids
+  $sids = array();
+  //Chargement et traitement de chacun de ces noeuds
+  $nodes = array();
+  if (isset($nids)){
+    $nodes = node_load_multiple($nids);
+    foreach ($nodes as $node){
+      if(isset($node)){
+        //on s'occupe des atomes scald
+        $fieldsScald = getAtomScaldFields($node);
+        if(isset($fieldsScald))
+        {
+          $sidsnodeScald = getAtomFromScaldAtomFields($fieldsScald);
+          if (isset($sidsnodeScald)){
+            //on ajoute chaque tableau de sids relatifs à un node aux autres
+            $sids = array_merge($sids,$sidsnodeScald);
+          }
+        }
+        //on s'occupe des atomes WYSIWYG
+        $fieldsHtml = getHTMLFields($node);
+        if(isset($fieldsHtml)){
+          $sidsnodeHtml = getAtomFromScaldAtomFields($fieldsHtml);
+          if (isset($sidsnodeHtml)){
+            //on ajoute chaque tableau de sids relatifs à un node aux autres
+            $sids = array_merge($sids,$sidsnodeHtml);
+          }
+        }
+      }
+    }
+  }
+  //on enlève les doublons
+  $sids = array_unique($sids);
+  return $sids;
+}
+
+/**
+ * Fonction permettant de récupérer la liste des champs WYSIWYG que possède un node donné.
+ * @param $node Le noeud sur lequel chercher les champs.
+ * @return Un tableau contenant le nom des champs WYSIWYG en clé et la valeur du champ en valeur.
+ */
+function getHTMLFields($node){
+  //Liste des champs html WYSIWYG suceptibles de posséder des images atoms à supprimer
+	$htmlFields =  array(
+			'body' => null,//Type de contenu : ElementRLIP, FAQ, Décision
+			'field_article_descriptif' => null,//Type de contenu : ElementRLIP, Décision, Article
+			'field_article_body' => null,//Type de contenu : Article
+			'field_section_rapport_synthese' => null,//Type de contenu : Section du rapport annuel
+			'field_section_rapport_sommaire' => null,//Type de contenu : Section du rapport annuel
+			'field_section_rapport_corps' => null,//Type de contenu : Section du rapport annuel
+			'field_rapport_corps' => null,//Type de contenu : Rapport annuel
+			'field_page_body' => null,//Type de contenu : Page Simple
+			'field_home_map_text' => null,//Type de contenu : Page d'accueil
+			'field_marche_descriptif' => null,//Type de contenu : Marché public
+			'field_marche_body' => null,//Type de contenu : Marché public
+			'field_faq_questions' => null,//Type de contenu : FAQ
+			'field_event_lieu' => null,//Type de contenu : Evènement
+			'field_event_descriptif' => null,//Type de contenu : Evènement
+			'field_event_body' => null,//Type de contenu : Evènement
+			'field_decision_suivi' => null//Type de contenu : Décision
+			);
+
+	$nodeFields = get_object_vars($node);
+
+	return array_intersect_key($nodeFields, $htmlFields);
+}
+
+/**
+ * Fonction récupérant les champs Scald atome d'un noeud
+ * @param $node le noeud sur lequel on va faire la recherche
+ * @return tableau contenant le nom des champs scald atome en clé et la valeur du champ en valeur.
+ */
+function getAtomScaldFields($node){
+  //ensemble des champs scald atomes présent dans les types de contenu
+  $ScaldField = array(
+      'field_article_logo' => null ,// Type de contenu : Article, Blog, Marché public, Rapport, Element RLIP
+      'field_article_galerie' => null ,// Type de contenu : Article, Blog
+      //champ suivant ressence des vidéos, or elles ne passent pas dans scald atome deltete multiple...
+      //'field_article_video' => null ,// Type de contenu : Article, Blog
+      'field_article_document' => null ,// Type de contenu : Article, Blog, Décisions, Marché public, Outils, Rapport, Element RLIP, Proposition de réforme, Avis au parlement
+      'field_event_logo' => null ,// Type de contenu : Evènement,
+      'field_faq_logo' => null ,// Type de contenu : FAQ,
+      'field_page_logo' => null ,//Type de contenu : Page simple,
+      'field_rapport_piece_jointe' => null ,//Type de contenu : Rapport annuel,
+      'field_section_rapport_annexes' => null ,//Type de contenu : Section du rapport annuel,
+  );
+  //on récupère les champs du noeud et on les intersecte avec ceux au dessus
+  $nodeFields = get_object_vars($node);
+  $fields = array_intersect_key($nodeFields, $ScaldField);
+  return $fields;
+
+}
+
+/**
+ * Fonction qui permet de rechercher à l'intérieur d'une liste de champs Scald d'un noeud ceux qui sont des Scald atom
+ * @param $fields tableau contenant le nom des champs scald atome en clé et la valeur du champ en valeur
+ * @return Un Tableau de la liste des sid ,Null s'il n'en existe pas.
+ */
+function getAtomFromScaldAtomFields($fields){
+  $sidsnode = array();
+  //on parcours les champs contenant un scald pour y récupérer les sids
+  foreach($fields as $field => $fieldValue){
+    $sidsfield = array();
+    if(!empty($fieldValue)){
+      $i = 0;
+      //cas où il y a plusieurs atoms dans un même champ
+      while(!empty($fieldValue['und'][$i]['sid'])){
+        $sidsfield[] = $fieldValue['und'][$i]['sid'];
+        ++$i;
+      }
+      //on ajoute le tableau de sid issu du champ au reste du tableau de sid du noeud
+      $sidsnode = array_merge($sidsnode,$sidsfield);
+    }
+  }
+  if (!empty($sidsnode)){
+    return $sidsnode;
+  }else{
+    return Null;
+  }
+}
+
+/**
+ * Fonction permettant de supprimer tous les noeuds non publiés
+ */
+function _purge_content_run(){
+	//On récupère la lsite des noeuds
+	$node_list = getUnPublishedNodeList();
+	//supprime les nodes non publiés
+	node_delete_multiple($node_list);
+	drupal_set_message('Tâche effectuée');
+
+}
+
+/**
+ * Récupère la liste des noeuds non publiés
+ * @return Retourne un tableau d'objets ayant comme attributs le nid
+ */
+function getUnPublishedNodeList(){
+	//Requête de base de données permettants de récupérer les contenus non publiés
+	$query = db_select('node', 'n')
+		->fields('n', array('nid'));
+	$query->condition('n.status', '0', '=');
+
+	$result = $query->execute()->fetchCol();
+	return $result;
+}

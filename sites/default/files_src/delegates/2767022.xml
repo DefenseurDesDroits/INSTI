@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2767022" login="SPAILLET">
+        <identite civilite="Madame" codeDep="31">
+            <nom>PAILLET</nom>
+            <prenom>Suzanne</prenom>
+        </identite>
+        <email>suzanne.paillet@defenseurdesdroits.fr</email>
+        <photo>SPAILLET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la citoyenneté - Rive gauche</libelle>
+                <libelleSecondaire />
+                <adresse>20 place Jean Diebold</adresse>
+                <boitePostale />
+                <tel>05 31 22 91 30</tel>
+                <fax />
+                <ville cp="31300"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>1.430063</longitude>
+                    <latitude>43.598079</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

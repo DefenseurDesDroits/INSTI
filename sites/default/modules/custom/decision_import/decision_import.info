@@ -1,0 +1,7 @@
+name = Import décision
+description = Import des décisions
+dependencies[] = plupload
+package = DdD
+core = 7.x
+version = 7.x-1.0
+project = decision_import

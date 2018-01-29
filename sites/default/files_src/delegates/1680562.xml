@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680562" login="JJLAZOU">
+        <identite civilite="Monsieur" codeDep="35">
+            <nom>L&apos;AZOU</nom>
+            <prenom>Jean Julien</prenom>
+        </identite>
+        <email>jean-julien.lazou@defenseurdesdroits.fr</email>
+        <photo>JJLAZOU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Rennes-Vezin le Coquet</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue du Petit Pré</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="35132"><value>VEZIN-LE-COQUET</value></ville>
+                <poi>
+                    <longitude>-1.754131</longitude>
+                    <latitude>48.115563</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux par mois
+Réservée aux détenus JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Espace social commun Aimé Césaire</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Louis et René Moine</adresse>
+                <boitePostale />
+                <tel>02 23 62 21 54</tel>
+                <fax />
+                <ville cp="35200"><value>RENNES</value></ville>
+                <poi>
+                    <longitude>-1.681793</longitude>
+                    <latitude>48.091831</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

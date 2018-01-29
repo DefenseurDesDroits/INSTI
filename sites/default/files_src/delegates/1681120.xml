@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681120" login="PGODON">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>GODON</nom>
+            <prenom>Pascal</prenom>
+        </identite>
+        <email>pascal.godon@defenseurdesdroits.fr</email>
+        <photo>PGODON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 13ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>33 boulevard Kellermann</adresse>
+                <boitePostale />
+                <tel>01 55 78 20 56</tel>
+                <fax />
+                <ville cp="75013"><value>PARIS - 13</value></ville>
+                <poi>
+                    <longitude>2.354949</longitude>
+                    <latitude>48.820288</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit du 15ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>22 rue Saïda</adresse>
+                <boitePostale />
+                <tel>01 45 30 68 60</tel>
+                <fax />
+                <ville cp="75015"><value>PARIS - 15</value></ville>
+                <poi>
+                    <longitude>2.295808</longitude>
+                    <latitude>48.831830</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Menus feature.
+ */
+
+include_once 'ddd_cf_menus.features.inc';
+
+/**
+ * Implements hook_pre_features_revert().
+ *
+ * If a menu link is added in a menu handled by this feature, it won't be deleted when the menu feature is reverted.
+ * Only the menu links exported in the feature will be reverted.
+ * Implementing this hook allows us to make sure that the menu is fully resetted after the revert
+ * by first deleting all menu links before reverting.
+ */
+function ddd_cf_menus_pre_features_revert($component) {
+  if($component == 'features_overrides') {
+    // Delete all menu before reverting
+    menu_delete_links('menu-main-menu-en');
+    menu_delete_links('menu-main-menu-fr-dc');
+    menu_delete_links('menu-footer-qr');
+  }
+}

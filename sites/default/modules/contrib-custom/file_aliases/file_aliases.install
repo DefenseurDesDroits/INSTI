@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Contains installation functions for the File Aliases module.
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function file_aliases_install() {
+
+  // Adjust module weight.
+  db_update('system')
+    ->fields(array('weight' => 1))
+    ->condition('name', 'file_aliases')
+    ->execute();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function file_aliases_uninstall() {
+  db_query("DELETE FROM {url_alias} WHERE source LIKE 'filefield_paths/alias/%%'");
+}

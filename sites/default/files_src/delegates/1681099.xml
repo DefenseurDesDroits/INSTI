@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681099" login="ACORDRAY">
+        <identite civilite="Madame" codeDep="01">
+            <nom>CORDRAY</nom>
+            <prenom>Annie</prenom>
+        </identite>
+        <email>annie.cordray@defenseurdesdroits.fr</email>
+        <photo>ACORDRAY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Bourg-en-Bresse</libelle>
+                <libelleSecondaire />
+                <adresse>34, cours de Verdun</adresse>
+                <boitePostale />
+                <tel>04 74 14 01 40</tel>
+                <fax />
+                <ville cp="01000"><value>BOURG-EN-BRESSE</value></ville>
+                <poi>
+                    <longitude>5.227116</longitude>
+                    <latitude>46.206304</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

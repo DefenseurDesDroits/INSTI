@@ -1,0 +1,111 @@
+<?php
+
+/*
+ * Permet de modifier le formulaire de création d'une section d'un rapport annuel
+ * et les filtres des contenus liés à un rapport annuel
+ * Implementation of hook_form_alter()
+ */
+function ddd_annual_report_form_alter(&$form, &$form_state, $form_id) {
+
+	// On verifie qu'il s'agit du bon formulaire
+	/*if ($form_id == 'ct_section_rapport_annuel_node_form') {
+		// On cache et desactive à l'utilisateur le champ rattachant une section a son rapport
+		$form ['field_section_reference_rapport'] ['#access'] = FALSE;
+		$form ['field_section_reference_rapport'] ['#disabled'] = TRUE;
+	} // On affiche seulement les mots clés liés
+	else if($form_id == 'views_exposed_form' &&  $form_state['view']->name = 'ddd_vu_index_rapport_annuel') {
+		// On modifie le select des Mot-clefs
+		$options['All'] = $form['term_node_tid_depth_1']['#options']['All'];
+		$view = $form_state['view'];
+
+		// On remplace les tirets par des espaces pour rechercher le tid du terme
+		$taxoName = str_replace('-', ' ', $view->args[0]);
+		$term = taxonomy_get_term_by_name($taxoName, 'v_keyword');
+		reset($term);
+		$termid = key($term);
+
+		// On récupère tous les mot-cles associées au terme courant
+		$view = views_get_view('ddd_vu_index_rapport_annuel');
+		$view->set_display('block');
+		$view->set_items_per_page(0);
+		$view->set_arguments(array($termid));
+		$view->render();
+		$view_results = $view->result;
+
+		$nids = array_map ( function ($view_result) {
+			return $view_result->nid;
+		}, $view_results );
+
+		$nodes = node_load_multiple ( $nids );
+
+		$nested_keywords_tids = array_map ( function ($node) {
+			if (isset ( $node->field_article_keyword ) && isset ( $node->field_article_keyword ["und"] )) {
+				return $node->field_article_keyword ["und"];
+			}
+		}, $nodes );
+
+		$flattened_keywords_tids = array ();
+		array_walk ( $nested_keywords_tids, function ($keywords_tids) use(&$flattened_keywords_tids) {
+			if(!empty($keywords_tids)) {
+				foreach ( $keywords_tids as $keywords_tid ) {
+					if (! empty ( $keywords_tid ))
+						$flattened_keywords_tids [] = $keywords_tid ["tid"];
+				}
+			}
+		} );
+
+		$keywords_tids_filtered = array_filter ( $flattened_keywords_tids, function ($keywords_tid) use($node) {
+			return $keywords_tid !== isset($node->field_article_keyword ['und'] [0] ['tid']) ? $node->field_article_keyword ['und'] [0] ['tid'] : '';
+		} );
+		$keywords_tids_uniques = array_unique ( $keywords_tids_filtered );
+
+		// On supprime le keyword initial du contenu
+		foreach ( $keywords_tids_uniques as $key => $uniqueTid ) {
+			if ($uniqueTid == $termid) {
+				array_splice ( $keywords_tids_uniques, $key, 1 );
+			}
+		}
+
+		$taxos = array ();
+
+		for($i=0 ; $i < count ( $keywords_tids_uniques ) ; $i++){
+			$term = taxonomy_term_load( $keywords_tids_uniques [$i] );
+			if($term) $options[$term->tid] = $term->name;
+		}
+
+		natcasesort($options);
+		$form['term_node_tid_depth_1']['#options'] = $options;
+	}*/
+}
+
+function ddd_annual_report_node_insert($node) {
+	if ($node->type == "ct_rapport_annuel") {
+
+		if (isset ( $node ) && isset ( $node->field_rapport_first_section ) && isset ( $node->field_rapport_first_section ['und'] )) {
+
+			foreach ( $node->field_rapport_first_section ['und'] as $key => $rapport ) {
+				if (isset ( $rapport ['target_id'] )) {
+					$sections_id [] = $rapport ['target_id'];
+				}
+			}
+		}
+
+		if (isset ( $node ) && isset ( $node->field_rapport_second_section ) && isset ( $node->field_rapport_second_section ['und'] )) {
+			foreach ( $node->field_rapport_second_section ['und'] as $key => $rapport ) {
+				if (isset ( $rapport ['target_id'] )) {
+					$sections_id [] = $rapport ['target_id'];
+				}
+			}
+		}
+
+		if (isset ( $sections_id )) {
+			foreach ( $sections_id as $section_id ) {
+				$nodeSection = node_load ( $section_id );
+				$node_wrapper = entity_metadata_wrapper ( 'node', $nodeSection );
+				$node_wrapper->field_section_reference_rapport->set ( $node->nid );
+				$node_wrapper->save ();
+			}
+		}
+	}
+}
+?>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681259" login="GMICHALAK">
+        <identite civilite="Monsieur" codeDep="83">
+            <nom>MICHALAK</nom>
+            <prenom>Guy</prenom>
+        </identite>
+        <email>guy.michalak@defenseurdesdroits.fr</email>
+        <photo>GMICHALAK.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Toulon la Farlède</libelle>
+                <libelleSecondaire>Quartier La Castille</libelleSecondaire>
+                <adresse>Route de La Crau</adresse>
+                <boitePostale>BP 543</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="83000"><value>TOULON</value></ville>
+                <poi>
+                    <longitude>5.933813</longitude>
+                    <latitude>43.122934</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de La Seyne-sur-Mer</libelle>
+                <libelleSecondaire>Quartier Berthe</libelleSecondaire>
+                <adresse>le Germinal Bât. A4</adresse>
+                <boitePostale />
+                <tel>04 94 63 50 98</tel>
+                <fax>04 94 63 54 89</fax>
+                <ville cp="83500"><value>LA SEYNE-SUR-MER</value></ville>
+                <poi>
+                    <longitude>5.867471</longitude>
+                    <latitude>43.113046</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Hyères</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la République</adresse>
+                <boitePostale />
+                <tel>04 94 01 84 04</tel>
+                <fax />
+                <ville cp="83400"><value>HYERES</value></ville>
+                <poi>
+                    <longitude>6.130544</longitude>
+                    <latitude>43.121440</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

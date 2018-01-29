@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680954" login="CLEGER">
+        <identite civilite="Monsieur" codeDep="74">
+            <nom>LÉGER</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.leger@defenseurdesdroits.fr</email>
+        <photo>CLEGER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice</libelle>
+                <libelleSecondaire />
+                <adresse>26, allée Ampère</adresse>
+                <boitePostale />
+                <tel>04 50 96 84 63</tel>
+                <fax>04 50 96 84 67</fax>
+                <ville cp="74300"><value>CLUSES</value></ville>
+                <poi>
+                    <longitude>6.565081</longitude>
+                    <latitude>46.072589</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

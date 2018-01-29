@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681344" login="CJARDIN">
+        <identite civilite="Madame" codeDep="93">
+            <nom>JARDIN</nom>
+            <prenom>Catherine</prenom>
+        </identite>
+        <email>catherine.jardin@defenseurdesdroits.fr</email>
+        <photo>CJARDIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du Blanc-Mesnil</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue Emile Kahn</adresse>
+                <boitePostale />
+                <tel>01 45 91 93 57</tel>
+                <fax>01 45 91 93 57</fax>
+                <ville cp="93150"><value>LE BLANC-MESNIL</value></ville>
+                <poi>
+                    <longitude>2.462843</longitude>
+                    <latitude>48.941458</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des services publics du Quartier Avenir</libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Amitié</adresse>
+                <boitePostale />
+                <tel>01 48 96 39 29</tel>
+                <fax />
+                <ville cp="93700"><value>DRANCY</value></ville>
+                <poi>
+                    <longitude>2.421088</longitude>
+                    <latitude>48.921158</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

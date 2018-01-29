@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2837038" login="MCMARGEOT">
+        <identite civilite="Madame" codeDep="93">
+            <nom>MARGEOT</nom>
+            <prenom>Marie-Christine</prenom>
+        </identite>
+        <email>marie-christine.margeot@defenseurdesdroits.fr</email>
+        <photo>MCMARGEOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit de Villepinte</libelle>
+                <libelleSecondaire />
+                <adresse>15 avenue Auguste Blanqui</adresse>
+                <boitePostale />
+                <tel>01 48 61 86 30</tel>
+                <fax />
+                <ville cp="93420"><value>VILLEPINTE</value></ville>
+                <poi>
+                    <longitude>2.562098</longitude>
+                    <latitude>48.947105</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="666666" login="TEST">
+        <identite civilite="Madame" codeDep="75">
+            <nom>TEST</nom>
+            <prenom>Sascha</prenom>
+        </identite>
+        <email>webmaster@defenseurdesdroits.fr</email>
+        <photo>SASCHA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Test</libelle>
+                <libelleSecondaire />
+                <adresse>7 rue Saint Florentin</adresse>
+                <boitePostale />
+                <tel>04 66 56 42 80</tel>
+                <fax>04 66 56 11 44</fax>
+                <ville cp="30100"><value>PARIS</value></ville>
+                <poi>
+                    <longitude>2.323533</longitude>
+                    <latitude>48.867172</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

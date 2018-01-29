@@ -1,0 +1,14 @@
+name = Socle Lab' feature - views actualités
+description = Feature de gestion des vues spécifiques aux actualités
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_actualites
+dependencies[] = better_exposed_filters
+dependencies[] = views
+dependencies[] = views_import
+dependencies[] = views_infinite_scroll
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/soclelab/modules/features

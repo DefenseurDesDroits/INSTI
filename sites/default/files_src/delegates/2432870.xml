@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2432870" login="JPRAULO">
+        <identite civilite="Monsieur" codeDep="58">
+            <nom>RAULO</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.raulo@defenseurdesdroits.fr</email>
+        <photo>JPRAULO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie annexe</libelle>
+                <libelleSecondaire>Salle Emile Guillaumin</libelleSecondaire>
+                <adresse>Place François Mitterrand</adresse>
+                <boitePostale />
+                <tel>07 82 07 51 79</tel>
+                <fax />
+                <ville cp="58120"><value>CHATEAU CHINON</value></ville>
+                <poi>
+                    <longitude>3.932301</longitude>
+                    <latitude>47.064548</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,4 @@
+name = SocleLAB Utilities
+description = Contains useful functions for SocleLAB
+package = SocleLAB
+core = 7.x

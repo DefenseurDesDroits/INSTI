@@ -1,0 +1,77 @@
+.node-type-accueil #page-highlighted{
+  background-color: @bg_highlighted_front;
+}
+.region-highlighted{
+  .row;
+}
+#page-highlighted{
+  background-color: @bg_highlighted;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  
+  @media @scr_mobile{
+    padding-left: 15px;
+    padding-right: 15px;   
+  }
+   
+  .container{
+    padding: 0;
+  }
+  #block-sl-feature-accueil-block-carousel{
+    margin-bottom: 75px;
+    @media @scr_mobile{
+      margin: 0px -15px;
+    }
+    .carousel-text{
+      left: 40px;
+      @media @scr_mobile{
+        left: 0px;
+      }
+    }
+    .carousel-inner, .carousel-inner .node{
+      height: 415px;
+    }
+  }
+  
+  .nav-tabs{    // Menu d'administration
+    margin-bottom: -30px;
+    margin-top: 15px;
+    clear: both;
+    background-image: url("@{dir_img}/admin/unpublish.png");  
+    background-color: @col_main;
+    @media @scr_mobile{
+      padding: 0;  
+    }
+    
+    a{
+      padding: 7px 20px 5px 20px;
+      font-size: 1.143em;
+      color: @bg_admin_tab_a;
+      display: block;
+        @media @scr_mobile{font-size:14px;}
+    }
+    
+    li{
+      display: inline-block;
+      list-style: none;
+      background-color: @bg_admin_tab;
+      
+      &:hover{
+        background-color: @bg_admin_tab_h;
+        color: @bg_admin_tab_h;
+        a{ color: @bg_admin_tab_a; }
+      }
+    }
+    
+    .active{
+      background-color: @bg_admin_tab_a;
+      a{ color: @col_txt; }
+      
+      &:hover{
+        background-color: @bg_admin_tab_a;
+        a{ color: @col_txt; text-decoration: none; cursor: default;}
+      }
+    }
+  }
+}
+

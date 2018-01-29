@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681366" login="AMARCHAL">
+        <identite civilite="Monsieur" codeDep="57">
+            <nom>MARCHAL</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.marchal@defenseurdesdroits.fr</email>
+        <photo>AMARCHAL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>CCAS</libelle>
+                <libelleSecondaire>Hôtel de ville</libelleSecondaire>
+                <adresse>Avenue Saint-Rémy</adresse>
+                <boitePostale />
+                <tel>03 87 84 30 00</tel>
+                <fax />
+                <ville cp="57608"><value>FORBACH CEDEX</value></ville>
+                <poi>
+                    <longitude>6.898298</longitude>
+                    <latitude>49.187398</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>CCAS</libelle>
+                <libelleSecondaire>Maison de la Solidarité</libelleSecondaire>
+                <adresse>5, rue de la Paix</adresse>
+                <boitePostale />
+                <tel>03 87 98 93 18</tel>
+                <fax />
+                <ville cp="57200"><value>SARREGUEMINES</value></ville>
+                <poi>
+                    <longitude>7.065754</longitude>
+                    <latitude>49.112928</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

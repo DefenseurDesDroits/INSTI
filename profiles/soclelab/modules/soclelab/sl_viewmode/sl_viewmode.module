@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' view mode.
+ */
+
+ /**
+* Implements hook_entity_info_alter().
+*/
+function sl_viewmode_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['vignette_accueil'] = array(
+    'label' => t('Homepage thumbnail'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['node']['view modes']['liste_accueil'] = array(
+    'label' => t('Homepage thumbnail large'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['node']['view modes']['vignette_carousel'] = array(
+    'label' => t('Homepage thumbnail slider'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['node']['view modes']['vignette_sidebar'] = array(
+    'label' => t('Teaser sidebar'),
+    'custom settings' => FALSE,
+  );
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2666039" login="CTREMOUILHAC">
+        <identite civilite="Monsieur" codeDep="89">
+            <nom>TREMOUILHAC</nom>
+            <prenom>Charles</prenom>
+        </identite>
+        <email>charles.tremouilhac@defenseurdesdroits.fr</email>
+        <photo>CTREMOUILHAC.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Joux la Ville</libelle>
+                <libelleSecondaire />
+                <adresse>La Poste aux Alouettes</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="89440"><value>JOUX-LA-VILLE</value></ville>
+                <poi>
+                    <longitude>3.817230</longitude>
+                    <latitude>47.614858</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture d&apos;Avallon</libelle>
+                <libelleSecondaire />
+                <adresse>24, rue de Lyon</adresse>
+                <boitePostale />
+                <tel>03 86 34 92 00</tel>
+                <fax>03 86 34 92 12</fax>
+                <ville cp="89206"><value>AVALLON CEDEX</value></ville>
+                <poi>
+                    <longitude>3.911905</longitude>
+                    <latitude>47.490951</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

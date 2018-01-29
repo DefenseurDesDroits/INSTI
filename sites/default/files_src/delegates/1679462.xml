@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679462" login="JROQUEBRUN">
+        <identite civilite="Monsieur" codeDep="26">
+            <nom>ROQUEBRUN</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.roquebrun@defenseurdesdroits.fr</email>
+        <photo>JROQUEBRUN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Romans-sur-Isère</libelle>
+                <libelleSecondaire />
+                <adresse>5, boulevard Gabriel Péri</adresse>
+                <boitePostale />
+                <tel>04 75 70 68 00</tel>
+                <fax>04 75 70 68 01</fax>
+                <ville cp="26100"><value>ROMANS-SUR-ISÈRE</value></ville>
+                <poi>
+                    <longitude>5.053537</longitude>
+                    <latitude>45.048102</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

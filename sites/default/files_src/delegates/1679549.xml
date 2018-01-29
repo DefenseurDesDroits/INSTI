@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679549" login="CMAGNIER">
+        <identite civilite="Madame" codeDep="63">
+            <nom>MAGNIER</nom>
+            <prenom>Cécile</prenom>
+        </identite>
+        <email>cecile.magnier@defenseurdesdroits.fr</email>
+        <photo>CMAGNIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Public info</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Henri Tourette</adresse>
+                <boitePostale />
+                <tel>04 73 24 83 77</tel>
+                <fax />
+                <ville cp="63000"><value>CLERMONT FERRAND</value></ville>
+                <poi>
+                    <longitude>3.117181</longitude>
+                    <latitude>45.795057</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

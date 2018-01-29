@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679668" login="DJARDOT">
+        <identite civilite="Monsieur" codeDep="70">
+            <nom>JARDOT</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.jardot@defenseurdesdroits.fr</email>
+        <photo>DJARDOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Saône</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue de la Préfecture</adresse>
+                <boitePostale>BP 429</boitePostale>
+                <tel>03 84 77 71 49</tel>
+                <fax>03 84 76 49 60</fax>
+                <ville cp="70000"><value>VESOUL</value></ville>
+                <poi>
+                    <longitude>6.153268</longitude>
+                    <latitude>47.622757</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

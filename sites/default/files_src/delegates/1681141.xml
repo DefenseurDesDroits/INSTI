@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681141" login="ALEOTEY">
+        <identite civilite="Madame" codeDep="31">
+            <nom>LEOTEY</nom>
+            <prenom>Annie</prenom>
+        </identite>
+        <email>annie.leotey@defenseurdesdroits.fr</email>
+        <photo>ALEOTEY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Espace des diversités et de la laïcité</libelle>
+                <libelleSecondaire />
+                <adresse>38, rue d&apos;Aubuisson</adresse>
+                <boitePostale />
+                <tel>05 81 91 79 60</tel>
+                <fax />
+                <ville cp="31000"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>1.453132</longitude>
+                    <latitude>43.603375</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison communale de la Solidarité / Sicoval</libelle>
+                <libelleSecondaire />
+                <adresse>Place Marnac</adresse>
+                <boitePostale />
+                <tel>05 61 75 21 28</tel>
+                <fax />
+                <ville cp="31520"><value>RAMONVILLE-SAINT-AGNE</value></ville>
+                <poi>
+                    <longitude>1.477108</longitude>
+                    <latitude>43.547031</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Préfecture de la Haute-Garonne</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Saint-Etienne</adresse>
+                <boitePostale />
+                <tel>05 34 45 37 10</tel>
+                <fax />
+                <ville cp="31038"><value>TOULOUSE CEDEX 9</value></ville>
+                <poi>
+                    <longitude>1.450412</longitude>
+                    <latitude>43.598659</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680879" login="GMORIER">
+        <identite civilite="Monsieur" codeDep="69">
+            <nom>MORIER</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.morier@defenseurdesdroits.fr</email>
+        <photo>GMORIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Lyon Sud</libelle>
+                <libelleSecondaire />
+                <adresse>32 avenue Jean Mermoz</adresse>
+                <boitePostale />
+                <tel>04 78 74 00 42</tel>
+                <fax />
+                <ville cp="69008"><value>LYON</value></ville>
+                <poi>
+                    <longitude>4.873640</longitude>
+                    <latitude>45.734785</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

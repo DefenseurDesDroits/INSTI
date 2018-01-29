@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2472183" login="MCVITET">
+        <identite civilite="Madame" codeDep="76">
+            <nom>VITET</nom>
+            <prenom>Marie-Christine</prenom>
+        </identite>
+        <email>marie-christine.vitet@defenseurdesdroits.fr</email>
+        <photo>MCVITET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire du Havre</libelle>
+                <libelleSecondaire />
+                <adresse>Lieu dit &quot;La Queue du Grill&quot;</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="76430"><value>ST AUBIN ROUTOT</value></ville>
+                <poi>
+                    <longitude>0.290105</longitude>
+                    <latitude>49.517162</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Fécamp</libelle>
+                <libelleSecondaire />
+                <adresse>36, rue des Galeries</adresse>
+                <boitePostale />
+                <tel>02 35 28 89 57</tel>
+                <fax>02 35 28 37 95</fax>
+                <ville cp="76400"><value>FÉCAMP</value></ville>
+                <poi>
+                    <longitude>0.380589</longitude>
+                    <latitude>49.757090</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Pole d&apos;accès au droit</libelle>
+                <libelleSecondaire>Hôtel de ville</libelleSecondaire>
+                <adresse>Parc Jehan Ango</adresse>
+                <boitePostale>BP 226</boitePostale>
+                <tel>02 35 06 61 19</tel>
+                <fax />
+                <ville cp="76203"><value>DIEPPE CEDEX</value></ville>
+                <poi>
+                    <longitude>1.077510</longitude>
+                    <latitude>49.922961</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Seine-Maritime</libelle>
+                <libelleSecondaire />
+                <adresse>7, place de la Madeleine</adresse>
+                <boitePostale />
+                <tel>02 32 76 50 00</tel>
+                <fax />
+                <ville cp="76036"><value>ROUEN CEDEX</value></ville>
+                <poi>
+                    <longitude>1.079903</longitude>
+                    <latitude>49.445818</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

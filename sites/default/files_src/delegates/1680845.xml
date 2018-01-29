@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680845" login="MCOATLEVEN">
+        <identite civilite="Monsieur" codeDep="40">
+            <nom>COATLEVEN</nom>
+            <prenom>Marc</prenom>
+        </identite>
+        <email>marc.coatleven@defenseurdesdroits.fr</email>
+        <photo>MCOATLEVEN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Mont-de-Marsan</libelle>
+                <libelleSecondaire />
+                <adresse>Chemin de Pémégnan</adresse>
+                <boitePostale>BP 90629</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="40000"><value>MONT-DE-MARSAN</value></ville>
+                <poi>
+                    <longitude>-0.456408</longitude>
+                    <latitude>43.896662</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Service territorial de l&apos;architecture et du patrimoine-Landes (STAP)</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue du 8 Mai 1945</adresse>
+                <boitePostale>BP 344</boitePostale>
+                <tel>05 58 46 42 97</tel>
+                <fax />
+                <ville cp="40011"><value>MONT-DE-MARSAN CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.501880</longitude>
+                    <latitude>43.893561</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680373" login="GGLENAT">
+        <identite civilite="Monsieur" codeDep="24">
+            <nom>GLÉNAT</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.glenat@defenseurdesdroits.fr</email>
+        <photo>GGLENAT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Neuvic-sur-l&apos;Isle</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale>BP 01</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="24190"><value>NEUVIC</value></ville>
+                <poi>
+                    <longitude>0.470699</longitude>
+                    <latitude>45.087962</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Cité administrative </libelle>
+                <libelleSecondaire>Bât. des services fiscaux</libelleSecondaire>
+                <adresse>Rue Claude Bernard</adresse>
+                <boitePostale />
+                <tel>05 53 46 75 53</tel>
+                <fax />
+                <ville cp="24016"><value>PÉRIGUEUX</value></ville>
+                <poi>
+                    <longitude>0.709478</longitude>
+                    <latitude>45.180668</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

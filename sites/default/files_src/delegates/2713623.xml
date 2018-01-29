@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2713623" login="MLESECQ">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>LESECQ</nom>
+            <prenom>Maurice</prenom>
+        </identite>
+        <email>maurice.lesecq@defenseurdesdroits.fr</email>
+        <photo>MLESECQ.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice d&apos;Antibes/Juan les Pins</libelle>
+                <libelleSecondaire />
+                <adresse>80, 2ème avenue Quartier Nova-Antipolis</adresse>
+                <boitePostale />
+                <tel>04 92 19 75 40</tel>
+                <fax>04 92 19 75 41</fax>
+                <ville cp="06600"><value>ANTIBES</value></ville>
+                <poi>
+                    <longitude>7.091155</longitude>
+                    <latitude>43.601070</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Antenne de justice de Valbonne Sophia Antipolis</libelle>
+                <libelleSecondaire />
+                <adresse>2 place des Amouriers - Garbejaïre</adresse>
+                <boitePostale />
+                <tel>04 92 19 76 10</tel>
+                <fax>04 92 19 76 11</fax>
+                <ville cp="06560"><value>VALBONNE</value></ville>
+                <poi>
+                    <longitude>7.046970</longitude>
+                    <latitude>43.622914</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Antenne de justice de Vallauris</libelle>
+                <libelleSecondaire />
+                <adresse>6 boulevard Docteur Jacques Ugo</adresse>
+                <boitePostale />
+                <tel>04 92 19 76 20</tel>
+                <fax>04 92 19 76 21</fax>
+                <ville cp="06220"><value>VALLAURIS</value></ville>
+                <poi>
+                    <longitude>7.055176</longitude>
+                    <latitude>43.578478</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,83 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' contact.
+ */
+
+function sl_feeds_cronapi($op, $job = NULL) {
+  $items['feed_socle_ctbase_cron'] = array('description' => 'Ajout/Mise à jour des contenus de base du socle', );
+  $items['feed_socle_txbase_cron'] = array('description' => 'Ajout/Mise à jour des taxonomies de base du socle', );
+  return $items;
+}
+
+function feed_socle_ctbase_cron() {
+  $uri = '../../feeds/sl_feed_ct_article.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_ct_article';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+  
+  $uri = '../../feeds/sl_feed_ct_event.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_ct_event';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+  
+  $uri = '../../feeds/sl_feed_ct_faq.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_ct_faq';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+  
+  $uri = '../../feeds/sl_feed_ct_home.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_ct_home';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+  
+  $uri = '../../feeds/sl_feed_ct_page.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_ct_page';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+}
+
+
+function feed_socle_txbase_cron() {
+  $uri = '../../feeds/sl_feed_tx_type.csv';
+  if (file_exists($uri)) {
+    $importer_id = 'sl_feed_tx_type';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+}
+ 

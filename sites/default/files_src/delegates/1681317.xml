@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681317" login="CCARDONNET">
+        <identite civilite="Madame" codeDep="971">
+            <nom>CARDONNET</nom>
+            <prenom>Christelle</prenom>
+        </identite>
+        <email>christelle.cardonnet@defenseurdesdroits.fr</email>
+        <photo>CCARDONNET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Initiatives économiques</libelle>
+                <libelleSecondaire>Bât. 5</libelleSecondaire>
+                <adresse>rue Daniel Beauperthuy</adresse>
+                <boitePostale />
+                <tel>05 90 41 08 22</tel>
+                <fax>05 90 81 83 02</fax>
+                <ville cp="97100"><value>BASSE-TERRE</value></ville>
+                <poi>
+                    <longitude>-61.728264</longitude>
+                    <latitude>16.001193</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

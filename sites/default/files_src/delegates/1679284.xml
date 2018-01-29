@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679284" login="JPPHILIPPE">
+        <identite civilite="Monsieur" codeDep="28">
+            <nom>PHILIPPE</nom>
+            <prenom>Jean-Pol</prenom>
+        </identite>
+        <email>jean-pol.philippe@defenseurdesdroits.fr</email>
+        <photo>JPPHILIPPE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice du Drouais</libelle>
+                <libelleSecondaire>Mairie</libelleSecondaire>
+                <adresse>1, place Paul Doumer</adresse>
+                <boitePostale />
+                <tel>02 37 38 84 21</tel>
+                <fax>02 37 38 84 70</fax>
+                <ville cp="28100"><value>DREUX</value></ville>
+                <poi>
+                    <longitude>1.369873</longitude>
+                    <latitude>48.736628</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

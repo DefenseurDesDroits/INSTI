@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680258" login="JMMURCIA">
+        <identite civilite="Monsieur" codeDep="31">
+            <nom>MURCIA</nom>
+            <prenom>Jean-Michel</prenom>
+        </identite>
+        <email>jean-michel.murcia@defenseurdesdroits.fr</email>
+        <photo>JMMURCIA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de la Reynerie</libelle>
+                <libelleSecondaire />
+                <adresse>2, impasse de l&apos;Abbé Salvat</adresse>
+                <boitePostale />
+                <tel>05 61 43 06 94</tel>
+                <fax>05 61 43 07 02</fax>
+                <ville cp="31000"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>1.399802</longitude>
+                    <latitude>43.571312</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

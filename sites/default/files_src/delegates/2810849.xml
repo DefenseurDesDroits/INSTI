@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2810849" login="MFCOUSIN">
+        <identite civilite="Madame" codeDep="59">
+            <nom>COUSIN</nom>
+            <prenom>Marie-Françoise</prenom>
+        </identite>
+        <email>marie-francoise.cousin@defenseurdesdroits.fr</email>
+        <photo>MFCOUSIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Denain</libelle>
+                <libelleSecondaire />
+                <adresse>117, rue de Villars</adresse>
+                <boitePostale />
+                <tel>03 27 43 69 30</tel>
+                <fax />
+                <ville cp="59220"><value>DENAIN</value></ville>
+                <poi>
+                    <longitude>3.393112</longitude>
+                    <latitude>50.327010</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Saint-Amand</libelle>
+                <libelleSecondaire />
+                <adresse>42, rue d&apos;Orchies</adresse>
+                <boitePostale />
+                <tel>03 27 32 80 10</tel>
+                <fax />
+                <ville cp="59230"><value>ST AMAND LES EAUX</value></ville>
+                <poi>
+                    <longitude>3.425503</longitude>
+                    <latitude>50.447435</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Valenciennes</libelle>
+                <libelleSecondaire />
+                <adresse>Avenue des Dentellières</adresse>
+                <boitePostale>BP 469</boitePostale>
+                <tel>03 27 14 59 37</tel>
+                <fax>03 27 14 59 49</fax>
+                <ville cp="59322"><value>VALENCIENNES CEDEX</value></ville>
+                <poi>
+                    <longitude>3.519500</longitude>
+                    <latitude>50.356398</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e vendredi journée VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

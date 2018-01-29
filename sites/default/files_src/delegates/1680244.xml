@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680244" login="PBOYER">
+        <identite civilite="Monsieur" codeDep="60">
+            <nom>BOYER</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.boyer@defenseurdesdroits.fr</email>
+        <photo>PBOYER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Noyon</libelle>
+                <libelleSecondaire />
+                <adresse>Place Bertrand Labarre</adresse>
+                <boitePostale />
+                <tel>03 44 44 28 67 </tel>
+                <fax />
+                <ville cp="60400"><value>NOYON</value></ville>
+                <poi>
+                    <longitude>3.000101</longitude>
+                    <latitude>49.580570</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Compiègne</libelle>
+                <libelleSecondaire />
+                <adresse>21, rue Eugène Jacquet</adresse>
+                <boitePostale />
+                <tel>03 44 06 78 50</tel>
+                <fax />
+                <ville cp="60200"><value>COMPIÈGNE</value></ville>
+                <poi>
+                    <longitude>2.831665</longitude>
+                    <latitude>49.415789</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

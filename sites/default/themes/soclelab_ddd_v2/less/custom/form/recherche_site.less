@@ -1,0 +1,88 @@
+#search-form{
+  background-color: @bg_filter;
+  padding: 15px 15px 5px 455px;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  @media @scr_mobile{
+    padding-left: 15px;
+    padding-top: 120px;
+    position: relative;
+    padding-top: 15px;
+    top: 0;
+    margin-bottom: 15px;
+  }
+  label{
+    display: block;
+  }
+  .form-submit{
+    vertical-align: bottom;
+  }
+  input.form-text{
+    border: solid 1px @bor_actions_select;
+    padding: 5px;
+    font-size: 1em;
+    height: auto;
+    #border > .border-radius(0);
+    #shaddow > .no-shaddow();
+  }
+}
+
+.page-search-site{ 
+  #block-system-main{
+    margin-top: 100px;
+    @media @scr_mobile{
+      margin-top: 0px;
+    }
+    h2{
+      font-size: 1.2em;
+    }
+    .ds-search-extra{
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  .ds-search-extra{
+    @media @scr_mobile{
+      padding: 0 15px;
+    }
+  }
+  #page-main-content{
+    position: relative;
+    .block-facetapi{
+      display: inline-block;
+      margin-left: 15px;
+      height: 0;
+      position: relative;
+      z-index: 50;
+      width: 200px;
+      
+      h2{ display: none;}
+      @media @scr_mobile{
+        height: auto;
+        margin-left: 0;
+        padding: 15px 15px 0 15px;
+        width: 100%;
+        background-color: @bg_filter;
+      }
+    }
+    
+    .form-type-select{ 
+      width: 100%;
+      position: absolute;
+      padding-top: 25px;
+      @media @scr_mobile{
+        position: relative;
+        padding: 0;
+        margin: 0;
+      }
+      select{
+        border: solid 1px @bor_actions_select;
+        padding: 6px 5px 5px 5px;;
+        width: 100%;
+      }
+    }
+  }
+}

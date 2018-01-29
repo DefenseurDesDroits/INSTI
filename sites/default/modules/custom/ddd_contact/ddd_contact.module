@@ -1,0 +1,332 @@
+<?php
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function ddd_contact_form_contact_site_form_alter(&$form, &$form_state, $form_id) {
+  $form['gender'] = array(
+    '#type' => 'radios',
+    //'#title' => t('Gender'),
+    '#options' => array(
+      'Mme',
+      'M'
+    ),
+    '#required' => FALSE,
+    '#weight' => - 2,
+    '#prefix' => '<fieldset><legend class="legend-label">' . t('Gender') . '</legend>',
+    '#suffix' => '</fieldset>'
+  );
+  $form['last_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Last name'),
+    '#required' => TRUE,
+    '#weight' => - 1
+  );
+  // TODO Champ caché
+  $form['hidden'] = array(
+    '#type' => 'hidden'
+  );
+  $form['confirm_mail'] = (isset($form['mail'])) ? $form['mail'] : array(
+    '#type' => 'textfield',
+    '#maxlength' => 255
+  );
+  $form['confirm_mail']['#title'] = t('Confirmation Email');
+  $form['confirm_mail']['#default_value'] = '';
+
+  $form['cid']['#weight'] = - 3;
+  $form['subject']['#weight'] = 1;
+  $form['message']['#weight'] = 2;
+
+  $picture = array_key_exists('picture', $_GET) ? $_GET['picture'] : '';
+  if ($picture) {
+    $form['cid']['#default_value'] = _ddd_contact_get_cid();
+//     $form['cid']['#attributes'] = array(
+//       'class' => array('disabled')
+//     );
+    $form['message']['#value'] = t('Request for ') . $picture;
+  }
+
+  unset($form['copy']);
+  $form['#validate'][] = 'ddd_contact_contact_site_form_validate';
+  // TODO config captcha -> traduction texte
+}
+
+function ddd_contact_contact_site_form_validate($form, &$form_state) {
+  if ($form_state['values']['mail'] !== $form_state['values']['confirm_mail']) {
+    form_set_error('mail', t('You must enter a same e-mail address.'));
+    form_set_error('confirm_mail', t('You must enter a same e-mail address.'));
+  }
+
+  if(!empty($form_state['values']['hidden'])) {
+    form_set_error('hidden', t('Error with field'));
+  }
+
+  // Change le titre de la page en cas d'erreur.
+  $errors = form_get_errors();
+  if($errors) {
+    drupal_set_title(t('Form error'));
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function ddd_contact_menu() {
+  $items = array();
+
+
+  $items['contact_delegate'] = array(
+    'title' => 'Contacted your delegate',
+    'description' => t('Form for contacted your delegate'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'ddd_contact_contact_delegate_form',
+      1
+    ),
+    'access arguments' => array(
+      'access content'
+    )
+  );
+
+  $items['contact_delegate/%/%ctools_js'] = array(
+    'title' => 'Contacted your delegate',
+    'page callback' => 'ddd_contact_delegate_callback',
+    'page arguments' => array(1,2),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK
+  );
+
+  return $items;
+}
+
+//TODO comment
+function ddd_contact_delegate_callback($nid, $js = FALSE) {
+
+  if(!$js) {
+    return drupal_get_form('ddd_contact_contact_delegate_form');
+  }
+
+  ctools_include('modal');
+  ctools_include('ajax');
+  $form_state = array(
+    'title' => '',
+    'ajax' => TRUE,
+  );
+  $output = ctools_modal_form_wrapper('ddd_contact_contact_delegate_form', $form_state);
+  if (!empty($form_state['executed'])) {
+    // We'll just overwrite the form output if it was successful.
+    $output = array();
+    $output[] = ctools_modal_command_dismiss(t('Success!'));
+    // If you want to leave a message and links:
+    //$output[] = ctools_modal_command_display(t('Login Success'), '<div class="modal-message">Login successful. <a href="/modal/nojs/test">Go back</a>.</div>');
+  }
+  print ajax_render($output);
+  exit;
+}
+
+//TODO comment
+function ddd_contact_delegate_callback_submit($values) {
+  $result = array();
+
+  $values['sender'] = $user;
+  $values['sender']->name = $values['name'];
+  $values['sender']->last_name = $values['last_name'];
+  $values['sender']->mail = $values['mail'];
+  $values['sender']->phone = $values['phone'];
+
+  $query = new EntityFieldQuery();
+  $entities = $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'ct_delegate')
+  ->propertyCondition('nid', $values['nid'])
+  ->range(0, 1)
+  ->execute();
+
+  if (array_key_exists('node', $entities)) {
+  	$delegate = node_load($values['nid']);
+    $to = $delegate->field_delegate_email['und']['0']['value'];
+    $from = $values['sender']->mail;
+    // Send the e-mail to the recipients using the site default language.
+    drupal_mail('ddd_contact', 'page_delegate_mail', $to, language_default(), $values, $from);
+    $result[0] = t('Your message has been sent.');
+    $result[1] = 'status';
+  }
+  else {
+    $result[0] = t('Your message has not been sent.');
+    $result[1] = 'error';
+  }
+  return $result;
+}
+
+/**
+ * Hook de surcharge de mail alter
+ * Dans notre cas, on souhaite que le champ reply-to soit valorisé avec la valeur du mail saisi dan sle formulaire
+ * @param unknown $message
+ */
+function ddd_contact_mail_alter(&$message) {
+	$message['headers']['Reply-To'] = $message['headers']['From'];
+}
+
+/**
+ * Constructor page form
+ */
+function ddd_contact_contact_delegate_form($form, &$form_state) {
+  $form = array();
+  $form['#attributes']['class'][] = 'contact-form';
+
+  $form['info'] = array(
+    '#markup' => t('All field required')
+  );
+  $form['nid'] = array(
+    '#type' => 'hidden',
+    '#value' => arg(1)
+  );
+  $form['name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Your name'),
+    '#maxlength' => 255,
+    '#required' => TRUE
+  );
+  $form['last_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Last name'),
+    '#maxlength' => 255,
+    '#required' => TRUE
+
+  );
+  $form['mail'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Your e-mail address'),
+    '#maxlength' => 255,
+    '#required' => TRUE
+
+  );
+  $form['phone'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Your phone number'),
+    '#maxlength' => 10,
+    '#required' => TRUE
+
+  );
+
+  $form['message'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Message'),
+    '#required' => TRUE,
+    '#rows' => 3,
+    '#cols' => 60
+
+  );
+
+  $form['meeting'] = array(
+    '#type' => 'radios',
+    //'#title' => t('Get meeting with delegate ?'),
+    '#options' => array(
+      t('no'),
+      t('yes')
+    ),
+    '#required' => TRUE,
+    '#prefix' => '<fieldset><legend class="legend-label">' . t('Get meeting with delegate ?') . '</legend>',
+    '#suffix' => '</fieldset>'
+  );
+
+  $form['hidden'] = array(
+    '#type' => 'hidden'
+  );
+
+  $form['actions'] = array(
+    '#type' => 'actions'
+  );
+
+  $form['actions']['cancel'] = array(
+    '#markup' => l(t('Cancel'), '#', array(
+      'attributes' => array(
+        'class' => 'btn btn-default close ctools-close-modal',
+        'title' => t('Cancel'),
+        'data-dismiss' => "modal",
+        'aria-label' => "Close"
+      )
+    ))
+  );
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Send message'),
+    '#attributes' => array(
+      'title' => t('Send message')
+    )
+  );
+
+  return $form;
+}
+
+/**
+ * @param unknown $form
+ * @param unknown $form_state
+ */
+function ddd_contact_contact_delegate_form_validate($form, &$form_state) {
+  if (! $form_state['values']['nid']) {
+    form_set_error('nid', t('Delegate don\'t exist.'));
+  }
+  if (! valid_email_address($form_state['values']['mail'])) {
+    form_set_error('mail', t('You must enter a valid e-mail address.'));
+  }
+  if(!empty($form_state['values']['hidden'])) {
+    form_set_error('hidden', t('Error with field'));
+  }
+}
+
+/**
+ * Submit delegate contact form
+ * @param unknown $form
+ * @param unknown $form_state
+ */
+function ddd_contact_contact_delegate_form_submit($form, &$form_state) {
+  global $user;
+
+  $values = $form_state['values'];
+
+  $msg = ddd_contact_delegate_callback_submit($values);
+  drupal_set_message($msg[0], $msg[1]);
+
+}
+
+/**
+ * Create mail
+ */
+function ddd_contact_mail($key, &$message, $params) {
+  $language = $message['language'];
+  $variables = array(
+    '!site-name' => variable_get('site_name', 'Drupal'),
+    '!subject' => $params['meeting']? t('Request for meeting'): t('Request for information'),
+    '!sender-name' => format_username($params['sender']),
+  );
+
+  if ($key === 'page_delegate_mail') {
+  	if($params['meeting'] === "0"){
+  		$mail_category = "Contact";
+  	}else{
+  		$mail_category = "Demande de Rendez-vous";
+  	}
+
+    $message['subject'] .= t('!subject', $variables, array('langcode' => $language->language));
+    $message['body'][] = $params['last_name'].' '.$params['name']. ' - ('.$params['mail'].')'.'<br/>'.
+      									t('Email category').' :'.$mail_category.'<br/>'.
+    										t('Email subject').' : ' .t('!subject', $variables, array('langcode' => $language->language)).'<br/><br/>'.
+    										t('Email message').' : <br/>'.$params['message'];
+  }
+  $headers = array(
+  		'MIME-Version' => '1.0',
+  		'Content-Type' => 'text/plain; charset=\"iso-8859-1\"; format=flowed; delsp=yes',
+  		'Content-Transfer-Encoding' => '8Bit',
+  		'X-Mailer' => 'Drupal',
+  );
+}
+
+function _ddd_contact_get_cid() {
+  $contacts = db_select('contact', 'c')->fields('c')->execute();
+  foreach($contacts as $contact) {
+    if(stripos($contact->category, 'presse') !== FALSE) {
+      return $contact->cid;
+    }
+  }
+}
+?>

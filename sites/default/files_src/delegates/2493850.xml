@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2493850" login="MBABEL">
+        <identite civilite="Madame" codeDep="78">
+            <nom>BABEL</nom>
+            <prenom>Marie</prenom>
+        </identite>
+        <email>marie.babel@defenseurdesdroits.fr</email>
+        <photo>MBABEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de St-Quentin-en-Yvelines-Antenne de Trappes</libelle>
+                <libelleSecondaire />
+                <adresse>3, place de la Mairie</adresse>
+                <boitePostale />
+                <tel>01 30 16 03 20</tel>
+                <fax />
+                <ville cp="78190"><value>TRAPPES</value></ville>
+                <poi>
+                    <longitude>1.999897</longitude>
+                    <latitude>48.776854</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

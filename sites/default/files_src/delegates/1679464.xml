@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679464" login="JDUPERCHE">
+        <identite civilite="Monsieur" codeDep="28">
+            <nom>DUPERCHE</nom>
+            <prenom>Jacky</prenom>
+        </identite>
+        <email>jacky.duperche@defenseurdesdroits.fr</email>
+        <photo>JDUPERCHE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture d&apos;Eure-et-Loir</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la République</adresse>
+                <boitePostale />
+                <tel>02 37 27 70 57</tel>
+                <fax>02 37 27 72 55</fax>
+                <ville cp="28019"><value>CHARTRES CEDEX</value></ville>
+                <poi>
+                    <longitude>1.481592</longitude>
+                    <latitude>48.445775</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

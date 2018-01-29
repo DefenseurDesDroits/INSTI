@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681153" login="GNEGRE">
+        <identite civilite="Monsieur" codeDep="82">
+            <nom>NÈGRE</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.negre@defenseurdesdroits.fr</email>
+        <photo>GNEGRE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Direction Départementale de la Cohésion Sociale et de la protection des populations (DDCSPP)</libelle>
+                <libelleSecondaire />
+                <adresse>140, Avenue Marcel Unal</adresse>
+                <boitePostale>BP 730</boitePostale>
+                <tel>05 63 21 18 03</tel>
+                <fax />
+                <ville cp="82013"><value>MONTAUBAN CEDEX</value></ville>
+                <poi>
+                    <longitude>1.375920</longitude>
+                    <latitude>44.007350</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

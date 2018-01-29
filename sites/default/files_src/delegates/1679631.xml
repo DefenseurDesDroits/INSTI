@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679631" login="RFIROZALY">
+        <identite civilite="Madame" codeDep="93">
+            <nom>FIROZALY</nom>
+            <prenom>Rosine</prenom>
+        </identite>
+        <email>rosine.firozaly@defenseurdesdroits.fr</email>
+        <photo>RFIROZALY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Hôtel de Ville </libelle>
+                <libelleSecondaire />
+                <adresse>1/3, rue Quétigny</adresse>
+                <boitePostale />
+                <tel>01 49 71 99 99</tel>
+                <fax />
+                <ville cp="93800"><value>ÉPINAY-SUR-SEINE</value></ville>
+                <poi>
+                    <longitude>2.314582</longitude>
+                    <latitude>48.951201</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des services publics du Quartier Avenir</libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Amitié</adresse>
+                <boitePostale />
+                <tel>01 48 96 39 29</tel>
+                <fax />
+                <ville cp="93700"><value>DRANCY</value></ville>
+                <poi>
+                    <longitude>2.421088</longitude>
+                    <latitude>48.921158</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

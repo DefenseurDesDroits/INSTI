@@ -1,0 +1,12 @@
+<?php
+
+
+/*
+ * hook_social_media_links_iconset_info_alter
+ */
+function ddd_searchmenu_install() {
+  drupal_install_schema('ddd_searchmenu');
+  
+  // Change le weight du module a 10 pour que le hook soit prioritaire par rapport au socle
+  db_query("UPDATE {system} SET weight = 10 WHERE name = 'ddd_searchmenu'");
+}

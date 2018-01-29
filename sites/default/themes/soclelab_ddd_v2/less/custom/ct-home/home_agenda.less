@@ -1,0 +1,87 @@
+.big-font .agendahome-date a{padding:5px 0 0 0;
+&:hover{padding:5px 0 0 0;}
+}
+
+.agendahome-date{
+  background-color:  @bg_home_agenda;
+  color: @bg_home_agenda_date;
+  width: 123px;
+  height: 123px;
+  text-align: center;
+  margin: 0 auto 23px auto;
+  position: relative;
+  #border > .border-radius( 123px );
+  font-family: @font-family-lato-bol;
+  a, a:hover{
+    height: 123px;
+    padding: 36px 0 0 0;
+    color: @bg_home_agenda_date;
+    text-decoration: none;
+    display: block;
+  }
+  .date-day{
+    font-size: 2.95em;
+    line-height: 0.85em;
+  }
+  .date-month{
+    font-size: 0.86em;
+  }
+}
+.big-font .agendahome-date{
+  padding-top: 25px;
+}
+.style-0 .agendahome-date{ background-color: @bg_agenda_0; }
+.style-1 .agendahome-date{ background-color: @bg_agenda_1; }
+.style-2 .agendahome-date{ background-color: @bg_agenda_2; }
+.style-3 .agendahome-date{ background-color: @bg_agenda_3; }
+
+.style-0 .agendahome-date:hover{ background-color: @bg_agenda_2; }
+.style-1 .agendahome-date:hover{ background-color: @bg_agenda_3; }
+.style-2 .agendahome-date:hover{ background-color: @bg_agenda_0; }
+.style-3 .agendahome-date:hover{ background-color: @bg_agenda_1; }
+  
+.agendahome-title{
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  a{
+    color: @txt_home_agenda_title;
+  }
+}
+
+.agendahome-chapo{
+  text-align: center;
+  line-height: 1.589em;
+  font-size: 0.9em;
+  color: @txt_home_agenda_chapo;
+}
+
+#block-views-vue-events-block-agenda-home{
+  margin-bottom: 72px;
+}
+
+#block-agenda-home{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 55px;
+  color: @txt_home_block;
+  @media @scr_tablet{ width: 75%; }
+  @media @scr_mobile{ width: 100%; }
+  font-family: @font-family-lato-reg;
+  
+  h2{
+    margin: 0 0 17px 0;
+    font-weight: normal;
+    font-size: 2.15em;
+    color: @txt_home_block_title;
+    font-family: @font-family-lato-lig;
+  }
+      
+  a{
+    color: @txt_home_block_title;
+  }
+  .home-agenda-text{
+    
+  }
+}

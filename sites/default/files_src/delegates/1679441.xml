@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679441" login="DNEMIRI">
+        <identite civilite="Madame" codeDep="94">
+            <nom>NEMIRI</nom>
+            <prenom>Dalila</prenom>
+        </identite>
+        <email>dalila.nemiri@defenseurdesdroits.fr</email>
+        <photo>DNEMIRI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la prévention et de la médiation</libelle>
+                <libelleSecondaire />
+                <adresse>22, rue Guichard</adresse>
+                <boitePostale />
+                <tel>01 41 98 36 40</tel>
+                <fax>01 41 98 36 47</fax>
+                <ville cp="94230"><value>CACHAN</value></ville>
+                <poi>
+                    <longitude>2.337169</longitude>
+                    <latitude>48.793894</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

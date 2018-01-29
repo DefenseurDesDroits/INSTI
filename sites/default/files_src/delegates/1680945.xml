@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680945" login="CHENON">
+        <identite civilite="Monsieur" codeDep="51">
+            <nom>HÉNON</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.henon@defenseurdesdroits.fr</email>
+        <photo>CHENON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Reims</libelle>
+                <libelleSecondaire />
+                <adresse>37, rue Docteur Albert Schweitzer</adresse>
+                <boitePostale />
+                <tel>03 26 77 09 24</tel>
+                <fax>03 26 77 86 99</fax>
+                <ville cp="51100"><value>REIMS</value></ville>
+                <poi>
+                    <longitude>4.020650</longitude>
+                    <latitude>49.282068</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

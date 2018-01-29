@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681369" login="DGIRAUD">
+        <identite civilite="Monsieur" codeDep="79">
+            <nom>GIRAUD</nom>
+            <prenom>Didier</prenom>
+        </identite>
+        <email>didier.giraud@defenseurdesdroits.fr</email>
+        <photo>DGIRAUD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Deux-Sèvres</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue Du Guesclin</adresse>
+                <boitePostale>BP 522</boitePostale>
+                <tel>05 49 08 69 95</tel>
+                <fax>05 49 08 69 04</fax>
+                <ville cp="79099"><value>NIORT CEDEX 9</value></ville>
+                <poi>
+                    <longitude>-0.465515</longitude>
+                    <latitude>46.324550</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e - 4e et 5e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Bressuire</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue des Hardilliers</adresse>
+                <boitePostale>BP 100</boitePostale>
+                <tel>05 49 65 16 11</tel>
+                <fax />
+                <ville cp="79302"><value>BRESSUIRE CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.492177</longitude>
+                    <latitude>46.842885</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Parthenay</libelle>
+                <libelleSecondaire />
+                <adresse>20, boulevard de la Meilleraye</adresse>
+                <boitePostale>BP 169</boitePostale>
+                <tel>05 49 94 19 33</tel>
+                <fax />
+                <ville cp="79205"><value>PARTHENAY CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.248536</longitude>
+                    <latitude>46.645732</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,12 @@
+<?php
+
+
+function sl_forms_form_alter(&$form, &$form_state, $form_id){
+  switch($form_id){
+    case "contact_site_form":
+      if(isset($form['name']['#default_value'])){ $form['name']['#default_value'] = ""; }
+      if(isset($form['mail']['#default_value'])){ $form['mail']['#default_value'] = ""; }
+      if(isset($form['mail']['#title'])){ $form['mail']['#title'] = t("Email"); }
+      break;
+  }
+}

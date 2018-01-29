@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DDD - CT avis au parlement feature.
+ */
+
+include_once 'ddd_ct_avis_parlement.features.inc';

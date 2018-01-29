@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679762" login="CDESBORDES">
+        <identite civilite="Monsieur" codeDep="03">
+            <nom>DESBORDES</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.desbordes@defenseurdesdroits.fr</email>
+        <photo>CDESBORDES.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Allier</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Michel de l&apos;Hospital</adresse>
+                <boitePostale>CS 31649</boitePostale>
+                <tel>04 70 48 30 24</tel>
+                <fax>04 70 20 57 72</fax>
+                <ville cp="03016"><value>MOULINS CEDEX</value></ville>
+                <poi>
+                    <longitude>3.334577</longitude>
+                    <latitude>46.567514</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 3e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Vichy</libelle>
+                <libelleSecondaire />
+                <adresse>17, rue Alquié</adresse>
+                <boitePostale />
+                <tel>04 70 30 13 50</tel>
+                <fax />
+                <ville cp="03200"><value>VICHY</value></ville>
+                <poi>
+                    <longitude>3.417928</longitude>
+                    <latitude>46.124555</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

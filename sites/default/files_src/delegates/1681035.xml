@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681035" login="JNGUBELMANN">
+        <identite civilite="Monsieur" codeDep="67">
+            <nom>GUBELMANN</nom>
+            <prenom>Jean-Noël</prenom>
+        </identite>
+        <email>jean-noel.gubelmann@defenseurdesdroits.fr</email>
+        <photo>JNGUBELMANN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Communauté de communes du Val de Moder</libelle>
+                <libelleSecondaire />
+                <adresse>Place du Marché</adresse>
+                <boitePostale />
+                <tel>03 88 07 81 52</tel>
+                <fax>03 88 72 20 31</fax>
+                <ville cp="67350"><value>PFAFFENHOFFEN</value></ville>
+                <poi>
+                    <longitude>7.610199</longitude>
+                    <latitude>48.845655</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Strasbourg</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue de Flandre</adresse>
+                <boitePostale />
+                <tel>03 90 20 64 14</tel>
+                <fax>03 88 10 81 43</fax>
+                <ville cp="67000"><value>STRASBOURG</value></ville>
+                <poi>
+                    <longitude>7.774097</longitude>
+                    <latitude>48.581186</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

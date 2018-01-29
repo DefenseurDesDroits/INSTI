@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679645" login="HDJARI">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>DJARI</nom>
+            <prenom>Haddi</prenom>
+        </identite>
+        <email>haddi.djari@defenseurdesdroits.fr</email>
+        <photo>HDJARI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de la Vallée de Montmorency</libelle>
+                <libelleSecondaire />
+                <adresse>60, rue de Stalingrad</adresse>
+                <boitePostale />
+                <tel>01 34 44 03 90</tel>
+                <fax>01 34 44 03 99</fax>
+                <ville cp="95120"><value>ERMONT</value></ville>
+                <poi>
+                    <longitude>2.256705</longitude>
+                    <latitude>48.986113</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

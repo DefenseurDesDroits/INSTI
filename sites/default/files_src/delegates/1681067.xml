@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681067" login="CMORBOIS">
+        <identite civilite="Madame" codeDep="92">
+            <nom>MORBOIS</nom>
+            <prenom>Catherine</prenom>
+        </identite>
+        <email>catherine.morbois@defenseurdesdroits.fr</email>
+        <photo>CMORBOIS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison du droit de Boulogne-Billancourt</libelle>
+                <libelleSecondaire />
+                <adresse>35, rue Paul Bert</adresse>
+                <boitePostale />
+                <tel>01 46 03 04 98</tel>
+                <fax />
+                <ville cp="92100"><value>BOULOGNE-BILLANCOURT</value></ville>
+                <poi>
+                    <longitude>2.239268</longitude>
+                    <latitude>48.835328</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DDD Pathauto Configuration feature.
+ */
+
+include_once 'ddd_cf_pathauto_configuration.features.inc';

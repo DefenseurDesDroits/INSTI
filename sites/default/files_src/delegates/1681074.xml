@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681074" login="JRIVOIRE">
+        <identite civilite="Monsieur" codeDep="69">
+            <nom>RIVOIRE</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.rivoire@defenseurdesdroits.fr</email>
+        <photo>JRIVOIRE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice et du droit de Lyon Nord</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue du Chapeau Rouge</adresse>
+                <boitePostale />
+                <tel>04 72 85 67 90</tel>
+                <fax />
+                <ville cp="69009"><value>LYON</value></ville>
+                <poi>
+                    <longitude>4.806919</longitude>
+                    <latitude>45.773949</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

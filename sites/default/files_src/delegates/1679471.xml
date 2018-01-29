@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679471" login="DPANSIER">
+        <identite civilite="Monsieur" codeDep="30">
+            <nom>PANSIER</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.pansier@defenseurdesdroits.fr</email>
+        <photo>DPANSIER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>CCAS Villeneuve Lès Avignon</libelle>
+                <libelleSecondaire />
+                <adresse>1, allée Pierre-Louis Loisil</adresse>
+                <boitePostale />
+                <tel>04 90 15 97 00</tel>
+                <fax>04 90 25 79 77</fax>
+                <ville cp="30400"><value>VILLENEUVE-LÈS-AVIGNON</value></ville>
+                <poi>
+                    <longitude>4.794937</longitude>
+                    <latitude>43.968233</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Bagnols-sur-Cèze</libelle>
+                <libelleSecondaire />
+                <adresse>41, rue Marc Sagnier</adresse>
+                <boitePostale />
+                <tel>04 66 39 65 15</tel>
+                <fax />
+                <ville cp="30200"><value>BAGNOLS-SUR-CÈZE</value></ville>
+                <poi>
+                    <longitude>4.619121</longitude>
+                    <latitude>44.159083</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point de Justice</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Jean-Baptiste Fabre</adresse>
+                <boitePostale />
+                <tel>04 66 90 54 26</tel>
+                <fax>04 66 82 50 57</fax>
+                <ville cp="30150"><value>ROQUEMAURE</value></ville>
+                <poi>
+                    <longitude>4.779469</longitude>
+                    <latitude>44.052190</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

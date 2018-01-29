@@ -1,0 +1,37 @@
+<div class="row">
+  <p class="st-outils col-md-12"><?php print t("Filter results by type publications"); ?> :</p>
+  <div class="col-md-12">
+          <nav class="navbar navbar-default">
+                  <div class="container-fluid">
+                          <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-101" aria-expanded="false">
+                          <span class="sr-only"></span>
+                          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                                          <?php foreach($vars['menu'] as $m) : ?>
+                                                  <?php if($m['active'] == TRUE) : ?>
+                                                          <p class="navbar-brand"><?=$m['name']?></p>
+                                                  <?php  endif; ?>
+                                                  <?php endforeach; ?>
+                      </div>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-101">
+                                  <ul class="nav navbar-nav menu-taxo-vues">
+                                      <?php foreach($vars['menu'] as $m) : ?>
+                                  <li role="presentation">
+                                    <a href="/<?=$m['path']?>" <?php print ($m['active'] == TRUE ? 'class="active"' : '')?>><?=$m['name']?></a>
+                                  </li>
+                                      <?php endforeach; ?>
+                                  </ul>
+                          </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+          </nav>
+  </div>  
+</div>
+<div class="row">
+  <div class="col-md-12"><?php print render($vars['filter']); ?></div>
+</div>
+<div class="txt-resultats col-md-12"><?php print $vars['nb_result'] . t(' Result(s) for ') . '"' . $vars['name'] . '"'; ?></div>
+<?php print $vars['view']; ?> 
+</div>

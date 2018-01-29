@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2800059" login="ELAMBERT">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>LAMBERT</nom>
+            <prenom>Eric</prenom>
+        </identite>
+        <email>eric.lambert@defenseurdesdroits.fr</email>
+        <photo>ELAMBERT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie de Bourgoin-Jallieu</libelle>
+                <libelleSecondaire />
+                <adresse>1 rue de l&apos;Hôtel de ville</adresse>
+                <boitePostale>BP 428</boitePostale>
+                <tel>04 74 93 00 54</tel>
+                <fax />
+                <ville cp="38317"><value>BOURGOIN JALLIEU CEDEX</value></ville>
+                <poi>
+                    <longitude>5.276257</longitude>
+                    <latitude>45.593994</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

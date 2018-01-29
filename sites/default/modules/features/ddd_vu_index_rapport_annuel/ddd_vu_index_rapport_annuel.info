@@ -1,0 +1,11 @@
+name = DdD - Vue index rapport annuel
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0
+project = ddd_vu_index_rapport_annuel
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = ddd_vu_index_rapport_annuel
+features_exclude[dependencies][ctools] = ctools
+project path = sites/default/modules/features

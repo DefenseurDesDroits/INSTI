@@ -1,0 +1,4 @@
+name = SocleLAB Forms
+description = Contain forms preprocess for SocleLAB
+package = SocleLAB
+core = 7.x

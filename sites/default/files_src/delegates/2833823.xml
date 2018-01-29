@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2833823" login="VABDALLAH">
+        <identite civilite="Madame" codeDep="94">
+            <nom>ABDALLAH</nom>
+            <prenom>Valérie</prenom>
+        </identite>
+        <email>valerie.abdallah@defenseurdesdroits.fr</email>
+        <photo>VABDALLAH.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit de Vitry-sur-Seine</libelle>
+                <libelleSecondaire>Relais du plateau Gymnase Gosnat</libelleSecondaire>
+                <adresse>4 avenue du Colonel Fabien</adresse>
+                <boitePostale />
+                <tel>08 05 10 03 30</tel>
+                <fax />
+                <ville cp="94400"><value>VITRY SUR SEINE</value></ville>
+                <poi>
+                    <longitude>2.382994</longitude>
+                    <latitude>48.781790</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

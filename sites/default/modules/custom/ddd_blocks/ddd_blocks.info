@@ -1,0 +1,7 @@
+name = DdD - Blocks
+description = Module de gestion des blocks custom du site
+core = 7.x
+package = DdD - Configuration
+version = 7.x-1.0-dev1
+project = ddd_blocks
+project path = sites/default/modules/custom

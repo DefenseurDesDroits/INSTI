@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680022" login="JCBICKEL">
+        <identite civilite="Monsieur" codeDep="67">
+            <nom>BICKEL</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.bickel@defenseurdesdroits.fr</email>
+        <photo>JCBICKEL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Le Patio</libelle>
+                <libelleSecondaire />
+                <adresse>133, Grand&apos;Rue</adresse>
+                <boitePostale />
+                <tel>03 88 71 57 82</tel>
+                <fax />
+                <ville cp="67700"><value>SAVERNE</value></ville>
+                <poi>
+                    <longitude>7.367155</longitude>
+                    <latitude>48.739041</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Strasbourg</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue de Flandre</adresse>
+                <boitePostale />
+                <tel>03 90 20 64 14</tel>
+                <fax>03 88 10 81 43</fax>
+                <ville cp="67000"><value>STRASBOURG</value></ville>
+                <poi>
+                    <longitude>7.774097</longitude>
+                    <latitude>48.581186</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

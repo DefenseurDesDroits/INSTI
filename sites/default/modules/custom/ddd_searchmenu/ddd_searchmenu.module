@@ -1,0 +1,120 @@
+<?php
+/**
+ * @file
+ * Code for the DdD Search Menu
+ */
+
+function ddd_searchmenu_preprocess_page(&$vars, $hook)  {
+  $module_path = drupal_get_path('module', 'ddd_searchmenu');
+  drupal_add_js($module_path . '/js/searchmenu.js');
+}
+
+/**
+ * Implement hook_apachesolr_query_alter()
+ */
+function ddd_searchmenu_apachesolr_query_alter($query) {
+  global $language;
+  if($language->language == "fr-DC" ) {
+    $query->addFilter("ss_language", $language->language);
+  }
+  else if($language->language == "en" ){
+     $query->addFilter("ss_language", $language->language);
+  }
+}
+
+
+/**
+ * Implements hook_search_page().
+ */
+function ddd_searchmenu_search_page($results) {
+
+  // Build shared variables.
+  $build = array('#type' => 'node');
+  ds_build_shared_page_variables($build);
+
+  $i = 0;
+  // Multi site Apache Solr support.
+  if (variable_get('ds_search_apachesolr_multisite') && variable_get('ds_search_type', 'node') == 'apachesolr_search') {
+    $build['search_results'] = $results;
+  }
+  else {
+    foreach ($results as $id => $result) {
+      // Use default search result theming for file in case it's configured.
+      if ($result->entity_type == 'file' && variable_get('ds_search_file_render', FALSE)) {
+        // Get the file type from the file entity module. We'll overwrite
+        // the bundle here then as that makes more sense as a suggestion.
+        if (function_exists('file_get_type')) {
+          $type = file_get_type($result);
+          $result->original_result['bundle'] = $type;
+        }
+        $build['search_results'][] = array(
+          '#weight' => $i++,
+          '#markup' => theme('search_result', array('result' => $result->original_result, 'module' => 'apachesolr_search')),
+        );
+        continue;
+      } elseif ($result->entity_type == 'scald_atom' && isset($result->base_id)) { // TODO
+        $vars_atom = array('vars' => array(
+            'file_id'      => $result->base_id,
+            'file_source'  => $result->scald_file['und'][0]['uri'],
+            'file_title'   => check_plain($result->title),
+          ));
+        
+        $build['search_results'][] = array(
+          '#weight' => $i++,
+          '#markup' => theme('scald_file_render', $vars_atom),
+        );
+        continue;
+      }
+      $entity_type = isset($result->entity_type) ? $result->entity_type : 'node';
+      $data = ds_entity_view_fallback($entity_type, array($result->entity_id => $result), variable_get('ds_search_view_mode', 'search_result'));
+      // Check that we got an actual result back.
+      if ($data) { //TODO 
+        $data = reset($data);
+        if(isset($result->entity_type) && isset($result->sid) && $result->entity_type == "scald_atom"){ 
+          $data[$result->sid]['#weight'] = $i++;
+          $build['search_results'][] = $data[$result->sid];
+        } else {
+          $data[$result->entity_id]['#weight'] = $i++;
+          $build['search_results'][] = $data[$result->entity_id];
+        }
+      }
+    }
+  }
+
+  // Group by type.
+  if (variable_get('ds_search_group_by_type') && variable_get('ds_search_group_by_type_settings') && !empty($build['search_results'])) {
+    _ds_search_group_by_type($build);
+  }
+  else {
+    // Provide zebra striping for results that are not grouped.
+    $parity = 'odd';
+    foreach ($build['search_results'] as $id => $result) {
+      // We need to check on the entity type, as the container
+      // where the object is stored in doesn't necessarily reflect
+      // the name of the entity type.
+      if (!empty($build['search_results'][$id]['#entity_type'])) {
+        switch ($build['search_results'][$id]['#entity_type']) {
+          case 'taxonomy_term':
+            $key = '#term';
+            break;
+
+           default:
+             $key = '#' . $build['search_results'][$id]['#entity_type'];
+             break;
+        }
+
+        $build['search_results'][$id][$key]->ds_search_zebra = $parity;
+      }
+
+      // Let parity change always.
+      $parity = $parity == 'odd' ? 'even' : 'odd';
+    }
+  }
+
+  // Apache Solr multisearch grouping.
+  if (variable_get('ds_search_apachesolr_multisite') && variable_get('ds_search_apachesolr_multisite_group') && variable_get('ds_search_type', 'node') == 'apachesolr_search') {
+    _ds_search_group_by_type_multisearch($build);
+  }
+  return theme('ds_search_page', $build);
+}
+

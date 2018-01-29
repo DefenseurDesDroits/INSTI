@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681140" login="CLENFANT">
+        <identite civilite="Madame" codeDep="53">
+            <nom>LENFANT</nom>
+            <prenom>Christiane</prenom>
+        </identite>
+        <email>christiane.lenfant@defenseurdesdroits.fr</email>
+        <photo>CLENFANT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de l&apos;Europe </libelle>
+                <libelleSecondaire>Espace régional </libelleSecondaire>
+                <adresse>43, quai Gambetta</adresse>
+                <boitePostale />
+                <tel>06 19 17 69 89</tel>
+                <fax />
+                <ville cp="53000"><value>LAVAL</value></ville>
+                <poi>
+                    <longitude>-0.771893</longitude>
+                    <latitude>48.073048</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

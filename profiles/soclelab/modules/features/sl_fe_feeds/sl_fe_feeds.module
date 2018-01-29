@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature feeds feature.
+ */
+
+include_once 'sl_fe_feeds.features.inc';

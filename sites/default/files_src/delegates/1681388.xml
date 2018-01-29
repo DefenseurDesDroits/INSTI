@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681388" login="NFONTAINE">
+        <identite civilite="Madame" codeDep="71">
+            <nom>FONTAINE</nom>
+            <prenom>Noëlle</prenom>
+        </identite>
+        <email>noelle.fontaine@defenseurdesdroits.fr</email>
+        <photo>NFONTAINE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Varennes-le-Grand</libelle>
+                <libelleSecondaire />
+                <adresse>Sennecey-le-Grand</adresse>
+                <boitePostale>70013</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="71326"><value>CHALON SUR SAONE CEDEX</value></ville>
+                <poi>
+                    <longitude>4.871188</longitude>
+                    <latitude>46.709416</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 3e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Chalon sur Saône</libelle>
+                <libelleSecondaire />
+                <adresse>5, place de l&apos;Obélisque</adresse>
+                <boitePostale />
+                <tel>03 85 90 87 80</tel>
+                <fax />
+                <ville cp="71100"><value>CHALON SUR SAONE</value></ville>
+                <poi>
+                    <longitude>4.853437</longitude>
+                    <latitude>46.784875</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e - 3e et 4e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture d&apos;Autun</libelle>
+                <libelleSecondaire />
+                <adresse>21 rue Arquebuse</adresse>
+                <boitePostale />
+                <tel>03 85 90 87 80</tel>
+                <fax />
+                <ville cp="71400"><value>AUTUN</value></ville>
+                <poi>
+                    <longitude>4.303212</longitude>
+                    <latitude>46.950707</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

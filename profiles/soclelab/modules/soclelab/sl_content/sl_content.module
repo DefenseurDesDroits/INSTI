@@ -1,0 +1,29 @@
+<?php
+
+
+function sl_content_preprocess_node(&$variables){
+  if (isset($variables['nid']) && isset($variables['type']) && $variables['title']) {
+    $variables['node_url'] = (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . drupal_get_path_alias( 'node/' . $variables['nid'], getCurLang());
+    $variables['node_url_title'] = slutil_encode_title( t("Display the " . $variables['type'] . ":") ) . " " . $variables['title'];
+  }
+}
+
+// hook_scald_dnd_library_item_alter
+function sl_content_scald_dnd_library_item_alter(&$atom, $sid){
+  if (isset($atom->rendered->publisher['link'])) {
+    
+    global $base_url;
+    $atom->rendered->publisher['link'] = $base_url;
+    return $atom;
+  }
+}
+
+function sl_content_theme_registry_alter(&$theme_registry){
+  $theme_registry['sdl_editor_legend']['theme path'] = drupal_get_path('module', 'sl_content');;
+  $theme_registry['sdl_editor_legend']['function'] = "sl_content_sdl_editor_legend";
+}
+
+function sl_content_sdl_editor_legend($variables) {
+  $atom = $variables['atom'];
+  return '<div class="overlay-legend">' . slutil_get_imglegend($atom->sid) . '<div class="bg-legende-image"></div></div>';
+}

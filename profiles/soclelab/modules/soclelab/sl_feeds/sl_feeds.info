@@ -1,0 +1,6 @@
+name = Socle Lab' feeds
+description = Module de gestion des contenus importés
+core = 7.x
+package = SocleLAB - Feed
+version = 7.x-1.0
+project = sl_feeds

@@ -1,0 +1,13 @@
+name = DdD - View Filtres BO
+description = Feature comprenant la vue de gestion des filtres de type view
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-dev1
+project = ddd_vu_filtres
+dependencies[] = entityreference
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = vu_bo_filtre
+features_exclude[dependencies][ctools] = ctools
+project path = sites/default/modules/features

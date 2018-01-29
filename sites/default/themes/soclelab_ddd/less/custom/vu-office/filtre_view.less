@@ -1,0 +1,165 @@
+.view-vu-office {
+  .attachment .view-footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #search_input_gmap {
+    background-color: @transparent;
+    padding: 0;
+    margin: 0;
+    #shaddow > .drop-shadow(2px, 2px, 5px, 0.4);
+    position: relative;
+    top: 50px;
+    left: @left_filter;
+    z-index: 3;
+    width: 50%;
+
+    .form-text {
+      padding-left: 15px;
+      #border > .border-radius(0);
+      border: none;
+    }
+
+    .input-group-btn .btn-primary {
+      width: 75px;
+      background-color: @bg_map_btnsubmit;
+      border-radius: 0;
+    }
+  }
+
+  .modal-content {
+    #border > .border-radius(0);
+    background-color: @bg_contact;
+    .alert-dismissible{
+      display: none;
+    }
+    .modal-body{
+      padding: 0;
+    }
+    .btn{
+      #border > .border-radius(0);
+    }
+    .alert-danger {
+      margin: 10px;
+    }
+
+    .contact-form{
+      textarea{
+        padding-top: 6px;
+      }
+    }
+
+    .contact-form.submitted{
+      input:invalid {
+        background-color: #ffdddd;
+      }
+
+      input:valid {
+        background-color: #ddffdd;
+      }
+
+      textarea:invalid {
+        background-color: #ffdddd;
+      }
+
+      textarea:valid {
+        background-color: #ddffdd;
+      }
+    }
+
+  }
+
+  .label-cluster {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    width: 60px;
+    white-space: nowrap;
+  }
+}
+
+.filter-part-vignette{
+  background-color: @bg_actions_filtre;
+  padding: 21px 15px 27px 15px;
+
+  .title-filter{
+    color: @txt_actions_label;
+    font-size: 1.51em;
+    margin-bottom: 16px;
+  }
+  .sep-filter{
+    color: @txt_actions_label;
+    font-size: 1.2em;
+    margin-bottom: 11px;
+  }
+
+  .select-container{
+    position: relative;
+    width: 275px;
+    max-width: 100%;
+    margin: 0 auto 8px auto;
+  }
+
+  .select-arrow-btn{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 28px;
+    z-index: 10;
+    background-color: @bg_actions_select;
+    background-image: url("@{dir_img}/content/select-bot-arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none
+  }
+
+  select{
+    border: solid 1px @bor_actions_select;
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+
+
+
+/* Override inline dom styles from modal.js */
+#modalContent {
+  position: fixed !important;
+  top: 4% !important;
+  bottom: 0% !important;
+  right: 10% !important;
+  left: 10% !important;
+  overflow: auto !important;
+  max-width: 600px;
+  margin: auto;
+
+  div.ctools-modal-dialog {
+    width: 100% !important;
+    margin: 0 auto;
+    max-width: 600px;
+    height: 100% !important;
+
+    div.modal-content {
+      background-color: #e7e7e7 !important;
+    }
+
+    div.modal-header {
+      display: none;
+    }
+
+    div.modal-body {
+      width: 100% !important;
+      max-width: 600px;
+      height: 100% !important;
+      padding: 0;
+
+      #edit-message {
+        padding-top: 7px
+      }
+
+    }
+  }
+}

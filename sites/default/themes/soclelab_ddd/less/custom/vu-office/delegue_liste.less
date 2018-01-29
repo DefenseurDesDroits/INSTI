@@ -1,0 +1,54 @@
+.vignette-delegue{
+  padding: 15px 15px 15px 125px;
+  position: relative;
+  min-height: 100px;
+  margin-bottom: 30px;
+  
+  .delegue-photo{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 5;
+  }
+  .delegue-name{
+    color: @txt_delegue_name;
+    font-size: 1.35em;
+  }
+  .delegue-contact{
+    
+  }
+  .delegue-city-title{
+    color: @txt_delegue_city;
+    font-size: 1.35em;
+  }
+  .delegue-bottom-part{
+    border-top: 1px solid @bor_delegue_bot;
+    border-bottom: 1px solid @bor_delegue_bot;
+    color: @txt_delegue_perma;
+    padding: 4px 0 3px 0;
+    font-size: 1.1em;
+    margin-top: 20px;
+    a{
+      font-size: 1em;
+      padding: 0 0 0 18px;
+      border: none;
+      background: url("@{dir_img}/content/delegue-arrow-right.png") no-repeat left center;
+      @media @scr_mobile{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  a{
+    color: @bleu_medium;
+  }
+  @media @scr_mobile{
+    padding-left: 15px;
+    .container-delegue-contact{
+      padding-left: 130px;
+      min-height: 115px;
+    }
+    .delegue-photo{
+      left: 15px;
+    }
+  }
+}

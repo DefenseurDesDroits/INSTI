@@ -1,0 +1,14 @@
+name = Socle Lab' feature - views événement
+description = Feature de gestion des vues spécifiques aux événements
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_events
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-vue_events-block_event_sidebar
+features[features_api][] = api:2
+features[views_view][] = vue_events
+features_exclude[dependencies][views] = views
+features_exclude[dependencies][fe_block] = fe_block
+mtime = 1444147237
+project path = profiles/soclelab/modules/features

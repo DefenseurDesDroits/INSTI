@@ -1,0 +1,6 @@
+name = DdD - Refonte V2
+description = Module refonte v2
+core = 7.x
+package = DdD
+version = 7.x-1.0
+project path = sites/default/modules/custom

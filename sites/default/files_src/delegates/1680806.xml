@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680806" login="PREVAUX">
+        <identite civilite="Monsieur" codeDep="72">
+            <nom>REVAUX</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.revaux@defenseurdesdroits.fr</email>
+        <photo>PREVAUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Allonnes</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue Georges Bizet</adresse>
+                <boitePostale>BP 62</boitePostale>
+                <tel>02 43 39 05 85</tel>
+                <fax>02 43 43 82 99</fax>
+                <ville cp="72703"><value>ALLONNES CEDEX</value></ville>
+                <poi>
+                    <longitude>0.162543</longitude>
+                    <latitude>47.970257</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

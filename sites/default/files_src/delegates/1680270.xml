@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680270" login="FAMIEUX">
+        <identite civilite="Madame" codeDep="93">
+            <nom>AMIEUX</nom>
+            <prenom>Frédérique</prenom>
+        </identite>
+        <email>frederique.amieux@defenseurdesdroits.fr</email>
+        <photo>FAMIEUX.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Villepinte</libelle>
+                <libelleSecondaire />
+                <adresse>Avenue Vauban</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="93420"><value>VILLEPINTE</value></ville>
+                <poi>
+                    <longitude>2.554477</longitude>
+                    <latitude>48.967091</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 2e et 4e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Clichy-sous-Bois</libelle>
+                <libelleSecondaire />
+                <adresse>201, allée de Gagny</adresse>
+                <boitePostale />
+                <tel>01 41 70 38 20</tel>
+                <fax />
+                <ville cp="93390"><value>CLICHY SOUS BOIS</value></ville>
+                <poi>
+                    <longitude>2.549399</longitude>
+                    <latitude>48.911174</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des services publics</libelle>
+                <libelleSecondaire />
+                <adresse>11/15, Mail Federico Garcia Lorca</adresse>
+                <boitePostale />
+                <tel>01 55 85 12 00</tel>
+                <fax />
+                <ville cp="93160"><value>NOISY-LE-GRAND</value></ville>
+                <poi>
+                    <longitude>2.557843</longitude>
+                    <latitude>48.838878</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

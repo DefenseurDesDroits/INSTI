@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681174" login="JROZEN">
+        <identite civilite="Monsieur" codeDep="77">
+            <nom>ROZEN</nom>
+            <prenom>Jacques-Alain</prenom>
+        </identite>
+        <email>jacques-alain.rozen@defenseurdesdroits.fr</email>
+        <photo>JROZEN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Pontault-Combault</libelle>
+                <libelleSecondaire />
+                <adresse>107, avenue de la République</adresse>
+                <boitePostale />
+                <tel>01 70 05 45 83</tel>
+                <fax>01 70 05 45 91</fax>
+                <ville cp="77340"><value>PONTAULT COMBAULT</value></ville>
+                <poi>
+                    <longitude>2.607693</longitude>
+                    <latitude>48.800584</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

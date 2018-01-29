@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680558" login="FDJEDIDEN">
+        <identite civilite="Madame" codeDep="59">
+            <nom>DJEDIDEN</nom>
+            <prenom>Fatima</prenom>
+        </identite>
+        <email>fatima.djediden@defenseurdesdroits.fr</email>
+        <photo>FDJEDIDEN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie de Cambrai</libelle>
+                <libelleSecondaire />
+                <adresse>Rue de Nice</adresse>
+                <boitePostale>BP 409</boitePostale>
+                <tel>03 27 73 21 00</tel>
+                <fax>03 27 73 21 01</fax>
+                <ville cp="59407"><value>CAMBRAI CEDEX</value></ville>
+                <poi>
+                    <longitude>3.234604</longitude>
+                    <latitude>50.176278</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Douai</libelle>
+                <libelleSecondaire />
+                <adresse>505, rue de Cuincy</adresse>
+                <boitePostale>BP 707</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="59500"><value>DOUAI</value></ville>
+                <poi>
+                    <longitude>3.058886</longitude>
+                    <latitude>50.375383</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

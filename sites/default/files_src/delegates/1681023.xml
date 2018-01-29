@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681023" login="DROLIN">
+        <identite civilite="Monsieur" codeDep="57">
+            <nom>ROLIN</nom>
+            <prenom>Dominique</prenom>
+        </identite>
+        <email>dominique.rolin@defenseurdesdroits.fr</email>
+        <photo>DROLIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Pôle des Lauriers</libelle>
+                <libelleSecondaire />
+                <adresse>3 bis, rue d&apos;Anjou</adresse>
+                <boitePostale />
+                <tel>03 87 55 55 98</tel>
+                <fax />
+                <ville cp="57070"><value>METZ</value></ville>
+                <poi>
+                    <longitude>6.226270</longitude>
+                    <latitude>49.117383</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

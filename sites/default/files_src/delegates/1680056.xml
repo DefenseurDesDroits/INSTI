@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680056" login="JYLIMEUX">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>LIMEUX</nom>
+            <prenom>Jean-Yves</prenom>
+        </identite>
+        <email>jean-yves.limeux@defenseurdesdroits.fr</email>
+        <photo>JYLIMEUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Lens</libelle>
+                <libelleSecondaire>Pavillon Desmoulins </libelleSecondaire>
+                <adresse>Rue Alain</adresse>
+                <boitePostale />
+                <tel>03 91 83 01 10</tel>
+                <fax>03 91 83 01 11</fax>
+                <ville cp="62300"><value>LENS</value></ville>
+                <poi>
+                    <longitude>2.833505</longitude>
+                    <latitude>50.443544</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de Services Publics </libelle>
+                <libelleSecondaire />
+                <adresse>5, rue des Acacias</adresse>
+                <boitePostale />
+                <tel>03 91 83 23 00 </tel>
+                <fax />
+                <ville cp="62710"><value>COURRIÈRES</value></ville>
+                <poi>
+                    <longitude>2.953251</longitude>
+                    <latitude>50.460143</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

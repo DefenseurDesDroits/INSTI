@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680788" login="MDUMASGALANT">
+        <identite civilite="Madame" codeDep="34">
+            <nom>DUMAS-GALANT</nom>
+            <prenom>Myriam</prenom>
+        </identite>
+        <email>myriam.dumas-galant@defenseurdesdroits.fr</email>
+        <photo>MDUMASGALANT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Hérault</libelle>
+                <libelleSecondaire />
+                <adresse>34, place Martyrs de la Résistance</adresse>
+                <boitePostale />
+                <tel>04 67 61 61 26</tel>
+                <fax />
+                <ville cp="34062"><value>MONTPELLIER CEDEX 2</value></ville>
+                <poi>
+                    <longitude>3.876656</longitude>
+                    <latitude>43.611137</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

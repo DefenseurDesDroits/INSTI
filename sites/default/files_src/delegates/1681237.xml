@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681237" login="SDAVIDCLERMONT">
+        <identite civilite="Madame" codeDep="73">
+            <nom>DAVID-CLERMONT</nom>
+            <prenom>Sophie</prenom>
+        </identite>
+        <email>sophie.david-clermont@defenseurdesdroits.fr</email>
+        <photo>SDAVIDCLERMONT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Chambéry</libelle>
+                <libelleSecondaire />
+                <adresse>28, place du Forum</adresse>
+                <boitePostale />
+                <tel>04 79 72 38 37</tel>
+                <fax />
+                <ville cp="73000"><value>CHAMBÉRY</value></ville>
+                <poi>
+                    <longitude>5.919462</longitude>
+                    <latitude>45.592925</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Savoie</libelle>
+                <libelleSecondaire />
+                <adresse>Château des Ducs de Savoie</adresse>
+                <boitePostale>BP 1801</boitePostale>
+                <tel>04 79 75 50 53</tel>
+                <fax>04 79 75 51 52</fax>
+                <ville cp="73000"><value>CHAMBERY</value></ville>
+                <poi>
+                    <longitude>5.918644</longitude>
+                    <latitude>45.564774</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

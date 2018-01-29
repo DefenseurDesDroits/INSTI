@@ -1,0 +1,19 @@
+<?php
+
+
+/**
+  * Implémente hook_preprocess_page(&$vars)
+  *
+  * Ajoute les JS nécessaire à l'activation de la GMAP sur la page office.
+  */
+function ddd_custom_gmap_preprocess_page(&$vars) {
+
+	if(isset($vars['theme_hook_suggestions'])) {
+		if($vars['theme_hook_suggestions'][0] == 'page__office') {
+			drupal_add_js(drupal_get_path('module', 'gmap') . '/thirdparty/markerwithlabel.js', array(
+				'group' => JS_THEME,
+				'weight' => 5,
+			));
+		}
+	}
+}

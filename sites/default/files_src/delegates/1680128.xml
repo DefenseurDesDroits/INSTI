@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680128" login="DBLOT">
+        <identite civilite="Monsieur" codeDep="41">
+            <nom>BLOT</nom>
+            <prenom>Dominique</prenom>
+        </identite>
+        <email>dominique.blot@defenseurdesdroits.fr</email>
+        <photo>DBLOT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>Place du Château</adresse>
+                <boitePostale />
+                <tel>02 54 96 97 85</tel>
+                <fax />
+                <ville cp="41200"><value>ROMORANTIN LANTHENAY</value></ville>
+                <poi>
+                    <longitude>1.742599</longitude>
+                    <latitude>47.358319</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de Loir-et-Cher</libelle>
+                <libelleSecondaire />
+                <adresse>1, place de la République</adresse>
+                <boitePostale />
+                <tel>02 54 81 54 35</tel>
+                <fax>02 54 81 54 06</fax>
+                <ville cp="41000"><value>BLOIS</value></ville>
+                <poi>
+                    <longitude>1.333782</longitude>
+                    <latitude>47.590361</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

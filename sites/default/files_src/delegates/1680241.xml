@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680241" login="PFELIX">
+        <identite civilite="Monsieur" codeDep="85">
+            <nom>FÉLIX</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.felix@defenseurdesdroits.fr</email>
+        <photo>PFELIX.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie annexe de la Chaume</libelle>
+                <libelleSecondaire />
+                <adresse>Place d&apos;Armes</adresse>
+                <boitePostale />
+                <tel>02 51 95 16 29</tel>
+                <fax />
+                <ville cp="85100"><value>LES SABLES D OLONNE</value></ville>
+                <poi>
+                    <longitude>-1.797055</longitude>
+                    <latitude>46.497688</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Vendée</libelle>
+                <libelleSecondaire>Bât. A1 - 1er étage</libelleSecondaire>
+                <adresse>Cité Travot - rue du 93ème R.I.</adresse>
+                <boitePostale />
+                <tel>02 51 36 70 45</tel>
+                <fax />
+                <ville cp="85022"><value>LA ROCHE-SUR-YON CEDEX</value></ville>
+                <poi>
+                    <longitude>-1.427389</longitude>
+                    <latitude>46.667530</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

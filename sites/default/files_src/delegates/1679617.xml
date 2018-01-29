@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679617" login="CPARNAUD">
+        <identite civilite="Monsieur" codeDep="87">
+            <nom>PARNAUD</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.parnaud@defenseurdesdroits.fr</email>
+        <photo>CPARNAUD.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison du droit</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Gustave Flaubert</adresse>
+                <boitePostale />
+                <tel>05 55 43 06 82</tel>
+                <fax />
+                <ville cp="87200"><value>ST JUNIEN</value></ville>
+                <poi>
+                    <longitude>0.895855</longitude>
+                    <latitude>45.884509</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Vienne</libelle>
+                <libelleSecondaire />
+                <adresse>Place Stalingrad</adresse>
+                <boitePostale />
+                <tel>05 55 44 17 59</tel>
+                <fax />
+                <ville cp="87000"><value>LIMOGES</value></ville>
+                <poi>
+                    <longitude>1.257789</longitude>
+                    <latitude>45.832937</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

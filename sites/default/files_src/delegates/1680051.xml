@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680051" login="RPARISET">
+        <identite civilite="Monsieur" codeDep="80">
+            <nom>PARISET</nom>
+            <prenom>Régis</prenom>
+        </identite>
+        <email>regis.pariset@defenseurdesdroits.fr</email>
+        <photo>RPARISET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Immeuble de la DRAC</libelle>
+                <libelleSecondaire />
+                <adresse>5, rue Henri Daussy</adresse>
+                <boitePostale />
+                <tel>03 22 97 83 13</tel>
+                <fax />
+                <ville cp="80000"><value>AMIENS</value></ville>
+                <poi>
+                    <longitude>2.305204</longitude>
+                    <latitude>49.883056</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

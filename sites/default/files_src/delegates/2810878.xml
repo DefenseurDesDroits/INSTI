@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2810878" login="BSUSINI">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>SUSINI</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.susini@defenseurdesdroits.fr</email>
+        <photo>BSUSINI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Plate-forme de services publics de Bougainville</libelle>
+                <libelleSecondaire />
+                <adresse>9 rue Cougit</adresse>
+                <boitePostale />
+                <tel>04 91 11 42 60</tel>
+                <fax>04 91 11 42 69</fax>
+                <ville cp="13015"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.368986</longitude>
+                    <latitude>43.322033</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

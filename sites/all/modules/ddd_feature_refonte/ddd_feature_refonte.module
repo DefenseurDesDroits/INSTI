@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ddd_feature_refonte feature.
+ */
+
+include_once 'ddd_feature_refonte.features.inc';

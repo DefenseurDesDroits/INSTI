@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681155" login="LOMURPHY">
+        <identite civilite="Monsieur" codeDep="92">
+            <nom>O&apos;MURPHY</nom>
+            <prenom>Loïc</prenom>
+        </identite>
+        <email>loic.omurphy@defenseurdesdroits.fr</email>
+        <photo>LOMURPHY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Genevilliers</libelle>
+                <libelleSecondaire />
+                <adresse>19, avenue Lucette Mazalaigue</adresse>
+                <boitePostale />
+                <tel>01 47 99 06 56</tel>
+                <fax />
+                <ville cp="92230"><value>GENNEVILLIERS</value></ville>
+                <poi>
+                    <longitude>2.286843</longitude>
+                    <latitude>48.933232</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

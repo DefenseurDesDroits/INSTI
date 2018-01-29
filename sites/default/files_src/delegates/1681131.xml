@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681131" login="RLANDSBERGER">
+        <identite civilite="Monsieur" codeDep="78">
+            <nom>LANDSBERGER-ISAAC</nom>
+            <prenom>Robert</prenom>
+        </identite>
+        <email>robert.landsberger@defenseurdesdroits.fr</email>
+        <photo>RLANDSBERGER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit des Mureaux</libelle>
+                <libelleSecondaire />
+                <adresse>79 boulevard Victor Hugo</adresse>
+                <boitePostale />
+                <tel>01 34 92 73 42</tel>
+                <fax>01 30 99 51 00</fax>
+                <ville cp="78130"><value>LES MUREAUX</value></ville>
+                <poi>
+                    <longitude>1.912176</longitude>
+                    <latitude>48.992678</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit - CCAS</libelle>
+                <libelleSecondaire />
+                <adresse>6 place du Trident </adresse>
+                <boitePostale />
+                <tel>01 39 74 20 16</tel>
+                <fax />
+                <ville cp="78570"><value>CHANTELOUP-LES-VIGNES</value></ville>
+                <poi>
+                    <longitude>2.029614</longitude>
+                    <latitude>48.972844</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,156 @@
+
+form3{ // TODO : ????????
+
+  .form-item{
+    position: relative;
+  }
+
+  label{
+    width: 40%;
+    display: block;
+    vertical-align: top;
+    height: 30px;
+    padding: 7px 8px;
+    color: @txt_form_label;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 2;
+    font-size: 13px;
+
+    @media @scr_tablet{
+      margin-bottom: 0;
+      right: 1px;
+      width: auto;
+    }
+  }
+
+  .form-control{
+    #border > .border-radius(0px);
+    #shaddow > .no-shaddow();
+    width: 100%;
+    padding-left: 40%;
+    display: block;
+    vertical-align: top;
+    border: 1px solid @bor_form_field;
+    font-size: 13px;
+
+    &:focus{
+      #shaddow > .no-shaddow();
+      border-color: @bor_form_field_f;
+    }
+
+    @media @scr_tablet{
+      padding-left: 12px;
+      padding-top: 30px;
+      height: 63px;
+    }
+  }
+}
+
+.form-type-textfield{
+
+  label{
+
+  }
+  input{
+
+  }
+}
+
+.form-type-textarea{
+
+  label{
+    width: 80%;
+  }
+  textarea{
+    #border > .border-radius(0px);
+    width: 100% !important;
+    opacity: 1 !important;
+    border: 1px solid @bor_form_field;
+    padding-left: 12px;
+    padding-top: 34px;
+    &:focus{
+      border-color: @bor_form_field_f;
+    }
+
+    @media @scr_tablet{
+      height: 100px;
+    }
+  }
+}
+
+.form-type-checkbox{
+  display: inline-block;
+    margin:0 20px;
+  /*text-align: right;*/
+  /*float: right;*/
+    @media @scr_mobile{display:block;margin:10px 0 10px 20px;}
+
+  label{
+    background-color: @transparent;
+    width: auto;
+    padding: 0;
+    height: auto;
+    position: relative;
+  }
+  input{
+    position: relative !important;
+    float: left;
+  }
+}
+
+body .form-submit{
+  #border > .border-radius(0px);
+  background-color: @bg_button;
+  color: @txt_button;
+  border: 1px solid @bor_button;
+
+  &:hover{
+    background-color: @bg_button_h;
+    color: @txt_button_h;
+    border-color:  @bor_button_h;
+  }
+
+  &:focus,
+  &:active{
+    background-color: @bg_button_a;
+    color: @txt_button_a;
+    border-color:  @bor_button_a;
+    outline: 0 !important;
+    #shaddow > .no-shaddow();
+  }
+
+}
+
+#user-login, #user-register-form, #user-pass, #scald-atom-add-form-source, #scald-atom-add-form-add, #scald-atom-add-form-options{
+  background-color: @bg_filter;
+  padding: 15px 15px 15px 15px;
+  position: relative;
+  .help-block{
+    color: @txt_filter_nb_result;
+  }
+}
+
+#scald-atom-add-form-options{
+  .form-type-checkbox{
+    clear: both;
+    float: left;
+    margin-left: 20px;
+
+  }
+  .form-checkboxes{
+    .clearfix;
+  }
+
+  .form-type-checkboxes label{
+    position: relative;
+  }
+}
+
+.captcha {
+  margin-top: 25px;
+  .panel-heading{
+    display: none;
+  }
+}

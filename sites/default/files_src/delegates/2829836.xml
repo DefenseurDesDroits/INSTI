@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2829836" login="CTOSSZULEMARO">
+        <identite civilite="Madame" codeDep="973">
+            <nom>TOSS ZULEMARO</nom>
+            <prenom>Cécilia</prenom>
+        </identite>
+        <email>cecilia.toss-zulemaro@defenseurdesdroits.fr</email>
+        <photo>CTOSSZULEMARO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Pôle culturel de Kourou</libelle>
+                <libelleSecondaire>Perspective Copena</libelleSecondaire>
+                <adresse>Avenue Guidiglo </adresse>
+                <boitePostale />
+                <tel>05 94 22 32 90</tel>
+                <fax />
+                <ville cp="97310"><value>KOUROU</value></ville>
+                <poi>
+                    <longitude>-52.650276</longitude>
+                    <latitude>5.159752</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680695" login="FWELLHOFF">
+        <identite civilite="Monsieur" codeDep="92">
+            <nom>WELLHOFF</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.wellhoff@defenseurdesdroits.fr</email>
+        <photo>FWELLHOFF.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit intercommunale des Blagis </libelle>
+                <libelleSecondaire />
+                <adresse>7 rue Edouard Branly</adresse>
+                <boitePostale />
+                <tel>01 46 64 14 14</tel>
+                <fax>01 46 64 13 95</fax>
+                <ville cp="92220"><value>BAGNEUX</value></ville>
+                <poi>
+                    <longitude>2.309855</longitude>
+                    <latitude>48.788595</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680656" login="JPOUPLIER">
+        <identite civilite="Monsieur" codeDep="51">
+            <nom>POUPLIER</nom>
+            <prenom>Jacky</prenom>
+        </identite>
+        <email>jacky.pouplier@defenseurdesdroits.fr</email>
+        <photo>JPOUPLIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Marne</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Carnot</adresse>
+                <boitePostale />
+                <tel>03 26 26 13 68</tel>
+                <fax>03 26 26 13 63</fax>
+                <ville cp="51000"><value>CHÂLONS-EN-CHAMPAGNE</value></ville>
+                <poi>
+                    <longitude>4.366607</longitude>
+                    <latitude>48.953431</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,7 @@
+name = DdD - Agenda
+description = Module de gestion du bloc de défilement de semaine
+core = 7.x
+package = DdD - Configuration
+version = 7.x-1.0-dev1
+project = ddd_agenda
+project path = sites/default/modules/custom

@@ -1,0 +1,55 @@
+<?php
+/**
+ * @file
+ * Description : Contain custom blocks definition for DdD
+ * Date of last update : 24/12/2014
+ * Developer : PAUTREL Bruno
+ *
+ */
+
+define("DDD_CONTENT_DECISION_VIEW_NAME", 'decisions');
+
+function soclelab_ddd_preprocess_page(&$vars, $hook) {
+    if (preg_match('/^actions/', $_GET['q'])) {
+      drupal_add_js(drupal_get_path('module', 'ddd_content') . '/js/actions.js', array('weight' => 100));
+    }
+  
+    drupal_add_js(drupal_get_path('module', 'ddd_content') . '/js/aide.js');
+  
+    if(isset($vars['page']['content']['system_main']['no_content'])) {
+      unset($vars['page']['content']['system_main']['no_content']);
+    }
+    
+    $term = menu_get_object('taxonomy_term', 2);
+    if ($term) {
+      unset($vars['page']['content']['system_main']['pager']);
+    }
+
+
+//   if (preg_match('/^decisions/', $_GET['q'])) {
+//     drupal_add_js(drupal_get_path('module', 'ddd_content') . '/js/decisions.js', array('weight' => 100));
+//   }
+}
+
+ /**
+ * Implement hook_menu().
+ */
+function ddd_content_menu() {
+  $items = array();
+  $items['actions'] = array(
+    'title' => 'Liste des actions',
+    'page callback' => 'actions_callback',
+    'access arguments' => array(
+      'access content'
+    ),
+    'type' => MENU_CALLBACK
+  );
+
+  return $items;
+}
+
+function actions_callback() {
+  $output = ' ';
+
+  return $output;
+}

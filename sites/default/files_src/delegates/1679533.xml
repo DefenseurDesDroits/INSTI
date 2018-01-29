@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679533" login="JJFIEMS">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>FIEMS</nom>
+            <prenom>Jean-Jacques</prenom>
+        </identite>
+        <email>jean-jacques.fiems@defenseurdesdroits.fr</email>
+        <photo>JJFIEMS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la Médiation</libelle>
+                <libelleSecondaire />
+                <adresse>Place Roger Salengro</adresse>
+                <boitePostale>BP 667</boitePostale>
+                <tel>03 20 49 50 77</tel>
+                <fax />
+                <ville cp="59000"><value>LILLE</value></ville>
+                <poi>
+                    <longitude>3.071440</longitude>
+                    <latitude>50.630552</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison du Citoyen de Lomme</libelle>
+                <libelleSecondaire />
+                <adresse>343, avenue de Dunkerque Lomme</adresse>
+                <boitePostale />
+                <tel>03 20 08 90 30</tel>
+                <fax />
+                <ville cp="59160"><value>LAMBERSART</value></ville>
+                <poi>
+                    <longitude>3.018642</longitude>
+                    <latitude>50.640576</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

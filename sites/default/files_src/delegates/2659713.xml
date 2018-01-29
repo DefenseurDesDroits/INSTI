@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2659713" login="JMHEBERT">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>HEBERT</nom>
+            <prenom>Jean-Marc</prenom>
+        </identite>
+        <email>jean-marc.hebert@defenseurdesdroits.fr</email>
+        <photo>JMHEBERT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Espace Activités Emploi de Mouans Sartoux</libelle>
+                <libelleSecondaire />
+                <adresse>39, avenue de Cannes</adresse>
+                <boitePostale />
+                <tel>04 92 92 47 28</tel>
+                <fax />
+                <ville cp="06370"><value>MOUANS-SARTOUX</value></ville>
+                <poi>
+                    <longitude>6.971134</longitude>
+                    <latitude>43.619920</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Grasse</libelle>
+                <libelleSecondaire />
+                <adresse>55, route des Genêts</adresse>
+                <boitePostale>BP 44190</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="06137"><value>GRASSE CEDEX</value></ville>
+                <poi>
+                    <longitude>6.904369</longitude>
+                    <latitude>43.674833</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 2e et 4e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Grasse</libelle>
+                <libelleSecondaire />
+                <adresse>3, avenue du Général de Gaulle</adresse>
+                <boitePostale>CS 43179</boitePostale>
+                <tel>04 92 42 32 29</tel>
+                <fax />
+                <ville cp="06131"><value>GRASSE CEDEX</value></ville>
+                <poi>
+                    <longitude>6.919286</longitude>
+                    <latitude>43.656381</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

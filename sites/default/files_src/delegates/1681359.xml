@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681359" login="RJAMARD">
+        <identite civilite="Madame" codeDep="16">
+            <nom>JAMARD</nom>
+            <prenom>Raymonde</prenom>
+        </identite>
+        <email>raymonde.jamard@defenseurdesdroits.fr</email>
+        <photo>RJAMARD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Charente</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue de la Préfecture</adresse>
+                <boitePostale>BP 1399</boitePostale>
+                <tel>05 45 97 61 28</tel>
+                <fax />
+                <ville cp="16000"><value>ANGOULÊME</value></ville>
+                <poi>
+                    <longitude>0.157456</longitude>
+                    <latitude>45.646066</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

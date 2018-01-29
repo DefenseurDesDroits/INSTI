@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679564" login="SBRETIN">
+        <identite civilite="Monsieur" codeDep="69">
+            <nom>BRETIN</nom>
+            <prenom>Simon</prenom>
+        </identite>
+        <email>simon.bretin@defenseurdesdroits.fr</email>
+        <photo>SBRETIN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Villefranche-sur-Saône</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Lavoisier</adresse>
+                <boitePostale>BP 482</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="69400"><value>VILLEFRANCHE-SUR-SAÔNE</value></ville>
+                <poi>
+                    <longitude>4.725384</longitude>
+                    <latitude>45.997588</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Villefranche-sur-Saône</libelle>
+                <libelleSecondaire />
+                <adresse>36, rue de la République </adresse>
+                <boitePostale>BP 462</boitePostale>
+                <tel>04 74 62 66 46</tel>
+                <fax>04 74 62 66 03</fax>
+                <ville cp="69400"><value>VILLEFRANCHE-SUR-SAÔNE</value></ville>
+                <poi>
+                    <longitude>4.716451</longitude>
+                    <latitude>45.988532</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

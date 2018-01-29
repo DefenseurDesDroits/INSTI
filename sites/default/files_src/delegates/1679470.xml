@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679470" login="MMOLIERE">
+        <identite civilite="Monsieur" codeDep="30">
+            <nom>MOLIÈRE</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.moliere@defenseurdesdroits.fr</email>
+        <photo>MMOLIERE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie annexe</libelle>
+                <libelleSecondaire>Centre commercial de la Moulinelle</libelleSecondaire>
+                <adresse>1, avenue Jean Bouin</adresse>
+                <boitePostale />
+                <tel>04 66 59 28 81</tel>
+                <fax />
+                <ville cp="30300"><value>BEAUCAIRE</value></ville>
+                <poi>
+                    <longitude>4.625352</longitude>
+                    <latitude>43.811671</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e du mois JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Vauvert</libelle>
+                <libelleSecondaire>Résidence la Salicorne</libelleSecondaire>
+                <adresse>Rue Emile Zola</adresse>
+                <boitePostale />
+                <tel>04 66 88 88 40</tel>
+                <fax>04 66 88 88 41</fax>
+                <ville cp="30600"><value>VAUVERT</value></ville>
+                <poi>
+                    <longitude>4.273382</longitude>
+                    <latitude>43.693732</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e du mois JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de quartier</libelle>
+                <libelleSecondaire />
+                <adresse>Rue des Tourterelles</adresse>
+                <boitePostale />
+                <tel>04 66 38 03 29</tel>
+                <fax />
+                <ville cp="30800"><value>SAINT-GILLES</value></ville>
+                <poi>
+                    <longitude>4.434420</longitude>
+                    <latitude>43.680233</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

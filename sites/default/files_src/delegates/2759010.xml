@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2759010" login="JBOURGUIGNON">
+        <identite civilite="Monsieur" codeDep="24">
+            <nom>BOURGUIGNON</nom>
+            <prenom>Jacques</prenom>
+        </identite>
+        <email>jacques.bourguignon@defenseurdesdroits.fr</email>
+        <photo>JBOURGUIGNON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Bergerac</libelle>
+                <libelleSecondaire />
+                <adresse>16, place Gambetta </adresse>
+                <boitePostale>BP 825</boitePostale>
+                <tel>05 47 24 16 22</tel>
+                <fax>05 47 24 16 23</fax>
+                <ville cp="24108"><value>BERGERAC CEDEX</value></ville>
+                <poi>
+                    <longitude>0.482541</longitude>
+                    <latitude>44.854763</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

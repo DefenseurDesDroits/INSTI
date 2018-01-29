@@ -1,0 +1,17 @@
+name = DdD TAXO Autorite
+description = Taxonomie des autorités
+core = 7.x
+package = DdD - Taxonomies (Features)
+version = 7.x-1.0-dev1
+project = ddd_taxo_autorite
+dependencies[] = ddd_tx_typecontenu
+dependencies[] = features
+dependencies[] = fieldable_vocabularies
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_annee
+features[field_instance][] = taxonomy_term-autoriter-field_annee
+features[taxonomy][] = autoriter
+mtime = 1444146886
+project path = sites/default/modules/features

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680531" login="JLBRUGIERE">
+        <identite civilite="Monsieur" codeDep="15">
+            <nom>BRUGIÈRE</nom>
+            <prenom>Jean-Luc</prenom>
+        </identite>
+        <email>jean-luc.brugiere@defenseurdesdroits.fr</email>
+        <photo>JLBRUGIERE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Cantal</libelle>
+                <libelleSecondaire />
+                <adresse>Cours Monthyon</adresse>
+                <boitePostale>BP 529</boitePostale>
+                <tel>04 71 46 23 00</tel>
+                <fax>04 71 46 23 06</fax>
+                <ville cp="15000"><value>AURILLAC</value></ville>
+                <poi>
+                    <longitude>2.447662</longitude>
+                    <latitude>44.929342</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

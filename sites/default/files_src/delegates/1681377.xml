@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681377" login="JBONNEL">
+        <identite civilite="Monsieur" codeDep="11">
+            <nom>BONNEL</nom>
+            <prenom>Jean-Paul</prenom>
+        </identite>
+        <email>jean-paul.bonnel@defenseurdesdroits.fr</email>
+        <photo>JBONNEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison des Services</libelle>
+                <libelleSecondaire />
+                <adresse>1, avenue de la Naiade</adresse>
+                <boitePostale />
+                <tel>04 68 90 31 54</tel>
+                <fax>04 68 41 90 56</fax>
+                <ville cp="11100"><value>NARBONNE</value></ville>
+                <poi>
+                    <longitude>2.332127</longitude>
+                    <latitude>45.218307</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

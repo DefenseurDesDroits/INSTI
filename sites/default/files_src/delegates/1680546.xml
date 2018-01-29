@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680546" login="GPONSATY">
+        <identite civilite="Monsieur" codeDep="66">
+            <nom>PONSATY</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.ponsaty@defenseurdesdroits.fr</email>
+        <photo>GPONSATY.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Perpignan</libelle>
+                <libelleSecondaire />
+                <adresse>Chemin de Mailloles</adresse>
+                <boitePostale>BP 945</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="66000"><value>PERPIGNAN</value></ville>
+                <poi>
+                    <longitude>2.869284</longitude>
+                    <latitude>42.680033</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e du mois
+Réservée aux détenus VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture des Pyrénées-Orientales</libelle>
+                <libelleSecondaire />
+                <adresse>5, rue Bardou Job</adresse>
+                <boitePostale />
+                <tel>04 68 51 68 01</tel>
+                <fax />
+                <ville cp="66000"><value>PERPIGNAN</value></ville>
+                <poi>
+                    <longitude>2.891036</longitude>
+                    <latitude>42.699302</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

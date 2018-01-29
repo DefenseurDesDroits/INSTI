@@ -1,0 +1,79 @@
+#block-menu-menu-menu-utilitaire{
+  .menu{
+    .pull-right;
+    text-align: left;
+    @media @scr_mobile{
+      float: none !important;
+      background-color: @bg_list_result_h;
+      padding: 15px 20px 15px 20px;
+    }
+    a{
+      display: block;
+    }
+  }
+  a{
+    color: @txt_header_util;
+    font-size: 1.01em;
+    &:after{
+      content: "|";
+      position: absolute;
+      right: 0;
+      top: 0;
+      
+      @media @scr_mobile{
+        content: "";
+      }
+    }
+  }
+  li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 13px 0 4px;
+    color: @txt_header_util;
+    position: relative;
+    vertical-align: middle;
+    @media @scr_mobile{
+      margin:10px 0;
+      display: block;
+    }
+  }
+  .last{
+    padding-right: 0;
+  }
+  #link-normal-font, #link-big-font{
+    &:after{
+      content: "";
+    }    
+  }
+  .link-saisir-defenseur, .link-phone{
+    background-repeat: no-repeat;
+    color: @txt_header_util_picto;
+    &:after{
+      content: "";
+    }
+  }
+  .link-saisir-defenseur{
+    background-image: url("@{dir_img}/header/picto-saisir.png");
+    padding-left: 38px;
+    background-position: left 2px;
+  }
+  .link-phone{
+    background-image: url("@{dir_img}/header/picto-phone.png");
+    padding-left: 24px;
+    background-position: left top;
+  }
+}
+#menu-lang-fr-dc{
+  background-image: url("@{dir_img}/header/picto-defco.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  padding-top: 32px;
+  margin-top: -5px;
+  display: inline-block;
+  &:after{
+    content: "";
+  }
+}

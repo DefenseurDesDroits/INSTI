@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680362" login="JCNOEL">
+        <identite civilite="Monsieur" codeDep="10">
+            <nom>NOËL</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.noel@defenseurdesdroits.fr</email>
+        <photo>JCNOEL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Troyes</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue de Jaillard</adresse>
+                <boitePostale />
+                <tel>03 25 83 18 90</tel>
+                <fax>03 25 40 31 84</fax>
+                <ville cp="10000"><value>TROYES</value></ville>
+                <poi>
+                    <longitude>4.083217</longitude>
+                    <latitude>48.298943</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Aube</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la Libération</adresse>
+                <boitePostale />
+                <tel>03 25 42 35 22</tel>
+                <fax />
+                <ville cp="10000"><value>TROYES</value></ville>
+                <poi>
+                    <longitude>4.078179</longitude>
+                    <latitude>48.297339</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

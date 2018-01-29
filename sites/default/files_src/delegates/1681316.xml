@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681316" login="JCLELAY">
+        <identite civilite="Monsieur" codeDep="53">
+            <nom>LE LAY</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.lelay@defenseurdesdroits.fr</email>
+        <photo>JCLELAY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de l&apos;Europe</libelle>
+                <libelleSecondaire>Espace régional</libelleSecondaire>
+                <adresse>43, quai Gambetta</adresse>
+                <boitePostale />
+                <tel>06 11 81 59 31</tel>
+                <fax />
+                <ville cp="53000"><value>LAVAL</value></ville>
+                <poi>
+                    <longitude>-0.771893</longitude>
+                    <latitude>48.073048</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

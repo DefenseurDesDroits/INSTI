@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679659" login="MELLACOTT">
+        <identite civilite="Madame" codeDep="987">
+            <nom>ELLACOTT</nom>
+            <prenom>Monique</prenom>
+        </identite>
+        <email>monique.ellacott@defenseurdesdroits.fr</email>
+        <photo>MELLACOTT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Faa&apos;a-Nuutia</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="98702"><value>FAA&apos;A - TAHITI</value></ville>
+                <poi>
+                    <longitude>-149.603404993</longitude>
+                    <latitude>-17.5549826854</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - un sur deux JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Haut-Commissariat de la République</libelle>
+                <libelleSecondaire>(ex. avenue Bruat)</libelleSecondaire>
+                <adresse>Avenue Pouvanaa a Oopa</adresse>
+                <boitePostale>BP 115</boitePostale>
+                <tel>689 46 85 07</tel>
+                <fax />
+                <ville cp="98713"><value>PAPEETE</value></ville>
+                <poi>
+                    <longitude>-149.570177</longitude>
+                    <latitude>-17.543513</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

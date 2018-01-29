@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681122" login="AGRISWARD">
+        <identite civilite="Monsieur" codeDep="88">
+            <nom>GRISWARD</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.grisward@defenseurdesdroits.fr</email>
+        <photo>AGRISWARD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Vosges</libelle>
+                <libelleSecondaire>bureau 113</libelleSecondaire>
+                <adresse>Place Foch</adresse>
+                <boitePostale />
+                <tel>03 29 69 88 88</tel>
+                <fax />
+                <ville cp="88000"><value>ÉPINAL</value></ville>
+                <poi>
+                    <longitude>6.448452</longitude>
+                    <latitude>48.172780</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Saint-Dié-des-Vosges</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Jules Ferry </adresse>
+                <boitePostale />
+                <tel>03 29 42 11 11</tel>
+                <fax />
+                <ville cp="88107"><value>SAINT-DIÉ-DES-VOSGES CEDEX</value></ville>
+                <poi>
+                    <longitude>6.948050</longitude>
+                    <latitude>48.287052</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

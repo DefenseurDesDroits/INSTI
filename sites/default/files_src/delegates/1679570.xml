@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679570" login="RPERES">
+        <identite civilite="Monsieur" codeDep="69">
+            <nom>PERES</nom>
+            <prenom>Robert</prenom>
+        </identite>
+        <email>robert.peres@defenseurdesdroits.fr</email>
+        <photo>RPERES.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Vénissieux</libelle>
+                <libelleSecondaire />
+                <adresse>18, rue Jules Ferry</adresse>
+                <boitePostale />
+                <tel>04 72 90 18 20</tel>
+                <fax />
+                <ville cp="69200"><value>VÉNISSIEUX</value></ville>
+                <poi>
+                    <longitude>4.885941</longitude>
+                    <latitude>45.698885</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison des services publics</libelle>
+                <libelleSecondaire>Centre commercial de Vénissy</libelleSecondaire>
+                <adresse>19, avenue Jean Cagne</adresse>
+                <boitePostale />
+                <tel>04 72 89 32 60</tel>
+                <fax />
+                <ville cp="69200"><value>VÉNISSIEUX</value></ville>
+                <poi>
+                    <longitude>4.873750</longitude>
+                    <latitude>45.695369</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

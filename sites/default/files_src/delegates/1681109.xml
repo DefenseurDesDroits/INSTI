@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681109" login="ADEMOMENT">
+        <identite civilite="Monsieur" codeDep="26">
+            <nom>DEMOMENT</nom>
+            <prenom>André</prenom>
+        </identite>
+        <email>andre.demoment@defenseurdesdroits.fr</email>
+        <photo>ADEMOMENT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Romans-sur-Isère</libelle>
+                <libelleSecondaire />
+                <adresse>5, boulevard Gabriel Péri</adresse>
+                <boitePostale />
+                <tel>04 75 70 68 00</tel>
+                <fax />
+                <ville cp="26100"><value>ROMANS-SUR-ISÈRE</value></ville>
+                <poi>
+                    <longitude>5.053537</longitude>
+                    <latitude>45.048102</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des services publics - Vie sociale</libelle>
+                <libelleSecondaire />
+                <adresse>1, avenue Saint-Martin</adresse>
+                <boitePostale />
+                <tel>06 13 34 66 89</tel>
+                <fax />
+                <ville cp="26200"><value>MONTÉLIMAR</value></ville>
+                <poi>
+                    <longitude>4.753628</longitude>
+                    <latitude>44.563084</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Drôme</libelle>
+                <libelleSecondaire />
+                <adresse>3, boulevard Vauban </adresse>
+                <boitePostale />
+                <tel>06 13 34 66 89</tel>
+                <fax />
+                <ville cp="26000"><value>VALENCE</value></ville>
+                <poi>
+                    <longitude>4.893546</longitude>
+                    <latitude>44.935599</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e et 5e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

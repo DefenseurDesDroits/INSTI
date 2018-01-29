@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681162" login="DPIARDON">
+        <identite civilite="Monsieur" codeDep="17">
+            <nom>PIARDON</nom>
+            <prenom>Didier </prenom>
+        </identite>
+        <email>didier.piardon@defenseurdesdroits.fr</email>
+        <photo>DPIARDON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Rochefort</libelle>
+                <libelleSecondaire />
+                <adresse>21, rue Jean Jaurès</adresse>
+                <boitePostale />
+                <tel>06 21 13 46 74</tel>
+                <fax />
+                <ville cp="17306"><value>ROCHEFORT CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.959109</longitude>
+                    <latitude>45.937769</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2714765" login="JHARARI">
+        <identite civilite="Madame" codeDep="75">
+            <nom>ANTOURVILLE-HARARI</nom>
+            <prenom>Jeannine</prenom>
+        </identite>
+        <email>jeannine.antourville-harari@defenseurdesdroits.fr</email>
+        <photo>JHARARI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie du 9ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>6 rue Drouot</adresse>
+                <boitePostale />
+                <tel>06 74 66 62 53</tel>
+                <fax />
+                <ville cp="75009"><value>PARIS</value></ville>
+                <poi>
+                    <longitude>2.340513</longitude>
+                    <latitude>48.872767</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

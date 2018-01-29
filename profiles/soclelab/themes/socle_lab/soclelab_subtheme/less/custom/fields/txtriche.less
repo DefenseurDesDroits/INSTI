@@ -1,0 +1,98 @@
+.text-riche{
+  blockquote{
+    background-color: @bg_citation;
+    border-left: none;
+    position: relative;
+    padding-top: 47px;
+    padding-bottom: 40px;
+    font-size: 24px;
+    line-height: 31px;
+    text-indent: 100px;
+    
+    &:before,
+    &:after{
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+    
+    &:before{
+      top: 4px;
+      left: 14px;
+      width: 67px;
+      height: 56px;
+      background-image: url("@{dir_img}/content/bg-blockquote-top-blue.png");
+    }
+    &:after{
+      bottom: 9px;
+      right: 60px;
+      width: 39px;
+      height: 32px;
+      background-image: url("@{dir_img}/content/bg-blockquote-bot-blue.png");
+    }
+  }
+
+  h2{
+    color: @txt_main_title;
+    font-size: 20px;
+  }
+  h3{
+    color: @txt_main_title;
+    font-size: 18px;
+  }
+  
+  p{
+    margin-bottom: 15px;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  td{
+    padding: 10px;
+  }
+}
+
+#page-main-content{
+  .bloc-title, .field-label{
+    .vignette-home-type;
+    color: @txt_bloc_title;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+  }
+  .field{
+    margin-bottom: 56px;
+  }
+}
+
+.sl-scald-file{
+  background-color: @bg_pdf;
+  background-image: url("@{dir_img}/content/vignette-pdf.png");
+  background-repeat: no-repeat;
+  background-position: 15px 15px;
+  min-height: 100px;
+  padding: 35px 15px 15px 115px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  
+  @media @scr_mobile{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+.extension-doc{
+  background-image: url("@{dir_img}/content/vignette-doc.png");
+}
+.extension-xls{
+  background-image: url("@{dir_img}/content/vignette-xls.png");
+}
+
+.context-sdl_editor_representation{
+  display: block;
+  margin-bottom: 15px;
+}

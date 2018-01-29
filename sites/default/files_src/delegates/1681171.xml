@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681171" login="DTADUY">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>TADUY</nom>
+            <prenom>Dzung</prenom>
+        </identite>
+        <email>dzung.taduy@defenseurdesdroits.fr</email>
+        <photo>DTADUY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Palais de justice de Grenoble</libelle>
+                <libelleSecondaire>guichet unique </libelleSecondaire>
+                <adresse>Place Firmin Gautier</adresse>
+                <boitePostale />
+                <tel>06 24 64 80 12</tel>
+                <fax />
+                <ville cp="38000"><value>GRENOBLE</value></ville>
+                <poi>
+                    <longitude>5.711314</longitude>
+                    <latitude>45.190877</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

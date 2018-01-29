@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680773" login="RGODET">
+        <identite civilite="Monsieur" codeDep="83">
+            <nom>GODET</nom>
+            <prenom>Richard</prenom>
+        </identite>
+        <email>richard.godet@defenseurdesdroits.fr</email>
+        <photo>RGODET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison départementale du territoire de l&apos;aire dracénoise</libelle>
+                <libelleSecondaire>Conseil général </libelleSecondaire>
+                <adresse>1, boulevard Maréchal Foch</adresse>
+                <boitePostale />
+                <tel>04 83 95 33 00</tel>
+                <fax>04 83 95 33 69</fax>
+                <ville cp="83300"><value>DRAGUIGNAN</value></ville>
+                <poi>
+                    <longitude>6.461915</longitude>
+                    <latitude>43.538441</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

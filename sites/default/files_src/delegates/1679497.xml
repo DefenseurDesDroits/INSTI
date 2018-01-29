@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679497" login="BBRON">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>BRON</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.bron@defenseurdesdroits.fr</email>
+        <photo>BBRON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Villefontaine</libelle>
+                <libelleSecondaire />
+                <adresse>Place du 11 novembre 1918</adresse>
+                <boitePostale />
+                <tel>04 74 96 94 67</tel>
+                <fax />
+                <ville cp="38090"><value>VILLEFONTAINE</value></ville>
+                <poi>
+                    <longitude>5.148156</longitude>
+                    <latitude>45.612979</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

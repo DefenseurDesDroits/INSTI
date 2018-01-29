@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681078" login="LBOULA">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>BOULA</nom>
+            <prenom>Laurent</prenom>
+        </identite>
+        <email>laurent.boula@defenseurdesdroits.fr</email>
+        <photo>LBOULA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Cergy</libelle>
+                <libelleSecondaire />
+                <adresse>12, place des Institutions </adresse>
+                <boitePostale />
+                <tel>01 30 38 45 15</tel>
+                <fax />
+                <ville cp="95000"><value>CERGY</value></ville>
+                <poi>
+                    <longitude>2.033065</longitude>
+                    <latitude>49.047345</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

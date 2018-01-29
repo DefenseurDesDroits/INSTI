@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680084" login="RPUJOL">
+        <identite civilite="Monsieur" codeDep="11">
+            <nom>PUJOL</nom>
+            <prenom>Renaud</prenom>
+        </identite>
+        <email>renaud.pujol@defenseurdesdroits.fr</email>
+        <photo>RPUJOL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Aude</libelle>
+                <libelleSecondaire />
+                <adresse>52, rue Jean Bringer</adresse>
+                <boitePostale>BP 836</boitePostale>
+                <tel>04 68 10 27 27</tel>
+                <fax>04 68 72 32 98</fax>
+                <ville cp="11000"><value>CARCASSONNE</value></ville>
+                <poi>
+                    <longitude>2.353303</longitude>
+                    <latitude>43.214368</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

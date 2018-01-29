@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2364911" login="MRAIMBEAULT">
+        <identite civilite="Monsieur" codeDep="50">
+            <nom>RAIMBEAULT</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.raimbeault@defenseurdesdroits.fr</email>
+        <photo>MRAIMBEAULT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous préfecture de Cherbourg</libelle>
+                <libelleSecondaire />
+                <adresse>106, rue Emmanuel Liais</adresse>
+                <boitePostale />
+                <tel>02 33 87 81 81</tel>
+                <fax />
+                <ville cp="50100"><value>CHERBOURG OCTEVILLE</value></ville>
+                <poi>
+                    <longitude>-1.628246</longitude>
+                    <latitude>49.639295</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

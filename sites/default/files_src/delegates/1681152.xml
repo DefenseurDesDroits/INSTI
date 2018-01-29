@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681152" login="GMORLIER">
+        <identite civilite="Monsieur" codeDep="91">
+            <nom>MORLIER</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.morlier@defenseurdesdroits.fr</email>
+        <photo>GMORLIER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit d&apos;Athis-Mons</libelle>
+                <libelleSecondaire>Porte de l&apos;Essonne</libelleSecondaire>
+                <adresse>4, avenue François Mitterrand</adresse>
+                <boitePostale />
+                <tel>01 60 48 70 59</tel>
+                <fax />
+                <ville cp="91200"><value>ATHIS-MONS</value></ville>
+                <poi>
+                    <longitude>2.371978</longitude>
+                    <latitude>48.698497</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit des Ulis</libelle>
+                <libelleSecondaire>Groupe scolaire des Bergères</libelleSecondaire>
+                <adresse>Rue des Bergères </adresse>
+                <boitePostale />
+                <tel>01 64 86 14 56</tel>
+                <fax />
+                <ville cp="91940"><value>LES ULIS</value></ville>
+                <poi>
+                    <longitude>2.167449</longitude>
+                    <latitude>48.684757</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du Val d&apos;Orges</libelle>
+                <libelleSecondaire>Le Trianon</libelleSecondaire>
+                <adresse>72, route de Corbeil</adresse>
+                <boitePostale />
+                <tel>01 69 46 81 50</tel>
+                <fax>01 69 46 81 57</fax>
+                <ville cp="91360"><value>VILLEMOISSON-SUR-ORGE</value></ville>
+                <poi>
+                    <longitude>2.338447</longitude>
+                    <latitude>48.659779</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire />
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

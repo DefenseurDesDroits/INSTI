@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2475100" login="CLAURENS">
+        <identite civilite="Monsieur" codeDep="31">
+            <nom>LAURENS</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.laurens@defenseurdesdroits.fr</email>
+        <photo>CLAURENS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Lalande</libelle>
+                <libelleSecondaire />
+                <adresse>217, avenue de Fronton</adresse>
+                <boitePostale />
+                <tel>05 34 42 29 50</tel>
+                <fax>05 34 42 29 51</fax>
+                <ville cp="31000"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>1.433037</longitude>
+                    <latitude>43.646555</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

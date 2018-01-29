@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2403142" login="GPERELLE">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>PERELLE</nom>
+            <prenom>Gilles</prenom>
+        </identite>
+        <email>gilles.perelle@defenseurdesdroits.fr</email>
+        <photo>GPERELLE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Paris Nord-Ouest</libelle>
+                <libelleSecondaire />
+                <adresse>16-22, rue Jacques Kellner</adresse>
+                <boitePostale />
+                <tel>01 53 06 83 40</tel>
+                <fax>01 42 29 34 76</fax>
+                <ville cp="75017"><value>PARIS - 17</value></ville>
+                <poi>
+                    <longitude>2.326140</longitude>
+                    <latitude>48.896125</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

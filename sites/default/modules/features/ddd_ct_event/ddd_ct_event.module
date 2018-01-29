@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DDD - CT Evenement feature.
+ */
+
+include_once 'ddd_ct_event.features.inc';

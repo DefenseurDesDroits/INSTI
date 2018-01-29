@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680868" login="JMTRAVEL">
+        <identite civilite="Monsieur" codeDep="56">
+            <nom>TRAVEL</nom>
+            <prenom>Jean-Michel</prenom>
+        </identite>
+        <email>jean-michel.travel@defenseurdesdroits.fr</email>
+        <photo>JMTRAVEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Lorient</libelle>
+                <libelleSecondaire />
+                <adresse>Quai de Rohan</adresse>
+                <boitePostale />
+                <tel>02 97 84 40 07</tel>
+                <fax>02 97 21 60 93</fax>
+                <ville cp="56100"><value>LORIENT</value></ville>
+                <poi>
+                    <longitude>-3.362344</longitude>
+                    <latitude>47.745466</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

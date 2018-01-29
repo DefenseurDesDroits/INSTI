@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2664474" login="EPATINO">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>PATINO</nom>
+            <prenom>Edouard</prenom>
+        </identite>
+        <email>edouard.patino@defenseurdesdroits.fr</email>
+        <photo>EPATINO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Paris Nord-Est</libelle>
+                <libelleSecondaire />
+                <adresse>15/17, rue du Buisson St-Louis</adresse>
+                <boitePostale />
+                <tel>01 53 38 62 80</tel>
+                <fax />
+                <ville cp="75010"><value>PARIS - 10</value></ville>
+                <poi>
+                    <longitude>2.373562</longitude>
+                    <latitude>48.872675</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit du 20ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>15, cité Champagne</adresse>
+                <boitePostale />
+                <tel>01 53 27 37 40</tel>
+                <fax />
+                <ville cp="75020"><value>PARIS - 20</value></ville>
+                <poi>
+                    <longitude>2.4046</longitude>
+                    <latitude>48.85359</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

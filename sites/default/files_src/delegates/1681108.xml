@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681108" login="FDANCHAUD">
+        <identite civilite="Monsieur" codeDep="35">
+            <nom>DANCHAUD</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.danchaud@defenseurdesdroits.fr</email>
+        <photo>FDANCHAUD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Caisse d&apos;Allocations Familiales</libelle>
+                <libelleSecondaire>Face aux Champs Libres</libelleSecondaire>
+                <adresse>11, cours des Alliés</adresse>
+                <boitePostale />
+                <tel>02 99 29 59 30</tel>
+                <fax />
+                <ville cp="35028"><value>RENNES CEDEX 9</value></ville>
+                <poi>
+                    <longitude>-1.674728</longitude>
+                    <latitude>48.105734</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

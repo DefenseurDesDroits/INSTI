@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2442002" login="LBELFORT">
+        <identite civilite="Monsieur" codeDep="973">
+            <nom>BELFORT</nom>
+            <prenom>Laurent</prenom>
+        </identite>
+        <email>laurent.belfort@defenseurdesdroits.fr</email>
+        <photo>LBELFORT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Villa des Palmistes de la Préfecture</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Fiedmond</adresse>
+                <boitePostale />
+                <tel>05 94 39 45 78</tel>
+                <fax>05 94 31 80 73</fax>
+                <ville cp="97300"><value>CAYENNE</value></ville>
+                <poi>
+                    <longitude>-52.335262</longitude>
+                    <latitude>4.939450</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

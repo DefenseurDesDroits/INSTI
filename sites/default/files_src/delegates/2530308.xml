@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2530308" login="JLANGLOIS">
+        <identite civilite="Monsieur" codeDep="02">
+            <nom>LANGLOIS</nom>
+            <prenom>Jack</prenom>
+        </identite>
+        <email>jack.langlois@defenseurdesdroits.fr</email>
+        <photo>JLANGLOIS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Laon</libelle>
+                <libelleSecondaire />
+                <adresse>Rue des Epinettes</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="02000"><value>LAON</value></ville>
+                <poi>
+                    <longitude>3.6387</longitude>
+                    <latitude>49.581041</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Aisne</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Paul Doumer</adresse>
+                <boitePostale>CS 20656</boitePostale>
+                <tel>03 23 21 83 14</tel>
+                <fax />
+                <ville cp="02010"><value>LAON CEDEX </value></ville>
+                <poi>
+                    <longitude>3.621043</longitude>
+                    <latitude>49.564345</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

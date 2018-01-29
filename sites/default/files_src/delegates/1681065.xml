@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681065" login="FCAMPSERVEUX">
+        <identite civilite="Madame" codeDep="31">
+            <nom>CAMPSERVEUX</nom>
+            <prenom>Florence</prenom>
+        </identite>
+        <email>florence.campserveux@defenseurdesdroits.fr</email>
+        <photo>FCAMPSERVEUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>C.C.A.S.</libelle>
+                <libelleSecondaire />
+                <adresse>22 rue Joseph Gasc</adresse>
+                <boitePostale />
+                <tel>05 61 51 90 80</tel>
+                <fax />
+                <ville cp="31600"><value>MURET</value></ville>
+                <poi>
+                    <longitude>1.332009</longitude>
+                    <latitude>43.464410</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

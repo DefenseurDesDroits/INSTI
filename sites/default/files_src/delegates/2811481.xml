@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2811481" login="GBARNIER">
+        <identite civilite="Monsieur" codeDep="30">
+            <nom>BARNIER</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.barnier@defenseurdesdroits.fr</email>
+        <photo>GBARNIER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Nîmes</libelle>
+                <libelleSecondaire />
+                <adresse>131 Chemin Bas de Grezan</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="30000"><value>NIMES</value></ville>
+                <poi>
+                    <longitude>4.395697</longitude>
+                    <latitude>43.842310</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit d&apos;Aigues-Mortes</libelle>
+                <libelleSecondaire />
+                <adresse>1 boulevard Gambetta</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="30220"><value>AIGUES MORTES</value></ville>
+                <poi>
+                    <longitude>4.193380</longitude>
+                    <latitude>43.566870</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de la communauté de communes du Pays Viganais</libelle>
+                <libelleSecondaire>Hôtel de la Condamine</libelleSecondaire>
+                <adresse>Avenue Emmanuel d&apos;Alzon</adresse>
+                <boitePostale />
+                <tel>04 67 42 72 21</tel>
+                <fax />
+                <ville cp="30120"><value>LE VIGAN</value></ville>
+                <poi>
+                    <longitude>3.609926</longitude>
+                    <latitude>43.992670</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

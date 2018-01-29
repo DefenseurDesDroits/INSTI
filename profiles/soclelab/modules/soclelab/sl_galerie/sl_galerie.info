@@ -1,0 +1,6 @@
+name = Socle Lab' galerie
+description = Module de gestion des galerie d'image
+core = 7.x
+package = SocleLAB - Content Type
+version = 7.x-1.0
+project = sl_galerie

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680371" login="JPBRENET">
+        <identite civilite="Monsieur" codeDep="14">
+            <nom>BRENET</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.brenet@defenseurdesdroits.fr</email>
+        <photo>JPBRENET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Caen et Centre de détention</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue du Général Duparge</adresse>
+                <boitePostale>BP 6193</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="14000"><value>CAEN</value></ville>
+                <poi>
+                    <longitude>-0.391563</longitude>
+                    <latitude>49.182443</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Calvados</libelle>
+                <libelleSecondaire>Centre administratif départemental</libelleSecondaire>
+                <adresse>Rue Saint-Laurent</adresse>
+                <boitePostale />
+                <tel>02 31 30 64 82</tel>
+                <fax />
+                <ville cp="14000"><value>CAEN</value></ville>
+                <poi>
+                    <longitude>-0.363753</longitude>
+                    <latitude>49.179317</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>tous les jours sur RDV et VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

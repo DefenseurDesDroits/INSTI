@@ -1,0 +1,210 @@
+<?php
+/**
+ * Created by Hervé Tubaldo <herve.tubaldo@webup.fr>
+ * Date: 14/02/2014
+ * Time: 15:14
+ */
+
+
+/**
+ * Implements hook_entity_info_alter
+ * @param $entity_info
+ */
+function apachesolr_scald_entity_info_alter(&$entity_info) {
+  // Set this entity as indexable
+  $entity_info['scald_atom']['apachesolr']['indexable'] = TRUE;
+  $entity_info['scald_atom']['apachesolr']['status callback'][] = 'apachesolr_scald_status_callback';
+  $entity_info['scald_atom']['apachesolr']['document callback'][] = 'apachesolr_scald_index_atom_solr_document';
+  $entity_info['scald_atom']['apachesolr']['reindex callback'] = 'apachesolr_scald_solr_reindex';
+//   $entity_info['scald_atom']['apachesolr']['index_table'] = 'apachesolr_index_entities_scald_atom';
+  $entity_info['scald_atom']['apachesolr']['result callback'] = 'apachesolr_scald_atom_result';
+//   $entity_info['node']['view modes']['search_result'] = array(
+//     'label' => t('DdD - Search result'),
+//     'custom settings' => TRUE,
+//   );
+//   dsm($entity_info, 'entity');
+}
+
+
+/**
+ * Status callback for ApacheSolr
+ */
+function apachesolr_scald_status_callback($entity_id, $entity_type, $entity = NULL) {
+  if ($entity === NULL) {
+    $entity = scald_atom_load($entity_id);
+  }
+  return !empty($entity);
+}
+
+
+/**
+ * Builds the atom information for a Solr document.
+ *
+ * @param ApacheSolrDocument $document
+ *   The Solr document we are building up.
+ * @param stdClass $entity
+ *   The entity we are indexing.
+ * @param string $entity_type
+ *   The type of entity we're dealing with.
+ */
+function apachesolr_scald_index_atom_solr_document(ApacheSolrDocument $document, $entity, $entity_type) {
+  $contexts = scald_contexts();
+  if (isset($contexts['full'])) {
+    scald_prerender($entity, 'full', array());
+  }
+  elseif (isset($contexts['sdl_editor_representation'])) {
+    scald_prerender($entity, 'sdl_editor_representation', array());
+  }
+
+  $document->label = apachesolr_clean_text($entity->title);
+  $document->bs_status = 1;
+  $document->is_comment_count = 0;
+  if (!isset($document->ds_created)) $document->ds_created = apachesolr_date_iso(time());
+  $document->ds_changed = apachesolr_date_iso(time());
+
+  if (!isset($document->ss_created)) $document->ss_created = time();
+  $document->ss_changed = time();
+
+  if (!empty($document->ss_provider)) $document->ss_provider = $entity->provider;
+  if (!empty($entity->thumbnail_source)) {
+    $document->ss_thumbnail_source = $entity->thumbnail_source;
+    $document->ss_thumbnail_source_url = file_create_url($entity->thumbnail_source);
+  }
+
+  $items = field_get_items('scald_atom', $entity, 'scald_tags');
+  if ($items) {
+    foreach ($items as $item) {
+      $document->addField('im_scald_tags_tid', $item['tid']);
+      $term = taxonomy_term_load($item['tid']);
+      $document->addField('sm_scald_tags_name', $term->name);
+    }
+  }
+
+  if (isset($entity->rendered->player)) {
+    $document->content = apachesolr_clean_text($entity->rendered->player);
+  }
+
+  if (empty($document->content)) {
+    $document->content = $document->label;
+  }
+  $document->teaser = truncate_utf8($document->content, 300, TRUE);
+
+  //TODO : check if apachesolr_attachments is enabled and index atom content with tika
+
+  //  Generic use case for future reference. Callbacks can
+  //  allow you to send back multiple documents
+  $documents = array();
+  $documents[] = $document;
+  return $documents;
+}
+
+/**
+ * Reindexing callback for ApacheSolr
+ */
+function apachesolr_scald_solr_reindex($env_id, $bundle = NULL) {
+  $indexer_table = apachesolr_get_indexer_table('scald_atom');
+  $transaction = db_transaction();
+  try {
+    $indexable_bundles = apachesolr_get_index_bundles($env_id, 'scald_atom');
+
+    if ($bundle && !empty($indexable_bundles) && !in_array($bundle, $indexable_bundles)) {
+      // The bundle specified is not in the indexable bundles list.
+      return NULL;
+    }
+
+    // Leave status 0 rows - those need to be
+    // removed from the index later.
+    $delete = db_delete($indexer_table);
+    $delete->condition('status', 1);
+
+    if (!empty($bundle)) {
+      $delete->condition('bundle', $bundle);
+    }
+    elseif (!empty($indexable_bundles)) {
+      $delete->condition('bundle', $indexable_bundles, 'IN');
+    }
+
+    $delete->execute();
+
+    $select = db_select('scald_atoms', 'sa');
+    $select->addExpression("'scald_atom'", 'entity_type');
+    $select->addExpression(TRUE, 'status');
+    $select->addField('sa', 'sid', 'entity_id');
+    $select->addField('sa', 'type', 'bundle');
+    $select->addExpression(REQUEST_TIME, 'changed');
+
+    if ($bundle) {
+      // Mark all atoms of the specified bundle for reindexing.
+      $select->condition('sa.type', $bundle);
+    }
+    elseif (!empty($indexable_bundles)) {
+      // Restrict reindex to atoms in the indexable bundles list.
+      $select->condition('sa.type', $indexable_bundles, 'IN');
+    }
+
+    $insert = db_insert($indexer_table)
+      ->fields(array('entity_id', 'bundle', 'entity_type', 'status', 'changed'))
+      ->from($select)
+      ->execute();
+  }
+  catch (Exception $e) {
+    echo $e;
+    $transaction->rollback();
+    throw $e;
+  }
+}
+
+/**
+ * Callback function for atom search results.
+ *
+ * @param stdClass $doc
+ *   The result document from Apache Solr.
+ * @param array $result
+ *   The result array for this record to which to add.
+ */
+function apachesolr_scald_atom_result($doc, &$result, &$extra) {
+//  $atom = _file_exist_in_database('scald_atoms', 'sid', $doc->entity_id);
+//  if ($atom != FALSE) {
+ //   $atom = (object)$atom;
+ //   scald_file_scald_fetch($atom, 'atom');
+ //   scald_file_scald_prerender($atom, NULL, NULL, 'atom');
+//     $result['snippet'] = theme('scald_file_render',
+//       array('vars' => array(
+//         'file_id'      => $atom->base_id,
+//         'file_source'  => $atom->file_source,
+//         'thumbnail_source' => $atom->thumbnail_source,
+//         'file_title'   => check_plain($atom->title),
+//       ))
+//     );
+//    $result['snippet'] = drupal_render($atom);
+//  }
+//   scald_file_scald_prerender($atom, NULL, NULL, 'atom');
+//   dvm($atom, 'atom');
+//   $result['snippet'] = theme('scald_file_render',
+//     array('vars' => array(
+//       'file_id'      => $atom->base_id,
+//       'file_source'  => $atom->file_source,
+//       'thumbnail_source' => $atom->thumbnail_source,
+//       'file_title'   => check_plain($atom->title),
+//     ))
+//   );
+// //   $result['snippet'] = scald_file_scald_prerender($atom, NULL, NULL, 'atom');
+//   $query = new EntityFieldQuery();
+//   $entities = $query->entityCondition('entity_type', $doc->entity_type)
+//   ->entityCondition('bundle', $doc->bundle)
+//   ->entityCondition('entity_id', $doc->entity_id)
+//   ->execute();
+//   dsm($entities, 'entity');
+//   dsm($result, 'result');
+//   dsm($doc, 'doc');
+//dvm($doc);
+/*$result += array(
+    'type' => t('File attachment'),
+    'user' => theme('username', array('account' => $doc)),
+    'date' => isset($doc->created) ? $doc->created : 0,
+    'node' => $doc,
+    'file' => $doc,
+    'uid' => $doc->is_uid,
+  );*/
+//dvm($result);
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679437" login="RMOLINA">
+        <identite civilite="Monsieur" codeDep="12">
+            <nom>MOLINA</nom>
+            <prenom>Raymond</prenom>
+        </identite>
+        <email>raymond.molina@defenseurdesdroits.fr</email>
+        <photo>RMOLINA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Aveyron</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Louis Blanc</adresse>
+                <boitePostale />
+                <tel>05 65 75 73 05 </tel>
+                <fax>05 65 75 73 09</fax>
+                <ville cp="12000"><value>RODEZ</value></ville>
+                <poi>
+                    <longitude>2.574778</longitude>
+                    <latitude>44.349434</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

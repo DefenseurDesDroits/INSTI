@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681127" login="JMIOCHUM">
+        <identite civilite="Monsieur" codeDep="54">
+            <nom>IOCHUM</nom>
+            <prenom>Jean-Marie</prenom>
+        </identite>
+        <email>jean-marie.iochum@defenseurdesdroits.fr</email>
+        <photo>JMIOCHUM.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Nancy</libelle>
+                <libelleSecondaire>Bâtiment Tilleul Argenté</libelleSecondaire>
+                <adresse>17 bis, rue Laurent Bonnevay</adresse>
+                <boitePostale />
+                <tel>03 83 97 03 11</tel>
+                <fax />
+                <ville cp="54000"><value>NANCY</value></ville>
+                <poi>
+                    <longitude>6.154103</longitude>
+                    <latitude>48.701976</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Toul</libelle>
+                <libelleSecondaire />
+                <adresse>Place Henri Miller</adresse>
+                <boitePostale />
+                <tel>03 83 64 66 60</tel>
+                <fax />
+                <ville cp="54200"><value>TOUL</value></ville>
+                <poi>
+                    <longitude>5.897418</longitude>
+                    <latitude>48.689572</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1 sur 2 MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Vandoeuvre</libelle>
+                <libelleSecondaire>Centre Commercial Les Villes de France </libelleSecondaire>
+                <adresse>5, place de Paris</adresse>
+                <boitePostale />
+                <tel>03 83 55 10 34</tel>
+                <fax />
+                <ville cp="54500"><value>VANDOEUVRE-LÈS-NANCY</value></ville>
+                <poi>
+                    <longitude>6.172970</longitude>
+                    <latitude>48.660905</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1 sur 2 MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

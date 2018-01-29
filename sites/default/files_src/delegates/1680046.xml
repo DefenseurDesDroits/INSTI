@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680046" login="PMICHAUD">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>MICHAUD</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.michaud@defenseurdesdroits.fr</email>
+        <photo>PMICHAUD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Persan</libelle>
+                <libelleSecondaire />
+                <adresse>82 avenue Gaston Vermeire</adresse>
+                <boitePostale />
+                <tel>01 39 37 08 74</tel>
+                <fax>01 34 70 23 78</fax>
+                <ville cp="95340"><value>PERSAN</value></ville>
+                <poi>
+                    <longitude>2.283700</longitude>
+                    <latitude>49.145623</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680931" login="SSALAGER">
+        <identite civilite="Madame" codeDep="69">
+            <nom>SALAGER</nom>
+            <prenom>Solange</prenom>
+        </identite>
+        <email>solange.salager@defenseurdesdroits.fr</email>
+        <photo>SSALAGER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Lyon-Corbas </libelle>
+                <libelleSecondaire />
+                <adresse>40, boulevard des Nations</adresse>
+                <boitePostale>BP 351</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="69960"><value>CORBAS</value></ville>
+                <poi>
+                    <longitude>4.931182</longitude>
+                    <latitude>45.679559</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>En suppléance de Régine Vigna - réservée aux détenus JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Rhône</libelle>
+                <libelleSecondaire />
+                <adresse>106, rue Pierre Corneille</adresse>
+                <boitePostale />
+                <tel>04 72 61 65 15</tel>
+                <fax>04 72 61 60 86</fax>
+                <ville cp="69003"><value>LYON</value></ville>
+                <poi>
+                    <longitude>4.844157</longitude>
+                    <latitude>45.760797</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

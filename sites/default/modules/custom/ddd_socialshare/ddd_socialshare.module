@@ -1,0 +1,215 @@
+<?php
+
+/*
+ * hook_social_media_links_iconset_info_alter
+ */
+function ddd_socialshare_social_media_links_iconset_info_alter(&$iconsets)
+{
+    $module_path = drupal_get_path('module', 'ddd_socialshare');
+    $icons['socialshare_ddd'] = array(
+        'name' => 'DdD Social Share Theme',
+        'publisher' => 'Capgemini - Lab\'innovation/DigitalFactory',
+        'publisher url' => 'http://www.fr.capgemini.com/',
+        'styles' => array(
+            '30' => 'DdD-Blue-30x30',
+        ),
+        'path' => $module_path . '/libraries/socialshare_ddd',
+        'path callback' => 'ddd_socialshare_path_socialshare_ddd',
+        'download url' => '',
+    );
+
+    $iconsets['socialshare_ddd'] = $icons['socialshare_ddd'];
+}
+
+function ddd_socialshare_social_media_links_platform_info_alter(&$platforms)
+{
+
+    $platforms['facebook']['image alt'] = t('Follow us on Facebook');
+    $platforms['twitter']['image alt'] = t('Follow us on Twitter');
+
+}
+
+function ddd_socialshare_path_socialshare_ddd($platform = 'twitter', $style = '30')
+{
+    $info = social_media_links_iconset('socialshare_ddd');
+
+    $path = isset($info['path']) ? $info['path'] . '/PNG/' . $platform . '.png' : '';
+
+    return $path;
+}
+
+function ddd_socialshare_init()
+{
+    drupal_add_css(drupal_get_path('module', 'ddd_socialshare') . '/css/ddd_social.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+}
+
+function ddd_socialshare_theme_registry_alter(&$theme_registry)
+{
+    $module_path = drupal_get_path('module', 'ddd_socialshare');
+    $theme_registry['sharethis']['theme path'] = $module_path;
+    $theme_registry['sharethis']['function'] = 'theme_ddd_socialshare_sharethis';
+}
+
+
+/**
+ * Theme function for ShareThis code based on settings.
+ */
+function theme_ddd_socialshare_sharethis($variables)
+{
+
+
+    $data_options = $variables['data_options'];
+    $m_path = $variables['m_path'];
+    $m_title = $variables['m_title'];
+    $m_pdf = null;
+    $as_pdf = false;
+    // On récupère le node courant
+    $node = menu_get_object();
+
+    // Si le champ document existe alors on récupère le fichier associé
+    if (isset($node->type)) {
+        switch ($node->type) {
+            case 'ct_decision':
+            case 'ct_offre':
+            case 'article':
+                if (isset($node->field_article_document['und'][0]['sid'])) {
+                    $atom = scald_atom_load($node->field_article_document['und'][0]['sid']);
+                    $m_pdf = $atom->file_source;
+                    $as_pdf = true;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    // Inject the extra services.
+    foreach ($data_options['option_extras'] as $service) {
+        $data_options['services'] .= ',"' . $service . '"';
+    }
+
+    // The share buttons are simply spans of the form class='st_SERVICE_BUTTONTYPE' -- "st" stands for ShareThis.
+    $type = drupal_substr($data_options['buttons'], 4);
+    $type = $type == "_" ? "" : check_plain($type);
+    $service_array = explode(",", $data_options['services']);
+    $st_spans = "";
+
+    foreach ($service_array as $service_full) {
+        // Strip the quotes from the element in the array (They are there for javascript)
+        $service = explode(":", $service_full);
+
+        // Service names are expected to be parsed by Name:machine_name. If only one
+        // element in the array is given, it's an invalid service.
+        if (count($service) < 2) {
+            continue;
+        }
+
+        // Find the service code name.
+        $serviceCodeName = drupal_substr($service[1], 0, -1);
+
+        // Switch the title on a per-service basis if required.
+        $title = $m_title;
+        switch ($serviceCodeName) {
+            case 'twitter':
+                $title = empty($data_options['twitter_suffix']) ? $title : check_plain($title) . ' ' . check_plain($data_options['twitter_suffix']);
+                break;
+        }
+
+        // On change le nom du service segnalo
+        // Evite l'ouverture d'un lien dans un nouvel onglet
+        if ($serviceCodeName == 'segnalo') {
+            $serviceCodeName = 'pdf';
+        }
+
+        // Sanitize the service code for display.
+        $display = check_plain($serviceCodeName);
+
+
+        // Put together the span attributes.
+        $attributes = array(
+            'st_url' => $m_path,
+            'st_title' => $m_title,
+            'class' => 'st_' . $display . $type,
+        );
+
+        if ($serviceCodeName == 'twitter') {
+            if (!empty($data_options['twitter_handle'])) {
+                $attributes['st_via'] = $data_options['twitter_handle'];
+                $attributes['st_username'] = $data_options['twitter_recommends'];
+            }
+        }
+
+
+        // Only show the display text if the type is set.
+        if (!empty($type)) {
+            $attributes['displayText'] = check_plain($display);
+        }
+        switch ($serviceCodeName) {
+            case 'email':
+                $attributes['title'] = t("Envoyer par mail");
+                break;
+            case 'print':
+                unset($attributes['st_url']);
+                $attributes['onClick'] = "window.print();return false";
+                $attributes['title'] = t("Imprimer cette page");
+                break;
+            case 'pdf':
+                unset($attributes['st_url']);
+                // Ajoute le lien du fichier pdf
+                if ($m_pdf != null) $attributes['href'] = file_create_url($m_pdf);
+                // Force le téléchargement du pdf
+                if ($m_pdf != null) $attributes['download'] = drupal_basename($m_pdf);
+                //$attributes['target'] = "_blank";
+                $attributes['title'] = t("Télécharger le PDF");
+                break;
+        }
+
+        if ($attributes['displayText'] == "pdf") {
+            if ($as_pdf) {
+                // Render the span tag.
+                $st_spans .= theme('html_tag', array(
+                    'element' => array(
+                        '#tag' => 'button',
+                        '#attributes' => $attributes,
+                        '#value' => theme('html_tag', array(
+                            'element' => array(
+                                '#tag' => 'span',
+                                '#attributes' => array('class' => 'sr-only'),
+                                '#value' => t("Télécharger le PDF"),
+                            ),
+                        )),
+                    ),
+                ));
+            }
+        } else {
+
+            $st_spans .= theme('html_tag', array(
+                'element' => array(
+                    '#tag' => 'button',
+                    '#attributes' => $attributes,
+                    '#value' => theme('html_tag', array(
+                        'element' => array(
+                            '#tag' => 'span',
+                            '#attributes' => array('class' => 'sr-only'),
+                            '#value' => t("Imprimer cette page"),
+                        ),
+                    )),
+                ),
+            ));
+            // Render the span tag.
+            /*$st_spans .= theme('html_tag', array(
+              'element' => array(
+                '#tag' => 'a',
+                '#attributes' => $attributes,
+                '#value' => '', // It's an empty span tag.
+              ),
+            ));*/
+        }
+    }
+
+
+    // Output the embedded JavaScript.
+    sharethis_include_js();
+    return '<div class="sharethis-wrapper">' . $st_spans . '</div>';
+}

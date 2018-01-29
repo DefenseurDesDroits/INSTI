@@ -1,0 +1,7 @@
+name = DdD - Pager
+description = Module de modification de la pagination
+core = 7.x
+package = DdD
+version = 7.x-1.0-dev1
+project = ddd_pager
+project path = sites/default/modules/custom

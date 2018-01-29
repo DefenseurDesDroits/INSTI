@@ -1,0 +1,7 @@
+name = DdD - Search Menu
+description = Module de gestion du menu recherche
+core = 7.x
+package = DdD
+version = 7.x-1.0
+project = ddd_searchmenu
+project path = sites/default/modules/custom

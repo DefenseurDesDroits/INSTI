@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2360088" login="JMARTIN">
+        <identite civilite="Monsieur" codeDep="87">
+            <nom>MARTIN</nom>
+            <prenom>Jean-François</prenom>
+        </identite>
+        <email>jean-francois.martin@defenseurdesdroits.fr</email>
+        <photo>JMARTIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Limoges</libelle>
+                <libelleSecondaire />
+                <adresse>38, rue Rhin et Danube</adresse>
+                <boitePostale />
+                <tel>05 55 04 04 05</tel>
+                <fax />
+                <ville cp="87280"><value>LIMOGES</value></ville>
+                <poi>
+                    <longitude>1.293254</longitude>
+                    <latitude>45.883698</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison du droit</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Gustave Flaubert</adresse>
+                <boitePostale />
+                <tel>05 55 43 06 82</tel>
+                <fax />
+                <ville cp="87200"><value>ST JUNIEN</value></ville>
+                <poi>
+                    <longitude>0.895855</longitude>
+                    <latitude>45.884509</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

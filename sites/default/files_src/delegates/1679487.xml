@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679487" login="NBLAVIER">
+        <identite civilite="Madame" codeDep="34">
+            <nom>BLAVIER</nom>
+            <prenom>Nicole</prenom>
+        </identite>
+        <email>nicole.blavier@defenseurdesdroits.fr</email>
+        <photo>NBLAVIER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Villeneuve-lès-Maguelone</libelle>
+                <libelleSecondaire />
+                <adresse>Avenue du Moulin de la Jasse</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="34753"><value>VILLENEUVE-LÈS-MAGUELONE</value></ville>
+                <poi>
+                    <longitude>3.828653</longitude>
+                    <latitude>43.546503</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit</libelle>
+                <libelleSecondaire>Quartier Celleneuve</libelleSecondaire>
+                <adresse>546 rue André le Nôtre</adresse>
+                <boitePostale />
+                <tel>04 67 72 76 80</tel>
+                <fax />
+                <ville cp="34080"><value>MONTPELLIER</value></ville>
+                <poi>
+                    <longitude>3.823935</longitude>
+                    <latitude>43.614725</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

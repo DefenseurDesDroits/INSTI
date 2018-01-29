@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680092" login="JYJUMEL">
+        <identite civilite="Monsieur" codeDep="29">
+            <nom>JUMEL</nom>
+            <prenom>Jean-Yves</prenom>
+        </identite>
+        <email>jean-yves.jumel@defenseurdesdroits.fr</email>
+        <photo>JYJUMEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Finistère</libelle>
+                <libelleSecondaire />
+                <adresse>42, boulevard Dupleix</adresse>
+                <boitePostale />
+                <tel>02 98 76 29 29</tel>
+                <fax>02 98 76 27 02</fax>
+                <ville cp="29000"><value>QUIMPER</value></ville>
+                <poi>
+                    <longitude>-4.102762</longitude>
+                    <latitude>47.994489</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680367" login="CSERAIN">
+        <identite civilite="Monsieur" codeDep="45">
+            <nom>SERAIN</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.serain@defenseurdesdroits.fr</email>
+        <photo>CSERAIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Loiret</libelle>
+                <libelleSecondaire />
+                <adresse>181, rue de Bourgogne</adresse>
+                <boitePostale />
+                <tel>02 38 81 40 38 ou 39</tel>
+                <fax />
+                <ville cp="45000"><value>ORLÉANS</value></ville>
+                <poi>
+                    <longitude>1.910637</longitude>
+                    <latitude>47.900169</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

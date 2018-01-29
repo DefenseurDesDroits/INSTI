@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679722" login="JPDUPLOUY">
+        <identite civilite="Monsieur" codeDep="47">
+            <nom>DUPLOUY</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.duplouy@defenseurdesdroits.fr</email>
+        <photo>JPDUPLOUY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de Lot-et-Garonne</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Etienne Dolet</adresse>
+                <boitePostale />
+                <tel>05 53 77 60 47</tel>
+                <fax>05 53 98 33 40</fax>
+                <ville cp="47000"><value>AGEN</value></ville>
+                <poi>
+                    <longitude>0.614714</longitude>
+                    <latitude>44.198620</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>sur RDV du LUNDI au VENDREDI</jour>
+                        <horaire />
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

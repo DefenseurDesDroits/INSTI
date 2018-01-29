@@ -1,0 +1,6 @@
+name = My Custom Gmap Marker
+description = "Includes my custom markers for use with gmap"
+package = DdD
+core = 7.x
+dependencies[] = gmap
+project = "ddd_custom_gmap"

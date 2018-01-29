@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2748862" login="GGRELAT">
+        <identite civilite="Monsieur" codeDep="18">
+            <nom>GRELAT</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.grelat@defenseurdesdroits.fr</email>
+        <photo>GGRELAT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de la Chapelle d&apos;Angillon</libelle>
+                <libelleSecondaire />
+                <adresse>17 rue Eudes de Sully</adresse>
+                <boitePostale />
+                <tel>02 48 73 40 12</tel>
+                <fax />
+                <ville cp="18380"><value>LA CHAPELLE D ANGILLON</value></ville>
+                <poi>
+                    <longitude>2.433472</longitude>
+                    <latitude>47.363871</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Saint-Amand Montrond</libelle>
+                <libelleSecondaire />
+                <adresse>12, rue de Juranville</adresse>
+                <boitePostale />
+                <tel>02 36 78 40 60</tel>
+                <fax />
+                <ville cp="18200"><value>ST AMAND MONTROND</value></ville>
+                <poi>
+                    <longitude>2.505655</longitude>
+                    <latitude>46.725955</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

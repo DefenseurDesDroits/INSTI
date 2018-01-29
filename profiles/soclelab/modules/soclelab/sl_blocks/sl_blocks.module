@@ -1,0 +1,93 @@
+<?php
+
+module_load_include('inc', 'contact', 'contact.pages');
+
+/**
+ *  Function-name : sl_blocks_block_info
+ *  Input :     <none>
+ *  Output :    array() La liste des blocks
+ *  Description :   Ajoute le bloc contact à la liste des blocs.
+ */
+function sl_blocks_block_info() { // Début sl_blocks_block_info
+  $blocks = array();
+  $blocks['block_head_contact'] = array(
+    'info' => t('Contact - Block head contact'),
+  );
+  $blocks['block_contact'] = array(
+    'info' => t('Contact - Block contact'),
+  );
+  // Retourne les blocks
+  return $blocks;
+}
+
+/**
+ *  Function-name : sl_blocks_block_view
+ *  Input :     <none>
+ *  Output :    array() La liste des contenues des blocks
+ *  Description :   Ajoute le contenu du bloc contact à la liste des blocs.
+ */
+function sl_blocks_block_view($delta = '') { // Début sl_blocks_block_view
+  $block = array();
+  // Détermine quelle est le bloc en cours de création
+  switch ($delta) {
+    case 'block_head_contact':
+      $block['content'] = getCodeBloc('block_head_contact');
+      break;
+    case 'block_contact':
+      $block['content'] = drupal_get_form('contact_site_form');
+      break;
+  }
+  // Retourne la liste des blocks
+  return $block;
+}
+
+function sl_blocks_block_configure($delta='') {
+  $form = array();
+ 
+  switch($delta) {
+    case 'block_head_contact':
+      // Text field form element
+      $form['body_head_contact'] = array(
+        '#type' => 'text_format',
+        '#default_value' => variable_get('body_head_contact', ''),
+      );
+      break;
+  }
+  
+  return $form;
+}
+
+function sl_blocks_block_save($delta = '', $edit = array()){
+  switch($delta) {
+    case 'block_head_contact':
+      // Saving the WYSIWYG text    
+      if(isset($edit['body_head_contact']['value'])){  
+        variable_set('body_head_contact', $edit['body_head_contact']['value']);
+      }
+    break;
+  }
+}
+
+
+function getCodeBloc($blocname){
+  $code="";
+  switch ($blocname) {
+    case 'block_head_contact':
+      $code = array();
+      
+      // Capture WYSIWYG text from the variable
+      $text = variable_get('body_head_contact', '');
+      
+      // Block output in HTML with div wrapper
+      $code = array(
+        'message' => array(
+          '#prefix' => '<div class="class_name">',
+          '#type' => 'markup',
+          '#markup' => $text,
+        ),
+      );
+    break;
+  }
+  
+  return $code;
+}

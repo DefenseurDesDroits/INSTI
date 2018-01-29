@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680736" login="MGASPERMENT">
+        <identite civilite="Monsieur" codeDep="67">
+            <nom>GASPERMENT</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.gasperment@defenseurdesdroits.fr</email>
+        <photo>MGASPERMENT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture d&apos;Haguenau</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue des Soeurs </adresse>
+                <boitePostale>BP 251</boitePostale>
+                <tel>03 88 63 87 15</tel>
+                <fax />
+                <ville cp="67504"><value>HAGUENAU</value></ville>
+                <poi>
+                    <longitude>7.790501</longitude>
+                    <latitude>48.813424</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_update_N().
+ * - Update block_decision block
+ */
+/*function ddd_blocks_update_7040() {
+  // Update block_decision
+  db_update('block')
+    ->fields(array(      
+      'status' => 1,
+      'weight' => -20,
+      'region' => 'content',
+      'visibility' => 1,
+      'pages' => 'actions',      
+      'cache' => -1,
+      'title' => 'Décisions'
+    ))
+    ->condition('module', 'ddd_blocks')
+    ->condition('delta', 'block_decision')
+    ->condition('theme', 'soclelab_ddd')
+    ->execute();
+}*/

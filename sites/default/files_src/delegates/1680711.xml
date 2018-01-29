@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680711" login="PBARGETON">
+        <identite civilite="Monsieur" codeDep="78">
+            <nom>BARGETON</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.bargeton@defenseurdesdroits.fr</email>
+        <photo>PBARGETON.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Bois d&apos;Arcy</libelle>
+                <libelleSecondaire />
+                <adresse>5 bis, rue Alexandre Turpault  
+</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="78390"><value>BOIS D ARCY</value></ville>
+                <poi>
+                    <longitude>2.030636</longitude>
+                    <latitude>48.806187</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit des Mureaux</libelle>
+                <libelleSecondaire />
+                <adresse>79, boulevard Victor Hugo</adresse>
+                <boitePostale />
+                <tel>01 34 92 73 42</tel>
+                <fax>01 30 99 51 00</fax>
+                <ville cp="78130"><value>LES MUREAUX</value></ville>
+                <poi>
+                    <longitude>1.912176</longitude>
+                    <latitude>48.992678</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

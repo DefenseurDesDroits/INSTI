@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680850" login="ARAMECOURT">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>RAMECOURT</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.ramecourt@defenseurdesdroits.fr</email>
+        <photo>ARAMECOURT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Hôtel de ville d&apos;Arras</libelle>
+                <libelleSecondaire>1er étage - porte 130 </libelleSecondaire>
+                <adresse>6, place Guy Mollet</adresse>
+                <boitePostale>BP 70913</boitePostale>
+                <tel>03 21 50 50 50</tel>
+                <fax />
+                <ville cp="62022"><value>ARRAS CEDEX</value></ville>
+                <poi>
+                    <longitude>2.778790</longitude>
+                    <latitude>50.293382</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>Place des Ecrins </adresse>
+                <boitePostale />
+                <tel>03 21 73 85 62</tel>
+                <fax />
+                <ville cp="62223"><value>SAINT-NICOLAS</value></ville>
+                <poi>
+                    <longitude>2.793675</longitude>
+                    <latitude>50.305925</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Berck</libelle>
+                <libelleSecondaire>Chateau du Bois Magnier</libelleSecondaire>
+                <adresse>Maison des Associations - 
+76 bld de Boulogne</adresse>
+                <boitePostale />
+                <tel>03 21 84 69 73</tel>
+                <fax />
+                <ville cp="62600"><value>BERCK</value></ville>
+                <poi>
+                    <longitude>1.580600</longitude>
+                    <latitude>50.414034</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>semaine paire MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

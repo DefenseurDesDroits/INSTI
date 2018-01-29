@@ -1,0 +1,361 @@
+<?php
+require_once ('delegate_import.define.inc');
+require_once (conf_path() . '/libraries/xml_function/xml_function.php');
+require_once './includes/bootstrap.inc';
+include_once './includes/common.inc';
+/**
+ * Implements hook_permission().
+ */
+function delegate_import_permission() {
+   return array(
+    'delegate_import' => array(
+      'title' => t('Delegate import'),
+      'description' => t('Can imported delegate'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_cron().
+ */
+function delegate_import_cron() {
+  delegate_import_run();
+}
+
+/**
+ * Implement hook_menu
+ */
+function delegate_import_menu() {
+  $items = array();
+
+  $items['admin/config/defenseurdesdroits'] = array(
+    'title' => 'Défenseur des droits',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array(
+      'delegate_import'
+    ),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system')
+  );
+  $items['admin/config/defenseurdesdroits/importdelegues'] = array(
+    'title' => 'import des délégués',
+    'description' => t('Import des délégués du défenseur des droits'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array(
+      'delegate_import_settings'
+    ),
+    'access arguments' => array(
+      'delegate_import'
+    )
+  );
+
+  return $items;
+}
+
+/**
+ * Form builder function for delegate import.
+ */
+function delegate_import_settings() {
+
+  // Contenu du répertoire d'import
+  $form['content_repository'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Content repository')
+  );
+
+  $form['content_repository']['delegate'] = array(
+    '#type' => 'item',
+    '#title' => t('Delegates \'s directory'),
+    '#markup' => get_directory_path_msg(DELEGATES_PATH)
+  );
+
+  $form['content_repository']['picture'] = array(
+    '#type' => 'item',
+    '#title' => t('picture \'s directory'),
+    '#markup' => PICTURES_PATH
+  );
+
+  $form['content_repository']['import'] = array(
+    '#type' => 'submit',
+    '#title' => 'run',
+    '#value' => t('Run'),
+    '#submit' => array(
+      'delegate_import_run'
+    ),
+    '#disabled' => ! files_into_directory(DELEGATES_PATH)
+  );
+
+  return $form;
+}
+
+/**
+ * Import all XML files into directory_path (enter in form)
+ * @param unknown $form
+ * @param unknown $form_state
+ */
+function delegate_import_run() {
+
+  //ensuite on importe les données
+  $files = files_into_directory(DELEGATES_PATH);
+  $imported_files = 0;
+  $imported_nid = array();
+  foreach ($files as $file) {
+    // Import des délégués.
+    if (delegate_read_xml_file($file->uri, $imported_nid)) {
+      ++ $imported_files;
+    }
+  }
+
+  _delete_all_imported_datas($imported_nid);
+
+  if ($imported_files != 0) {
+    drupal_set_message(t('Succes import (' . $imported_files . ' files)'));
+  }
+}
+
+// Lit le fichier XML $uri et créer les délégués et les structures
+function delegate_read_xml_file($uri, &$imported_nid) {
+  try {
+    $dom = new DOMDocument();
+    $dom->load($uri);
+
+    $errors = libxml_get_errors();
+    if (! empty($errors)) {
+      foreach ($errors as $error) {
+        drupal_set_message(libxml_display_error($error), 'error');
+      }
+      libxml_clear_errors();
+      return FALSE;
+    }
+
+    // Gestion des erreurs
+    set_error_handler('error_to_excpetion');
+    try {
+      $dom->schemaValidate(DELEGATES_PATH . '/delegues.xsd');
+    }
+    catch (ErrorException $e) {
+      drupal_set_message(nl2br($e->getMessage() . ' in ' . $uri), 'warning');
+      return FALSE;
+    }
+    // Retour à la gestion des erreurs par défaut
+    restore_error_handler();
+
+    $xml = simplexml_import_dom($dom);
+    $delegate = _create_delegue($xml);
+    foreach ($xml->delegue->structures->structure as $xml_structure) {
+
+      $structure = _create_structure($xml_structure);
+      $i = 0;
+      foreach ($xml_structure->permanences->permanence as $xml_office) {
+        $office = _create_office($xml_office, $delegate->nid, $structure->nid, $i);
+        array_push($imported_nid, $office->nid);
+        $i++;
+      }
+      array_push($imported_nid, $structure->nid);
+    }
+
+    array_push($imported_nid, $delegate->nid);
+
+    return TRUE;
+  }
+  catch (Exception $e) {
+    drupal_set_message(t($e->getMessage()), 'error');
+    return FALSE;
+  }
+}
+
+// Créer un delege (type de contenu) via un XML
+function _create_delegue($xml) {
+  global $user;
+
+  // Préparation du type de contenu
+  $delegate = new stdClass();
+  $delegate->type = 'ct_delegate';
+  node_object_prepare($delegate);
+
+  $delegate->title = (string) $xml->delegue->identite->nom . ', ' . (string) $xml->delegue->identite->prenom;
+  $delegate->language = LANGUAGE_NONE;
+
+  if ($nid = node_exist($delegate->type, $delegate->title))
+    $delegate = node_load($nid);
+
+  $delegate->uid = $user->uid;
+  $attributes = $xml->delegue->attributes();
+  $delegate->field_delegate_job_id[LANGUAGE_NONE][0]['value'] = (int) $attributes['id'];
+
+  $attributes = $xml->delegue->identite->attributes();
+  $delegate->field_delegate_departement_code[LANGUAGE_NONE][0]['value'] = (int) $attributes['codeDep'];
+  $delegate->field_delegate_departement_code[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $delegate->field_delegate_civilite[LANGUAGE_NONE][0]['value'] = (string) $attributes['civilite'];
+
+  $delegate->field_delegate_name[LANGUAGE_NONE][0]['value'] = (string) $xml->delegue->identite->nom;
+  $delegate->field_delegate_name[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $delegate->field_delegate_last_name[LANGUAGE_NONE][0]['value'] = (string) $xml->delegue->identite->prenom;
+  $delegate->field_delegate_last_name[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $delegate->field_delegate_email[LANGUAGE_NONE][0]['value'] = (string) $xml->delegue->email;
+  $delegate->field_delegate_email[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $delegate->field_delegate_picture[LANGUAGE_NONE][0]['value'] = PICTURES_PATH . (string) $xml->delegue->photo;
+  $delegate->field_delegate_picture[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  node_submit($delegate);
+  node_save($delegate);
+
+  return $delegate;
+}
+
+// Créer une structure (type de contenu) via un XML
+function _create_structure($xml_structure) {
+  global $user;
+  $structure_required_fields = array(
+    'street',
+    'city',
+    'postal_code'
+  );
+
+  $structure = new stdClass();
+  $structure->type = 'ct_structure';
+  node_object_prepare($structure);
+
+  $structure->title = (string) $xml_structure->libelle . ' - ' . (string) $xml_structure->ville->value;
+  $structure->language = LANGUAGE_NONE;
+
+  if ($nid = node_exist($structure->type, $structure->title))
+    $structure = node_load($nid);
+
+  $structure->uid = $user->uid;
+  $structure->field_structure_label[LANGUAGE_NONE][0]['value'] = (string) $xml_structure->libelle;
+  $structure->field_structure_label[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $structure->field_structure_second_label[LANGUAGE_NONE][0]['value'] = (string) $xml_structure->libelleSecondaire;
+  $structure->field_structure_second_label[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $structure->field_structure_postal_box[LANGUAGE_NONE][0]['value'] = (string) $xml_structure->boitePostale;
+  $structure->field_structure_postal_box[LANGUAGE_NONE][0]['format'] = 'Plain text';
+
+  $attributes = $xml_structure->ville->attributes();
+
+  $settings = variable_get('location_settings_node_' . $structure->type, array(
+    'multiple' => array(
+      'min' => 0,
+      'max' => 1,
+      'add' => '1'
+    )
+  ));
+
+  $location = array(
+    'lid' => NULL,
+    'name' => (string) $xml_structure->libelle,
+    'street' => (string) $xml_structure->adresse,
+    'additional' => '',
+    'city' => (string) $xml_structure->ville->value,
+    'province' => (int) substr((string) $attributes['cp'], 0, 2),
+    'postal_code' => (string) $attributes['cp'],
+    'country' => '',
+    'latitude' => (float) $xml_structure->poi->latitude,
+    'longitude' => (float) $xml_structure->poi->longitude,
+    'source' => LOCATION_LATLON_USER_SUBMITTED,
+    'inhibit_geocode' => TRUE,
+    'location_settings' => $settings
+  );
+
+  if (! isset($structure->locations)) {
+    $structure->locations = array();
+  }
+  elseif (! empty($structure->locations)) {
+    $location['lid'] = $structure->locations[0]['lid'];
+  }
+
+  $structure->locations = array(
+    $location
+  );
+  $structure->locations[0] = $location;
+  // $structure->field_structure_location[LANGUAGE_NONE][0] = array($location);
+
+  $structure->field_structure_phone[LANGUAGE_NONE][0]['value'] = (string) $xml_structure->tel;
+  $structure->field_structure_fax[LANGUAGE_NONE][0]['value'] = (string) $xml_structure->fax;
+
+  if(preg_match("#^97#", $attributes['cp']) || preg_match("#^98#", $attributes['cp']))
+    $structure->field_delegate_departement_code[LANGUAGE_NONE][0]['value'] = (int) substr((string) $attributes['cp'], 0, 3);
+  else
+    $structure->field_delegate_departement_code[LANGUAGE_NONE][0]['value'] = substr((string) $attributes['cp'], 0, 2);
+  $structure->field_delegate_departement_code[LANGUAGE_NONE][0]['format'] = 'Plain text';
+  node_submit($structure);
+  node_save($structure);
+
+  return $structure;
+}
+
+// Créer une permanence (type de contenu) via un XML
+/**
+ * @param unknown $xml_office
+ * @param unknown $did
+ * @param unknown $sid
+ * @return stdClass
+ */
+function _create_office($xml_office, $did, $sid, $pid) {
+  global $user;
+  $office = new stdClass();
+  $office->type = 'ct_office';
+
+  node_object_prepare($office);
+  $office->title = 'Permanence ' . $did . $sid . $pid;
+  if ($nid = node_exist($office->type, $office->title)) {
+    $office = node_load($nid);
+  }
+
+  $office->uid = $user->uid;
+  $office->field_office_delegate[LANGUAGE_NONE][0]['target_id'] = $did;
+  $office->field_office_structure[LANGUAGE_NONE][0]['target_id'] = $sid;
+  $office->field_office_hourly[LANGUAGE_NONE][0]['value'] = (string) $xml_office->horaire;
+  $office->field_office_day[LANGUAGE_NONE][0]['value'] = (string) $xml_office->jour;
+
+  node_submit($office);
+  node_save($office);
+
+  return $office;
+}
+
+/**
+ * Méthode de suppression des données qui ont été crées lors du précédent import
+ */
+function _delete_all_imported_datas($imported_nid){
+	//On supprime les données de la table des délégués, des structures et des offices
+	_delete_all_nodes("ct_structure", $imported_nid);
+	_delete_all_nodes("ct_office", $imported_nid);
+	_delete_all_nodes("ct_delegate", $imported_nid);
+
+}
+
+
+/**
+ * Méthode de suppression de l'ensemble des noeuds d'un certain type
+ * @param String $node_type : nom de type de noeud des éléments à supprimer
+ */
+function _delete_all_nodes($node_type, $imported_nid){
+
+	// Selection des noeuds à supprimer.
+	$result = db_select('node', 'n')
+	->fields('n', array('nid'))
+	->condition('type', $node_type, '=')
+	->execute();
+
+	//Pour tous les éléments sélectionnés, on supprime
+	$deleted_count = 0;
+	$nids_to_delete = array();
+	foreach ($result as $record) {
+		if(!in_array($record->nid, $imported_nid)) {
+			array_push($nids_to_delete, $record->nid);
+			$deleted_count++;
+		}
+	}
+
+	node_delete_multiple($nids_to_delete);
+
+	if($deleted_count > 0){
+		drupal_set_message("Nettoyage de la table ".$node_type." - ".$deleted_count." éléments supprimés.");
+	}
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680866" login="GBILLOT">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>BILLOT</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.billot@defenseurdesdroits.fr</email>
+        <photo>GBILLOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie annexe de Lille Sud</libelle>
+                <libelleSecondaire />
+                <adresse>83, rue Faubourg des Postes</adresse>
+                <boitePostale />
+                <tel>03 28 54 02 31</tel>
+                <fax />
+                <ville cp="59000"><value>LILLE</value></ville>
+                <poi>
+                    <longitude>3.047112</longitude>
+                    <latitude>50.613156</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de St-André</libelle>
+                <libelleSecondaire> Hôtel de ville</libelleSecondaire>
+                <adresse>89, rue du Général Leclerc</adresse>
+                <boitePostale>BP 1</boitePostale>
+                <tel>03 20 63 07 50</tel>
+                <fax>03 20 51 75 62</fax>
+                <ville cp="59871"><value>SAINT-ANDRÉ-LEZ-LILLE</value></ville>
+                <poi>
+                    <longitude>3.050203</longitude>
+                    <latitude>50.661287</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Préfecture du Nord</libelle>
+                <libelleSecondaire />
+                <adresse>12/14, rue Jean Sans Peur</adresse>
+                <boitePostale />
+                <tel>03 28 54 02 31</tel>
+                <fax />
+                <ville cp="59039"><value>LILLE CEDEX</value></ville>
+                <poi>
+                    <longitude>3.059558</longitude>
+                    <latitude>50.634300</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

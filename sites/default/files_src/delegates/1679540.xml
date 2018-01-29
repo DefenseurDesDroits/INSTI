@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679540" login="MTMERCIER">
+        <identite civilite="Madame" codeDep="60">
+            <nom>MERCIER</nom>
+            <prenom>Marie-Thérèse</prenom>
+        </identite>
+        <email>marie-therese.mercier@defenseurdesdroits.fr</email>
+        <photo>MTMERCIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Oise</libelle>
+                <libelleSecondaire />
+                <adresse>1, place de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 44 06 12 06</tel>
+                <fax>03 44 06 12 09</fax>
+                <ville cp="60000"><value>BEAUVAIS</value></ville>
+                <poi>
+                    <longitude>2.073393</longitude>
+                    <latitude>49.437806</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

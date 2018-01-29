@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680335" login="JPMARECHAL">
+        <identite civilite="Monsieur" codeDep="60">
+            <nom>MARÉCHAL</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.marechal@defenseurdesdroits.fr</email>
+        <photo>JPMARECHAL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Liancourt</libelle>
+                <libelleSecondaire />
+                <adresse>1, avenue Robert Badinter</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="60140"><value>LIANCOURT</value></ville>
+                <poi>
+                    <longitude>2.476237</longitude>
+                    <latitude>49.333163</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Creil</libelle>
+                <libelleSecondaire />
+                <adresse>26, rue Voltaire</adresse>
+                <boitePostale />
+                <tel>03 44 64 46 70</tel>
+                <fax>03 44 64 46 78</fax>
+                <ville cp="60100"><value>CREIL</value></ville>
+                <poi>
+                    <longitude>2.479067</longitude>
+                    <latitude>49.264879</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

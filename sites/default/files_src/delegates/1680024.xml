@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680024" login="MBIA">
+        <identite civilite="Madame" codeDep="54">
+            <nom>BIA</nom>
+            <prenom>Mireille</prenom>
+        </identite>
+        <email>mireille.bia@defenseurdesdroits.fr</email>
+        <photo>MBIA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Briey</libelle>
+                <libelleSecondaire />
+                <adresse>Place du Château</adresse>
+                <boitePostale>BP 70009</boitePostale>
+                <tel>03 82 47 55 16</tel>
+                <fax />
+                <ville cp="54151"><value>BRIEY CEDEX</value></ville>
+                <poi>
+                    <longitude>5.936452</longitude>
+                    <latitude>49.248086</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

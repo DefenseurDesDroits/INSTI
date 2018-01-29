@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681146" login="DMARCHESSEAU">
+        <identite civilite="Madame" codeDep="44">
+            <nom>MARCHESSEAU</nom>
+            <prenom>Dominique</prenom>
+        </identite>
+        <email>dominique.marchesseau@defenseurdesdroits.fr</email>
+        <photo>DMARCHESSEAU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Rezé</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue Jean-Baptiste Vigier</adresse>
+                <boitePostale />
+                <tel>02 51 11 37 00</tel>
+                <fax />
+                <ville cp="44400"><value>REZÉ</value></ville>
+                <poi>
+                    <longitude>-1.545938</longitude>
+                    <latitude>47.190948</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>3e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

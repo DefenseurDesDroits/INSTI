@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Styles Images feature.
+ */
+
+include_once 'ddd_cf_images.features.inc';

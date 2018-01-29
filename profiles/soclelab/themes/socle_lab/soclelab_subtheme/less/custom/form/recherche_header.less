@@ -1,0 +1,82 @@
+#block-sl-search-block-header-search{
+  position: absolute;
+  right: 30px;
+  top: 100%;
+  z-index: 80;
+  padding-top: 15px;
+  
+  @media @scr_mobile{
+    right: 0;
+    position: relative;
+    margin: auto;
+    width: 266px;
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .form-control{
+    background-color: @bg_head_search;
+    border-color: @bor_head_search;
+    padding: 12px 20px;
+    width: 380px;
+    height: auto;
+    color: @txt_head_search;
+    font-style: italic;
+    font-size: 13px;
+    #border > .border-radius(42px);
+    
+    &:active,
+    &:focus{
+      border-color: @bor_head_search_a;
+    }
+    
+    @media @scr_mobile{
+      width: 220px;
+      margin-right: -80px;
+    }
+  }
+  
+  .form-type-textfield{
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+    
+    @media @scr_mobile{
+      width: 186px;
+    }
+  }
+  
+  .form-submit{
+    border: none;
+    background-color: @bg_head_btnsearch;
+    text-transform: uppercase;
+    color: @txt_head_btnsearch;
+    padding: 11px 15px 10px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 2px;
+    #border > .border-radius(42px);
+    
+    &:hover{ 
+      background-color: @bg_head_btnsearch_h; 
+    } 
+    &:active, &:focus{ 
+      background-color: @bg_head_btnsearch_a; 
+    } 
+    @media @scr_mobile{
+      padding-top: 39px;
+      padding-bottom: 0;
+      height: 39px;
+      width: 70px;
+      overflow: hidden;
+      background-image: url("@{dir_img}/header/search_loupe.png");
+      background-repeat: no-repeat;
+      background-position: right 10px top 7px;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680783" login="CSEVERAN">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>SÉVERAN</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.severan@defenseurdesdroits.fr</email>
+        <photo>CSEVERAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Bouches-du Rhône</libelle>
+                <libelleSecondaire />
+                <adresse>2, boulevard Paul Peytral</adresse>
+                <boitePostale />
+                <tel>04 84 35 47 91</tel>
+                <fax>04 84 35 47 95</fax>
+                <ville cp="13282"><value>MARSEILLE CEDEX 20</value></ville>
+                <poi>
+                    <longitude>5.380105</longitude>
+                    <latitude>43.290363</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

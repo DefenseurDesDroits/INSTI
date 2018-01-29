@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679102" login="MTESSIER">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>TESSIER</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.tessier@defenseurdesdroits.fr</email>
+        <photo>MTESSIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du 14ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue Bardinet</adresse>
+                <boitePostale />
+                <tel>01 45 45 22 23</tel>
+                <fax />
+                <ville cp="75014"><value>PARIS - 14</value></ville>
+                <poi>
+                    <longitude>2.316886</longitude>
+                    <latitude>48.830773</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

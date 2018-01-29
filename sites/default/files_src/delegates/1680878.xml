@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680878" login="RMILLEROU">
+        <identite civilite="Monsieur" codeDep="36">
+            <nom>MILLEROU</nom>
+            <prenom>Roland</prenom>
+        </identite>
+        <email>roland.millerou@defenseurdesdroits.fr</email>
+        <photo>RMILLEROU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Indre</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la Victoire et des Alliés</adresse>
+                <boitePostale />
+                <tel>02 54 29 51 69</tel>
+                <fax />
+                <ville cp="36000"><value>CHÂTEAUROUX</value></ville>
+                <poi>
+                    <longitude>1.686566</longitude>
+                    <latitude>46.811895</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

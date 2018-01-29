@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679538" login="GMIRISOLA">
+        <identite civilite="Madame" codeDep="59">
+            <nom>MIRISOLA</nom>
+            <prenom>Geneviève</prenom>
+        </identite>
+        <email>genevieve.mirisola@defenseurdesdroits.fr</email>
+        <photo>GMIRISOLA.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre communal d&apos;action sociale</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue Gabriel Péri</adresse>
+                <boitePostale />
+                <tel>03 59 69 71 80</tel>
+                <fax>03 20 76 63 57</fax>
+                <ville cp="59200"><value>TOURCOING</value></ville>
+                <poi>
+                    <longitude>3.158060</longitude>
+                    <latitude>50.725102</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison des services publics de la Bourgogne</libelle>
+                <libelleSecondaire />
+                <adresse>17, rue Claude Perrault</adresse>
+                <boitePostale />
+                <tel>03 59 69 71 80</tel>
+                <fax />
+                <ville cp="59200"><value>TOURCOING</value></ville>
+                <poi>
+                    <longitude>3.182971</longitude>
+                    <latitude>50.738121</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

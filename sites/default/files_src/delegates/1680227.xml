@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680227" login="JMAURAN">
+        <identite civilite="Madame" codeDep="31">
+            <nom>MAURAN</nom>
+            <prenom>Jacqueline</prenom>
+        </identite>
+        <email>jacqueline.mauran@defenseurdesdroits.fr</email>
+        <photo>JMAURAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Garonne</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Saint-Etienne</adresse>
+                <boitePostale />
+                <tel>05 34 45 37 10</tel>
+                <fax>05 34 45 37 09</fax>
+                <ville cp="31038"><value>TOULOUSE CEDEX 9</value></ville>
+                <poi>
+                    <longitude>1.450412</longitude>
+                    <latitude>43.598659</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

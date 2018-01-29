@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680336" login="VMALKA">
+        <identite civilite="Madame" codeDep="91">
+            <nom>MALKA</nom>
+            <prenom>Valérie</prenom>
+        </identite>
+        <email>valerie.malka@defenseurdesdroits.fr</email>
+        <photo>VMALKA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue du Coq</adresse>
+                <boitePostale />
+                <tel>01 69 92 11 70</tel>
+                <fax>01 69 92 71 94</fax>
+                <ville cp="91150"><value>ÉTAMPES</value></ville>
+                <poi>
+                    <longitude>2.691680</longitude>
+                    <latitude>48.265813</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,10 @@
+name = ddd_bk_image_home
+description = Création d'un bloc d'accès  la page des délégués
+core = 7.x
+package = DdD - Blocks (Features)
+version = 7.x-1.0
+project = ddd_bk_image_home
+dependencies[] = fe_block
+features[fe_block_boxes][] = image_carte_home
+features[features_api][] = api:2
+project path = sites/default/modules/features

@@ -1,0 +1,82 @@
+
+.search-logo.logo-event{
+  img{
+    top: 33px;
+    left: 105px;
+    width: 88px !important;
+    height: auto !important;
+    
+    @media @scr_wide{
+      width: auto !important;
+      top: 15px;
+    }
+    @media @scr_tablet{
+      left: 99px;
+    }
+  }
+}
+
+.search-title.title-event{
+  font-size: 1.15em;
+  line-height: 1.3em;
+  font-weight: normal;  
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid @bor_event_list_border;
+  h3{
+    font-size: 1em;
+    font-weight: normal;
+  }
+}
+
+.style0 .search-date-big{
+  background-color: @bg_agenda_0;
+}
+.style1 .search-date-big{
+  background-color: @bg_agenda_1;
+}
+.style2 .search-date-big{
+  background-color: @bg_agenda_2;
+}
+.style3 .search-date-big{
+  background-color: @bg_agenda_3;
+}
+
+.search-event-left-part{
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  left: 15px;
+}
+
+.search-result.node-evenement{
+  position: relative;
+  z-index: 5;
+  padding: 15px 15px 15px 130px;;
+  min-height: 130px;
+  margin-bottom: 27px;
+}
+
+.search-chapo.chapo-event{
+  font-size: 0.9em;
+}
+.search-lieu{
+  font-family: @font-family-lato-bol;
+  font-size: 0.9em;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.search-date-big{
+  .agendasidebar-date;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  padding-top: 27px;
+  margin-bottom: 0;
+  
+  .date-day{
+    line-height: 32px;
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681182" login="MESCOT">
+        <identite civilite="Monsieur" codeDep="42">
+            <nom>ESCOT</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.escot@defenseurdesdroits.fr</email>
+        <photo>MESCOT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Saint-Etienne</libelle>
+                <libelleSecondaire />
+                <adresse>9, boulevard Jules Janin</adresse>
+                <boitePostale />
+                <tel>04 77 49 83 30</tel>
+                <fax />
+                <ville cp="42000"><value>ST ETIENNE</value></ville>
+                <poi>
+                    <longitude>4.387230</longitude>
+                    <latitude>45.447874</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Loire</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Charles de Gaulle</adresse>
+                <boitePostale />
+                <tel>04 77 48 48 99</tel>
+                <fax />
+                <ville cp="42022"><value>ST ETIENNE CEDEX 1</value></ville>
+                <poi>
+                    <longitude>4.386359</longitude>
+                    <latitude>45.441943</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

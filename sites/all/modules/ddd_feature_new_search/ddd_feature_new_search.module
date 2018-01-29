@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ddd_feature_new_search feature.
+ */
+
+include_once 'ddd_feature_new_search.features.inc';

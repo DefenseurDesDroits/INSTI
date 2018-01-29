@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681046" login="HARAB">
+        <identite civilite="Monsieur" codeDep="34">
+            <nom>ARAB</nom>
+            <prenom>Houcine</prenom>
+        </identite>
+        <email>houcine.arab@defenseurdesdroits.fr</email>
+        <photo>HARAB.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit </libelle>
+                <libelleSecondaire>Quartier Celleneuve</libelleSecondaire>
+                <adresse>546 rue André Le Nôtre</adresse>
+                <boitePostale />
+                <tel>04 67 72 76 80</tel>
+                <fax />
+                <ville cp="34080"><value>MONTPELLIER</value></ville>
+                <poi>
+                    <longitude>3.823935</longitude>
+                    <latitude>43.614725</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Lodève</libelle>
+                <libelleSecondaire />
+                <adresse>7, place de l&apos;Hôtel de Ville</adresse>
+                <boitePostale />
+                <tel>04 67 44 10 29</tel>
+                <fax>04 67 44 20 84</fax>
+                <ville cp="34700"><value>LODEVE</value></ville>
+                <poi>
+                    <longitude>3.317299</longitude>
+                    <latitude>43.732516</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Lunel</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue des Caladons</adresse>
+                <boitePostale />
+                <tel>04 67 83 61 54</tel>
+                <fax />
+                <ville cp="34400"><value>LUNEL</value></ville>
+                <poi>
+                    <longitude>4.134325</longitude>
+                    <latitude>43.675706</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681086" login="CGEOFFRION">
+        <identite civilite="Madame" codeDep="45">
+            <nom>GEOFFRION</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.geoffrion@defenseurdesdroits.fr</email>
+        <photo>CGEOFFRION.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de La Source </libelle>
+                <libelleSecondaire />
+                <adresse>3, rue Edouard Branly </adresse>
+                <boitePostale />
+                <tel>02 38 69 01 22</tel>
+                <fax />
+                <ville cp="45100"><value>ORLÉANS LA SOURCE</value></ville>
+                <poi>
+                    <longitude>1.934090</longitude>
+                    <latitude>47.834126</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Loiret</libelle>
+                <libelleSecondaire />
+                <adresse>181, rue de Bourgogne</adresse>
+                <boitePostale />
+                <tel>02 38 81 40 39</tel>
+                <fax />
+                <ville cp="45000"><value>ORLÉANS</value></ville>
+                <poi>
+                    <longitude>1.910637</longitude>
+                    <latitude>47.900169</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680718" login="MJBILLOT">
+        <identite civilite="Madame" codeDep="75">
+            <nom>BILLOT</nom>
+            <prenom>Marie-Josèphe</prenom>
+        </identite>
+        <email>marie-josephe.billot@defenseurdesdroits.fr</email>
+        <photo>MJBILLOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 20ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>15, cité Champagne</adresse>
+                <boitePostale />
+                <tel>01 53 27 37 40</tel>
+                <fax />
+                <ville cp="75020"><value>PARIS - 20</value></ville>
+                <poi>
+                    <longitude>2.404618</longitude>
+                    <latitude>48.853419</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

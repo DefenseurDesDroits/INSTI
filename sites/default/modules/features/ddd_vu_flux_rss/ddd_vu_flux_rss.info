@@ -1,0 +1,13 @@
+name = DdD - View Flux RSS
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_flux_rss
+dependencies[] = feeds
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = flux_rss
+features_exclude[dependencies][ctools] = ctools
+mtime = 1452757618
+project path = sites/default/modules/features

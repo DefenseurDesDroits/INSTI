@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2433290" login="JLMATHIEU">
+        <identite civilite="Monsieur" codeDep="92">
+            <nom>MATHIEU</nom>
+            <prenom>Jean-Luc</prenom>
+        </identite>
+        <email>jean-luc.mathieu@defenseurdesdroits.fr</email>
+        <photo>JLMATHIEU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison pour la vie citoyenne et point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>28, rue Merlin de Thionville</adresse>
+                <boitePostale />
+                <tel>01 41 18 37 36</tel>
+                <fax />
+                <ville cp="92150"><value>SURESNES</value></ville>
+                <poi>
+                    <longitude>2.223485</longitude>
+                    <latitude>48.869839</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire>Espace Rosa Parks</libelleSecondaire>
+                <adresse>144, rue Emile Zola</adresse>
+                <boitePostale />
+                <tel>01 41 11 68 15</tel>
+                <fax />
+                <ville cp="92600"><value>ASNIERES SUR SEINE</value></ville>
+                <poi>
+                    <longitude>5.862034</longitude>
+                    <latitude>43.451198</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

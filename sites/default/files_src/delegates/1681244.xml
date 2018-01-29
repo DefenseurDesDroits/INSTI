@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681244" login="JMCHAUVET">
+        <identite civilite="Monsieur" codeDep="37">
+            <nom>CHAUVET</nom>
+            <prenom>Jean-Marc</prenom>
+        </identite>
+        <email>jean-marc.chauvet@defenseurdesdroits.fr</email>
+        <photo>JMCHAUVET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Centre de vie de Sanitas</libelle>
+                <libelleSecondaire>Plate-forme multi-services</libelleSecondaire>
+                <adresse>10, place Neuve</adresse>
+                <boitePostale />
+                <tel>02 47 31 39 00</tel>
+                <fax />
+                <ville cp="37000"><value>TOURS</value></ville>
+                <poi>
+                    <longitude>0.697095</longitude>
+                    <latitude>47.383463</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

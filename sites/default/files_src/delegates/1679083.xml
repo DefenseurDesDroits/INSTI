@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679083" login="GGUILLEMIN">
+        <identite civilite="Madame" codeDep="30">
+            <nom>GUILLEMIN</nom>
+            <prenom>Gisèle</prenom>
+        </identite>
+        <email>gisele.guillemin@defenseurdesdroits.fr</email>
+        <photo>GGUILLEMIN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Hôtel de ville</libelle>
+                <libelleSecondaire />
+                <adresse>Place Charles Mourier</adresse>
+                <boitePostale />
+                <tel>04 66 56 10 47</tel>
+                <fax />
+                <ville cp="30260"><value>QUISSAC</value></ville>
+                <poi>
+                    <longitude>4.000271</longitude>
+                    <latitude>43.908317</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Mairie</libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Hôtel de ville</adresse>
+                <boitePostale />
+                <tel>04 66 56 42 80</tel>
+                <fax>04 66 56 11 44</fax>
+                <ville cp="30100"><value>ALÈS</value></ville>
+                <poi>
+                    <longitude>4.077371</longitude>
+                    <latitude>44.125061</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

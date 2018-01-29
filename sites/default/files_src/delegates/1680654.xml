@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680654" login="MCAILLON">
+        <identite civilite="Monsieur" codeDep="39">
+            <nom>CAILLON</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.caillon@defenseurdesdroits.fr</email>
+        <photo>MCAILLON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Jura</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 84 86 84 00</tel>
+                <fax>03 84 86 84 28</fax>
+                <ville cp="39000"><value>LONS-LE-SAUNIER</value></ville>
+                <poi>
+                    <longitude>5.550962</longitude>
+                    <latitude>46.672074</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681318" login="ASINNANRAGAVA">
+        <identite civilite="Monsieur" codeDep="971">
+            <nom>SINNAN-RAGAVA</nom>
+            <prenom>Alex</prenom>
+        </identite>
+        <email>alex.sinnan-ragava@defenseurdesdroits.fr</email>
+        <photo>ASINNANRAGAVA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>GUADAV (Guadeloupe Accès au droit et Aide aux victimes)</libelle>
+                <libelleSecondaire />
+                <adresse>Angle Bld Légitimus - rue Hincelin</adresse>
+                <boitePostale />
+                <tel>05 90 84 22 86</tel>
+                <fax />
+                <ville cp="97110"><value>POINTE-À-PITRE</value></ville>
+                <poi>
+                    <longitude>-61.534099</longitude>
+                    <latitude>16.244184</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

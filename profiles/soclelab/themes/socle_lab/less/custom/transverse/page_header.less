@@ -1,0 +1,144 @@
+#page-header{
+  background-color: @bg_header;
+  min-height: 80px;
+  
+  .glyphicon-th-list{
+    float: right;
+    position: relative;
+    z-index: 200;
+    font-size: 50px;
+    margin: 13px 5% 0 0;
+    max-width: 25%;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: @txt_header_menu_actif;
+      text-decoration: none;
+    }
+  }
+  @media @scr_mobile{
+    #collapse-main-menu{
+      clear: both;
+    }
+  }
+  @media @scr_tablet{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+  @media @scr_normal{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+  @media @scr_wide{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+}
+.region-header{
+  position: relative;
+}
+#page-header > .container{
+  padding: 0;
+}
+
+.logo-site{
+  float: left;
+  line-height: 80px;
+  max-height: 80px;
+  max-width: 300px;
+  
+  @media @scr_tablet{
+    max-width: 175px;
+  }
+  
+  @media @scr_mobile{
+    max-width: 70%;  
+  }
+  
+  h1{
+    margin: 0;
+    line-height: 80px;
+  }
+  img{
+    margin-top: -5px;
+    height: auto !important;
+    max-height: 80px;
+    max-width: 100%;
+  }
+}
+
+#block-system-main-menu{
+  ul{
+    margin-bottom: 0px; 
+    float: right;
+    padding-left: 0;
+    
+    @media @scr_mobile{
+      clear: both;
+      float: none;
+      
+      .caret{
+        display: none;
+      }
+    }
+  }
+  li{
+    display: inline-block;
+    list-style: none;
+    
+    @media @scr_mobile{
+      display: block;
+    }
+  }
+  
+  a{
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    
+    @media @scr_tablet{
+      padding: 0 10px;
+    }
+    @media @scr_mobile{
+      line-height: 40px;
+      height: auto;
+    }
+  }
+  
+  .active, .active-trail{
+    background-color: @bg_header_menu_actif;
+  }
+  a, a:hover{
+    color: @txt_header_menu_actif;
+  }
+  .contextual-links-trigger{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .dropdown-menu{
+    background-color: @bg_header;
+    margin-top: -10px;
+    a:hover{
+      background-color: transparent;
+    }
+    a{
+      line-height: 40px;
+      height: auto;
+    }
+    @media @scr_mobile{
+      position: relative;
+      display: block; 
+      background-color: transparent;
+      padding-left: 15px; 
+      font-size: 11px;
+    }
+  }
+}

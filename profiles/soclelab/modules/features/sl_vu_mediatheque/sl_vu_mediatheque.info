@@ -1,0 +1,13 @@
+name = Socle Lab' feature - views mediatheque
+description = Feature de gestion des vues spécifiques à la médiathèque
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_mediatheque
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = vue_mediatheque
+features_exclude[dependencies][ctools] = ctools
+mtime = 1444147236
+project path = profiles/soclelab/modules/features

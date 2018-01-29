@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679479" login="CGRECH">
+        <identite civilite="Madame" codeDep="32">
+            <nom>GRECH</nom>
+            <prenom>Christiane</prenom>
+        </identite>
+        <email>christiane.grech@defenseurdesdroits.fr</email>
+        <photo>CGRECH.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Gers</libelle>
+                <libelleSecondaire />
+                <adresse>3, place du Préfet Claude Erignac</adresse>
+                <boitePostale>BP 10322</boitePostale>
+                <tel>05 62 61 44 85</tel>
+                <fax>05 62 61 44 98</fax>
+                <ville cp="32000"><value>AUCH</value></ville>
+                <poi>
+                    <longitude>0.586352</longitude>
+                    <latitude>43.646583</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

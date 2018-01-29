@@ -1,0 +1,217 @@
+<?php
+/**
+ * @file
+ * Description : Contain custom blocks definition for DdD
+ * Date of last update : 24/12/2014
+ * Developer : PAUTREL Bruno
+ *
+ */
+define ( "DDD_BLOCKS_PROCESS_THEME_GRILLE_VOC_NAME", 'v_theme' );
+define ( "DDD_BLOCKS_AUTORITE_VOC_NAME", 'autoriter' );
+
+/**
+ * Implements : hook_block_info().
+ * Function-name : ddd_blocks_block_info
+ * Input : <none>
+ * Output : blocks - Liste des blocks créer en code pour le site du DdD
+ * Description : Permet d'ajouter les blocks de la page d'accueil dans l'admin de drupal
+ */
+function ddd_blocks_block_info() {
+	$blocks = array ();
+	$blocks ['block_typearticle'] = array (
+			'info' => t ( 'Article - Type de contenu' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE 
+	);
+	$blocks ['block_main_title'] = array (
+			'info' => t ( 'Titre de la page' ),
+			'cache' => DRUPAL_CACHE_PER_PAGE 
+	);
+	$blocks ['block_relatedcontent'] = array (
+			'info' => t ( 'Article - Contenus assosciés' ),
+			'cache' => DRUPAL_NO_CACHE 
+	);
+	$blocks ['block_agenda_title'] = array (
+			'info' => t ( "Home - Agenda du défenseur" ) 
+	);
+	$blocks ['block_pointvue'] = array (
+			'info' => t ( "Home - Block point de vue du défenseur" ) 
+	);
+	$blocks ['block_seemore'] = array (
+			'info' => t ( 'Article - PDF dans voir aussi' ) 
+	);
+	$blocks ['block_maptext'] = array (
+			'info' => t ( 'Struture - Carte et texte' ) 
+	);
+	$blocks ['block_annualreport'] = array (
+			'info' => t ( 'Home - Rapport Annuel' ) 
+	);
+	
+	return $blocks;
+}
+
+/**
+ * Implements : hook_block_view().
+ * Function-name : ddd_blocks_block_view
+ * Input : delta
+ * Output : block - Contient la configuration des blocks créer en code pour le site du DdD
+ * Description : Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function ddd_blocks_block_view($delta = '') {
+	$block = array ();
+	switch ($delta) { // Détermine quelle est le bloc en cours de création
+		case 'block_typearticle' :
+			$block ['subject'] = '';
+			$block ['content'] = _article_field_type ();
+			break;
+		case 'block_main_title' :
+			$block ['subject'] = '';
+			$block ['content'] = _page_title ();
+			break;
+		case 'block_relatedcontent' :
+			$block ['subject'] = '';
+			$block ['content'] = theme ( 'block--block-relatedcontent' );
+			break;
+		case 'block_seemore' :
+			$block ['subject'] = '';
+			$block ['content'] = theme ( 'block--block-seemore' );
+			break;
+		case 'block_maptext' :
+			$block ['subject'] = '';
+			$block ['content'] = _structure_info ();
+			break;
+		case 'block_agenda_title' :
+			$block ['subject'] = '';
+			$block ['content'] = _accueil_field_agenda ();
+			break;
+		case 'block_pointvue' :
+			$block ['subject'] = '';
+			$block ['content'] = _accueil_field_pointvue ();
+			break;
+		case 'block_annualreport' :
+			$block ['subject'] = '';
+			$block ['content'] = _accueil_field_rapport_annuel ();
+			break;
+	}
+	return $block; // Retourne la liste des blocks
+} // Fin ddd_blocks_block_view
+function ddd_blocks_theme() {
+	return array (
+			'block--block-relatedcontent' => array (
+					'template' => 'themes/block--block-relatedcontent' 
+			),
+			'block--block-seemore' => array (
+					'template' => 'themes/block--block-seemore' 
+			) 
+	);
+}
+/**
+ *
+ * @return string
+ */
+function _accueil_field_pointvue() {
+	$current_obj_show = menu_get_object ();
+	if (isset ( $current_obj_show->field_home_pointvue ['und'] [0] ['target_id'] )) {
+		return field_view_field ( 'node', $current_obj_show, 'field_home_pointvue', 'full' );
+	} else {
+		return "";
+	}
+}
+
+/**
+ *
+ * @return string
+ */
+function _accueil_field_agenda() {
+	$current_obj_show = menu_get_object ();
+	if (isset ( $current_obj_show->field_home_agenda_title )) {
+		return field_view_field ( 'node', $current_obj_show, 'field_home_agenda_title', 'full' );
+	} else {
+		return "";
+	}
+}
+
+/**
+ *
+ * @return string
+ */
+function _accueil_field_rapport_annuel() {
+	$current_obj_show = menu_get_object ();
+	if (isset ( $current_obj_show->field_rapport_annuel ['und'] )) {
+		return field_view_field ( 'node', $current_obj_show, 'field_rapport_annuel', 'full' );
+	} else {
+		return "";
+	}
+}
+
+/**
+ * Function-name : _article_field_type
+ * Input :
+ * Output :
+ * Description :
+ */
+function _article_field_type() {
+	$current_obj_show = menu_get_object ();
+	
+	if (isset ( $current_obj_show->type ) && ($current_obj_show->type == 'evenement')) {
+		return "<a href=\"/" . getCurLang () . "/agenda\" title=\"" . t ( "Display the agenda" ) . "\">" . t ( "Event" ) . "</a>";
+	}
+	if (isset ( $current_obj_show->field_article_type ['und'] )) {
+		return field_view_field ( 'node', $current_obj_show, 'field_article_type', 'full' );
+	} else {
+		return "";
+	}
+}
+
+/**
+ * Function-name : _page_title
+ * Input :
+ * Output :
+ * Description :
+ */
+function _page_title() {
+	$current_obj_show = menu_get_object ();
+	$current_title = drupal_get_title ();
+	
+	if ($current_obj_show != NULL) {
+		if (isset ( $current_obj_show->type )) {
+			if ($current_obj_show->type == 'article' || $current_obj_show->type == 'blog' || $current_obj_show->type == 'ct_outils' || $current_obj_show->type == 'ct_rapport_annuel' || $current_obj_show->type == 'ct_decision' || $current_obj_show->type == 'evenement' || $current_obj_show->type == 'ct_offre' || $current_obj_show->type == 'ct_marche') {
+				return "";
+			}			// section rapport
+			elseif ($current_obj_show->type == 'ct_section_rapport_annuel') {
+				$current_title = t ( "Rapport annuel" );
+				return "<span>" . $current_title . "</span>";
+			}
+		}
+	}
+	if ($current_title) {
+		if ($current_title == "Point de vue du Défenseur")
+			$current_title = "Les Points de vue du Défenseur des Droits";
+		return "<span>" . $current_title . "</span>";
+	}
+	return "";
+}
+
+/**
+ * Function-name : _structure_info
+ * Input :
+ * Output :
+ * Description :
+ */
+function _structure_info() {
+	$current_obj_show = menu_get_object ();
+	if (isset ( $current_obj_show->field_home_map_text ['und'] )) {
+		return field_view_field ( 'node', $current_obj_show, 'field_home_map_text', 'full' );
+	} else {
+		return "";
+	}
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function ddd_blocks_entity_info_alter(&$entity_info) {
+	$entity_info ['node'] ['view modes'] ['vignette_related'] = array (
+			'label' => t ( 'DdD Vignette related' ),
+			'custom settings' => TRUE 
+	);
+}

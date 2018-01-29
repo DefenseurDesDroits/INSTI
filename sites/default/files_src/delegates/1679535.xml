@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679535" login="AKROUCHI">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>KROUCHI</nom>
+            <prenom>Abdou</prenom>
+        </identite>
+        <email>abdou.krouchi@defenseurdesdroits.fr</email>
+        <photo>AKROUCHI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Douai</libelle>
+                <libelleSecondaire />
+                <adresse>642, boulevard Albert 1er</adresse>
+                <boitePostale />
+                <tel>03 27 93 59 61</tel>
+                <fax />
+                <ville cp="59500"><value>DOUAI</value></ville>
+                <poi>
+                    <longitude>3.074979</longitude>
+                    <latitude>50.377260</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

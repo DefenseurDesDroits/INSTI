@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679603" login="ADAURES">
+        <identite civilite="Madame" codeDep="81">
+            <nom>DAURES</nom>
+            <prenom>Annabelle</prenom>
+        </identite>
+        <email>annabelle.daures@defenseurdesdroits.fr</email>
+        <photo>ADAURES.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Hôtel de Ville </libelle>
+                <libelleSecondaire />
+                <adresse>Place Elie Théophile</adresse>
+                <boitePostale>BP 169</boitePostale>
+                <tel>05 63 42 85 50</tel>
+                <fax />
+                <ville cp="81300"><value>GRAULHET</value></ville>
+                <poi>
+                    <longitude>1.988780</longitude>
+                    <latitude>43.759974</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Castres</libelle>
+                <libelleSecondaire />
+                <adresse>26, rue Camille Rabaud</adresse>
+                <boitePostale />
+                <tel>05 63 71 55 61</tel>
+                <fax>05 63 72 34 24</fax>
+                <ville cp="81100"><value>CASTRES</value></ville>
+                <poi>
+                    <longitude>2.237492</longitude>
+                    <latitude>43.607563</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

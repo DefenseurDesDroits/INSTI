@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681236" login="PDURAND">
+        <identite civilite="Monsieur" codeDep="14">
+            <nom>DURAND</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.durand@defenseurdesdroits.fr</email>
+        <photo>PDURAND.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie de Honfleur</libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Hôtel de Ville</adresse>
+                <boitePostale />
+                <tel>02 31 81 88 00</tel>
+                <fax />
+                <ville cp="14600"><value>HONFLEUR</value></ville>
+                <poi>
+                    <longitude>0.232529</longitude>
+                    <latitude>49.421765</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-Préfecture de Lisieux</libelle>
+                <libelleSecondaire />
+                <adresse>24, boulevard Carnot</adresse>
+                <boitePostale>BP 77221</boitePostale>
+                <tel>02 31 31 82 06</tel>
+                <fax />
+                <ville cp="14107"><value>LISIEUX CEDEX</value></ville>
+                <poi>
+                    <longitude>0.224918</longitude>
+                    <latitude>49.148107</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

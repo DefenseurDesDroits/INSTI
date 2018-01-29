@@ -1,0 +1,134 @@
+
+.view-display-id-block_theme, .view-display-id-block_theme_reg{
+  background-color: @blanc;
+    // Bloc theme
+  .section-dec{ 
+    padding: 0;
+    border-bottom: 2px solid @bor_decision_ongl;
+    h2{
+      font-size: 1em;
+      margin-bottom: 0px;
+    }
+    a{
+      display: block;
+      height: 67px;
+      padding: 0 15px;
+      background-color: @bg_decision_ongl;
+      border-right: 1px solid @bor_decision_ongl;
+      color: @txt_decision_ongl;
+      font-size: 1.1em;
+      line-height: 60px;
+      text-align: center;
+      &:hover{
+        background-color: @bg_decision_ongl_h;
+      }
+      &:active {
+        background-color: @bg_decision_ongl_a;
+      }
+    }
+    &.actif a{
+      background-color: @bg_decision_ongl_a;
+      margin-top: -11px;
+      margin-bottom: -11px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      height: 89px;
+      @media @scr_mobile{
+        height: 67px;
+        padding: 0 15px;
+        margin: 0;
+      }
+    }
+    &:last-child a{
+      border: none;
+    }
+    .container-theme{
+      line-height: 22px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .view-content > .actif{
+    z-index: 10;
+  }
+}
+
+.view-display-id-block_sub_theme, .view-display-id-block_autorite, .view-display-id-block_sub_theme_reg, .view-display-id-block_autorite_reg{
+  .view-content{
+    .sub-theme-label {
+      font-size: 1em;
+      font-weight: bold;
+    }
+    
+    .clearfix;
+    padding: 38px 30px 30px 30px;
+    a{
+      font-size: 1.1em;
+    }
+    ul{
+      padding-left: 0px;
+    }
+    li{
+      list-style: none;
+    }
+    a.actif, a.actif:hover{
+      color: @txt_decision_filtre_a;
+      text-decoration: none;
+      cursor: default;
+    }
+    .btn-reset{
+      background-color: @bg_decision_ongl_a;
+      color: @txt_decision_ongl;
+      display: inline-block;
+      padding: 5px 15px;
+      float: right;
+      &:hover{
+        background-color: @bg_decision_ongl_h;
+      }
+      &:active {
+        background-color: @bg_decision_ongl;
+      }
+    }
+  }
+}
+
+.view-id-decisions{
+  .view-header {
+    background-color: @bg_decision_ongl_header;
+    padding-top: 0;
+    padding-bottom: 0;
+  } 
+}
+
+/*
+.view-display-id-page_decison{
+
+  // Bloc autorite
+  .view-display-id-block_autorite, .view-display-id-block_sub_theme {
+    color: #697076;
+    a {
+      &[disabled] {
+        cursor: default;
+        pointer-events: none;
+        color: #0B4C5F;
+      }
+    }
+  }
+  .view-display-id-block_autorite {
+    .views-field-name:after {
+      content: ":";
+    }
+  }
+}
+*/
+
+#block-system-main .term-listing-heading{
+  .sharethis-wrapper{
+      @media @scr_mobile{
+        margin:20px 0;
+      }
+  }
+  @media @scr_mobile{
+    margin:0 15px;
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2666786" login="SLARRANAGA">
+        <identite civilite="Monsieur" codeDep="93">
+            <nom>LARRANAGA</nom>
+            <prenom>Steve</prenom>
+        </identite>
+        <email>steve.larranaga@defenseurdesdroits.fr</email>
+        <photo>SLARRANAGA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>AFPAD </libelle>
+                <libelleSecondaire>Association pour la formation, prévention et accès au droit</libelleSecondaire>
+                <adresse>7 place de la Libération</adresse>
+                <boitePostale />
+                <tel>01 49 71 56 90</tel>
+                <fax>01 49 71 56 99</fax>
+                <ville cp="93380"><value>PIERREFITTE SUR SEINE</value></ville>
+                <poi>
+                    <longitude>2.359079</longitude>
+                    <latitude>48.963607</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

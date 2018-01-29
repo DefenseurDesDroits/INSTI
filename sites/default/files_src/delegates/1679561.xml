@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679561" login="RGAUTSCH">
+        <identite civilite="Monsieur" codeDep="68">
+            <nom>GAUTSCH</nom>
+            <prenom>Roland</prenom>
+        </identite>
+        <email>roland.gautsch@defenseurdesdroits.fr</email>
+        <photo>RGAUTSCH.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre socio-culturel PAX</libelle>
+                <libelleSecondaire />
+                <adresse>54, rue de Soultz</adresse>
+                <boitePostale />
+                <tel>03 89 52 34 04</tel>
+                <fax />
+                <ville cp="68100"><value>MULHOUSE</value></ville>
+                <poi>
+                    <longitude>7.321426</longitude>
+                    <latitude>47.769404</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison du bassin potassique</libelle>
+                <libelleSecondaire />
+                <adresse>260, route de Soultz</adresse>
+                <boitePostale />
+                <tel>03 89 52 22 29</tel>
+                <fax />
+                <ville cp="68270"><value>WITTENHEIM</value></ville>
+                <poi>
+                    <longitude>7.302604</longitude>
+                    <latitude>47.823308</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

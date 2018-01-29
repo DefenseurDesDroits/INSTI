@@ -1,0 +1,16 @@
+name = DdD - Feed Actions
+description = Feature d'import et d'export des taxonomies de type action
+core = 7.x
+package = DdD - Feeds (Features)
+version = 7.x-1.0-dev1
+project = ddd_fe_actions
+dependencies[] = ctools
+dependencies[] = feeds
+dependencies[] = sl_vu_taxonomy
+dependencies[] = views
+dependencies[] = views_data_export
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:2
+features[feeds_importer][] = ddd_feed_tx_actions
+mtime = 1423067291
+project path = sites/default/modules/features

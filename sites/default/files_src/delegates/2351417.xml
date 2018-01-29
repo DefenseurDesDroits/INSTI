@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2351417" login="MRIGAULT">
+        <identite civilite="Madame" codeDep="93">
+            <nom>RIGAULT</nom>
+            <prenom>Michèle</prenom>
+        </identite>
+        <email>michele.rigault@defenseurdesdroits.fr</email>
+        <photo>MRIGAULT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Saint-Denis</libelle>
+                <libelleSecondaire />
+                <adresse>16, rue des Boucheries</adresse>
+                <boitePostale />
+                <tel>01 55 84 05 30</tel>
+                <fax />
+                <ville cp="93200"><value>SAINT-DENIS</value></ville>
+                <poi>
+                    <longitude>2.357300</longitude>
+                    <latitude>48.934333</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

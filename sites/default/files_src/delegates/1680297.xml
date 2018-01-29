@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680297" login="SBEERNAERT">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>BEERNAERT</nom>
+            <prenom>Serge</prenom>
+        </identite>
+        <email>serge.beernaert@defenseurdesdroits.fr</email>
+        <photo>SBEERNAERT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Maubeuge</libelle>
+                <libelleSecondaire />
+                <adresse>Route d&apos;Assevent</adresse>
+                <boitePostale>BP 239</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="59600"><value>MAUBEUGE</value></ville>
+                <poi>
+                    <longitude>3.999158</longitude>
+                    <latitude>50.285502</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Maubeuge</libelle>
+                <libelleSecondaire>Quartier de l&apos;Épinette - Bloc Vilvorde </libelleSecondaire>
+                <adresse>Rue Marceline Desbordes Valmore</adresse>
+                <boitePostale />
+                <tel>03 27 39 00 26</tel>
+                <fax>03 27 62 08 37</fax>
+                <ville cp="59600"><value>MAUBEUGE</value></ville>
+                <poi>
+                    <longitude>3.964435</longitude>
+                    <latitude>50.292141</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

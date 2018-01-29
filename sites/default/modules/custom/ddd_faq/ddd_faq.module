@@ -1,0 +1,149 @@
+<?php
+
+define('DDD_FAQ_TID', 23);
+
+/**
+ * Implements hook_menu().
+ */
+function ddd_faq_menu(){
+  $items['faq'] = array(
+    'title' => 'Frequently Asked Questions',
+    'page callback' => 'ddd_faq_page',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+function ddd_faq_page(){
+  $output = '<section id="block-ddd-faq-faq-hp" class="block block-ddd-faq contextual-links-region clearfix">';
+  $output .= ddd_faq_get_info_block_questions_hp('', '12');
+  $output .= '</section>';
+  return $output;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ddd_faq_block_info() {
+  $blocks['faq_hp'] = array(
+    'info' => t('Questions les plus fréquentes'),
+    'status' => TRUE,
+    'region' => 'faq',
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => '<front>',
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ddd_faq_block_view($delta='') {
+  $block = array();
+  
+  switch($delta) {
+    case 'faq_hp' :
+      $block['content'] = ddd_faq_get_info_block_questions_hp('3', '6');
+      break;
+  }
+  
+  return $block;
+}
+
+function ddd_faq_get_info_block_questions_hp($nb_items = '', $cols = ''){
+  global $language;
+  $lang_name = $language->language;  
+  
+  $output = '<ul>';
+  
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+  ->entityCondition('bundle', 'article')
+  ->propertyCondition('language', $language->language, '=')
+  ->fieldCondition('field_article_type', 'tid', DDD_FAQ_TID, '=');
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    $nids = array_keys($result['node']);
+    $nodes = entity_load('node', $nids);
+    foreach ($nodes as $node) {
+      $output .= '<li>' . l($node->title, 'node/' . $node->nid .'/edit') . '</li>';
+    }
+  }
+  
+  $output .= '</ul>';
+  
+  // @todo Temporaire
+  // A améliorer en utilisant un theming avec des fichiers tpl.php
+  $output .= '<p class="intro">'.t('You have a question ? Read our Frequently Asked Questions to find answers to frequently asked questions').'</p>';
+  $output .= '<div class="row">';
+  
+  $closerow = false;
+  foreach(taxonomy_get_children(DDD_FAQ_TID) as $term) {
+    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    $output .= '<div class="col-sm-12 col-md-' . $cols . ' col-lg-' . $cols . '">';
+    $output .= '<h2 class="faq-' . $term->tid . ' title-h3">' . $translate->name . '</h2>';
+    $output .= '<div class="panel-group faq-group" id="faq-' . $term->tid . '">';
+    
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node');
+    $query->entityCondition('bundle', 'article');
+    $query->propertyCondition('language', $language->language, '=');
+    $query->fieldCondition('field_article_type', 'tid', $term->tid, '=');
+    if(!empty($nb_items))
+      $query->range(0, $nb_items);
+    $result = $query->execute();
+    
+    if (isset($result['node'])) {
+      $nids = array_keys($result['node']);
+      $nodes = entity_load('node', $nids);
+      foreach ($nodes as $node) {
+        $output .= '<div class="panel">';
+        $output .= '  <div class="panel-heading">';
+        $output .= '    <h3 class="panel-title">';
+        $output .= '      <a data-toggle="collapse" data-parent="#faq-' . $term->tid . '" href="#collapse-' . $node->nid . '" class="collapsed" role="button">' . $node->title . '<i class="fa fa-plus-circle" aria-hidden="true"></i><i class="fa fa-minus-circle" aria-hidden="true"></i></a>';
+        $output .= '    </h3>';
+        $output .= '  </div>';
+        $content_field = field_view_field('node', $node, 'field_article_body', array(
+          'label' => 'hidden'
+        ));
+        $output .= '  <div id="collapse-' . $node->nid . '" class="panel-collapse collapse">' . render($content_field) . '</div>';
+        $output .= '</div>';
+      }
+    }
+    
+    $output .= '</div>';
+    $output .= '</div>';
+    
+    if($closerow) {
+      $output .= '</div><div class="row">';
+      $closerow = false;
+    } else {
+      $closerow = true;
+    }
+  }
+  
+  $output .= '</div>';
+  
+  //return theme('ddd_faq_hp', array('vars' => $variable));
+  return $output;
+}
+
+/**
+ * Implement Hook_theme().
+ */
+function ddd_faq_theme() {
+  $base_theme  = array(
+    'path' => drupal_get_path('module', 'ddd_faq') . "/templates/",
+  );
+
+  return array(
+    'ddd_faq_hp' => $base_theme + array(
+      'template'      => 'faq-hp',  // + .tpl.php
+      'variables'     => array('vars' => NULL),
+    ),
+    'ddd_faq_page' => $base_theme + array(
+      'template'      => 'faq-page',  // + .tpl.php
+      'variables'     => array('vars' => NULL),
+    ),
+  );
+}

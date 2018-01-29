@@ -1,0 +1,39 @@
+#block-crumbs-breadcrumb{
+  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-right: 0px;
+  text-align: right;
+  color: @txt_ariane_base;
+  
+  @media @scr_mobile{
+    margin: 0 0 15px 0;
+      text-align:left;
+  }
+  a{
+    color: @txt_ariane;
+  }
+  .crumbs-current-page{
+    color: @txt_ariane_a;
+  }
+  .crumbs-separator{
+    border: 1px solid @bor_ariane_sep;
+    background-color: @bg_ariane_sep;
+    color: @txt_ariane_sep;
+    #border > .border-radius(3px);
+    margin: 0 23px 0 9px;
+    font-family: "comic sans ms";
+    display: inline-block;
+    padding: 1px 4px 3px 4px;
+    line-height: 0.7em;
+    font-size: 1.2em;
+  }
+  .crumbs-current-page{
+    display: none;
+  }
+  .breadcrumb{
+    
+  }
+  .crumbs-separator:nth-last-child(2){
+    display: none;
+  }
+}

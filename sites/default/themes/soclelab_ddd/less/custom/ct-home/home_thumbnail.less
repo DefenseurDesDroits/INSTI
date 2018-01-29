@@ -1,0 +1,220 @@
+#block-sl-ct-accueil-block-vignette-acc{
+  margin-bottom: 82px;
+  margin-top : 30px;
+  position: relative;
+  outline: none;
+}
+
+.vignette-accueil{
+  margin-bottom: 67px;
+  
+  @media @scr_mobile{
+    padding: 0 30px 0 30px;
+  }
+  .vignette-logo{
+    
+    @media @scr_mobile{
+      margin: 0 -15px 0 -15px;
+    }
+    img{
+      margin-bottom: 10px;
+      max-width: 100%;
+      max-height: 128px;
+      height: auto !important;
+    }
+  }
+  
+}
+
+.vignette-title{ 
+  margin-bottom: 7px;
+  a{
+    color: @txt_vignette_title;
+    font-size: 1.071em;
+    font-weight: bold;
+  }
+}
+
+.vignette-chapo{
+  font-size: 0.929em;
+  line-height: 23px;
+}
+  
+.vignette-home-type{
+  margin: 0 15px 0 15px;
+  border-top: 1px solid @bor_type_vignette;
+  border-bottom: 1px solid @bor_type_vignette;
+  padding: 6px 0;
+  margin-bottom: 13px;
+  
+  @media @scr_mobile{
+    padding-left: 15px;
+  }
+  a{
+    font-size: 1.357em;
+    text-transform: uppercase;
+  }
+}
+
+.link-more{
+  background-color: @bg_link_more;
+  color: @txt_link_more;
+  display: block;
+  float: left;
+  padding: 12px 25px 8px 25px;
+  margin-top: 35px;
+  position: relative;
+  font-size: 0.98em;
+  
+  @media @scr_mobile{
+    margin-top: 15px;
+  }
+  
+  &:hover{
+    color: @txt_link_more_h;
+    background-color: @bg_link_more_h;
+    text-decoration: none;
+  } 
+  
+  &:after,
+  &:before{
+    content: "";
+    width: 17px;
+    height: 37px;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+  
+  &:before{
+    left: 0;
+  }
+  
+  &:after{
+    right: 0;
+  }
+}
+
+.vignette-accueil-large{
+  
+  .vignette-text{
+    width: 508px;
+    position: absolute;
+    bottom: 0px;
+    padding: 123px 30px 58px 30px;
+    margin-top: 26px;
+    top: 0;  
+    z-index: 10;
+    background-image: url("@{dir_img}/accueil/bg-vignette-homequestion.png");
+    background-repeat: no-repeat;
+    color: @txt_vignette_chapo;
+    text-align: center;
+    @media @scr_mobile{
+      margin: 0 -15px;
+      width: auto; 
+      background-size:100%; 
+      padding:15px 30px 58px 30px;
+      background-image:none;
+      background-color: rgba(255, 255, 255, 0.5); 
+    }
+  }
+  
+  .vignette-type{
+    color: @txt_vignette_title;
+    font-family: @font-family-lato-lig;
+    font-size: 2.3em;
+    a{
+      color: @txt_vignette_title;
+    }
+  }
+  
+  .vignette-title a{
+    margin-bottom: 7px;
+    font-size: 1.8em;
+    margin-top: 66px;
+    display: block;
+    font-weight: normal;
+    color: @txt_vignette_chapo;
+      @media @scr_mobile{ margin-top: 15px; }
+  }
+  .vignette-chapo{
+    font-size: 1.3em;
+    line-height: 1.66em;
+  }
+  
+  .link-more-wrap{
+    position: absolute;
+    right: 15px;
+    bottom: 68px;
+    @media @scr_mobile{ 
+      right: 30px !important;
+      left: 30px;
+      bottom: 30px; 
+    }
+    a{
+      margin-top: 78px;
+      @media @scr_mobile{ width:100%; }
+    }
+  }
+}
+
+.big-font .vignette-accueil-large{
+  .vignette-text{
+    padding-top: 104px;
+  }
+  .vignette-title{ 
+    a {
+      margin-top: 0;
+      line-height: 1.1em;
+    }
+  }
+  .link-more-wrap{
+    right: -100px;
+  }
+  .vignette-chapo{
+    line-height: 1.2em;
+  }
+}
+
+
+#vignette-pointvue-home{ 
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 77px;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  padding: 0 7.5%;
+  color: @txt_home_block_bas;
+  @media @scr_tablet{ width: 75%; }
+  @media @scr_mobile{ width: 100%; }
+  font-family: @font-family-lato-reg;
+  .logo-pointvue{
+    margin-bottom: 52px;
+  }
+  a:hover{
+    color: @txt_home_block_title;
+  }
+  h2{
+    margin: 0 0 40px 0;
+    font-weight: normal;
+    font-size: 1.6em;
+    color: @txt_home_block_title;
+    font-family: @font-family-lato-lig;
+  }
+  p{
+    margin-bottom: 22px;
+  }
+  .link-more{
+    float: none;
+    display: inline-block;
+  }
+  
+  blockquote{
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+}
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2484254" login="MOMARCHAL">
+        <identite civilite="Madame" codeDep="94">
+            <nom>MARCHAL</nom>
+            <prenom>Marie-Odile</prenom>
+        </identite>
+        <email>marie-odile.marchal@defenseurdesdroits.fr</email>
+        <photo>MOMARCHAL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du Val de Bièvre</libelle>
+                <libelleSecondaire />
+                <adresse>65, rue Jean Jaurès </adresse>
+                <boitePostale />
+                <tel>01 43 90 25 25</tel>
+                <fax />
+                <ville cp="94800"><value>VILLEJUIF</value></ville>
+                <poi>
+                    <longitude>2.367112</longitude>
+                    <latitude>48.793584</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit et à la médiation de Créteil</libelle>
+                <libelleSecondaire />
+                <adresse>Place Salvador-Allende</adresse>
+                <boitePostale />
+                <tel>01 58 43 38 74</tel>
+                <fax />
+                <ville cp="94000"><value>CRETEIL</value></ville>
+                <poi>
+                    <longitude>2.453240</longitude>
+                    <latitude>48.777847</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

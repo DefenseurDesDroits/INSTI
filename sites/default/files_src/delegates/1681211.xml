@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681211" login="AMINGUET">
+        <identite civilite="Madame" codeDep="84">
+            <nom>MINGUET</nom>
+            <prenom>Andrée</prenom>
+        </identite>
+        <email>andree.minguet@defenseurdesdroits.fr</email>
+        <photo>AMINGUET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Palais de Justice</libelle>
+                <libelleSecondaire />
+                <adresse>2, boulevard Limbert</adresse>
+                <boitePostale />
+                <tel>04 32 74 74 00</tel>
+                <fax />
+                <ville cp="84000"><value>AVIGNON</value></ville>
+                <poi>
+                    <longitude>4.815842</longitude>
+                    <latitude>43.944281</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

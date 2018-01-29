@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2838724" login="FSQUARCINI">
+        <identite civilite="Monsieur" codeDep="2A">
+            <nom>SQUARCINI</nom>
+            <prenom>Félix</prenom>
+        </identite>
+        <email>felix.squarcini@defenseurdesdroits.fr</email>
+        <photo>FSQUARCINI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Corse-du-Sud</libelle>
+                <libelleSecondaire>Palais Lantivy</libelleSecondaire>
+                <adresse>4 Cours Napoléon</adresse>
+                <boitePostale>BP 401</boitePostale>
+                <tel>04 95 11 12 13</tel>
+                <fax>04 95 11 12 04</fax>
+                <ville cp="20000"><value>AJACCIO</value></ville>
+                <poi>
+                    <longitude>8.736405</longitude>
+                    <latitude>41.919534</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

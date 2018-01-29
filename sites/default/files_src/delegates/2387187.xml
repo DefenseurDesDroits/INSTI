@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2387187" login="GSOUBEYRAND">
+        <identite civilite="Monsieur" codeDep="42">
+            <nom>SOUBEYRAND</nom>
+            <prenom>Georges</prenom>
+        </identite>
+        <email>georges.soubeyrand@defenseurdesdroits.fr</email>
+        <photo>GSOUBEYRAND.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Roanne</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Georges Mandel</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="42300"><value>ROANNE</value></ville>
+                <poi>
+                    <longitude>4.097414</longitude>
+                    <latitude>46.055133</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de service public du Parc des Sports</libelle>
+                <libelleSecondaire />
+                <adresse>Place d&apos;Elbeuf</adresse>
+                <boitePostale />
+                <tel>04 77 44 09 60</tel>
+                <fax />
+                <ville cp="42300"><value>ROANNE</value></ville>
+                <poi>
+                    <longitude>4.092788</longitude>
+                    <latitude>46.060046</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Roanne</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Joseph Dechelette</adresse>
+                <boitePostale />
+                <tel>04 77 23 85 55</tel>
+                <fax>04 77 71 42 78</fax>
+                <ville cp="42300"><value>ROANNE</value></ville>
+                <poi>
+                    <longitude>4.068712</longitude>
+                    <latitude>46.035440</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

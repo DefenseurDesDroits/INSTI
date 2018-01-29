@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680312" login="GBURGER">
+        <identite civilite="Monsieur" codeDep="83">
+            <nom>BURGER</nom>
+            <prenom>Georges</prenom>
+        </identite>
+        <email>georges.burger@defenseurdesdroits.fr</email>
+        <photo>GBURGER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Var</libelle>
+                <libelleSecondaire />
+                <adresse>Boulevard Louvois</adresse>
+                <boitePostale />
+                <tel>04 94 18 84 45</tel>
+                <fax>04 94 18 83 00</fax>
+                <ville cp="83000"><value>TOULON</value></ville>
+                <poi>
+                    <longitude>5.934253</longitude>
+                    <latitude>43.129457</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

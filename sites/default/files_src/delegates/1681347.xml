@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681347" login="MPAILLAT">
+        <identite civilite="Monsieur" codeDep="44">
+            <nom>PAILLAT</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.paillat@defenseurdesdroits.fr</email>
+        <photo>MPAILLAT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Nantes</libelle>
+                <libelleSecondaire />
+                <adresse>21, rue Charles Roger</adresse>
+                <boitePostale />
+                <tel>02 51 80 64 30</tel>
+                <fax />
+                <ville cp="44000"><value>NANTES</value></ville>
+                <poi>
+                    <longitude>-1.597561</longitude>
+                    <latitude>47.223035</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681056" login="SLERMISSION">
+        <identite civilite="Madame" codeDep="60">
+            <nom>LERMISSION</nom>
+            <prenom>Simone</prenom>
+        </identite>
+        <email>simone.lermission@defenseurdesdroits.fr</email>
+        <photo>SLERMISSION.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Creil</libelle>
+                <libelleSecondaire />
+                <adresse>26, rue Voltaire</adresse>
+                <boitePostale />
+                <tel>03 44 64 46 70</tel>
+                <fax />
+                <ville cp="60100"><value>CREIL</value></ville>
+                <poi>
+                    <longitude>2.479067</longitude>
+                    <latitude>49.264879</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

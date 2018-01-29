@@ -1,0 +1,127 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature accueil feature.
+ */
+
+include_once 'sl_ct_accueil.features.inc';
+
+/**
+ *  Implements :  hook_block_info().
+ *  Function-name : sl_ct_accueil_block_info
+ *  Input :     <none>
+ *  Output :    blocks - Liste des blocks de la page d'accueil
+ *  Description :   Permet d'ajouter les blocks de la page d'accueil dans l'admin de drupal
+ */
+function sl_ct_accueil_block_info() {  // Début sl_ct_accueil_block_info
+  $blocks = array();
+  $blocks['block_carousel'] = array(
+      'info' => t('Home - Block carousel'),
+  );
+  $blocks['block_liste_taxo'] = array(
+      'info' => t("Home - Block liste d'une taxonomy"),
+  );
+  $blocks['block_vignette_acc'] = array(
+      'info' => t("Home - Block vignettes"),
+  );
+  $blocks['block_highlighted'] = array(
+      'info' => t("Home - Block mis en avant"),
+  );
+  
+  return $blocks; // Retourne les blocks
+} // Fin sl_ct_accueil_block_info
+
+/**
+ *  Implements :  hook_block_view().
+ *  Function-name : sl_ct_accueil_block_view
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_ct_accueil_block_view($delta = '') { // Début sl_ct_accueil_block_view
+  $block = array();
+  switch ($delta) { // Détermine quelle est le bloc en cours de création
+    case 'block_carousel':
+      $block['subject'] = '';
+      $block['content'] = _accueil_field_carrousel();
+      break;
+    case 'block_liste_taxo':
+      $block['subject'] = '';
+      $block['content'] = _accueil_field_listetaxo();
+      break;
+    case 'block_vignette_acc':
+      $block['subject'] = '';
+      $block['content'] = _accueil_field_vignettes();
+      break;
+    case 'block_highlighted':
+      $block['subject'] = '';
+      $block['content'] = _accueil_field_highlighted();
+      break;
+  }
+  return $block;  // Retourne la liste des blocks 
+} // Fin sl_ct_accueil_block_view
+
+/**
+ *  Function-name : _accueil_field_carrousel
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function _accueil_field_carrousel(){
+  $current_obj_show = menu_get_object();
+  
+  if(isset($current_obj_show->field_home_carousel_liste['und'])){
+    return field_view_field('node', $current_obj_show, 'field_home_carousel_liste', 'full');
+  }else{
+    return "";
+  }
+}
+
+/**
+ *  Function-name : _accueil_field_listetaxo
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function _accueil_field_listetaxo(){
+  $current_obj_show = menu_get_object();
+  
+  if(isset($current_obj_show->field_home_liste_taxo['und'][0]['target_id'])){
+    return field_view_field('node', $current_obj_show, 'field_home_liste_taxo', 'full');
+  }else{
+    return "";
+  }
+}
+
+/**
+ *  Function-name : _accueil_field_carrousel
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function _accueil_field_vignettes(){
+  $current_obj_show = menu_get_object();
+  
+  if(isset($current_obj_show->field_home_vignette_liste['und'])){
+    return field_view_field('node', $current_obj_show, 'field_home_vignette_liste', 'full');
+  }else{
+    return "";
+  }
+}
+/**
+ *  Function-name : _accueil_field_listetaxo
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function _accueil_field_highlighted(){
+  $current_obj_show = menu_get_object();
+
+  if(isset($current_obj_show->field_home_highlight['und'][0]['value'])){
+    return field_view_field('node', $current_obj_show, 'field_home_highlight', 'full');
+  }else{
+    return "";
+  }
+}
+
+

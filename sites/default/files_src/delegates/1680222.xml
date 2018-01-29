@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680222" login="NCHABANNE">
+        <identite civilite="Madame" codeDep="90">
+            <nom>CHABANNE</nom>
+            <prenom>Nicole</prenom>
+        </identite>
+        <email>nicole.chabanne@defenseurdesdroits.fr</email>
+        <photo>NCHABANNE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Territoire de Belfort</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Bartholdi</adresse>
+                <boitePostale />
+                <tel>03 84 57 16 92</tel>
+                <fax />
+                <ville cp="90000"><value>BELFORT</value></ville>
+                <poi>
+                    <longitude>6.861323</longitude>
+                    <latitude>47.639022</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

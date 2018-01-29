@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2617450" login="JCLHOSTIS">
+        <identite civilite="Monsieur" codeDep="29">
+            <nom>L&apos;HOSTIS</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.lhostis@defenseurdesdroits.fr</email>
+        <photo>JCLHOSTIS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point d&apos;information médiation multiservices </libelle>
+                <libelleSecondaire>Mairie de Quartier de l&apos;Europe</libelleSecondaire>
+                <adresse>31, rue Saint-Jacques</adresse>
+                <boitePostale />
+                <tel>02 98 41 00 66</tel>
+                <fax>02 98 41 40 21</fax>
+                <ville cp="29200"><value>BREST</value></ville>
+                <poi>
+                    <longitude>-4.471439</longitude>
+                    <latitude>48.409693</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Brest</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue Parmentier</adresse>
+                <boitePostale />
+                <tel>02 98 00 97 00</tel>
+                <fax>02 98 43 26 32</fax>
+                <ville cp="29200"><value>BREST</value></ville>
+                <poi>
+                    <longitude>-4.484212</longitude>
+                    <latitude>48.385487</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

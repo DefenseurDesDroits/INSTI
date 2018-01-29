@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681297" login="ACGRANDJEAN">
+        <identite civilite="Madame" codeDep="59">
+            <nom>GRANDJEAN</nom>
+            <prenom>Anne-Claire</prenom>
+        </identite>
+        <email>anne-claire.grandjean@defenseurdesdroits.fr</email>
+        <photo>ACGRANDJEAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Dunkerque</libelle>
+                <libelleSecondaire />
+                <adresse>30, rue Beaumont</adresse>
+                <boitePostale />
+                <tel>03 28 61 52 44</tel>
+                <fax />
+                <ville cp="59140"><value>DUNKERQUE</value></ville>
+                <poi>
+                    <longitude>2.379369</longitude>
+                    <latitude>51.031553</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Grande-Synthe</libelle>
+                <libelleSecondaire />
+                <adresse>Place de l&apos;Europe</adresse>
+                <boitePostale />
+                <tel>03 28 28 20 07</tel>
+                <fax />
+                <ville cp="59760"><value>GRANDE SYNTHE</value></ville>
+                <poi>
+                    <longitude>2.3030192</longitude>
+                    <latitude>51.0150245</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>sur RDV LUNDI</jour>
+                        <horaire />
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

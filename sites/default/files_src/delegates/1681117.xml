@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681117" login="RGILLIO">
+        <identite civilite="Monsieur" codeDep="05">
+            <nom>GILLIO-TOS</nom>
+            <prenom>Robert</prenom>
+        </identite>
+        <email>robert.gillio-tos@defenseurdesdroits.fr</email>
+        <photo>RGILLIO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit </libelle>
+                <libelleSecondaire>Maison Pommier</libelleSecondaire>
+                <adresse>Impasse des Jardins </adresse>
+                <boitePostale />
+                <tel>04 92 52 10 27</tel>
+                <fax />
+                <ville cp="05000"><value>GAP</value></ville>
+                <poi>
+                    <longitude>2.151689</longitude>
+                    <latitude>48.431542</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Préfecture des Hautes-Alpes</libelle>
+                <libelleSecondaire />
+                <adresse>32, rue Saint-Arey</adresse>
+                <boitePostale />
+                <tel>04 92 40 48 00</tel>
+                <fax />
+                <ville cp="05000"><value>GAP</value></ville>
+                <poi>
+                    <longitude>6.076259</longitude>
+                    <latitude>44.557486</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

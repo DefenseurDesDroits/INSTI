@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680675" login="BGALAUP">
+        <identite civilite="Monsieur" codeDep="31">
+            <nom>GALAUP</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.galaup@defenseurdesdroits.fr</email>
+        <photo>BGALAUP.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Mairie Annexe DESBALS </libelle>
+                <libelleSecondaire />
+                <adresse>128, rue Henri Desbals</adresse>
+                <boitePostale />
+                <tel>05 61 41 23 80</tel>
+                <fax>05 62 26 76 11</fax>
+                <ville cp="31300"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>1.412828</longitude>
+                    <latitude>43.579471</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de la Citoyenneté</libelle>
+                <libelleSecondaire>Espace Niel </libelleSecondaire>
+                <adresse>81, rue Saint Roch</adresse>
+                <boitePostale />
+                <tel>05 67 73 87 67</tel>
+                <fax />
+                <ville cp="31400"><value>TOULOUSE</value></ville>
+                <poi>
+                    <longitude>2.155203</longitude>
+                    <latitude>44.053499</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2601322" login="ATERRADE">
+        <identite civilite="Madame" codeDep="91">
+            <nom>TERRADE</nom>
+            <prenom>Annie</prenom>
+        </identite>
+        <email>annie.terrade@defenseurdesdroits.fr</email>
+        <photo>ATERRADE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue Johann Strauss</adresse>
+                <boitePostale />
+                <tel>01 60 47 86 59</tel>
+                <fax />
+                <ville cp="91860"><value>EPINAY SOUS SENART</value></ville>
+                <poi>
+                    <longitude>2.524002</longitude>
+                    <latitude>48.695804</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

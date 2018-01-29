@@ -1,0 +1,78 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ROOT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="delegue">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="identite">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="nom"/>
+                                        <xs:element type="xs:string" name="prenom"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="civilite"/>
+                                    <xs:attribute type="xs:string" name="codeDep"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:string" name="email"/>
+                            <xs:element type="xs:string" name="photo"/>
+                            <xs:element name="structures">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="structure" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="libelle"/>
+                                                    <xs:element type="xs:string" name="libelleSecondaire"/>
+                                                    <xs:element type="xs:string" name="adresse"/>
+                                                    <xs:element type="xs:string" name="boitePostale"/>
+                                                    <xs:element type="xs:string" name="tel"/>
+                                                    <xs:element type="xs:string" name="fax"/>
+                                                    <xs:element name="ville">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element type="xs:string" name="value"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:integer" name="cp" use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="poi">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+								<xs:element type="xs:float" name="longitude"/>
+                                                                <xs:element type="xs:float" name="latitude"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="permanences">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="permanence" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="jour"/>
+                                                                            <xs:element type="xs:string" name="horaire"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="principal" use="optional"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="etat"/>
+                        <xs:attribute type="xs:int" name="id"/>
+                        <xs:attribute type="xs:string" name="login"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

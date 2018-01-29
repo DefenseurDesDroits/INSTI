@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680786" login="PBELLET">
+        <identite civilite="Monsieur" codeDep="30">
+            <nom>BELLET</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.bellet@defenseurdesdroits.fr</email>
+        <photo>PBELLET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Gard</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Guillemette</adresse>
+                <boitePostale />
+                <tel>04 66 36 40 27</tel>
+                <fax>04 66 36 41 76</fax>
+                <ville cp="30045"><value>NÎMES Cedex 9</value></ville>
+                <poi>
+                    <longitude>4.362964</longitude>
+                    <latitude>43.832018</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>sur RDV du LUNDI au VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

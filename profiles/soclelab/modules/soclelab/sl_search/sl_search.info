@@ -1,0 +1,4 @@
+name = SocleLAB Search
+description = Contain search for SocleLAB
+package = SocleLAB
+core = 7.x

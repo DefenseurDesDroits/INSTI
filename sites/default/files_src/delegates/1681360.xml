@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681360" login="EBENAMOR">
+        <identite civilite="Madame" codeDep="93">
+            <nom>BEN AMOR</nom>
+            <prenom>Emna</prenom>
+        </identite>
+        <email>emna.benamor@defenseurdesdroits.fr</email>
+        <photo>EBENAMOR.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit d&apos;Aubervilliers</libelle>
+                <libelleSecondaire />
+                <adresse>20, rue Bernard et Mazoyer</adresse>
+                <boitePostale />
+                <tel>01 48 11 32 24</tel>
+                <fax />
+                <ville cp="93300"><value>AUBERVILLIERS</value></ville>
+                <poi>
+                    <longitude>2.382490</longitude>
+                    <latitude>48.912203</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de La Courneuve</libelle>
+                <libelleSecondaire />
+                <adresse>2, avenue de la République</adresse>
+                <boitePostale />
+                <tel>01 49 92 62 05</tel>
+                <fax />
+                <ville cp="93120"><value>LA COURNEUVE</value></ville>
+                <poi>
+                    <longitude>2.388637</longitude>
+                    <latitude>48.925138</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

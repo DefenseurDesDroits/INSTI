@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679967" login="GPALLAVICINI">
+        <identite civilite="Monsieur" codeDep="76">
+            <nom>PALLAVICINI</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.pallavicini@defenseurdesdroits.fr</email>
+        <photo>GPALLAVICINI.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Espace d&apos;accès au droit et aux services publics</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue du Couvent</adresse>
+                <boitePostale />
+                <tel>02 35 95 91 40</tel>
+                <fax />
+                <ville cp="76190"><value>YVETOT</value></ville>
+                <poi>
+                    <longitude>0.751426</longitude>
+                    <latitude>49.616456</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>3e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Canteleu</libelle>
+                <libelleSecondaire>Plate forme citoyenne</libelleSecondaire>
+                <adresse>6, ancienne route de Duclair</adresse>
+                <boitePostale />
+                <tel>02 32 83 20 31</tel>
+                <fax>02 35 08 19 13</fax>
+                <ville cp="76380"><value>CANTELEU</value></ville>
+                <poi>
+                    <longitude>1.034134</longitude>
+                    <latitude>49.448006</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Elbeuf</libelle>
+                <libelleSecondaire />
+                <adresse>27, place de la République</adresse>
+                <boitePostale />
+                <tel>02 35 77 23 24</tel>
+                <fax />
+                <ville cp="76500"><value>ELBEUF</value></ville>
+                <poi>
+                    <longitude>1.000254</longitude>
+                    <latitude>49.289616</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

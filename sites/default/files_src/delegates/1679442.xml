@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679442" login="CPIETRI">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>PIÉTRI</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.pietri@defenseurdesdroits.fr</email>
+        <photo>CPIETRI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Martigues</libelle>
+                <libelleSecondaire />
+                <adresse>Place Paradis Saint Roch</adresse>
+                <boitePostale />
+                <tel>04 42 41 32 20</tel>
+                <fax>04 42 41 32 40</fax>
+                <ville cp="13500"><value>MARTIGUES</value></ville>
+                <poi>
+                    <longitude>5.039478</longitude>
+                    <latitude>43.406942</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison du droit et antenne de justice</libelle>
+                <libelleSecondaire />
+                <adresse>Bt la Ginestière quartier les Plantiers</adresse>
+                <boitePostale />
+                <tel>04 42 89 03 31</tel>
+                <fax />
+                <ville cp="13127"><value>VITROLLES</value></ville>
+                <poi>
+                    <longitude>5.253556</longitude>
+                    <latitude>43.445661</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e ou 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

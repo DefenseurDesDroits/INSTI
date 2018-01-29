@@ -1,0 +1,57 @@
+.node-logo{
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    .overlay-legend{
+      bottom: 0;
+    }
+  }
+}
+
+.overlay-legend{
+  position: absolute;
+  bottom: -70px;
+  left:0;
+  right: 0;
+  z-index: 5;
+  padding: 5px 15px;
+  color: @txt_logo_legend;
+  #transition > .all(250ms);
+  
+  .legende-image{
+    position: relative;
+    z-index: 5;
+    font-size: 0.857em;
+  }
+  
+  .copyright-image{
+    font-style: italic;
+  }
+  
+  .bg-legende-image{
+    #alpha > .opacity(0.75, 75);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: @bg_logo_legend;
+  }
+}
+
+.dnd-atom-wrapper{
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    .overlay-legend{
+      bottom: 0;
+    }
+  }
+}
+.dnd-legend-wrapper, .video-article .field-name-scald-authors, .video-article .field-name-scald-tags{
+  display: none;
+}
+.type-image .dnd-legend-wrapper{
+  display: block;
+}

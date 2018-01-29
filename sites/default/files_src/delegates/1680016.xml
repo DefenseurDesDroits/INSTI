@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680016" login="MBOUCHARA">
+        <identite civilite="Monsieur" codeDep="45">
+            <nom>BOUCHARA</nom>
+            <prenom>Marc</prenom>
+        </identite>
+        <email>marc.bouchara@defenseurdesdroits.fr</email>
+        <photo>MBOUCHARA.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire d&apos;Orléans Saran</libelle>
+                <libelleSecondaire>Les Montaubans</libelleSecondaire>
+                <adresse>4024 Ancienne route de Chartres</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="45770"><value>SARAN</value></ville>
+                <poi>
+                    <longitude>1.870112</longitude>
+                    <latitude>47.963809</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de La Source</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue Edouard Branly</adresse>
+                <boitePostale />
+                <tel>02 38 69 01 22</tel>
+                <fax>02 38 63 98 74</fax>
+                <ville cp="45100"><value>ORLÉANS LA SOURCE</value></ville>
+                <poi>
+                    <longitude>1.934090</longitude>
+                    <latitude>47.834126</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

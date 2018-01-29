@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681337" login="CLEGUERN">
+        <identite civilite="Madame" codeDep="94">
+            <nom>LE GUERN</nom>
+            <prenom>Christine</prenom>
+        </identite>
+        <email>christine.leguern@defenseurdesdroits.fr</email>
+        <photo>CLEGUERN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit et à la médiation</libelle>
+                <libelleSecondaire />
+                <adresse>12, avenue Charles Garcia</adresse>
+                <boitePostale />
+                <tel>01 71 33 58 61</tel>
+                <fax />
+                <ville cp="94120"><value>FONTENAY SOUS BOIS</value></ville>
+                <poi>
+                    <longitude>2.482044</longitude>
+                    <latitude>48.855472</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

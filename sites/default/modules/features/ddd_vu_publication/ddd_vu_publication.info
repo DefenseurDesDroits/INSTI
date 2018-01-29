@@ -1,0 +1,11 @@
+name = DdD - View Publication
+description = Vue de gestions des publications
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-dev1
+project = ddd_vu_publication
+dependencies[] = features_override
+dependencies[] = sl_vu_publications
+features[features_api][] = api:2
+mtime = 1442845911
+project path = sites/default/modules/features

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681305" login="DRIOLLET">
+        <identite civilite="Madame" codeDep="58">
+            <nom>RIOLLET</nom>
+            <prenom>Danielle</prenom>
+        </identite>
+        <email>danielle.riollet@defenseurdesdroits.fr</email>
+        <photo>DRIOLLET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Nièvre</libelle>
+                <libelleSecondaire />
+                <adresse>64, rue de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 86 60 72 09</tel>
+                <fax>03 86 36 12 54</fax>
+                <ville cp="58000"><value>NEVERS</value></ville>
+                <poi>
+                    <longitude>3.161935</longitude>
+                    <latitude>46.992704</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

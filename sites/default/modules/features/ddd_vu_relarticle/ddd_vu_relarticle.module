@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD View related article feature.
+ */
+
+include_once 'ddd_vu_relarticle.features.inc';

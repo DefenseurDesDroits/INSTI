@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681075" login="MBOUKETIR">
+        <identite civilite="Madame" codeDep="51">
+            <nom>BOUKETIR</nom>
+            <prenom>Myriam</prenom>
+        </identite>
+        <email>myriam.bouketir@defenseurdesdroits.fr</email>
+        <photo>MBOUKETIR.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>L&apos;Étoile mission locale</libelle>
+                <libelleSecondaire />
+                <adresse>18, rue Marabais</adresse>
+                <boitePostale />
+                <tel>03 26 72 10 79</tel>
+                <fax />
+                <ville cp="51300"><value>VITRY-LE-FRANÇOIS</value></ville>
+                <poi>
+                    <longitude>4.582335</longitude>
+                    <latitude>48.726405</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Reims</libelle>
+                <libelleSecondaire />
+                <adresse>37, rue Docteur Albert Schweitzer</adresse>
+                <boitePostale />
+                <tel>03 26 77 09 24</tel>
+                <fax>03 26 77 86 99</fax>
+                <ville cp="51100"><value>REIMS</value></ville>
+                <poi>
+                    <longitude>4.020650</longitude>
+                    <latitude>49.282068</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des personnes handicapées </libelle>
+                <libelleSecondaire />
+                <adresse>51, rue Patton</adresse>
+                <boitePostale />
+                <tel>03 26 21 57 70</tel>
+                <fax />
+                <ville cp="51000"><value>CHÂLONS-EN-CHAMPAGNE</value></ville>
+                <poi>
+                    <longitude>4.349074</longitude>
+                    <latitude>48.963143</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

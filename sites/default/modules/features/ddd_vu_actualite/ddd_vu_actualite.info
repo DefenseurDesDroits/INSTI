@@ -1,0 +1,9 @@
+name = DdD - View Actualites
+description = Vue de gestion des actualités
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_actualite
+dependencies[] = sl_vu_actualites
+features[features_api][] = api:2
+project path = sites/default/modules/features

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2436603" login="MROCHE">
+        <identite civilite="Madame" codeDep="69">
+            <nom>ROCHÉ</nom>
+            <prenom>Martine</prenom>
+        </identite>
+        <email>martine.roche@defenseurdesdroits.fr</email>
+        <photo>MROCHE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Rhône</libelle>
+                <libelleSecondaire />
+                <adresse>18, rue de Bonnel</adresse>
+                <boitePostale />
+                <tel>04 72 61 65 15</tel>
+                <fax />
+                <ville cp="69419"><value>LYON CEDEX 03</value></ville>
+                <poi>
+                    <longitude>4.844134</longitude>
+                    <latitude>45.76188</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

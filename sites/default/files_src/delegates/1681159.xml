@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681159" login="GTHELLIER">
+        <identite civilite="Monsieur" codeDep="66">
+            <nom>THELLIER</nom>
+            <prenom>Gilles</prenom>
+        </identite>
+        <email>gilles.thellier@defenseurdesdroits.fr</email>
+        <photo>GTHELLIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Joseph Deloncle</adresse>
+                <boitePostale />
+                <tel>04 68 66 34 56</tel>
+                <fax />
+                <ville cp="66000"><value>PERPIGNAN</value></ville>
+                <poi>
+                    <longitude>2.900029</longitude>
+                    <latitude>42.697573</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Céret</libelle>
+                <libelleSecondaire />
+                <adresse>6, boulevard Simon Batlle</adresse>
+                <boitePostale />
+                <tel>04 68 66 34 56</tel>
+                <fax />
+                <ville cp="66400"><value>CÉRET</value></ville>
+                <poi>
+                    <longitude>2.746100</longitude>
+                    <latitude>42.483847</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

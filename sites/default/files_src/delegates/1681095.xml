@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681095" login="ECHRETIEN">
+        <identite civilite="Madame" codeDep="72">
+            <nom>CHRÉTIEN-MAYEUR</nom>
+            <prenom>Evelyne</prenom>
+        </identite>
+        <email>evelyne.chretien-mayeur@defenseurdesdroits.fr</email>
+        <photo>ECHRETIEN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit d&apos;Allonnes</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue Georges Bizet</adresse>
+                <boitePostale>BP 62</boitePostale>
+                <tel>02 43 39 05 85</tel>
+                <fax />
+                <ville cp="72703"><value>ALLONNES CEDEX</value></ville>
+                <poi>
+                    <longitude>0.162543</longitude>
+                    <latitude>47.970257</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire>Vie associative et Citoyenne</libelleSecondaire>
+                <adresse>25 bis, rue Pasteur</adresse>
+                <boitePostale />
+                <tel>02 43 62 50 37</tel>
+                <fax />
+                <ville cp="72300"><value>SABLÉ-SUR-SARTHE</value></ville>
+                <poi>
+                    <longitude>-0.332755</longitude>
+                    <latitude>47.841433</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Pôle associatif Coluche</libelle>
+                <libelleSecondaire />
+                <adresse>31, allée Claude Debussy</adresse>
+                <boitePostale />
+                <tel>02 43 50 17 90</tel>
+                <fax />
+                <ville cp="72100"><value>LE MANS</value></ville>
+                <poi>
+                    <longitude>0.209311</longitude>
+                    <latitude>47.973769</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

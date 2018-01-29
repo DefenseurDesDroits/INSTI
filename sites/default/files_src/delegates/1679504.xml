@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679504" login="ATHIBAUD">
+        <identite civilite="Monsieur" codeDep="42">
+            <nom>THIBAUD</nom>
+            <prenom>Albert</prenom>
+        </identite>
+        <email>albert.thibaud@defenseurdesdroits.fr</email>
+        <photo>ATHIBAUD.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Saint-Etienne-la-Talaudière</libelle>
+                <libelleSecondaire />
+                <adresse>Rue de la Sauvagère</adresse>
+                <boitePostale>BP 540</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="42355"><value>LA TALAUDIÈRE CEDEX</value></ville>
+                <poi>
+                    <longitude>4.415811</longitude>
+                    <latitude>45.473349</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus sur RDV JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Loire</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Charles de Gaulle</adresse>
+                <boitePostale />
+                <tel>04 77 48 48 99</tel>
+                <fax>04 77 41 72 22</fax>
+                <ville cp="42022"><value>SAINT-ETIENNE CEDEX 1</value></ville>
+                <poi>
+                    <longitude>4.386359</longitude>
+                    <latitude>45.441943</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

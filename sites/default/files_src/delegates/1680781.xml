@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680781" login="DTOULET">
+        <identite civilite="Madame" codeDep="61">
+            <nom>TOULET</nom>
+            <prenom>Danielle</prenom>
+        </identite>
+        <email>danielle.toulet@defenseurdesdroits.fr</email>
+        <photo>DTOULET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire Alençon - Condé/Sarthe</libelle>
+                <libelleSecondaire />
+                <adresse>Route du Pont Percé</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="61250"><value>CONDE SUR SARTHE</value></ville>
+                <poi>
+                    <longitude>0.015440</longitude>
+                    <latitude>48.438762</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Orne</libelle>
+                <libelleSecondaire />
+                <adresse>39, rue Saint-Blaise</adresse>
+                <boitePostale />
+                <tel>02 33 80 62 18</tel>
+                <fax>02 33 80 62 16</fax>
+                <ville cp="61000"><value>ALENÇON</value></ville>
+                <poi>
+                    <longitude>0.091179</longitude>
+                    <latitude>48.432780</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

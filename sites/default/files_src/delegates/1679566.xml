@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679566" login="MGUERIN">
+        <identite civilite="Madame" codeDep="69">
+            <nom>GUÉRIN</nom>
+            <prenom>Michelle</prenom>
+        </identite>
+        <email>michelle.guerin@defenseurdesdroits.fr</email>
+        <photo>MGUERIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice et du droit</libelle>
+                <libelleSecondaire />
+                <adresse>87, avenue de l&apos;Europe</adresse>
+                <boitePostale />
+                <tel>04 37 85 10 50</tel>
+                <fax />
+                <ville cp="69140"><value>RILLIEUX-LA-PAPE</value></ville>
+                <poi>
+                    <longitude>4.905663</longitude>
+                    <latitude>45.819117</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

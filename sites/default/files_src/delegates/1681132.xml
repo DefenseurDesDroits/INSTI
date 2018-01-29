@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681132" login="JLASSORT">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>LASSORT</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.lassort@defenseurdesdroits.fr</email>
+        <photo>JLASSORT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Espace Info Ecoute</libelle>
+                <libelleSecondaire />
+                <adresse>10 place Maréchal Foch</adresse>
+                <boitePostale />
+                <tel>05 56 41 66 60</tel>
+                <fax />
+                <ville cp="33340"><value>LESPARRE MEDOC</value></ville>
+                <poi>
+                    <longitude>-0.929244</longitude>
+                    <latitude>45.310002</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Bordeaux</libelle>
+                <libelleSecondaire>Entrée A - 3ème étage</libelleSecondaire>
+                <adresse>2, place Ravezies</adresse>
+                <boitePostale />
+                <tel>05 56 11 27 10</tel>
+                <fax />
+                <ville cp="33300"><value>BORDEAUX</value></ville>
+                <poi>
+                    <longitude>-0.575251</longitude>
+                    <latitude>44.865988</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit des Hauts-de-Garonne</libelle>
+                <libelleSecondaire>Le carré d&apos;Iris</libelleSecondaire>
+                <adresse>45, avenue de la Libération </adresse>
+                <boitePostale>BP 105</boitePostale>
+                <tel>05 57 77 74 60</tel>
+                <fax />
+                <ville cp="33305"><value>LORMONT CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.522887</longitude>
+                    <latitude>44.867952</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison des services publics</libelle>
+                <libelleSecondaire>(Mairie annexe)</libelleSecondaire>
+                <adresse>Rue Salvador Allende</adresse>
+                <boitePostale />
+                <tel>05 57 80 87 17</tel>
+                <fax />
+                <ville cp="33270"><value>FLOIRAC</value></ville>
+                <poi>
+                    <longitude>-0.510621</longitude>
+                    <latitude>44.845405</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 3e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;Accès au Droit de Langon</libelle>
+                <libelleSecondaire />
+                <adresse>Résidence de l&apos;Horloge
+Place de l&apos;Horloge</adresse>
+                <boitePostale />
+                <tel>06 17 19 77 06</tel>
+                <fax />
+                <ville cp="33210"><value>LANGON</value></ville>
+                <poi>
+                    <longitude>-1.143549</longitude>
+                    <latitude>44.637492</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

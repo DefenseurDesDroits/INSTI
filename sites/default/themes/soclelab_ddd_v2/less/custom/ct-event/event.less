@@ -1,0 +1,47 @@
+// TODO
+
+.node-logo.logo-event{
+  border: none;
+  margin-bottom: 20px;
+}
+
+.node-date.date-event{
+  background-color:  @bg_home_agenda;
+  color: @bg_home_agenda_date;
+  padding: 15px;
+  font-size: 1.286em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.node-lieu{
+  background-color: @bg_event_lieu;
+  padding: 15px 15px 5px 113px;
+  min-height: 110px;
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  background-image: url("@{dir_img}/content/vignette-point-localisation.png");
+  margin-bottom: 20px;
+  margin-top: -20px;
+  color: @txt_event_lieu;
+}
+
+#page-main-content {
+  .field.field-name-field-event-date, 
+  .field.field-name-field-event-lieu,
+  .field-name-field-article-date{
+    margin-bottom: 0;
+  }
+}
+
+@media @scr_mobile{
+  .node-vm-full.node-evenement{
+    margin: 0 15px;
+  
+    .date-event, .lieu-event, .galerie-event{
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}

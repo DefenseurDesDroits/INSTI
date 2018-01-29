@@ -1,0 +1,307 @@
+#page-header{
+  background-color: @bg_header;
+  min-height: 80px;
+  padding-bottom: 36px;
+  padding-top: 15px;
+  
+  .glyphicon-th-list{
+    float: right;
+    position: relative;
+    z-index: 200;
+    font-size: 50px;
+    margin: 13px 5% 0 0;
+    max-width: 25%;
+    color: @txt_header_puce;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: @txt_header_puce;
+      text-decoration: none;
+    }
+  }
+  #collapse-main-menu{
+    padding-left: 200px;
+      @media @scr_tablet{padding-left:180px;}
+  }
+  @media @scr_mobile{
+    #collapse-main-menu{
+      clear: both;
+      padding-left: 0px;
+      padding-top: 35px;
+    }
+  }
+  @media @scr_tablet{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+  @media @scr_normal{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+  @media @scr_wide{
+    #collapse-main-menu{
+      display: block !important;
+    }
+  }
+  div.contextual-links-wrapper{ right: -28px; }
+}
+.region-header{
+  position: relative;
+  #block-menu-menu-menu-utilitaire ul{
+   @media @scr_tablet{padding:0}
+   }
+  #block-menu-menu-menu-utilitaire ul li{
+   @media @scr_tablet{margin:10px 0;padding: 0 6px 0 4px;}
+   }
+}
+#page-header > .container{
+  padding: 0;
+}
+#zoom-minify, #zoom-magnify{
+  &:after{
+    display: none;
+  }
+}
+.logo-site{
+  float: left;
+  line-height: 80px;
+  max-height: 80px;
+  max-width: 300px;
+  position: absolute;
+  z-index: 10;
+
+  @media @scr_tablet{
+    max-width: 175px;
+  }
+  
+  @media @scr_mobile{
+    max-width: 70%; 
+    margin-left:20px;
+  }
+  
+  h1{
+    margin: 0;
+    line-height: 80px;
+  }
+  img{
+    margin-top: -5px;
+    height: auto !important;
+    max-height: 80px;
+    max-width: 100%;
+  }
+}
+
+.caret{
+  background-image: url("@{dir_img}/header/arrow-submenu.png");  
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 5px;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+}
+
+.header-main-menu{
+  margin-top: 20px;
+  
+  ul{
+    margin-bottom: 0px; 
+    float: right;
+    padding-left: 0;
+    @media @scr_tablet{float:left;}
+    @media @scr_mobile{
+      clear: both;
+      float: none;
+      
+      .caret{
+        display: none;
+      }
+    }
+  }
+  
+  li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 0px;
+    vertical-align: middle;
+    @media @scr_mobile{
+      display: block;
+    }
+  }
+  li > a, li > span{
+    padding: 7px 20px;
+    position: relative;
+       @media @scr_tablet{
+           padding:7px 15px;
+       }
+  }
+  .link-search{
+    background-image: url("@{dir_img}/header/picto-search.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    overflow: hidden;
+    width: 20px;
+    height: 20px;
+    padding: 20px 0 0 0;
+    @media @scr_mobile{
+      margin: 20px auto 0 auto;
+      padding: 10px 20px 10px 20px;
+      width: 300px;
+      text-align: center;
+      height: auto;
+      display: block;
+      background-position: right top;
+      background-image: none;
+      background-color: @col_main;
+      color: @blanc;
+    }
+  }
+  .last{
+    margin-right: 0;
+  }
+  .menu a, .menu .nolink{
+    display: block;
+  }
+  a, .nolink{
+    font-size: 1.03em;
+    font-family: @font-family-lato-bol;
+  }
+  .menu > li > .nolink{
+    color: @txt_header_menu;
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .menu > li:first-child > .active{
+    .header-menu-item-active;
+  }
+  
+  .menu > li > .active-trail{
+    .header-menu-item-active;
+  }
+  .dropdown-menu > li > .active{
+    color: @txt_header_menu;
+    &:hover{ color: @txt_header_menu; }
+  }
+  
+  
+  a, a:hover{
+    color: @txt_header_menu;
+  }
+  .contextual-links-trigger{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .dropdown{
+    position: static;
+  }
+  .dropdown-menu{
+    background-color: @bg_header_dropdow;
+    margin-top: 0px;
+    padding: 41px 30px 40px 60px;
+    border: none;
+    font-family: @font-family-lato-bol;
+    float: none;
+    width: 615px;
+    left: auto;
+    right: 0;
+    font-size: 1em;
+    #border > .border-radius(0);
+    .caret{
+      display: none;
+    }
+    a, a:hover{
+      background-color: transparent;
+      padding: 8px 0;
+      line-height: 1em;
+      font-family: @font-family-lato-reg;
+      color: @txt_header_menu_a;
+      white-space: normal;
+    }
+    
+    .nolink{
+      font-size: 1.1em;
+      padding: 0;
+      color: @txt_nolink_header;
+    }
+    @media @scr_mobile{
+      position: relative;
+      display: block; 
+      background-color: transparent;
+      font-size: 11px;
+      #shaddow > .no-shaddow();
+      padding: 5px 15px 5px 40px;
+    }
+        
+    .dropdown{
+      float: left;  
+      @media @scr_mobile{
+        float: none;
+      }
+    }
+    
+    .dropdown-menu{ // gestion des menus de niveau 3
+      display: block;
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      padding: 0;
+      #shaddow > .no-shaddow();
+      background-color: transparent;
+      padding-top: 5px;
+      width: 100%;
+      li{
+        width: 100%;
+        padding: 0;
+      }
+    }
+    li{
+      display: block;
+      width: 260px;
+      padding-right: 30px;
+    }
+  }
+  .open > a, .open > .nolink {
+    background-color: @bg_header_menu_deplie !important;
+    color: @txt_header_menu_deplie !important;
+    text-decoration: none;
+    position: relative;
+    
+    .caret{
+      background-image: none;
+      border: 15px solid transparent;
+      border-top-color: @bg_header_menu_deplie;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      left: 35%;
+      z-index: 1010;
+      top: auto;
+      bottom: -30px;
+    }
+  }
+  .open > .dropdown-menu > li{
+    display: inline-block;
+    vertical-align: top;
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.header-menu-item-active{
+  background-color: @bg_header_menu_actif;
+  color: @txt_header_menu_a;
+  a, a:hover{
+    color: @txt_header_menu_a;
+  }
+}

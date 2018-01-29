@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - View Espace juridique feature.
+ */
+
+include_once 'ddd_vu_espace_juridique.features.inc';

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2530454" login="DDURY">
+        <identite civilite="Monsieur" codeDep="74">
+            <nom>DURY</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.dury@defenseurdesdroits.fr</email>
+        <photo>DDURY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Annemasse</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue du Levant </adresse>
+                <boitePostale />
+                <tel>04 50 84 06 70</tel>
+                <fax />
+                <ville cp="74100"><value>ANNEMASSE</value></ville>
+                <poi>
+                    <longitude>6.239573</longitude>
+                    <latitude>46.196497</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Thonon-les-Bains</libelle>
+                <libelleSecondaire />
+                <adresse>Chemin de Morcy</adresse>
+                <boitePostale />
+                <tel>04 50 17 04 82</tel>
+                <fax />
+                <ville cp="74200"><value>THONON-LES-BAINS</value></ville>
+                <poi>
+                    <longitude>6.461664</longitude>
+                    <latitude>46.359973</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison transfrontalière de justice et du droit</libelle>
+                <libelleSecondaire />
+                <adresse>26, avenue de Genéve</adresse>
+                <boitePostale />
+                <tel>04 50 74 86 86</tel>
+                <fax />
+                <ville cp="74160"><value>SAINT-JULIEN-EN-GENEVOIS</value></ville>
+                <poi>
+                    <longitude>6.087017</longitude>
+                    <latitude>46.148161</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

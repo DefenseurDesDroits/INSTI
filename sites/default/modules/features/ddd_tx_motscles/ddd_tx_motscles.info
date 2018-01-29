@@ -1,0 +1,12 @@
+name = DdD - Taxo MotsClés
+description = Feature de gestion des taxonomies de type Mots Clés
+core = 7.x
+package = DdD - Taxonomies (Features)
+version = 7.x-1.0-dev1
+project = ddd_tx_motscles
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = v_keyword
+mtime = 1442840167
+project path = sites/default/modules/features

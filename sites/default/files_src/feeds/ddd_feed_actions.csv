@@ -1,0 +1,13 @@
+"Nom","Description","Redirect","Affichage","NomParent","Weight","Alias","FiltreDecision"
+"Protection des droits & libertés","","","","","5","",0
+"Promotion des droits & égalités","","","","","7","",0
+"Décisions","","","","Protection des droits & libertés","0","",1
+"Recommandations générales","","","","Promotion des droits & égalités","0","",0
+"Propositions de réforme","","","","Promotion des droits & égalités","1","",0
+"Répertoire des règlements amiables","","","","Protection des droits & libertés","1","",1
+"Avis & auditions publiques","","","","Promotion des droits & égalités","2","",0
+"Demande d'études et d'avis","","","","Protection des droits & libertés","2","",0
+"Dossiers documentaires","","http://dev.ddd.fr/fr/actions/protection-des-droits-libertes/dossiers-documentaires","","Protection des droits & libertés","3","",0
+"Lettres d'informations","","","","Promotion des droits & égalités","3","",0
+"Outils pratiques","","","","Promotion des droits & égalités","4","",0
+"Activités internationales","","","","Promotion des droits & égalités","5","",0

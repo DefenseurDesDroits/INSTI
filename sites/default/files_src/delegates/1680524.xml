@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680524" login="MTPEREZ">
+        <identite civilite="Madame" codeDep="64">
+            <nom>PEREZ</nom>
+            <prenom>Marie-Thérèse</prenom>
+        </identite>
+        <email>marie-therese.perez@defenseurdesdroits.fr</email>
+        <photo>MTPEREZ.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Bayonne</libelle>
+                <libelleSecondaire />
+                <adresse>Allées Marines</adresse>
+                <boitePostale>BP 3</boitePostale>
+                <tel>05 40 17 27 79</tel>
+                <fax />
+                <ville cp="64100"><value>BAYONNE</value></ville>
+                <poi>
+                    <longitude>-1.482532</longitude>
+                    <latitude>43.496574</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

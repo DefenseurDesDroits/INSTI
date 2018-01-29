@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681112" login="JCESTER">
+        <identite civilite="Monsieur" codeDep="02">
+            <nom>ESTER</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.ester@defenseurdesdroits.fr</email>
+        <photo>JCESTER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point info droit</libelle>
+                <libelleSecondaire>Palais de Fervaques (aile droite)</libelleSecondaire>
+                <adresse>Rue Victor Basch</adresse>
+                <boitePostale />
+                <tel>03 23 05 04 84</tel>
+                <fax />
+                <ville cp="02100"><value>SAINT-QUENTIN</value></ville>
+                <poi>
+                    <longitude>3.287526</longitude>
+                    <latitude>49.847066</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

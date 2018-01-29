@@ -1,0 +1,60 @@
+
+.search-result.node-ct-decision{
+  position: relative;
+  z-index: 5;
+  padding: 15px 15px 15px 130px;;
+  min-height: 130px;
+  margin-bottom: 27px;
+}
+
+.search-nature{
+  font-family: @font-family-lato-bol;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.search-motcle{
+  position: relative;
+  
+  .picto-motcle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 16px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-image: url("@{dir_img}/content/picto-keywords.png");
+    cursor: default;
+  }
+  .list-keyword{
+    padding-left: 35px;
+    a{
+      position: relative;
+      margin-right: 8px;
+      color: @txt_decision_list_key;
+      &:hover{
+        color: @txt_decision_list_key_h;
+      }
+      &:after{
+        content: ";";
+        position: absolute;
+        right: -8px;
+        outline: none;
+      }
+      
+      &:last-child{
+        &:after{
+          display: none;
+        }
+      }
+      
+      &:first-child{
+        
+      }
+    }
+  }
+}

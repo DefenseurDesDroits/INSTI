@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679715" login="AMUNIER">
+        <identite civilite="Madame" codeDep="81">
+            <nom>MUNIER</nom>
+            <prenom>Angèle</prenom>
+        </identite>
+        <email>angele.munier@defenseurdesdroits.fr</email>
+        <photo>AMUNIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Tarn</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la Préfecture</adresse>
+                <boitePostale />
+                <tel>05 63 45 60 89</tel>
+                <fax>05 63 47 61 04</fax>
+                <ville cp="81013"><value>ALBI CEDEX 9</value></ville>
+                <poi>
+                    <longitude>2.146516</longitude>
+                    <latitude>43.928222</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

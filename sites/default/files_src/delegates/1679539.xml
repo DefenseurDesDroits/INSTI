@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679539" login="DPYTKO">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>PYTKO</nom>
+            <prenom>Dominique</prenom>
+        </identite>
+        <email>dominique.pytko@defenseurdesdroits.fr</email>
+        <photo>DPYTKO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie annexe Sous le Bois</libelle>
+                <libelleSecondaire>Douzies - Montplaisir</libelleSecondaire>
+                <adresse>Place de l&apos;Industrie </adresse>
+                <boitePostale />
+                <tel>03 27 39 00 26</tel>
+                <fax>03 27 58 01 38</fax>
+                <ville cp="59600"><value>MAUBEUGE</value></ville>
+                <poi>
+                    <longitude>3.947194</longitude>
+                    <latitude>50.270271</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Maubeuge</libelle>
+                <libelleSecondaire>Quartier de l&apos;Épinette - Bloc Vilvorde </libelleSecondaire>
+                <adresse>Rue Marceline Desbordes Valmore</adresse>
+                <boitePostale />
+                <tel>03 27 39 00 26</tel>
+                <fax>03 27 62 08 37</fax>
+                <ville cp="59600"><value>MAUBEUGE</value></ville>
+                <poi>
+                    <longitude>3.964435</longitude>
+                    <latitude>50.292141</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>du LUNDI au VENDREDI</jour>
+                        <horaire />
+                    </permanence>
+                    <permanence>
+                        <jour>un sur deux VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

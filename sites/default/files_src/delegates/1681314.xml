@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681314" login="CKANELOPOULO">
+        <identite civilite="Madame" codeDep="94">
+            <nom>KANELOPOULO</nom>
+            <prenom>Chantal</prenom>
+        </identite>
+        <email>chantal.kanelopoulo@defenseurdesdroits.fr</email>
+        <photo>CKANELOPOULO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du Val de Bièvre</libelle>
+                <libelleSecondaire />
+                <adresse>65, rue Jean Jaurès</adresse>
+                <boitePostale />
+                <tel>01 43 90 25 25</tel>
+                <fax />
+                <ville cp="94800"><value>VILLEJUIF</value></ville>
+                <poi>
+                    <longitude>2.367112</longitude>
+                    <latitude>48.793584</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Relais social et de l&apos;accès au droit</libelle>
+                <libelleSecondaire>Résidence La Bergerie </libelleSecondaire>
+                <adresse>1, cours de la Ferme</adresse>
+                <boitePostale />
+                <tel>01 43 82 81 30 </tel>
+                <fax />
+                <ville cp="94460"><value>VALENTON</value></ville>
+                <poi>
+                    <longitude>2.464290</longitude>
+                    <latitude>48.748508</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

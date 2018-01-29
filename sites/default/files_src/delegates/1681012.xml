@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681012" login="MLASGI">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>LASGI</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.lasgi@defenseurdesdroits.fr</email>
+        <photo>MLASGI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 18ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue de Suez</adresse>
+                <boitePostale />
+                <tel>01 53 41 86 60</tel>
+                <fax>01 42 62 79 81</fax>
+                <ville cp="75018"><value>PARIS - 18</value></ville>
+                <poi>
+                    <longitude>2.352449</longitude>
+                    <latitude>48.887586</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681338" login="RMVITTEMANT">
+        <identite civilite="Madame" codeDep="2B">
+            <nom>VITTEMANT</nom>
+            <prenom>Rose-Marie</prenom>
+        </identite>
+        <email>rose-marie.vittemant@defenseurdesdroits.fr</email>
+        <photo>RMVITTEMANT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Corse</libelle>
+                <libelleSecondaire />
+                <adresse>Rond Point du Maréchal Leclerc</adresse>
+                <boitePostale />
+                <tel>04 95 34 51 55 </tel>
+                <fax />
+                <ville cp="20401"><value>BASTIA CEDEX 9</value></ville>
+                <poi>
+                    <longitude>9.447764</longitude>
+                    <latitude>42.703089</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

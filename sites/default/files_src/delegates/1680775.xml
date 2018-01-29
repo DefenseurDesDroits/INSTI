@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680775" login="BCARCIOFI">
+        <identite civilite="Monsieur" codeDep="03">
+            <nom>CARCIOFI</nom>
+            <prenom>Bruno</prenom>
+        </identite>
+        <email>bruno.carciofi@defenseurdesdroits.fr</email>
+        <photo>BCARCIOFI.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Montluçon</libelle>
+                <libelleSecondaire>Centre social </libelleSecondaire>
+                <adresse>Avenue de Fontbouillant </adresse>
+                <boitePostale />
+                <tel>04 70 64 75 95 </tel>
+                <fax />
+                <ville cp="03100"><value>MONTLUÇON</value></ville>
+                <poi>
+                    <longitude>2.579081</longitude>
+                    <latitude>46.328171</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Montluçon</libelle>
+                <libelleSecondaire />
+                <adresse>Rue de la Comédie</adresse>
+                <boitePostale>CS 61249</boitePostale>
+                <tel>04 70 02 25 00</tel>
+                <fax />
+                <ville cp="03100"><value>MONTLUÇON</value></ville>
+                <poi>
+                    <longitude>2.605717</longitude>
+                    <latitude>46.340373</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

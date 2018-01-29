@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680238" login="JCHADDAG">
+        <identite civilite="Monsieur" codeDep="08">
+            <nom>HADDAG</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.haddag@defenseurdesdroits.fr</email>
+        <photo>JCHADDAG.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Ardennes</libelle>
+                <libelleSecondaire>Cité administrative</libelleSecondaire>
+                <adresse>Place Lucien Hubert</adresse>
+                <boitePostale />
+                <tel>03 24 32 33 69</tel>
+                <fax />
+                <ville cp="08000"><value>CHARLEVILLE-MÉZIÈRES</value></ville>
+                <poi>
+                    <longitude>4.719980</longitude>
+                    <latitude>49.761090</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

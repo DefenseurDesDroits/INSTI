@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681103" login="BVERHEYDEJANVIER">
+        <identite civilite="Madame" codeDep="75">
+            <nom>VERHEYDE-JANVIER</nom>
+            <prenom>Brigitte</prenom>
+        </identite>
+        <email>brigitte.verheyde-janvier@defenseurdesdroits.fr</email>
+        <photo>BVERHEYDEJANVIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Paris-Sud</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue Bardinet</adresse>
+                <boitePostale />
+                <tel>01 45 45 22 23</tel>
+                <fax />
+                <ville cp="75014"><value>PARIS - 14</value></ville>
+                <poi>
+                    <longitude>2.316885</longitude>
+                    <latitude>48.830773</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit des jeunes</libelle>
+                <libelleSecondaire>CIDJ</libelleSecondaire>
+                <adresse>101, quai Branly</adresse>
+                <boitePostale />
+                <tel>01 44 49 12 00</tel>
+                <fax />
+                <ville cp="75015"><value>PARIS - 15</value></ville>
+                <poi>
+                    <longitude>2.290188</longitude>
+                    <latitude>48.855626</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

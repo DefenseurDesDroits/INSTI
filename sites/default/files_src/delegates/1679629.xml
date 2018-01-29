@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679629" login="APARDIGON">
+        <identite civilite="Madame" codeDep="92">
+            <nom>PARDIGON</nom>
+            <prenom>Anne</prenom>
+        </identite>
+        <email>anne.pardigon@defenseurdesdroits.fr</email>
+        <photo>APARDIGON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison du droit et de la prévention</libelle>
+                <libelleSecondaire />
+                <adresse>92, rue Martre</adresse>
+                <boitePostale />
+                <tel>01 47 15 32 05</tel>
+                <fax>01 47 15 72 26</fax>
+                <ville cp="92110"><value>CLICHY</value></ville>
+                <poi>
+                    <longitude>2.305833</longitude>
+                    <latitude>48.903475</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

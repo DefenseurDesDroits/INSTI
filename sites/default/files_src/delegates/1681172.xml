@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681172" login="JPSEPIETER">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>SEPIETER</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.sepieter@defenseurdesdroits.fr</email>
+        <photo>JPSEPIETER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Grande-Synthe</libelle>
+                <libelleSecondaire />
+                <adresse>6, Place Europe</adresse>
+                <boitePostale />
+                <tel>03 28 28 20 07</tel>
+                <fax />
+                <ville cp="59760"><value>GRANDE-SYNTHE</value></ville>
+                <poi>
+                    <longitude>2.3030192</longitude>
+                    <latitude>51.0150245</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point relais services</libelle>
+                <libelleSecondaire>Maison des Solidarités</libelleSecondaire>
+                <adresse>5, rue Donckèle</adresse>
+                <boitePostale />
+                <tel>03 28 43 44 45</tel>
+                <fax />
+                <ville cp="59522"><value>HAZEBROUCK</value></ville>
+                <poi>
+                    <longitude>2.538906</longitude>
+                    <latitude>50.724819</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680219" login="BDIMILLA">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>DI MILLA</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.di-milla@defenseurdesdroits.fr</email>
+        <photo>BDIMILLA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice de Cannes</libelle>
+                <libelleSecondaire />
+                <adresse>11, rue du Bosquet</adresse>
+                <boitePostale />
+                <tel>04 92 19 60 40</tel>
+                <fax>04 92 19 60 41</fax>
+                <ville cp="06150"><value>CANNES</value></ville>
+                <poi>
+                    <longitude>6.980308</longitude>
+                    <latitude>43.550199</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

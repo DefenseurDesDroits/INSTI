@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2364988" login="ATHIERRY">
+        <identite civilite="Monsieur" codeDep="02">
+            <nom>THIERRY</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.thierry@defenseurdesdroits.fr</email>
+        <photo>ATHIERRY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Soissons</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue Saint-Jean</adresse>
+                <boitePostale />
+                <tel>03 23 59 88 04</tel>
+                <fax />
+                <ville cp="02200"><value>SOISSONS</value></ville>
+                <poi>
+                    <longitude>3.325845</longitude>
+                    <latitude>49.377592</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

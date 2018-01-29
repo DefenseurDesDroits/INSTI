@@ -1,0 +1,87 @@
+<?php
+/**
+ * @file
+ * Description : Contain custom blocks definition for DdD
+ * Date of last update : 24/12/2014
+ * Developer : PAUTREL Bruno
+ *
+ */
+
+/**
+ *  Implements :  hook_block_info().
+ *  Function-name : ddd_blocks_block_info
+ *  Input :     <none>
+ *  Output :    blocks - Liste des blocks créer en code pour le site du DdD
+ *  Description :   Permet d'ajouter les blocks de la page d'accueil dans l'admin de drupal
+ */
+function ddd_agenda_block_info() {
+  return array(
+    'block_agenda' => array(
+      'info' => t('Agenda - Bloc des semaines'),
+      'visibility' => 'BLOCK_VISIBILITY_LISTED',
+      'pages' => 'agenda',
+      'region' => 'content',
+    )
+  );
+}
+
+/**
+ *  Implements :  hook_block_view().
+ *  Function-name : ddd_blocks_block_view
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks créer en code pour le site du DdD
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function ddd_agenda_block_view($delta = '') {
+  $block = array();
+  switch ($delta) { // Détermine quelle est le bloc en cours de création
+    case 'block_agenda':
+      $block['subject'] = '';
+      $block['content'] = theme('block--block-agenda');
+  }
+  return $block;  // Retourne la liste des blocks
+}
+
+function ddd_agenda_theme(){
+  return array(
+    'block--block-agenda' => array('template' => 'themes/block--block-agenda')
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ddd_agenda_preprocess_views_view_unformatted(&$variables) {
+  if (preg_match('/^agenda/', $_GET['q'])) {
+    drupal_add_js(drupal_get_path('module', 'ddd_agenda') . '/js/agenda.js', array('weight' => 100));
+  }
+}
+
+/**
+ * Implement hook_menu().
+ */
+function ddd_agenda_menu() {
+  return $items = array(
+    'getagenda' => array(
+      'title' => 'Agenda',
+      'page callback' => 'ddd_agenda_link_callback',
+      'access arguments' => array(
+        'access content'
+      ),
+      'type' => MENU_CALLBACK
+    )
+  );
+}
+/**
+ * Implements function: callback agenda view update.
+ */
+function ddd_agenda_link_callback() {
+  $date = isset($_POST['date']) ? $_POST['date'] : '';
+  $view = views_get_view('agenda');
+  $view->set_display('default');
+  $view->set_arguments(array($date));
+  $view->pre_execute();
+  $view->execute();
+
+  drupal_json_output(array('html' => $view->preview('default')));
+}

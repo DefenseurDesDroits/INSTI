@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681323" login="JORABONA">
+        <identite civilite="Monsieur" codeDep="21">
+            <nom>ORABONA</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.orabona@defenseurdesdroits.fr</email>
+        <photo>JORABONA.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Chenôve</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue des Clématites</adresse>
+                <boitePostale />
+                <tel>03 80 51 78 30</tel>
+                <fax />
+                <ville cp="21300"><value>CHENOVE</value></ville>
+                <poi>
+                    <longitude>5.010519</longitude>
+                    <latitude>47.299666</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Côte-d&apos;Or</libelle>
+                <libelleSecondaire>Bâtiment annexe</libelleSecondaire>
+                <adresse>53, rue de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 80 44 64 35</tel>
+                <fax>03 80 44 69 21</fax>
+                <ville cp="21000"><value>DIJON</value></ville>
+                <poi>
+                    <longitude>5.041572</longitude>
+                    <latitude>47.324720</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

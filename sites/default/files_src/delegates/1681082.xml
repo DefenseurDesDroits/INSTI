@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681082" login="DLABORDE">
+        <identite civilite="Madame" codeDep="84">
+            <nom>LABORDE</nom>
+            <prenom>Danièle</prenom>
+        </identite>
+        <email>daniele.laborde@defenseurdesdroits.fr</email>
+        <photo>DLABORDE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Palais de justice </libelle>
+                <libelleSecondaire>Point d&apos;accès au droit - 1er étage </libelleSecondaire>
+                <adresse>Place du 4 septembre</adresse>
+                <boitePostale />
+                <tel>04 90 79 50 40</tel>
+                <fax>04 90 79 16 33</fax>
+                <ville cp="84120"><value>PERTUIS</value></ville>
+                <poi>
+                    <longitude>5.501071</longitude>
+                    <latitude>43.694165</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

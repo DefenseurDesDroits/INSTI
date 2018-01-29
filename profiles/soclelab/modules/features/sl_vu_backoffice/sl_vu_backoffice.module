@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature - views backoffice feature.
+ */
+
+include_once 'sl_vu_backoffice.features.inc';

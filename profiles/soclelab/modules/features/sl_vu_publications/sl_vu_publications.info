@@ -1,0 +1,15 @@
+name = Socle Lab' feature - views publications
+description = Feature de gestion des vues spécifiques aux publications
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_publications
+dependencies[] = fe_block
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-6870f372b5155df9ad278fe68015c4a3
+features[fe_block_settings][] = views-9c8c31431d90b9240c845b935a048f23
+features[features_api][] = api:2
+features[views_view][] = vue_publications
+features_exclude[dependencies][ctools] = ctools
+project path = profiles/soclelab/modules/features

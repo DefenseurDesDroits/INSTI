@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * Code for the DdD Admin
+ */
+ 
+/**
+ * 
+ */
+function ddd_admin_preprocess_page(&$vars, $hook)  {
+  $module_path = drupal_get_path('module', 'ddd_admin');
+  drupal_add_js($module_path . '/js/content_type.js');
+}
+ 
+
+/**
+ *  Implementation of hook_form_alter().
+ */ 
+function ddd_admin_form_alter(&$form, $form_state, $form_id) { 
+      if($form_id == "ct_marche_node_form") {
+        // Rajoute une nouvelle fonction de validation au formulaire
+        $form['#validate'][] = 'custom_data_validate';
+      }
+}
+
+/**
+ *  Custom validation function.
+ *  Vérifie pour l'édition ou la création d'un contenu de type marché public 
+ *  que un des deux champs URL ou PDF est rempli
+ */ 
+function custom_data_validate(&$form, &$form_state) {
+  $values = $form_state['values']; // Récupère toutes les valeurs 
+
+  // Si un des deux champs n'est pas rempli, on renvoie une erreur
+  if (empty($values['field_marche_url']['und'][0]['url']) && empty($values['field_article_document']['und'][0]['sid'])) {
+    form_set_error('field_marche_url', t("Au moins un champ doit être rempli (URL ou Documents)"));
+  }
+}

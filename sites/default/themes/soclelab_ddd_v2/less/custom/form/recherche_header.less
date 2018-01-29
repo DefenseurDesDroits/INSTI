@@ -1,0 +1,101 @@
+#block-sl-search-block-header-search{
+  position: absolute;
+  right: 0px;
+  z-index: 100;
+  text-align: right;
+  
+  form{
+    padding: 25px 35px;
+    background-color: @bg_head_search;
+    display: none;
+    min-width: 550px;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    fieldset{
+      min-width: 480px;
+      @media @scr_mobile{min-width:100%!important;}
+    }
+    @media @scr_mobile{margin-top:0px;min-width:100%!important;}
+  }
+  @media @scr_mobile{
+    right: 0;
+    position: relative;
+    margin: auto;
+    width: 266px;
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+  
+  .form-control{
+    background-color: @bg_head_search_input;
+    border-color: @bor_head_search;
+    padding: 8px 15px;
+    width: 380px;
+    height: auto;
+    color: @txt_head_search;
+    font-style: italic;
+    font-size: 0.929em;
+    #border > .border-radius(0px);
+      @media @scr_mobile{width:100%!important;}
+    
+    &:active,
+    &:focus{
+      border-color: @bor_head_search_a;
+    }
+    
+    @media @scr_mobile{
+      width: 220px;
+      margin-right: -80px;
+    }
+  }
+  
+  .form-type-textfield{
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+    
+    @media @scr_mobile{
+      width: 100%;
+    }
+  }
+  
+  .form-submit, button{
+    border: none;
+    background-color: @bg_head_btnsearch;
+    color: @txt_head_btnsearch;
+    padding: 10px 15px 8px 15px;
+    font-size: 0.929em;
+    font-weight: bold;
+    margin-top: 0px;
+    #border > .border-radius(0px);
+    
+    &:hover{ 
+      background-color: @bg_head_btnsearch_h; 
+    } 
+    &:active, &:focus{ 
+      background-color: @bg_head_btnsearch_a; 
+    } 
+    @media @scr_mobile{
+      margin-top:20px;
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 39px;
+      width: 100%;
+      overflow: hidden;
+      background-image: url("@{dir_img}/header/search_loupe.png");
+      background-repeat: no-repeat;
+      background-position: right 10px top 7px;
+    }
+  }
+  .input-group-btn{
+    width: auto;
+  }
+  .input-group{
+    display: block;
+  }
+}
+
+
+
+
+

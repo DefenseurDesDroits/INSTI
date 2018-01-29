@@ -1,0 +1,6 @@
+name = SocleLAB Social Share Theme
+description = Contain social share libraries for SocleLAB
+package = SocleLAB
+core = 7.x
+project = sl_socialshare
+dependencies[] = social_media_links

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680819" login="MPOULIN">
+        <identite civilite="Madame" codeDep="35">
+            <nom>POULIN</nom>
+            <prenom>Martine</prenom>
+        </identite>
+        <email>martine.poulin@defenseurdesdroits.fr</email>
+        <photo>MPOULIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture d&apos;Ille-et-Vilaine</libelle>
+                <libelleSecondaire />
+                <adresse>3 avenue de la Préfecture</adresse>
+                <boitePostale />
+                <tel>02 99 02 17 17</tel>
+                <fax>02 99 02 13 29</fax>
+                <ville cp="35000"><value>RENNES</value></ville>
+                <poi>
+                    <longitude>-1.694026</longitude>
+                    <latitude>48.126893</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

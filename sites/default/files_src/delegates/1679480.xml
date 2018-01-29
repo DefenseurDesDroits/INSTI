@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679480" login="PCARLES">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>CARLES</nom>
+            <prenom>Philippe</prenom>
+        </identite>
+        <email>philippe.carles@defenseurdesdroits.fr</email>
+        <photo>PCARLES.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit des Hauts-de-Garonne</libelle>
+                <libelleSecondaire />
+                <adresse>45, avenue de la Libération</adresse>
+                <boitePostale />
+                <tel>05 57 77 74 60</tel>
+                <fax>05 57 77 74 61</fax>
+                <ville cp="33305"><value>LORMONT CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.522887</longitude>
+                    <latitude>44.867952</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

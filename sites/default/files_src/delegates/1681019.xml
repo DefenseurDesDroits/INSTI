@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681019" login="VIACONELLI">
+        <identite civilite="Madame" codeDep="93">
+            <nom>IACONELLI</nom>
+            <prenom>Valérie</prenom>
+        </identite>
+        <email>valerie.iaconelli@defenseurdesdroits.fr</email>
+        <photo>VIACONELLI.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Clichy-sous-Bois</libelle>
+                <libelleSecondaire />
+                <adresse>201, allée de Gagny</adresse>
+                <boitePostale />
+                <tel>01 41 70 38 20</tel>
+                <fax>01 41 70 38 29</fax>
+                <ville cp="93390"><value>CLICHY-SOUS-BOIS</value></ville>
+                <poi>
+                    <longitude>2.549399</longitude>
+                    <latitude>48.911174</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture du Raincy </libelle>
+                <libelleSecondaire />
+                <adresse>6, allée de l&apos;Eglise</adresse>
+                <boitePostale />
+                <tel>01 43 01 47 67</tel>
+                <fax>01 43 01 48 10</fax>
+                <ville cp="93340"><value>LE RAINCY</value></ville>
+                <poi>
+                    <longitude>2.520532</longitude>
+                    <latitude>48.898246</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2795606" login="FLIENARD">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>LIENARD</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.lienard@defenseurdesdroits.fr</email>
+        <photo>FLIENARD.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de St-Quentin-Fallavier</libelle>
+                <libelleSecondaire />
+                <adresse>Lieu-dit Le Biais</adresse>
+                <boitePostale>BP 66</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="38070"><value>SAINT-QUENTIN-FALLAVIER</value></ville>
+                <poi>
+                    <longitude>5.133140</longitude>
+                    <latitude>45.659374</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus sur RDV LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Vienne</libelle>
+                <libelleSecondaire />
+                <adresse>16, boulevard Eugène Arnaud</adresse>
+                <boitePostale />
+                <tel>04 74 53 26 25</tel>
+                <fax>04 74 53 15 82</fax>
+                <ville cp="38200"><value>VIENNE</value></ville>
+                <poi>
+                    <longitude>4.869072</longitude>
+                    <latitude>45.518852</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680829" login="MTMAURICE">
+        <identite civilite="Madame" codeDep="21">
+            <nom>MAURICE</nom>
+            <prenom>Marie-Thérèse</prenom>
+        </identite>
+        <email>marie-therese.maurice@defenseurdesdroits.fr</email>
+        <photo>MTMAURICE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Côte d&apos;Or</libelle>
+                <libelleSecondaire>Bâtiment annexe</libelleSecondaire>
+                <adresse>53, rue de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 80 44 64 35</tel>
+                <fax />
+                <ville cp="21000"><value>DIJON</value></ville>
+                <poi>
+                    <longitude>5.041572</longitude>
+                    <latitude>47.324720</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

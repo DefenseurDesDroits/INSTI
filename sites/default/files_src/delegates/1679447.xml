@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679447" login="APRUDHOMME">
+        <identite civilite="Monsieur" codeDep="14">
+            <nom>PRUDHOMME</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.prudhomme@defenseurdesdroits.fr</email>
+        <photo>APRUDHOMME.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Hérouville-Saint-Clair</libelle>
+                <libelleSecondaire />
+                <adresse>1, place de l&apos;Europe</adresse>
+                <boitePostale />
+                <tel>02 31 53 20 04</tel>
+                <fax />
+                <ville cp="14200"><value>HÉROUVILLE-SAINT-CLAIR</value></ville>
+                <poi>
+                    <longitude>-0.334629</longitude>
+                    <latitude>49.203742</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>2e et 4e SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

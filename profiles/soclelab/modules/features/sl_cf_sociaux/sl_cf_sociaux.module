@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' - Réseaux sociaux feature.
+ */
+
+include_once 'sl_cf_sociaux.features.inc';

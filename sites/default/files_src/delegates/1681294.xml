@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681294" login="JYDELPORTE">
+        <identite civilite="Monsieur" codeDep="22">
+            <nom>DELPORTE</nom>
+            <prenom>Jean-Yves</prenom>
+        </identite>
+        <email>jean-yves.delporte@defenseurdesdroits.fr</email>
+        <photo>JYDELPORTE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Préfecture des Côtes-d&apos;Armor</libelle>
+                <libelleSecondaire />
+                <adresse>1 place Général de Gaulle</adresse>
+                <boitePostale>BP 2370</boitePostale>
+                <tel>02 96 62 43 80</tel>
+                <fax />
+                <ville cp="22023"><value>ST BRIEUC CEDEX 1</value></ville>
+                <poi>
+                    <longitude>-2.764649</longitude>
+                    <latitude>48.51416</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Guingamp</libelle>
+                <libelleSecondaire />
+                <adresse>34, rue du Maréchal Joffre</adresse>
+                <boitePostale>BP 60544</boitePostale>
+                <tel>02 56 57 41 62</tel>
+                <fax />
+                <ville cp="22205"><value>GUINGAMP CEDEX</value></ville>
+                <poi>
+                    <longitude>-3.152355</longitude>
+                    <latitude>48.564022</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

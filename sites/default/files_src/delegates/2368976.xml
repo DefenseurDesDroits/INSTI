@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2368976" login="GCHARLES">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>CHARLES</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.charles@defenseurdesdroits.fr</email>
+        <photo>GCHARLES.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Bordeaux</libelle>
+                <libelleSecondaire>Entrée A - 3ème étage</libelleSecondaire>
+                <adresse>2, place Ravezies</adresse>
+                <boitePostale />
+                <tel>05 56 11 27 10</tel>
+                <fax />
+                <ville cp="33300"><value>BORDEAUX</value></ville>
+                <poi>
+                    <longitude>-0.575251</longitude>
+                    <latitude>44.865988</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maisons des associations</libelle>
+                <libelleSecondaire />
+                <adresse>55, rue De Lattre de Tassigny</adresse>
+                <boitePostale />
+                <tel>05 57 00 15 10</tel>
+                <fax />
+                <ville cp="33700"><value>MERIGNAC</value></ville>
+                <poi>
+                    <longitude>-0.653842</longitude>
+                    <latitude>44.845964</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679618" login="FCHRISMANN">
+        <identite civilite="Monsieur" codeDep="88">
+            <nom>CHRISMANN</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.chrismann@defenseurdesdroits.fr</email>
+        <photo>FCHRISMANN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Vosges</libelle>
+                <libelleSecondaire />
+                <adresse>Place Foch</adresse>
+                <boitePostale />
+                <tel>03 29 69 87 19</tel>
+                <fax />
+                <ville cp="88000"><value>ÉPINAL</value></ville>
+                <poi>
+                    <longitude>6.448452</longitude>
+                    <latitude>48.172780</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

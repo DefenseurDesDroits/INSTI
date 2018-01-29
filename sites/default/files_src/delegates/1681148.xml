@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681148" login="CMERCIE">
+        <identite civilite="Madame" codeDep="91">
+            <nom>MERCIÉ</nom>
+            <prenom>Claudie</prenom>
+        </identite>
+        <email>claudie.mercie@defenseurdesdroits.fr</email>
+        <photo>CMERCIE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit </libelle>
+                <libelleSecondaire />
+                <adresse>1, rue du Coq</adresse>
+                <boitePostale />
+                <tel>01 69 92 11 70</tel>
+                <fax />
+                <ville cp="91150"><value>ÉTAMPES</value></ville>
+                <poi>
+                    <longitude>2.428439</longitude>
+                    <latitude>48.623161</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit </libelle>
+                <libelleSecondaire />
+                <adresse>7, Le Clos de la Cathédrale</adresse>
+                <boitePostale />
+                <tel>01 60 91 07 88</tel>
+                <fax />
+                <ville cp="91000"><value>ÉVRY</value></ville>
+                <poi>
+                    <longitude>2.428418</longitude>
+                    <latitude>48.623161</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

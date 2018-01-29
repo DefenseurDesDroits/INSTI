@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - CT Offre feature.
+ */
+
+include_once 'ddd_ct_offre.features.inc';

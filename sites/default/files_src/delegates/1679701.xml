@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679701" login="CBLAT">
+        <identite civilite="Madame" codeDep="37">
+            <nom>BLAT</nom>
+            <prenom>Christiane</prenom>
+        </identite>
+        <email>christiane.blat@defenseurdesdroits.fr</email>
+        <photo>CBLAT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture d&apos;Indre-et-Loire</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la Préfecture </adresse>
+                <boitePostale>BP 3208</boitePostale>
+                <tel>02 47 33 10 30</tel>
+                <fax>02 47 33 10 23</fax>
+                <ville cp="37000"><value>TOURS</value></ville>
+                <poi>
+                    <longitude>0.692871</longitude>
+                    <latitude>47.393606</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Loches </libelle>
+                <libelleSecondaire />
+                <adresse>5-7, rue du Docteur Martinais </adresse>
+                <boitePostale>BP 279</boitePostale>
+                <tel>02 47 33 10 30</tel>
+                <fax />
+                <ville cp="37600"><value>LOCHES</value></ville>
+                <poi>
+                    <longitude>1.003579</longitude>
+                    <latitude>47.129022</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679682" login="JPVILLERMAINLECOLIER">
+        <identite civilite="Monsieur" codeDep="52">
+            <nom>VILLERMAIN-LÉCOLIER</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.villermain-lecolier@defenseurdesdroits.fr</email>
+        <photo>JPVILLERMAINLECOLIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Marne</libelle>
+                <libelleSecondaire />
+                <adresse>89, rue Victoire de la Marne</adresse>
+                <boitePostale />
+                <tel>03 25 30 52 58</tel>
+                <fax />
+                <ville cp="52000"><value>CHAUMONT</value></ville>
+                <poi>
+                    <longitude>5.140567</longitude>
+                    <latitude>48.114386</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

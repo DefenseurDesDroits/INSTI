@@ -1,0 +1,130 @@
+#alpha { 
+	.opacity(@alpha: 0.55, @iealpha: 55){
+		-moz-opacity: @alpha; 
+		opacity: @alpha; 
+		filter: alpha(opacity= @iealpha); 
+	}
+}
+#transition { 
+	.bg-color(@time: 1000ms){
+		-webkit-transition: background-color @time linear;
+		-moz-transition: background-color @time linear;
+		-o-transition: background-color @time linear;
+		-ms-transition: background-color @time linear;
+		transition: background-color @time linear;
+	}
+  .opacity(@time: 1000ms){
+    -webkit-transition: opacity @time linear;
+    -moz-transition: opacity @time linear;
+    -o-transition: opacity @time linear;
+    -ms-transition: opacity @time linear;
+    transition: opacity @time linear;
+  }
+  .all(@time: 1000ms){
+    -webkit-transition: all @time linear;
+    -moz-transition: all @time linear;
+    -o-transition: all @time linear;
+    -ms-transition: all @time linear;
+    transition: all @time linear;
+  }
+}
+#shaddow { 
+	.no-shaddow(){
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	
+	.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+		-webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+		-moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+		box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+		filter: progid:DXImageTransform.Microsoft.Shadow(color=grey, Direction=145, Strength=3);
+	}
+	
+	.text-shaddow(){
+	  text-shadow: 1px 1px #222222;
+	  filter:progid:DXImageTransform.Microsoft.Shadow(color=#222222,direction=135,strength=2);
+	}
+}
+
+#border {
+	.border-radius(@radius){
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+	}
+	
+	.border-radius-top(@radius){
+		-webkit-border-top-left-radius: @radius;
+		-webkit-border-top-right-radius: @radius;
+		-moz-border-radius-topleft: @radius;
+		-moz-border-radius-topright: @radius;
+		border-top-left-radius: @radius;
+		border-top-right-radius: @radius;
+	}
+	.border-radius-bottom(@radius){
+		-webkit-border-bottom-right-radius: @radius;
+		-webkit-border-bottom-left-radius: @radius;
+		-moz-border-radius-bottomright: @radius;
+		-moz-border-radius-bottomleft: @radius;
+		border-bottom-right-radius: @radius;
+		border-bottom-left-radius: @radius;
+	}
+}
+
+#do-gradient {
+	.horizontal(@startColor: #555, @endColor: #333) {
+		background-color: @endColor;
+		background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+		background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+	.horizontal-percent(@startColor: #555, @endColor: #333,@startpercent: 100%,@endpercent: 0%) {
+		background-color: @endColor;
+		background-image: -moz-linear-gradient(left, @startColor, @endColor @endpercent); // FF 3.6+
+		background-image: -webkit-gradient(linear, left center,right center, from(@startColor), color-stop(@startpercent,@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(left, @startColor @startpercent, @endColor @endpercent); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(left, @startColor @startpercent, @endColor @endpercent); // Opera 11.10
+		background-image: linear-gradient(to right, @startColor @startpercent, @endColor @endpercent); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+	.vertical(@startColor: #555, @endColor: #333) {
+		background-color: mix(@startColor, @endColor, 60%);
+		background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+		background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+		background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+		background-repeat: repeat-x;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+  
+	.vertical-percent(@startColor: #555, @startPercent, @endColor: #333, @endPercent) {
+		background: @startColor; /* Old browsers */
+		background: -moz-linear-gradient(top,  @startColor @startPercent, @endColor @endPercent); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(@startPercent,@startColor), color-stop(@endPercent,@endColor)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  @startColor @startPercent,@endColor @endPercent); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  @startColor @startPercent,@endColor @endPercent); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  @startColor @startPercent,@endColor @endPercent); /* IE10+ */
+		background: linear-gradient(to bottom,  @startColor @startPercent,@endColor @endPercent); /* W3C */
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+	}
+	
+	.radialGradient(@startColor: #555, @endColor: #333, @position: center, @percent:80%){
+		background: -webkit-radial-gradient(@startColor 0%, @endColor @percent);
+		background:    -moz-radial-gradient(@position,  @startColor 0%, @endColor @percent);
+		background:     -ms-radial-gradient(@position,  @startColor 0%, @endColor @percent);
+		background:      -o-radial-gradient(@position,  @startColor 0%, @endColor @percent);
+		background:         radial-gradient(circle at @position, @startColor 0%, @endColor @percent);
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@endColor),argb(@startColor))); // IE9 and down
+	}
+	.ie-gradient-shadow(@startColor: #555, @endColor: #333, @x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1){
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=@startColor, endColorstr=@endColor), progid:DXImageTransform.Microsoft.Shadow(color=grey, Direction=145, Strength=3); // IE9 and down
+	}
+}

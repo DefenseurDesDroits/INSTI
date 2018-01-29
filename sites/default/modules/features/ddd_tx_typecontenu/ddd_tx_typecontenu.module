@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Taxo Type de contenus feature.
+ */
+
+include_once 'ddd_tx_typecontenu.features.inc';

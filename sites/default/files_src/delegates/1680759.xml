@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680759" login="CCORNET">
+        <identite civilite="Madame" codeDep="92">
+            <nom>CORNET</nom>
+            <prenom>Claire</prenom>
+        </identite>
+        <email>claire.cornet@defenseurdesdroits.fr</email>
+        <photo>CCORNET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison du droit de Boulogne-Billancourt</libelle>
+                <libelleSecondaire />
+                <adresse>35, rue Paul Bert</adresse>
+                <boitePostale />
+                <tel>01 46 03 04 98</tel>
+                <fax />
+                <ville cp="92100"><value>BOULOGNE-BILLANCOURT</value></ville>
+                <poi>
+                    <longitude>2.239268</longitude>
+                    <latitude>48.835328</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;Accès au droit de la Mairie de Meudon</libelle>
+                <libelleSecondaire>Centre social du Millandy</libelleSecondaire>
+                <adresse>5, rue Georges Millandy</adresse>
+                <boitePostale />
+                <tel>01 41 07 94 79</tel>
+                <fax />
+                <ville cp="92360"><value>MEUDON-LA-FORÊT</value></ville>
+                <poi>
+                    <longitude>2.234450</longitude>
+                    <latitude>48.785468</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

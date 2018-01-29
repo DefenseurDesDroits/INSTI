@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD VU Agenda feature.
+ */
+
+include_once 'ddd_vu_agenda.features.inc';

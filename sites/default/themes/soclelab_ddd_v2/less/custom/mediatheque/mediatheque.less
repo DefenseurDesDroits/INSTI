@@ -1,0 +1,62 @@
+.view-vue-mediatheque{
+  .view-content{
+    .clearfix;
+    .row;
+    margin-top: 50px;
+    
+    img, iframe{
+      max-width: 100%;
+     /* height: auto; */
+      display: block;
+      margin: auto;
+    }
+    iframe{
+      height: 220px;
+    }
+  }
+  .views-field-representation{
+    .node-logo;
+    height: 270px;
+    overflow: hidden;
+    .field-content{
+      display: block;
+    }
+  }
+  .views-field-title{
+    font-weight: bold;
+    margin-bottom: 0;
+    height: 45px;
+  }
+  /*.view-content > div{
+    margin-bottom: 25px;
+  }*/
+  
+  .views-label{
+    font-weight: bold;
+  }
+  .field-content{
+    display: inline-block;
+  }
+  .views-submit-button {
+    margin-top: 1.5em;
+  }
+  .view-empty{
+    padding-top: 15px;
+  }
+}
+
+.view-display-id-page_actions_documents{
+  .views-field-representation{
+    height: 120px;
+  }
+  .sl-scald-file{
+    min-height: 120px;
+  }
+  .view-content, .sl-scald-file{
+    @media @scr_mobile{
+      margin-left: 0;
+      margin-right: 0;
+      
+    }
+  }
+}

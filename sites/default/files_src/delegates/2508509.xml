@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2508509" login="MGENET">
+        <identite civilite="Monsieur" codeDep="71">
+            <nom>GENET</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.genet@defenseurdesdroits.fr</email>
+        <photo>MGENET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Mâcon</libelle>
+                <libelleSecondaire>Parc de l&apos;Abîme</libelleSecondaire>
+                <adresse>1550 Avenue Charles de Gaulle</adresse>
+                <boitePostale />
+                <tel>07 83 27 62 58</tel>
+                <fax />
+                <ville cp="71017"><value>MACON CEDEX</value></ville>
+                <poi>
+                    <longitude>4.835143</longitude>
+                    <latitude>46.315473</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit renforcé</libelle>
+                <libelleSecondaire>Palais de justice</libelleSecondaire>
+                <adresse>15 rue de Champagny</adresse>
+                <boitePostale />
+                <tel>07 83 27 62 58</tel>
+                <fax />
+                <ville cp="71120"><value>CHAROLLES</value></ville>
+                <poi>
+                    <longitude>4.277179</longitude>
+                    <latitude>46.435698</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

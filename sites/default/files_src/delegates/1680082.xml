@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680082" login="JBRAND">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>BRAND</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.brand@defenseurdesdroits.fr</email>
+        <photo>JBRAND.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Longuenesse</libelle>
+                <libelleSecondaire />
+                <adresse>Plateau des Bruyères</adresse>
+                <boitePostale>BP 19</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="62219"><value>LONGUENESSE</value></ville>
+                <poi>
+                    <longitude>2.223069</longitude>
+                    <latitude>50.730101</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Saint-Omer</libelle>
+                <libelleSecondaire />
+                <adresse>41, rue Saint-Bertin</adresse>
+                <boitePostale />
+                <tel>03 21 11 12 34</tel>
+                <fax>03 21 11 12 66</fax>
+                <ville cp="62505"><value>SAINT-OMER CEDEX</value></ville>
+                <poi>
+                    <longitude>2.257841</longitude>
+                    <latitude>50.748826</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,180 @@
+.text-riche{
+  blockquote{
+    background-color: @bg_citation;
+    border-left: none;
+    position: relative;
+    padding-top: 47px;
+    padding-bottom: 40px;
+    font-size: 1.714em;
+    line-height: 31px;
+    text-indent: 100px;
+    
+    &:before,
+    &:after{
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+    
+    &:before{
+      top: 4px;
+      left: 14px;
+      width: 67px;
+      height: 56px;
+      background-image: url("@{dir_img}/content/bg-blockquote-top-blue.png");
+    }
+    &:after{
+      bottom: 9px;
+      right: 60px;
+      width: 39px;
+      height: 32px;
+      background-image: url("@{dir_img}/content/bg-blockquote-bot-blue.png");
+    }
+  }
+
+  h2{
+    color: @txt_body_h2;
+    font-size: 1.5em;
+  }
+  h3{
+    color: @txt_body_h3;
+    font-size: 1.3em;
+    a{
+    	color: @txt_body_h3;
+    }
+  }
+  h4{
+    color: @txt_body_h4;
+    font-size: 1.2em;
+    text-indent: 20px;
+    a{
+    	color: @txt_body_h4;
+    }
+    
+  }
+  h5{
+    color: @txt_body_h5;
+    font-size: 1.1em;
+    text-indent: 40px;
+    a{
+    	color: @txt_body_h5;
+    }
+  }
+  h6{
+    color: @txt_body_h6;
+    font-size: 1.0em;
+    text-indent: 60px;
+    a{
+    	color: @txt_body_h6;
+    }
+  }
+  h7{
+    color: @txt_body_h7;
+    font-size: 1.0em;
+    text-indent: 80px;
+    a{
+    	color: @txt_body_h7;
+    }
+  }
+  h8{
+    color: @txt_body_h8;
+    font-size: 1.0em;
+    text-indent: 100px;
+    a{
+    	color: @txt_body_h8;
+    }
+  }
+  h9{
+    color: @txt_body_h9;
+    font-size: 1.0em;
+    text-indent: 120px;
+    a{
+    	color: @txt_body_h9;
+    }
+  }
+  
+  p{
+    margin-bottom: 15px;
+  }
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  td{
+    padding: 10px;
+  }
+  ul{
+    padding-left: 10px;
+  }
+  li{
+    padding-left: 15px;
+    list-style: none;
+    background-image: url("@{dir_img}/content/puce-list.png");
+    background-repeat: no-repeat;
+    background-position: 0px 7px;
+  }
+}
+
+#page-main-content{
+  .bloc-title, .field-label{
+    color: @txt_bloc_title;
+    font-size: 1.5em;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 0 15px 0;
+    font-weight: normal;
+  }
+  .field{
+    margin-bottom: 56px;
+  }
+}
+
+.sl-scald-file{
+  background-color: @bg_pdf;
+  background-image: url("@{dir_img}/content/picto-pdf.png");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  height: 120px;
+  padding: 0px 15px 0px 86px;
+  margin-bottom: 15px;
+  font-size: 1.15em;
+  line-height: 120px;
+  
+  img{
+    position: relative;
+    max-height: 100%;
+    right: 90px;
+    height: auto;
+  }
+  
+  @media @scr_mobile{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  a{
+    color: @txt_pdf;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+    word-break: break-word;
+  }
+  &:hover{
+  background-color: @bg_pdf_h;
+  }
+}
+.extension-doc{
+  background-image: url("@{dir_img}/content/picto-doc.png");
+}
+.extension-xls{
+  background-image: url("@{dir_img}/content/picto-xls.png");
+}
+
+.context-sdl_editor_representation{
+  display: block;
+  margin-bottom: 15px;
+}
+
+.context-sdl_editor_representation.type-image{
+  display: inline-block;
+}

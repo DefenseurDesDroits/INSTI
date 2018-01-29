@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature FAQ feature.
+ */
+
+include_once 'sl_ct_faq.features.inc';

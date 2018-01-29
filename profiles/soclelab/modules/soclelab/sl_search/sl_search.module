@@ -1,0 +1,148 @@
+<?php
+
+
+/**
+ *  Function-name : sl_search_block_info
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_block_info() {
+  $blocks = array();
+  $blocks['block_header_search'] = array(
+    'info' => t('Header - Barre de recherche'),
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  /*$blocks['block_title_search'] = array(
+    'info' => t('Recherche - Titre et chapo de la recherche'),
+  );*/
+  // Retourne les blocks
+  return $blocks;
+}
+
+/**
+ *  Function-name : sl_search_block_view
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_block_view($delta = '') {
+  $block = array();
+  // Détermine quelle est le bloc en cours de création
+  switch ($delta) {
+    case 'block_header_search':
+      $block['subject'] = '';
+      $block['content'] = drupal_get_form('sl_search_head_form');
+      break;
+
+    case 'block_title_search':
+      $block['subject'] = '';
+      $block['content'] = sl_search_titlechapo();
+      break;
+  }
+  // Retourne la liste des blocks
+  return $block;
+}
+
+/**
+ *  Function-name : sl_search_form_alter
+ *  Input :     delta
+ *  Output :    url du formulaire mis en /search/site
+ *  Description :   Permet de figé l'url de redirection du formulaire de recherche du header
+ */
+function sl_search_form_alter(&$form, &$form_state, $form_id) {
+  if( isset($form['#form_id']) && $form['#form_id'] == "sl_search_head_form"){
+    
+    $form['#action'] = '/' . getCurLang() . '/search/site/';
+    $form['#attributes'] = array('role' => 'search');
+  }
+}
+
+/**
+ *  Function-name : sl_search_head_form
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_head_form($form, &$form_submit) {
+  $taxonomy_content_type = taxonomy_vocabulary_machine_name_load('v_type');
+  $taxonomy_content_type_item = taxonomy_get_tree($taxonomy_content_type->vid, 0, 1, FALSE);
+  $content_type_tab = array();
+  
+  $content_type_tab[0] = t('##');
+  
+  sort($content_type_tab);
+  $content_type_tab[0] = t('Entire site');
+  
+    // Container principal de la configuration de la page d'acceuil
+  $form['search_form_container'] = array(
+    '#prefix' => "<div class='search-head-container'>",
+    '#suffix' => "</div>",
+  );
+  $form['search_form_container']['search_keyword'] = array(
+    '#type' => 'textfield',
+    '#attributes' => array('placeholder' => t('Search'), 'title' => t('Keyword Search')),
+  );
+  $form['search_form_container']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Search'),
+  );
+  return $form;
+}
+
+/**
+ *  Function-name : sl_search_apachesolr_query_prepare
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_apachesolr_query_prepare($query) {
+  $query->operator = "AND";
+}
+
+/**
+ *  Function-name : sl_search_apachesolr_search_page_alter
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_apachesolr_search_page_alter(&$build, $search_page) {
+  $req = $build['search_form']['basic']['keys']['#default_value'];
+  $req = str_replace(" AND ", " ", $req);
+  $build['search_form']['basic']['keys']['#default_value'] = $req;
+  $build['search_form']['basic']['keys']['#value'] = $req;
+}
+
+/**
+ *  Function-name : sl_search_apachesolr_query_alter
+ *  Input :     delta
+ *  Output :    block - Contient la configuration des blocks de la page d'accueil
+ *  Description :   Permet de définir quelles contenus seront utiliser pour chaque blocks
+ */
+function sl_search_apachesolr_query_alter($query) {
+  $req = $query->getParams();
+  if (isset($req['q']) && strpos($req['q'], "\"") === FALSE) {
+    $str_tmp = str_replace(" ", " AND ", $req['q']);
+    $query->replaceParam("q", $str_tmp);
+    $query->replaceParam("hl", TRUE);
+  }
+}
+
+
+/**
+ *  Function-name : sl_search_head_form_submit
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function sl_search_head_form_submit($form, &$form_state) {
+  $keyword = $form['search_form_container']['search_keyword']['#value'];
+  $keyword = str_replace("?", "", $keyword);
+  
+  global $base_url;
+  if ($keyword != "") {
+    drupal_goto($base_url ."/" . getCurLang() .'/search/site/'. $keyword);
+  } else {
+    drupal_goto($base_url ."/" . getCurLang() .'/search/site/');
+  }
+}

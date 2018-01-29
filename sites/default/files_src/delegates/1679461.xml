@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679461" login="MJBONNET">
+        <identite civilite="Madame" codeDep="26">
+            <nom>BONNET</nom>
+            <prenom>Marie-Jeanne</prenom>
+        </identite>
+        <email>marie-jeanne.bonnet@defenseurdesdroits.fr</email>
+        <photo>MJBONNET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Mairie de Bourg-lès-Valence</libelle>
+                <libelleSecondaire />
+                <adresse>Espace François Mitterrand</adresse>
+                <boitePostale />
+                <tel>04 75 79 45 45</tel>
+                <fax />
+                <ville cp="26500"><value>BOURG-LÈS-VALENCE</value></ville>
+                <poi>
+                    <longitude>4.893324</longitude>
+                    <latitude>44.946287</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

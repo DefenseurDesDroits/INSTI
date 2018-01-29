@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2361934" login="GGASS">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>GASS</nom>
+            <prenom>Guy</prenom>
+        </identite>
+        <email>guy.gass@defenseurdesdroits.fr</email>
+        <photo>GGASS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison pour Tous - Vallée d&apos;Huveaune</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue Gimon</adresse>
+                <boitePostale />
+                <tel>04 91 35 06 07</tel>
+                <fax />
+                <ville cp="13011"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.456538</longitude>
+                    <latitude>43.287285</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

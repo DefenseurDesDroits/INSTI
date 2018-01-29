@@ -1,0 +1,79 @@
+<?php
+/**
+ * @file
+ * Scald Gallery Plupload Installation.
+ */
+
+
+
+/**
+ * Implements hook_install().
+ */
+function scald_gallery_plupload_enable() {
+  ScaldAtomController::addType('gallery_pl', 'Gallery plupload', 'Gallery plupload');
+
+  // Associate the gallery atom type to the "library" image style
+  // in the library context.
+  $context_config = scald_context_config_load('sdl_library_item');
+  $context_config->transcoder['gallery_pl']['*'] = 'style-Library';
+  scald_context_config_save($context_config);
+
+  // Create fields and instances.
+  foreach (scald_gallery_plupload_installed_fields() as $field) {
+    field_create_field($field);
+  }
+  foreach (scald_gallery_plupload_installed_instances() as $instance) {
+    field_create_instance($instance);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function scald_gallery_plupload_disable() {
+  // scald_remove_type('gallery_pl');
+  ScaldAtomController::removeType('gallery_pl');
+}
+
+/**
+ * List of initially installed fields on gallery bundle.
+ */
+function scald_gallery_plupload_installed_fields() {
+  $fields = array();  
+  if(!field_info_field("gallery_items_pl")) {
+    $fields = array(
+      'gallery_items_pl' => array(
+        'field_name' => 'gallery_items_pl',
+        'type' => 'atom_reference',
+        'cardinality' => -1,
+      ),
+    );
+  }
+  return $fields;
+}
+
+/**
+ * List of initially installed field instances.
+ */
+function scald_gallery_plupload_installed_instances() {
+  $instances = array(
+    'gallery_items_pl' => array(
+      'field_name' => 'gallery_items_pl',
+      'label' => t('Gallery items'),
+      'description' => t('Items that make up gallery. An item can be an atom of any type.'),
+      'required' => FALSE,
+      'widget' => array(
+        'weight' => -4,
+        'type' => 'atom_reference_textfield',
+      ),
+    ),
+  );
+
+  foreach ($instances as &$instance) {
+    $instance['entity_type'] = 'scald_atom';
+    $instance['bundle'] = 'gallery_pl';
+  }
+
+  return $instances;
+}
+

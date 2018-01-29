@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2735324" login="CCAMUS">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>CAMUS</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.camus@defenseurdesdroits.fr</email>
+        <photo>CCAMUS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Bapaume</libelle>
+                <libelleSecondaire />
+                <adresse>Chemin des Anzacs</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="62450"><value>BAPAUME</value></ville>
+                <poi>
+                    <longitude>2.864717</longitude>
+                    <latitude>50.102650</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 2e et 4e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt d&apos;Arras</libelle>
+                <libelleSecondaire />
+                <adresse>12 rue des Carabiniers-d&apos;Artois</adresse>
+                <boitePostale>B.P  915</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="62022"><value>ARRAS CEDEX</value></ville>
+                <poi>
+                    <longitude>2.760312</longitude>
+                    <latitude>50.292338</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 1e et 3e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de la communauté de communes de la région de Bapaume</libelle>
+                <libelleSecondaire />
+                <adresse>5 rue Neuve</adresse>
+                <boitePostale />
+                <tel>03 21 59 17 17</tel>
+                <fax />
+                <ville cp="62450"><value>BAPAUME</value></ville>
+                <poi>
+                    <longitude>2.850079</longitude>
+                    <latitude>50.105199</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Liévin</libelle>
+                <libelleSecondaire>Maison de la parentalité </libelleSecondaire>
+                <adresse>49 rue Jean-Baptiste Defernez</adresse>
+                <boitePostale />
+                <tel>03 21 45 81 60</tel>
+                <fax />
+                <ville cp="62800"><value>LIÉVIN</value></ville>
+                <poi>
+                    <longitude>2.772933</longitude>
+                    <latitude>50.418957</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

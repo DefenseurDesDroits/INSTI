@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680348" login="DGIRIBONE">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>GIRIBONE</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.giribone@defenseurdesdroits.fr</email>
+        <photo>DGIRIBONE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Plate-forme des services publics du Panier</libelle>
+                <libelleSecondaire />
+                <adresse>11 et 12 rue Caisserie</adresse>
+                <boitePostale />
+                <tel>04 91 13 21 91</tel>
+                <fax />
+                <ville cp="13002"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.368619</longitude>
+                    <latitude>43.297239</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

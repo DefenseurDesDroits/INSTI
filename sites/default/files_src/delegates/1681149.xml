@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681149" login="EMINARD">
+        <identite civilite="Madame" codeDep="80">
+            <nom>MINARD-PLACIARD</nom>
+            <prenom>Elisabeth</prenom>
+        </identite>
+        <email>elisabeth.minard-placiard@defenseurdesdroits.fr</email>
+        <photo>EMINARD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de l&apos;égalité</libelle>
+                <libelleSecondaire>Espace Dewailly</libelleSecondaire>
+                <adresse>12, rue Frédéric Petit</adresse>
+                <boitePostale />
+                <tel>03 22 97 41 13</tel>
+                <fax />
+                <ville cp="80000"><value>AMIENS</value></ville>
+                <poi>
+                    <longitude>2.288961</longitude>
+                    <latitude>49.892507</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

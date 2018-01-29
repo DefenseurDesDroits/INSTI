@@ -1,0 +1,6 @@
+name = Socle Lab' contact
+description = Module de gestion du contact
+core = 7.x
+package = SocleLAB-Site
+version = 7.x-1.0
+project = sl_contact

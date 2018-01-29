@@ -1,0 +1,12 @@
+/**********************************************************************************************/
+/*        Module : Crumbs                                                                     */
+/*        Description : Module de gestion du fil d'ariane                                     */
+/*        Modifié par : PAUTREL Bruno (Capgemini)                                             */
+/*        Date de dernière modification: 21/10/2014                                           */
+/*        Liste des modifications :                                                           */
+/*              - crumbs.theme.inc : ligne 31 à ligne 47                                      */
+/*                                   Correction d'une erreur php et ajout du lien Accueil     */
+/**********************************************************************************************/
+
+
+

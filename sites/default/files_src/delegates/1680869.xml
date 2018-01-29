@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680869" login="FSEMUR">
+        <identite civilite="Monsieur" codeDep="49">
+            <nom>SEMUR</nom>
+            <prenom>François</prenom>
+        </identite>
+        <email>francois.semur@defenseurdesdroits.fr</email>
+        <photo>FSEMUR.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Saumur</libelle>
+                <libelleSecondaire />
+                <adresse>33, rue Beaurepaire</adresse>
+                <boitePostale />
+                <tel>02 53 57 90 49</tel>
+                <fax>02 41 67 19 88</fax>
+                <ville cp="49400"><value>SAUMUR</value></ville>
+                <poi>
+                    <longitude>-0.081539</longitude>
+                    <latitude>47.260272</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

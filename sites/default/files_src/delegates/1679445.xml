@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679445" login="RVINCENSINI">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>VINCENSINI</nom>
+            <prenom>Robert</prenom>
+        </identite>
+        <email>robert.vincensini@defenseurdesdroits.fr</email>
+        <photo>RVINCENSINI.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire d&apos;Aix-Luynes</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="13085"><value>AIX-EN-PROVENCE CEDEX 2</value></ville>
+                <poi>
+                    <longitude>5.379534</longitude>
+                    <latitude>43.51759</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Mairie annexe</libelle>
+                <libelleSecondaire />
+                <adresse>30, rue Chastel</adresse>
+                <boitePostale />
+                <tel>04 42 91 93 95</tel>
+                <fax>04 42 91 96 55</fax>
+                <ville cp="13100"><value>AIX EN PROVENCE</value></ville>
+                <poi>
+                    <longitude>5.451516</longitude>
+                    <latitude>43.531129</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

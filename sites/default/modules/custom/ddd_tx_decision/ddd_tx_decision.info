@@ -1,0 +1,8 @@
+name = DdD - Taxo decision
+description = Module de gestion des listes de selections de taxonomies liées aux décisions (thème, authorité)
+dependencies[] = ddd_vu_theme
+core = 7.x
+package = DdD
+version = 7.x-1.0-dev1
+project = ddd_tx_decision
+project path = sites/default/modules/custom

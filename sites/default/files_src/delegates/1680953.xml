@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680953" login="JPARRA">
+        <identite civilite="Monsieur" codeDep="09">
+            <nom>PARRA</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.parra@defenseurdesdroits.fr</email>
+        <photo>JPARRA.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Muret</libelle>
+                <libelleSecondaire />
+                <adresse>Route de Seysses</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="31600"><value>MURET</value></ville>
+                <poi>
+                    <longitude>1.322393</longitude>
+                    <latitude>43.481792</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Toulouse-Seysses</libelle>
+                <libelleSecondaire />
+                <adresse>10, rue Danielle Casanova</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="31600"><value>SEYSSES</value></ville>
+                <poi>
+                    <longitude>1.323338</longitude>
+                    <latitude>43.49216</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-Préfecture de Pamiers</libelle>
+                <libelleSecondaire />
+                <adresse>26, rue Frédéric Soulié </adresse>
+                <boitePostale>BP 09102 </boitePostale>
+                <tel>05 61 60 97 30</tel>
+                <fax />
+                <ville cp="09100"><value>PAMIERS</value></ville>
+                <poi>
+                    <longitude>1.616552</longitude>
+                    <latitude>43.115312</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

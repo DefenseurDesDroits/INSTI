@@ -1,0 +1,65 @@
+
+.pagination{
+  ul{
+    
+  }
+  
+  li{
+    list-style: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  
+  a{
+    background-color: @bg_pagination;
+    color: @txt_pagination;
+    font-weight: bold;
+    display: block;
+    line-height: 32px;
+    font-size: 18px;
+    padding: 1px 12px 0px 12px;
+    
+    &:hover{
+      background-color: @bg_pagination_h;
+      color: @txt_pagination_h;
+    }
+    
+    &:active{
+      background-color: @bg_pagination_a;
+      color: @txt_pagination_a;
+    }
+  }
+  .active a, .active a:hover, .active a:active{
+    background-color: @bg_pagination_a;
+    color: @txt_pagination_a;
+    text-decoration: none;
+    cursor: default;
+  }
+  
+  .next, .prev{
+    a{
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+  }
+  
+  .next{
+    
+  }
+  
+  .prev{
+    
+  }
+  
+  .last{
+    
+  }
+  
+  .first{
+    
+  }
+  
+}

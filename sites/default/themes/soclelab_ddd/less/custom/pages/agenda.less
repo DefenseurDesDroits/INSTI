@@ -1,0 +1,61 @@
+@size_slide: 40px;
+@size_pad: 10px;
+@size_mar: calc(@size_slide - @size_pad);
+
+#block-ddd-agenda-block-agenda {
+
+	.row {
+		display:none;
+		
+		#next, #prev {
+			
+			a {
+				cursor: pointer;
+
+				text-decoration: none;
+				text-align: center;
+				color: #ffffff;
+				
+				background-color: @bg_home_agenda;
+
+				display: inline-block;
+
+				width: @size_slide;
+				height: @size_slide;
+				margin: calc(@size_slide * 1.5);
+				padding: @size_pad;
+				border-radius: 50%;
+				
+				&:hover, &:focus {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.divs {
+			width: calc(@size_slide * 4);
+			height: calc(@size_slide * 4);
+			padding: @size_slide;
+		}
+	}
+}
+
+/*
+.page-agendalink #chargementEvent {
+  margin: 194px 0 0 203px;
+}
+
+.page-agendalink .load-img {
+  background-image: url("../img/agenda/ajax-loader_blue.gif");
+  background-repeat: no-repeat;
+}
+
+.page-agendalink .desac-scroll a {
+  pointer-events: none;
+  cursor: default;
+}
+
+.page-agendalink #week-val h3 {
+  display: inline;
+  margin: 0 !important;
+} */

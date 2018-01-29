@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DDD - Configuration Scheduler feature.
+ */
+
+include_once 'ddd_configuration_scheduler.features.inc';

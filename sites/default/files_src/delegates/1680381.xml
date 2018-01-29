@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680381" login="MDEFFAUX">
+        <identite civilite="Madame" codeDep="64">
+            <nom>DEFFAUX</nom>
+            <prenom>Martine</prenom>
+        </identite>
+        <email>martine.deffaux@defenseurdesdroits.fr</email>
+        <photo>MDEFFAUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Complexe de la République</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue Carnot</adresse>
+                <boitePostale />
+                <tel>05 59 27 68 79</tel>
+                <fax />
+                <ville cp="64000"><value>PAU</value></ville>
+                <poi>
+                    <longitude>-0.370395</longitude>
+                    <latitude>43.299192</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

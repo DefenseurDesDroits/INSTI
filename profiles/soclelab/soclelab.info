@@ -1,0 +1,200 @@
+name = SocleLab
+description = Ready-to-use solution for building interministerial site with the Capgemini DigitalFactory solution.
+core = 7.x
+distribution_name = "Socle Lab'innovation / Digital Factory"
+exclusive = TRUE
+
+; Install required core modules.
+dependencies[] = block
+dependencies[] = contact
+dependencies[] = translation
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = field
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+
+; Administration modules
+dependencies[] = admin_devel
+dependencies[] = admin_menu_toolbar
+dependencies[] = admin_menu
+dependencies[] = module_filter
+
+; Autre modules
+dependencies[] = backup_migrate
+dependencies[] = block_class
+dependencies[] = crumbs
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = eu_cookie_compliance
+dependencies[] = image_combination_effects
+dependencies[] = menu_attributes
+dependencies[] = pathauto
+dependencies[] = shs
+dependencies[] = site_map
+; dependencies[] = special_menu_items
+dependencies[] = social_media_links
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = job_scheduler
+dependencies[] = feeds
+dependencies[] = views_data_export
+dependencies[] = elysia_cron
+
+; Champs
+dependencies[] = entityreference
+dependencies[] = field_collection
+dependencies[] = field_group
+dependencies[] = link
+dependencies[] = node_reference
+dependencies[] = references
+
+; Chaos tool suite
+dependencies[] = ctools
+
+; Contexte
+dependencies[] = context_ui
+dependencies[] = context
+
+; Contrôle du pollupostage
+dependencies[] = captcha
+dependencies[] = recaptcha
+
+; Date/Heure
+dependencies[] = date_api
+dependencies[] = date_views
+dependencies[] = date
+
+; Display Suite
+dependencies[] = ds_search
+dependencies[] = ds
+
+; Développement
+dependencies[] = devel
+
+; Features extra
+dependencies[] = fe_block
+
+; Features
+dependencies[] = features
+dependencies[] = features_override
+
+; UUID
+dependencies[] = uuid
+
+; User interface
+dependencies[] = ckeditor_link
+dependencies[] = ckeditor
+dependencies[] = jquery_update
+
+; Multilingual 
+dependencies[] = i18n_block
+dependencies[] = i18n_field
+dependencies[] = i18n
+dependencies[] = i18n_menu
+dependencies[] = i18n_node
+dependencies[] = i18n_select
+dependencies[] = i18n_string
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
+dependencies[] = l10n_update
+
+; Média
+dependencies[] = imagecache_actions
+dependencies[] = imagecache_canvasactions
+
+; Recherche
+dependencies[] = apachesolr_autocomplete
+dependencies[] = apachesolr
+dependencies[] = apachesolr_attachments
+dependencies[] = apachesolr_search
+dependencies[] = apachesolr_sort
+dependencies[] = facetapi
+
+; Scald
+dependencies[] = atom_reference
+dependencies[] = dnd
+dependencies[] = mee
+dependencies[] = scald
+dependencies[] = scald_dnd_library
+
+; Scald provider
+dependencies[] = scald_dailymotion
+dependencies[] = scald_file
+dependencies[] = scald_image
+dependencies[] = scald_youtube
+
+; Sharing
+dependencies[] = sharethis
+
+; Statistiques
+; dependencies[] = googleanalytics
+
+; Variables
+dependencies[] = variable
+
+; Vues
+dependencies[] = views_ui
+dependencies[] = views
+
+; ****************************************
+; Socle Lab - Modules principaux
+dependencies[] = sl_accessibility
+dependencies[] = sl_blocks
+dependencies[] = sl_contact
+dependencies[] = sl_content
+dependencies[] = sl_forms
+dependencies[] = sl_galerie
+dependencies[] = sl_search
+dependencies[] = sl_socialshare
+dependencies[] = sl_taxonomy
+dependencies[] = sl_utilities
+dependencies[] = sl_viewmode
+
+; Socle Lab - Features
+dependencies[] = sl_cf_ckeditor
+dependencies[] = sl_cf_genconf
+dependencies[] = sl_cf_language
+dependencies[] = sl_cf_menus
+dependencies[] = sl_cf_scald
+dependencies[] = sl_cf_search
+dependencies[] = sl_cf_sitemap
+dependencies[] = sl_cf_sociaux
+dependencies[] = sl_cf_stylesimages
+dependencies[] = sl_cf_users
+dependencies[] = sl_ct_accueil
+dependencies[] = sl_ct_article
+dependencies[] = sl_ct_event
+dependencies[] = sl_ct_faq
+dependencies[] = sl_ct_page
+dependencies[] = sl_tx_themes
+dependencies[] = sl_tx_typecontenu
+dependencies[] = sl_vu_actualites
+dependencies[] = sl_vu_backoffice
+dependencies[] = sl_vu_events
+dependencies[] = sl_vu_mediatheque
+dependencies[] = sl_vu_publications
+dependencies[] = sl_vu_taxonomy
+
+
+; System Requirements.
+php_memory_limit = 128M

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681362" login="PROGER">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>ROGER</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.roger@defenseurdesdroits.fr</email>
+        <photo>PROGER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt d&apos;Osny</libelle>
+                <libelleSecondaire />
+                <adresse>Route départementale 927</adresse>
+                <boitePostale />
+                <tel>01 34 25 47 47</tel>
+                <fax />
+                <ville cp="95520"><value>OSNY</value></ville>
+                <poi>
+                    <longitude>2.106316</longitude>
+                    <latitude>49.036736</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 4e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Argenteuil</libelle>
+                <libelleSecondaire />
+                <adresse>14, rue Alfred Labrière</adresse>
+                <boitePostale />
+                <tel>01 34 34 62 30</tel>
+                <fax />
+                <ville cp="95100"><value>ARGENTEUIL</value></ville>
+                <poi>
+                    <longitude>2.254761</longitude>
+                    <latitude>48.944670</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 3e JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

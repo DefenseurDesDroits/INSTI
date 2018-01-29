@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681342" login="CMAILLET">
+        <identite civilite="Monsieur" codeDep="07">
+            <nom>MAILLET</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.maillet@defenseurdesdroits.fr</email>
+        <photo>CMAILLET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Hôtel de Ville d&apos;Annonay</libelle>
+                <libelleSecondaire />
+                <adresse>Rue de l&apos;Hôtel de Ville</adresse>
+                <boitePostale />
+                <tel>04 75 07 07 82</tel>
+                <fax />
+                <ville cp="07100"><value>ANNONAY</value></ville>
+                <poi>
+                    <longitude>4.667488</longitude>
+                    <latitude>45.239990</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Tournon-sur-Rhône</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue Boissy d&apos;Anglas</adresse>
+                <boitePostale>BP 62</boitePostale>
+                <tel>04 75 07 07 82</tel>
+                <fax />
+                <ville cp="07300"><value>TOURNON-SUR-RHÔNE</value></ville>
+                <poi>
+                    <longitude>4.833905</longitude>
+                    <latitude>45.067550</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,13 @@
+name = DdD - View Taxonomy
+description = Vue de gestion des taxonomies
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-dev1
+project = ddd_vu_taxonomy
+dependencies[] = fe_block
+dependencies[] = sl_vu_taxonomy
+dependencies[] = views
+features[fe_block_settings][] = views-vue_taxonomy-block_taxonomy_sub
+features[features_api][] = api:2
+mtime = 1442840194
+project path = sites/default/modules/features

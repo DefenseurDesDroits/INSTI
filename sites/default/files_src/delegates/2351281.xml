@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2351281" login="ALEFORT">
+        <identite civilite="Madame" codeDep="35">
+            <nom>LEFORT</nom>
+            <prenom>Annie</prenom>
+        </identite>
+        <email>annie.lefort@defenseurdesdroits.fr</email>
+        <photo>ALEFORT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Espace Bougainville</libelle>
+                <libelleSecondaire />
+                <adresse>Rue du Grand passage</adresse>
+                <boitePostale />
+                <tel>02 99 81 63 47</tel>
+                <fax />
+                <ville cp="35400"><value>ST MALO</value></ville>
+                <poi>
+                    <longitude>-1.992861</longitude>
+                    <latitude>48.639631</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

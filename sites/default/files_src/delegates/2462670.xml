@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2462670" login="PGRUAU">
+        <identite civilite="Monsieur" codeDep="83">
+            <nom>GRUAU</nom>
+            <prenom>Patrick</prenom>
+        </identite>
+        <email>patrick.gruau@defenseurdesdroits.fr</email>
+        <photo>PGRUAU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Toulon centre</libelle>
+                <libelleSecondaire>Traverse des minimes</libelleSecondaire>
+                <adresse>Place Besagne (centre Mayol)</adresse>
+                <boitePostale />
+                <tel>04 94 87 14 60</tel>
+                <fax />
+                <ville cp="83000"><value>TOULON</value></ville>
+                <poi>
+                    <longitude>5.935940</longitude>
+                    <latitude>43.120692</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit de Fréjus</libelle>
+                <libelleSecondaire>Centre d&apos;animation de Villeneuve</libelleSecondaire>
+                <adresse>63 rue de l&apos;Argentière</adresse>
+                <boitePostale />
+                <tel>04 94 54 53 42</tel>
+                <fax />
+                <ville cp="83600"><value>FREJUS</value></ville>
+                <poi>
+                    <longitude>6.728225</longitude>
+                    <latitude>43.430079</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,29 @@
+aside{
+  .block-menu{
+    ul{
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+    
+    li{
+      list-style: none;
+      display: block;
+      padding: 5px 0;
+      border-top: 1px solid @bor_type_vignette;
+      &:last-child{
+        border-bottom: 1px solid @bor_type_vignette;
+      }
+      a{
+        display: block;
+        border-left: 11px solid @col_main;
+        padding: 20px 15px 20px 40px;
+        font-size: 17px;
+        font-weight: bold;
+        background-image: url("@{dir_img}/home/link-menu-aside.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+      }
+    }
+  }
+  
+}

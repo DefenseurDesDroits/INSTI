@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679115" login="ADABOVAL">
+        <identite civilite="Monsieur" codeDep="94">
+            <nom>DABOVAL</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.daboval@defenseurdesdroits.fr</email>
+        <photo>ADABOVAL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Fresnes</libelle>
+                <libelleSecondaire />
+                <adresse>Allée des Thuyas</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="94260"><value>FRESNES</value></ville>
+                <poi>
+                    <longitude>2.326906</longitude>
+                    <latitude>48.756412</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - un sur deux MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Centre socio-culturel l&apos;Escale</libelle>
+                <libelleSecondaire>Place Charles Trenet </libelleSecondaire>
+                <adresse>2, boulevard Friedberg</adresse>
+                <boitePostale />
+                <tel>01 49 41 41 55</tel>
+                <fax>01 49 41 41 70</fax>
+                <ville cp="94350"><value>VILLIERS-SUR-MARNE</value></ville>
+                <poi>
+                    <longitude>2.539119</longitude>
+                    <latitude>48.830201</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

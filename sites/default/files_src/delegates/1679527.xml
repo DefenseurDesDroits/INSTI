@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679527" login="GBARBIER">
+        <identite civilite="Monsieur" codeDep="57">
+            <nom>BARBIER</nom>
+            <prenom>Gilles</prenom>
+        </identite>
+        <email>gilles.barbier@defenseurdesdroits.fr</email>
+        <photo>GBARBIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Moselle</libelle>
+                <libelleSecondaire />
+                <adresse>9, place de la Préfecture</adresse>
+                <boitePostale>BP 71014</boitePostale>
+                <tel>03 87 34 87 34</tel>
+                <fax>03 87 34 85 82</fax>
+                <ville cp="57000"><value>METZ</value></ville>
+                <poi>
+                    <longitude>6.174395</longitude>
+                    <latitude>49.122266</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>du LUNDI au VENDREDI</jour>
+                        <horaire />
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680858" login="MBRUNELET">
+        <identite civilite="Monsieur" codeDep="10">
+            <nom>BRUNELET</nom>
+            <prenom>Marc</prenom>
+        </identite>
+        <email>marc.brunelet@defenseurdesdroits.fr</email>
+        <photo>MBRUNELET.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison centrale de Clairvaux</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="10310"><value>VILLE-SOUS-LA-FERTÉ</value></ville>
+                <poi>
+                    <longitude>4.786473</longitude>
+                    <latitude>48.145441</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Romilly-sur-Seine</libelle>
+                <libelleSecondaire />
+                <adresse>9, rue de l&apos;Union</adresse>
+                <boitePostale />
+                <tel>03 25 21 67 67</tel>
+                <fax />
+                <ville cp="10100"><value>ROMILLY-SUR-SEINE</value></ville>
+                <poi>
+                    <longitude>3.727817</longitude>
+                    <latitude>48.517130</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Bar-sur-Aube</libelle>
+                <libelleSecondaire />
+                <adresse>18, rue Armand</adresse>
+                <boitePostale>BP 52</boitePostale>
+                <tel>03 25 27 66 04</tel>
+                <fax />
+                <ville cp="10200"><value>BAR-SUR-AUBE</value></ville>
+                <poi>
+                    <longitude>4.708063</longitude>
+                    <latitude>48.231156</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681247" login="LSANTAMARIA">
+        <identite civilite="Monsieur" codeDep="974">
+            <nom>SANTAMARIA</nom>
+            <prenom>Laurent</prenom>
+        </identite>
+        <email>laurent.santamaria@defenseurdesdroits.fr</email>
+        <photo>LSANTAMARIA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne de justice des Camélias</libelle>
+                <libelleSecondaire />
+                <adresse>Bât. T - Allée des Bureaux</adresse>
+                <boitePostale />
+                <tel>06 92 91 63 58</tel>
+                <fax />
+                <ville cp="97400"><value>ST DENIS</value></ville>
+                <poi>
+                    <longitude>55.462161</longitude>
+                    <latitude>-20.894376</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Centre Régional d&apos;Information pour la Jeunesse</libelle>
+                <libelleSecondaire />
+                <adresse>28, rue Jean Chatel</adresse>
+                <boitePostale />
+                <tel>06 92 91 63 58</tel>
+                <fax />
+                <ville cp="97400"><value>ST DENIS</value></ville>
+                <poi>
+                    <longitude>55.449391</longitude>
+                    <latitude>-20.876772</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

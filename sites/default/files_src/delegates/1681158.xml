@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681158" login="JCTHIBEAULT">
+        <identite civilite="Monsieur" codeDep="93">
+            <nom>THIBEAULT</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.thibeault@defenseurdesdroits.fr</email>
+        <photo>JCTHIBEAULT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du centre ville</libelle>
+                <libelleSecondaire />
+                <adresse>12, Boulevard Rouget-de-Lisle</adresse>
+                <boitePostale />
+                <tel>01 48 70 68 67</tel>
+                <fax />
+                <ville cp="93100"><value>MONTREUIL</value></ville>
+                <poi>
+                    <longitude>2.440683</longitude>
+                    <latitude>48.861619</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

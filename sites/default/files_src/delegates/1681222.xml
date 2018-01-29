@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681222" login="KGOBCRANTOR">
+        <identite civilite="Madame" codeDep="971">
+            <nom>GOB-CRANTOR</nom>
+            <prenom>Ketty</prenom>
+        </identite>
+        <email>ketty.gob-crantor@defenseurdesdroits.fr</email>
+        <photo>KGOBCRANTOR.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>GUADAV (Guadeloupe Accès au droit et aide aux victimes)</libelle>
+                <libelleSecondaire />
+                <adresse>Angle bld Légitimus, rue Hincelin</adresse>
+                <boitePostale />
+                <tel>05 90 84 22 86</tel>
+                <fax>05 90 91 43 52</fax>
+                <ville cp="97110"><value>POINTE A PITRE</value></ville>
+                <poi>
+                    <longitude>-61.534099</longitude>
+                    <latitude>16.244184</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2391465" login="IVERSCHUEREN">
+        <identite civilite="Madame" codeDep="04">
+            <nom>VERSCHUEREN</nom>
+            <prenom>Isabelle</prenom>
+        </identite>
+        <email>isabelle.verschueren@defenseurdesdroits.fr</email>
+        <photo>IVERSCHUEREN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Antenne d&apos;accès à la justice et au droit</libelle>
+                <libelleSecondaire>Château de Drouilles </libelleSecondaire>
+                <adresse>Chemin Drouilles</adresse>
+                <boitePostale />
+                <tel>04 92 74 31 12</tel>
+                <fax>04 92 72 79 43</fax>
+                <ville cp="04100"><value>MANOSQUE</value></ville>
+                <poi>
+                    <longitude>5.783492</longitude>
+                    <latitude>43.830591</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

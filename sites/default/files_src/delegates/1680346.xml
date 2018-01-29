@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680346" login="GSAUBAUX">
+        <identite civilite="Monsieur" codeDep="06">
+            <nom>SAUBAUX</nom>
+            <prenom>Georges</prenom>
+        </identite>
+        <email>georges.saubaux@defenseurdesdroits.fr</email>
+        <photo>GSAUBAUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison du Département de Nice-Centre</libelle>
+                <libelleSecondaire />
+                <adresse>26, rue Saint-François de Paule</adresse>
+                <boitePostale />
+                <tel>04 89 04 32 90</tel>
+                <fax />
+                <ville cp="06300"><value>NICE</value></ville>
+                <poi>
+                    <longitude>7.269273</longitude>
+                    <latitude>43.695222</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

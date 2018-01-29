@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680359" login="JPJORIEUX">
+        <identite civilite="Monsieur" codeDep="46">
+            <nom>JORIEUX</nom>
+            <prenom>Jean-Paul</prenom>
+        </identite>
+        <email>jean-paul.jorieux@defenseurdesdroits.fr</email>
+        <photo>JPJORIEUX.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Direction départementale de la cohésion sociale et de la protection des populations (DDCSPP)</libelle>
+                <libelleSecondaire />
+                <adresse>304, rue Victor Hugo</adresse>
+                <boitePostale />
+                <tel>05 65 20 56 73</tel>
+                <fax />
+                <ville cp="46000"><value>CAHORS</value></ville>
+                <poi>
+                    <longitude>1.375920</longitude>
+                    <latitude>44.007350</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

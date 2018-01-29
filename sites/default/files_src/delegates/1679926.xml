@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679926" login="PMAURICE">
+        <identite civilite="Monsieur" codeDep="78">
+            <nom>MAURICE</nom>
+            <prenom>Pierre</prenom>
+        </identite>
+        <email>pierre.maurice@defenseurdesdroits.fr</email>
+        <photo>PMAURICE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison centrale de Poissy</libelle>
+                <libelleSecondaire />
+                <adresse>17, rue de l&apos;Abbaye</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="78300"><value>POISSY</value></ville>
+                <poi>
+                    <longitude>2.038412</longitude>
+                    <latitude>48.9287</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>12, boulevard Louis Lemelle</adresse>
+                <boitePostale />
+                <tel>01 39 65 23 11</tel>
+                <fax />
+                <ville cp="78300"><value>POISSY</value></ville>
+                <poi>
+                    <longitude>2.044222</longitude>
+                    <latitude>48.926924</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

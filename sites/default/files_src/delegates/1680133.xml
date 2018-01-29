@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680133" login="GDHALLEINE">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>DHALLEINE</nom>
+            <prenom>Guylain</prenom>
+        </identite>
+        <email>guylain.dhalleine@defenseurdesdroits.fr</email>
+        <photo>GDHALLEINE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la famille</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Antoine Bourdelle</adresse>
+                <boitePostale />
+                <tel>03 21 97 60 73</tel>
+                <fax>03 21 97 96 99</fax>
+                <ville cp="62100"><value>CALAIS</value></ville>
+                <poi>
+                    <longitude>1.889679</longitude>
+                    <latitude>50.950802</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Tribunal d&apos;Instance </libelle>
+                <libelleSecondaire>Maison de justice et du droit de Calais</libelleSecondaire>
+                <adresse>Place Crèvecoeur</adresse>
+                <boitePostale />
+                <tel>03 21 97 09 27</tel>
+                <fax />
+                <ville cp="62100"><value>CALAIS</value></ville>
+                <poi>
+                    <longitude>1.859807</longitude>
+                    <latitude>50.944604</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>4e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

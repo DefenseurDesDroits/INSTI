@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2617519" login="JLBECHIR">
+        <identite civilite="Monsieur" codeDep="77">
+            <nom>BECHIR</nom>
+            <prenom>Jean-Louis</prenom>
+        </identite>
+        <email>jean-louis.bechir@defenseurdesdroits.fr</email>
+        <photo>JLBECHIR.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre Pénitentiaire de Meaux-Chauconin-Neufmontiers</libelle>
+                <libelleSecondaire />
+                <adresse>Rue du Lycée - RD 5</adresse>
+                <boitePostale>BP 20177 Chauconin-N</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="77351"><value>MEAUX CEDEX</value></ville>
+                <poi>
+                    <longitude>2.864072</longitude>
+                    <latitude>48.962676</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Meaux</libelle>
+                <libelleSecondaire>Centre commercial la Verrière </libelleSecondaire>
+                <adresse>Allée Jean-Louis Barrault</adresse>
+                <boitePostale />
+                <tel>01 60 41 10 80</tel>
+                <fax>01 60 41 10 84</fax>
+                <ville cp="77100"><value>MEAUX</value></ville>
+                <poi>
+                    <longitude>2.912711</longitude>
+                    <latitude>48.952275</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

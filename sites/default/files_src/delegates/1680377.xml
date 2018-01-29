@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680377" login="CDELAFONTAINE">
+        <identite civilite="Madame" codeDep="84">
+            <nom>DELAFONTAINE</nom>
+            <prenom>Carole</prenom>
+        </identite>
+        <email>carole.delafontaine@defenseurdesdroits.fr</email>
+        <photo>CDELAFONTAINE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire d&apos;Avignon le Pontet</libelle>
+                <libelleSecondaire />
+                <adresse>90, rue Panisset</adresse>
+                <boitePostale>BP 92</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="84135"><value>LE PONTET CEDEX</value></ville>
+                <poi>
+                    <longitude>4.861485</longitude>
+                    <latitude>43.962652</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison du Département</libelle>
+                <libelleSecondaire />
+                <adresse>1, rond-point de l&apos;Arc de Triomphe</adresse>
+                <boitePostale />
+                <tel>04 90 30 30 20</tel>
+                <fax />
+                <ville cp="84100"><value>ORANGE</value></ville>
+                <poi>
+                    <longitude>4.802159</longitude>
+                    <latitude>44.143530</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

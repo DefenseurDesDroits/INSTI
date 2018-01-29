@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681358" login="MGREMILLON">
+        <identite civilite="Monsieur" codeDep="86">
+            <nom>GRÉMILLON</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.gremillon@defenseurdesdroits.fr</email>
+        <photo>MGREMILLON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Vienne</libelle>
+                <libelleSecondaire>A.postale : Place Aristide Briand</libelleSecondaire>
+                <adresse>20, rue Arsène Orillard</adresse>
+                <boitePostale />
+                <tel>05 49 47 80 89</tel>
+                <fax>05 49 88 76 89 </fax>
+                <ville cp="86021"><value>POITIERS CEDEX</value></ville>
+                <poi>
+                    <longitude>0.344710</longitude>
+                    <latitude>46.581912</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

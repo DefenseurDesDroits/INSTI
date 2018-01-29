@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680525" login="MPOINGT">
+        <identite civilite="Monsieur" codeDep="74">
+            <nom>POINGT</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.poingt@defenseurdesdroits.fr</email>
+        <photo>MPOINGT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Savoie</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue du 30ème Régiment d&apos;Infanterie</adresse>
+                <boitePostale />
+                <tel>04 50 33 61 16</tel>
+                <fax>04 50 33 64 56</fax>
+                <ville cp="74000"><value>ANNECY</value></ville>
+                <poi>
+                    <longitude>6.131547</longitude>
+                    <latitude>45.902846</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,6 @@
+name = Socle Lab' taxonomy
+description = Module de gestion des taxonomies
+core = 7.x
+package = SocleLAB - Taxonomy
+version = 7.x-1.0
+project = sl_taxonomy

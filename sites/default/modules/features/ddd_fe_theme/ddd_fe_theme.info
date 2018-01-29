@@ -1,0 +1,11 @@
+name = DdD - Feed Thème
+core = 7.x
+package = DdD - Feeds (Features)
+version = 7.x-1.0-rc1
+project = ddd_fe_theme
+dependencies[] = ctools
+dependencies[] = feeds
+features[ctools][] = feeds:feeds_importer_default:1
+features[features_api][] = api:2
+features[feeds_importer][] = ddd_import_tax_theme
+mtime = 1424163337

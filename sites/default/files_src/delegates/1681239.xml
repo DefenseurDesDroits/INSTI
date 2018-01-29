@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681239" login="CGUEYDAN">
+        <identite civilite="Monsieur" codeDep="40">
+            <nom>GUEYDAN</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.gueydan@defenseurdesdroits.fr</email>
+        <photo>CGUEYDAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Dax</libelle>
+                <libelleSecondaire />
+                <adresse>5, avenue Paul Doumer</adresse>
+                <boitePostale />
+                <tel>05 58 90 69 49</tel>
+                <fax />
+                <ville cp="40100"><value>DAX</value></ville>
+                <poi>
+                    <longitude>-1.056559</longitude>
+                    <latitude>43.703334</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680240" login="CGRUA">
+        <identite civilite="Monsieur" codeDep="13">
+            <nom>GRUA</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.grua@defenseurdesdroits.fr</email>
+        <photo>CGRUA.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Marseille-Baumettes</libelle>
+                <libelleSecondaire />
+                <adresse>239, chemin de Morgiou</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="13009"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.414507</longitude>
+                    <latitude>43.232705</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Mairie des 9e et 10e arrondissements</libelle>
+                <libelleSecondaire />
+                <adresse>150, avenue Paul Claudel</adresse>
+                <boitePostale />
+                <tel>04 91 14 63 50</tel>
+                <fax>04 91 14 63 51</fax>
+                <ville cp="13009"><value>MARSEILLE</value></ville>
+                <poi>
+                    <longitude>5.415359</longitude>
+                    <latitude>43.268195</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

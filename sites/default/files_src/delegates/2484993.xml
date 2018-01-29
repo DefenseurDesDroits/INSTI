@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2484993" login="IMARINHO">
+        <identite civilite="Madame" codeDep="971">
+            <nom>MARINHO</nom>
+            <prenom>Inès</prenom>
+        </identite>
+        <email>ines.marinho@defenseurdesdroits.fr</email>
+        <photo>IMARINHO.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de la citoyenneté</libelle>
+                <libelleSecondaire />
+                <adresse>16 rue du commandant Mortenol</adresse>
+                <boitePostale />
+                <tel>05 90 21 04 83</tel>
+                <fax />
+                <ville cp="97110"><value>POINTE A PITRE</value></ville>
+                <poi>
+                    <longitude>-61.533182</longitude>
+                    <latitude>16.237397</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681186" login="FMARIE">
+        <identite civilite="Madame" codeDep="37">
+            <nom>MARIÉ</nom>
+            <prenom>Françoise</prenom>
+        </identite>
+        <email>francoise.marie@defenseurdesdroits.fr</email>
+        <photo>FMARIE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Centre de vie de Sanitas</libelle>
+                <libelleSecondaire>Plate-forme multi-services</libelleSecondaire>
+                <adresse>10, place Neuve</adresse>
+                <boitePostale />
+                <tel>02 47 31 39 00</tel>
+                <fax>02 47 31 39 03</fax>
+                <ville cp="37000"><value>TOURS</value></ville>
+                <poi>
+                    <longitude>0.697095</longitude>
+                    <latitude>47.383463</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Chinon</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Philippe de Commines </adresse>
+                <boitePostale>BP 156</boitePostale>
+                <tel>02 47 81 14 14</tel>
+                <fax>02 47 33 10 30</fax>
+                <ville cp="37500"><value>CHINON</value></ville>
+                <poi>
+                    <longitude>0.243573</longitude>
+                    <latitude>47.165867</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

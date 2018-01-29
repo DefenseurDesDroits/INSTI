@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Blocks feature.
+ */
+
+include_once 'ddd_cf_blocks.features.inc';

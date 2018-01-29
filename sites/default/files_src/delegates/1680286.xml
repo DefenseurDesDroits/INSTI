@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680286" login="AMAGNANT">
+        <identite civilite="Madame" codeDep="78">
+            <nom>MAGNANT</nom>
+            <prenom>Anne</prenom>
+        </identite>
+        <email>anne.magnant@defenseurdesdroits.fr</email>
+        <photo>AMAGNANT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de St-Quentin-en-Yvelines</libelle>
+                <libelleSecondaire>Place Rabelais</libelleSecondaire>
+                <adresse>Rue Jacques Duclos</adresse>
+                <boitePostale />
+                <tel>01 39 30 32 40</tel>
+                <fax />
+                <ville cp="78280"><value>GUYANCOURT</value></ville>
+                <poi>
+                    <longitude>2.050407</longitude>
+                    <latitude>48.784935</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,1274 @@
+<?php
+
+//require_once(drupal_get_path('module', 'ddd_refonte') . '/lib/twitter/TwitterOAuth.php');
+
+function ddd_documents_associes(){
+  $node = menu_get_object();
+  $view = views_get_view('documents_associes');
+  $view->set_display('block');
+  $view->set_arguments(array($node->nid));
+  $view->pre_execute();
+  $res = $view->execute();
+  if(!empty($view->result[0]->field_field_documents_associes)){
+    $variable['title'] = t('Attachments');
+  }
+  $variable['view'] = $view->render();
+  return theme('_theme_ddd_refonte_documents_associes', array('vars' => $variable));
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function ddd_refonte_entity_info_alter(&$entity_info)
+{
+    $entity_info['node']['view modes']['competence'] = array(
+    'label' => t('Teaser Competence'),
+    'custom settings' => true,
+  );
+    $entity_info['node']['view modes']['teaser_v2'] = array(
+    'label' => t('Teaser V2'),
+    'custom settings' => true,
+  );
+}
+
+function ddd_refonte_get_info_block_actualite_hp()
+{
+    global $language;
+    $variable['title'] = t('Latest News');
+    $variables['taxonomie_actualites'] = 'taxo';
+
+    $actus = taxonomy_get_children('1584');
+    $actus = i18n_taxonomy_localize_terms($actus);
+    $filter = array('3','1705','47','1706','1708');
+    $menu = array();
+    $menu[0]['url'] = url('taxonomy/term/1584');
+    $menu[0]['name'] = t('All News');
+    $menu[0]['active'] = true;
+    $i=1;
+    foreach ($actus as $a) {
+        if (in_array($a->tid, $filter)) {
+            $menu[$i]['url'] = url('taxonomy/term/' . $a->tid);
+            $menu[$i]['name'] = $a->name;
+            $menu[$i]['active'] = false;
+            $i++;
+        }
+    }
+
+    $variable['link'] = drupal_get_path_alias($path = "taxonomy/term/1584", $path_language = $language->language);
+    $variable['taxo'] = $menu;
+    $variable['view_actualites'] = views_embed_view('vue_actualites', 'block_actu_hp_v2');
+    return theme('_theme_ddd_refonte_block_actualite', array('vars' => $variable));
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function ddd_refonte_block_info()
+{
+    $blocks = array();
+    $blocks['faq'] = array(
+    'info' => t('Dernieres actualites'),
+  );
+    $blocks['histoire_hp'] = array(
+    'info' => t('Histoires vécues'),
+  );
+    $blocks['ddd_agenda'] = array(
+    'info' => t('Agenda (DDD)'),
+  );
+    $blocks['ddd_twitter_feed'] = array(
+    'info' => t('Twitter feed (DDD)'),
+  );
+    $blocks['ddd_figures'] = array(
+    'info' => t('Chiffres clés (DDD)'),
+  );
+    $blocks['block_contact'] = array(
+    'info' => t('Block Phone'),
+  );
+    $blocks['ddd_partners'] = array(
+    'info' => t('Partenaires (DDD)'),
+  );
+    $blocks['ddd_hitoire_remonte'] = array(
+    'info' => t('Block - Histoire remontees'),
+  );
+    $blocks['ddd_saisir_defenseur'] = array(
+    'info' => t('Block - Saisir les defenseurs'),
+  );
+    return $blocks;
+}
+
+function ddd_refonte_get_info_block_histoire_hp()
+{
+    global $language;
+    $variable = array();
+    $trads = translation_node_get_translations('21758');
+    foreach ($trads as $trad) {
+        if ($language->language == $trad->language) {
+            $node = node_load($trad->nid);
+        }
+    }
+    if (isset($node->field_accueil_v2_histoires_vecue['und'])) {
+        foreach ($node->field_accueil_v2_histoires_vecue['und'] as $n) {
+            $n = node_load($n['nid']);
+            $variable['node'][] = node_view($n, 'teaser');
+        }
+    }
+    return theme('_theme_ddd_refonte_block_histoire', array('vars' => $variable));
+}
+
+function ddd_refonte_get_view_element($display)
+{
+    $view = views_get_view_result('questions_les_plus_frequentes', $display);
+    $i=1;
+    foreach ($view as $v) {
+        $val[$i]['title'] = $v->node_title;
+        if (isset($v->field_field_article_descriptif[0]['rendered']['#markup'])) {
+            $val[$i]['content'] = $v->field_field_article_descriptif[0]['rendered']['#markup'];
+        } else {
+            $val[$i]['content'] = '';
+        }
+        $i++;
+    }
+    return $val;
+}
+
+function ddd_refonte_get_url_by_language($nid)
+{
+    global $language;
+    $translations = translation_path_get_translations("node/" . $nid);
+    return drupal_get_path_alias($translations[$language->language], $language->language);
+}
+
+function get_file_url($fid)
+{
+    $file = file_load($fid);
+    $uri = $file->uri;
+    return  file_create_url($uri);
+}
+
+function ddd_refonte_get_info_block_agenda()
+{
+    global $language;
+    $today = date('Y-m-d h:i:s', strtotime('yesterday midnight'));
+    $day_before = date('Y-m-d h:i:s', strtotime('+6 days',time()));
+    $block = block_load('ddd_refonte','ddd_agenda');
+    $title = $block->title;
+    $variable['titre'] = t($title);
+    $query = new EntityFieldQuery();
+    $result = $query
+      ->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'evenement')
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->propertyCondition('language', $language->language, '=')
+      ->fieldCondition('field_event_date', 'value',array($today, $day_before), 'BETWEEN')
+      ->fieldOrderBy('field_event_date', 'value', 'ASC')
+      ->range(0,7)
+      ->execute();
+    $result = array_keys($result['node']);
+    $c = floor(count($result)) - 1;
+    foreach($result as $key => $res){
+      //dpm($res);
+      $node = node_load($res);
+      if($i < $c){
+        $variable['event_left'][$i]['title'] = $node->title;
+        $variable['event_left'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
+      } else {
+        $variable['event_right'][$i]['title'] = $node->title;
+        $variable['event_right'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
+      }
+      $i++;
+    }
+    return theme('_theme_ddd_refonte_block_agenda', array('vars' => $variable));
+}
+
+function ddd_refonte_get_info_block_figures()
+{
+    $block = block_load('ddd_refonte','ddd_figures');
+    $title = $block->title;
+    $variable['titre'] = t($title);
+    //Recup fichier
+    $file = file_load(variable_get('rapport_annuel'));
+    $uri = $file->uri;
+    $variable['rapport'] = array(
+      'annee' => variable_get('annee_rapport'),
+      'file_url' => file_create_url($uri),
+      'file_size' =>format_size($file->filesize),
+    );
+    $variable['nb_traite'] = variable_get('traite');
+    $variable['nb_rendu'] = variable_get('rendus');
+    $variable['nb_mesures'] = variable_get('mesures');
+    $variable['nb_observation'] = variable_get('observation');
+    return theme('_theme_ddd_refonte_block_figures', array('vars' => $variable));
+}
+
+function ddd_refonte_get_info_block_partners()
+{
+    $block = block_load('ddd_refonte','ddd_partners');
+    $title = $block->title;
+    $variable['titre'] = t($title);
+    $variable['partenaires'] = array(
+    array('title' => variable_get('titre_partenaire1'), 'url' => variable_get('lien_partenaire1'), 'img_url' => get_file_url(variable_get('file_partenaire1'))),
+    array('title' => variable_get('titre_partenaire2'), 'url' => variable_get('lien_partenaire2'), 'img_url' => get_file_url(variable_get('file_partenaire2'))),
+    array('title' => variable_get('titre_partenaire3'), 'url' => variable_get('lien_partenaire3'), 'img_url' => get_file_url(variable_get('file_partenaire3'))),
+    array('title' => variable_get('titre_partenaire4'), 'url' => variable_get('lien_partenaire4'), 'img_url' => get_file_url(variable_get('file_partenaire4'))),
+  );
+    return theme('_theme_ddd_refonte_block_partners', array('vars' => $variable));
+}
+
+function ddd_refonte_histoires_remontee()
+{
+    $variable['view'] = views_embed_view('nodequeue_2', 'block_1');
+    return theme('_theme_ddd_refonte_histoires_remontees', array('vars' => $variable));
+}
+
+function ddd_saisir_defenseur()
+{
+    $output = '<div class="row bg-contact">';
+    $output .= '<div class="col-md-6 col-md-offset-3">';
+    $output .= '<div class="bloc-contact">';
+    $output .= '<div class="img-contact"><img src="' . get_file_url(variable_get('file4')) . '"></div>';
+    $output .= t(variable_get('body4'));
+    $output .= '</div>';
+    $output .= '</div>';
+    $output .= '</div>';
+    return render($output);
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ddd_refonte_block_view($delta='')
+{
+    $block = array();
+
+    switch ($delta) {
+    case 'faq':
+      $block['content'] = ddd_refonte_get_info_block_actualite_hp();
+      break;
+    case 'histoire_hp':
+      $block['content'] = ddd_refonte_get_info_block_histoire_hp();
+      break;
+    case 'ddd_partners':
+      $block['content'] = ddd_refonte_get_info_block_partners();
+      break;
+    case 'ddd_agenda':
+      $block['content'] = ddd_refonte_get_info_block_agenda();
+      break;
+    case 'ddd_twitter_feed':
+      $block['content'] = render(views_embed_view('tweets', 'block'));
+      break;
+    case 'ddd_figures':
+      $block['content'] = ddd_refonte_get_info_block_figures();
+      break;
+    case 'block_contact':
+      $block['content'] = contact_get_theme();
+      break;
+    case 'block_delegate':
+      $block['content'] = delegate_get_theme();
+    case 'ddd_hitoire_remonte':
+      $block['content'] = ddd_refonte_histoires_remontee();
+      break;
+    case 'ddd_saisir_defenseur':
+      $block['content'] = ddd_saisir_defenseur();
+      break;
+  }
+
+    return $block;
+}
+
+/**
+ * Implement Hook_theme().
+ */
+function ddd_refonte_theme()
+{
+    $base_theme  = array(
+    'path' => drupal_get_path('module', 'ddd_refonte') . "/templates/blocks",
+  );
+    $base_theme_page  = array(
+    'path' => drupal_get_path('module', 'ddd_refonte') . "/templates/pages",
+  );
+
+    return array(
+    '_theme_ddd_refonte_block_actualite' => $base_theme + array(
+        'template'      => 'block-actualite-hp',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_block_histoire' => $base_theme + array(
+        'template'      => 'block-histoire-hp',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_block_partners' => $base_theme + array(
+        'template'      => 'block-partners',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_agenda' => $base_theme_page + array(
+        'template'      => 'page-agenda',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_page_rejoindre' => $base_theme_page + array(
+        'template'      => 'page-nous-rejoindre',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_page_contact' => $base_theme_page + array(
+        'template'      => 'page-contact',  // + .tpl.php
+        'variables'     => array('vars' => null),
+        ),
+    '_theme_ddd_refonte_page_outils' => $base_theme_page + array(
+        'template'      => 'page-outils',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_page_publications' => $base_theme_page + array(
+        'template'      => 'page-publications',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_dd_recherche_block_contact' => $base_theme + array(
+      'template'      => 'block-contact-hp',  // + .tpl.php
+      'variables'     => array('vars' => null),
+    ),
+    '_theme_ddd_refonte_block_agenda' => $base_theme + array(
+        'template'      => 'block-agenda',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_recherche_page_delegate' => $base_theme_page + array(
+        'template'      => 'page-delegate-hp',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+      '_theme_dd_recherche_block_delegate' => $base_theme + array(
+        'template'      => 'block-delegate-hp',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+//
+      '_theme_dd_defenseur_page' => $base_theme_page + array(
+        'template'      => 'page-saisir-defenseur',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+
+      'defenseur_multistep_form' => $base_theme_page + array(
+       'render element' => 'form',
+       'template'       => 'form-saisir-defenseur',
+     ),
+//
+    '_theme_ddd_refonte_block_figures' => $base_theme + array(
+        'template'      => 'block-figures',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+    '_theme_ddd_refonte_histoires_remontees' => $base_theme + array(
+        'template'      => 'block-histoires-associes',  // + .tpl.php
+        'variables'     => array('vars' => null),
+      ),
+  );
+}
+
+function ddd_refonte_chiffres_cles_form($form, &$form_states)
+{
+    $form['#parents'] = array();
+    $form['group_tabs'] = array(
+    '#type'     => 'horizontal_tabs',
+    '#attached' => array('library' => array(array('field_group', 'horizontal-tabs'))), // Converts fieldsets into tabs
+  );
+
+  // BLOCK CHIFFRES CLES
+  $form['group_chiffre'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('Block Chiffres'),
+    '#group' => 'group_tabs',
+  );
+  // CHIFFRES CLES
+  $form['group_chiffre']['chiffres'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Chiffres clés'),
+    '#collapsible' => true, // Added
+    '#collapsed' => false,  // Added
+  );
+    $form['group_chiffre']['chiffres']['traite'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Dossiers traités'),
+    '#default_value' => !empty(variable_get('traite')) ? variable_get('traite') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_chiffre']['chiffres']['rendus'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Dossiers rendus'),
+    '#default_value' => !empty(variable_get('rendus')) ? variable_get('rendus') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_chiffre']['chiffres']['mesures'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mesures engagées'),
+    '#default_value' => !empty(variable_get('mesures')) ? variable_get('mesures') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_chiffre']['chiffres']['observation'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Observations en justice'),
+    '#default_value' => !empty(variable_get('observation')) ? variable_get('observation') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+  // RAPPORT ANNUEL
+  $form['group_chiffre']['rapport'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Rapport'),
+    '#collapsible' => true, // Added
+    '#collapsed' => true,  // Added
+  );
+    $form['group_chiffre']['rapport']['annee_rapport'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Année du rapport'),
+    '#attributes' => array('placeholder' => t('ex : 2015')),
+    '#default_value' => !empty(variable_get('annee_rapport')) ? variable_get('annee_rapport') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_chiffre']['rapport']['file'] = array(
+    '#title' => t('Rapport Annuel'),
+    '#type' => 'managed_file',
+    '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+    '#default_value' => !empty(variable_get('rapport_annuel')) ? variable_get('rapport_annuel') : '',
+    '#upload_location' => 'public://rapport_annuel/',
+  );
+
+  // BLOCK PARTENAIRES
+  $form['group_partenaires'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('Block Information'),
+    '#group' => 'group_tabs',
+  );
+
+    $form['group_partenaires']['file_partenaire1'] = array(
+    '#title' => t('Partenaire 1'),
+    '#type' => 'managed_file',
+    '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+    '#default_value' => !empty(variable_get('file_partenaire1')) ? variable_get('file_partenaire1') : '',
+    '#upload_location' => 'public://partnaires/',
+  );
+    $form['group_partenaires']['titre_partenaire1'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Titre du partenaire 1'),
+    '#attributes' => array('placeholder' => t('ex : le rascisme')),
+    '#default_value' => !empty(variable_get('titre_partenaire1')) ? variable_get('titre_partenaire1') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_partenaires']['lien_partenaire1'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url du partenaire 1'),
+    '#attributes' => array('placeholder' => t('ex : http://www.mondomaine.com')),
+    '#default_value' => !empty(variable_get('lien_partenaire1')) ? variable_get('lien_partenaire1') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_partenaires']['file_partenaire2'] = array(
+    '#title' => t('Partenaire 2'),
+    '#type' => 'managed_file',
+    '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+    '#default_value' => !empty(variable_get('file_partenaire2')) ? variable_get('file_partenaire2') : '',
+    '#upload_location' => 'public://partnaires/',
+  );
+    $form['group_partenaires']['titre_partenaire2'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Titre du partenaire 2'),
+    '#attributes' => array('placeholder' => t('ex : le rascisme')),
+    '#default_value' => !empty(variable_get('titre_partenaire1')) ? variable_get('titre_partenaire2') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_partenaires']['lien_partenaire2'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url du partenaire 2'),
+    '#attributes' => array('placeholder' => t('ex : http://www.mondomaine.com')),
+    '#default_value' => !empty(variable_get('lien_partenaire2')) ? variable_get('lien_partenaire2') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+
+    $form['group_partenaires']['file_partenaire3'] = array(
+    '#title' => t('Partenaire 3'),
+    '#type' => 'managed_file',
+    '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+    '#default_value' => !empty(variable_get('file_partenaire3')) ? variable_get('file_partenaire3') : '',
+    '#upload_location' => 'public://partnaires/',
+  );
+    $form['group_partenaires']['titre_partenaire3'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Titre du partenaire 3'),
+    '#attributes' => array('placeholder' => t('ex : le rascisme')),
+    '#default_value' => !empty(variable_get('titre_partenaire1')) ? variable_get('titre_partenaire3') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_partenaires']['lien_partenaire3'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url du partenaire 3'),
+    '#attributes' => array('placeholder' => t('ex : http://www.mondomaine.com')),
+    '#default_value' => !empty(variable_get('lien_partenaire3')) ? variable_get('lien_partenaire3') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+
+    $form['group_partenaires']['file_partenaire4'] = array(
+    '#title' => t('Partenaire 4'),
+    '#type' => 'managed_file',
+    '#description' => t('The uploaded image will be displayed on this page using the image style choosen below.'),
+    '#default_value' => !empty(variable_get('file_partenaire4')) ? variable_get('file_partenaire4') : '',
+    '#upload_location' => 'public://partnaires/',
+  );
+    $form['group_partenaires']['titre_partenaire4'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Titre du partenaire 4'),
+    '#attributes' => array('placeholder' => t('ex : le rascisme ')),
+    '#default_value' => !empty(variable_get('titre_partenaire1')) ? variable_get('titre_partenaire4') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['group_partenaires']['lien_partenaire4'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Url du partenaire 4'),
+    '#attributes' => array('placeholder' => t('ex : http://www.mondomaine.com')),
+    '#default_value' => !empty(variable_get('lien_partenaire4')) ? variable_get('lien_partenaire4') : '',
+    '#size' => 60,
+    '#maxlength' => 128,
+  );
+    $form['#type'] = 'actions';
+    $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+    return $form;
+}
+
+function check_document($form, $var_name)
+{
+    if (isset($form)) {
+        if ($form == 0) {
+            $document_exist_id = variable_get($var_name);
+            $document_exist_file = file_load($document_exist_id);
+            if (!empty($document_exist_file)) {
+                file_usage_delete($document_exist_file, 'MODULE_NAME', 'TYPE', $document_exist_id);
+                file_delete($document_exist_file, true);
+        //drupal_set_message(t('Old document removed.'));
+            }
+        } else {
+            $current_document = file_load($form);
+            if (!empty($current_document->fid)) {
+                $file_id = $current_document->fid;
+                variable_set($var_name, $file_id);
+                file_usage_add($current_document, 'MODULE_NAME', 'TYPE', $file_id);
+                $current_document->status = FILE_STATUS_PERMANENT;
+                file_Save($current_document);
+        //drupal_set_message("Documents uploaded successfully.");
+            }
+        }
+    }
+}
+
+function ddd_refonte_chiffres_cles_form_submit($form, &$form_states)
+{
+    if (isset($form_states['values']['traite'])) {
+        variable_set('traite', $form_states['values']['traite']);
+    }
+    if (isset($form_states['values']['rendus'])) {
+        variable_set('rendus', $form_states['values']['rendus']);
+    }
+    if (isset($form_states['values']['mesures'])) {
+        variable_set('mesures', $form_states['values']['mesures']);
+    }
+    if (isset($form_states['values']['observation'])) {
+        variable_set('observation', $form_states['values']['observation']);
+    }
+    if (isset($form_states['values']['annee_rapport'])) {
+        variable_set('annee_rapport', $form_states['values']['annee_rapport']);
+    }
+    if (isset($form_states['values']['file'])) {
+        check_document($form_states['values']['file'], 'rapport_annuel');
+    }
+  //PARTENAIRE
+  if (isset($form_states['values']['lien_partenaire1'])) {
+      variable_set('lien_partenaire1', $form_states['values']['lien_partenaire1']);
+  }
+    if (isset($form_states['values']['titre_partenaire1'])) {
+        variable_set('titre_partenaire1', $form_states['values']['titre_partenaire1']);
+    }
+    if (isset($form_states['values']['file_partenaire1'])) {
+        check_document($form_states['values']['file_partenaire1'], 'file_partenaire1');
+    }
+    if (isset($form_states['values']['lien_partenaire2'])) {
+        variable_set('lien_partenaire2', $form_states['values']['lien_partenaire2']);
+    }
+    if (isset($form_states['values']['titre_partenaire2'])) {
+        variable_set('titre_partenaire2', $form_states['values']['titre_partenaire2']);
+    }
+    if (isset($form_states['values']['file_partenaire2'])) {
+        check_document($form_states['values']['file_partenaire2'], 'file_partenaire2');
+    }
+
+    if (isset($form_states['values']['lien_partenaire3'])) {
+        variable_set('lien_partenaire3', $form_states['values']['lien_partenaire3']);
+    }
+    if (isset($form_states['values']['titre_partenaire3'])) {
+        variable_set('titre_partenaire3', $form_states['values']['titre_partenaire3']);
+    }
+    if (isset($form_states['values']['file_partenaire3'])) {
+        check_document($form_states['values']['file_partenaire3'], 'file_partenaire3');
+    }
+
+    if (isset($form_states['values']['lien_partenaire4'])) {
+        variable_set('lien_partenaire4', $form_states['values']['lien_partenaire4']);
+    }
+    if (isset($form_states['values']['titre_partenaire4'])) {
+        variable_set('titre_partenaire4', $form_states['values']['titre_partenaire4']);
+    }
+    if (isset($form_states['values']['file_partenaire4'])) {
+        check_document($form_states['values']['file_partenaire4'], 'file_partenaire4');
+    }
+    drupal_set_message('Les informations sont bien enregistrée');
+}
+
+function ddd_refonte_config_footer()
+{
+    return drupal_get_form('ddd_refonte_chiffres_cles_form');
+}
+
+function ddd_get_json_agenda()
+{
+    $first_minute = mktime(0, 0, 0, $_REQUEST['month'], 1, $_REQUEST['year']);
+    $last_minute = mktime(23, 59, 59, $_REQUEST['month'], date('t', $first_minute), $_REQUEST['year']);
+    $times = array($first_minute, $last_minute);
+    setlocale(LC_TIME, "fr_FR");
+    $start_date = date('Y-m-d h:i:s', $first_minute);
+    $end_date = date('Y-m-d h:i:s', $last_minute);
+
+    $query = db_query("SELECT * FROM {field_data_field_event_date} t
+    WHERE t.field_event_date_value > :start_date AND t.field_event_date_value < :end_date ORDER BY t.field_event_date_value ASC", array(':start_date' => $start_date, ':end_date' => $end_date));
+    $result = $query->fetchAll();
+    foreach ($result as $r) {
+        //dpm($r);
+      $node = node_load($r->entity_id);
+        if (isset($node->field_event_date['und'][0]['value'])) {
+            $date_explode = explode(' ', $node->field_event_date['und'][0]['value']);
+            $date = $date_explode[0];
+        }
+        $d = strtotime($date);
+        $d = format_date($d, 'custom', t('l d F Y', array(), array('context' => 'php date format')));
+        $dates[] = array(
+          'date' => $date,
+          'title' => $d . ' ' . substr($date_explode[1], 0 , -3),
+          'body' => $node->title,
+      );
+    }
+    return drupal_json_output($dates);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function ddd_refonte_menu()
+{
+    $items['admin/config/ddd'] = array(
+    'title' => 'Configuration DDD',
+    'description' => 'Page de Configuration',
+    'position' => 'right',
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('administer DDD'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system')
+  );
+    $items['admin/config/ddd/footer'] = array(
+    'title' => "Les options du footer",
+    'description' => "Configuration des options du footer",
+    'page callback' => 'ddd_refonte_config_footer',
+    'access arguments' => array('administer DDD'),
+  );
+    $items['admin/config/ddd/contact'] = array(
+    'title' => "Les options des contacts",
+    'description' => "Configuration des options des contacts",
+    'page callback' => 'contact_get_theme',
+    'access arguments' => array('administer DDD'),
+  );
+    $items['admin/config/ddd/delegate'] = array(
+    'title' => "Les options du delegate",
+    'description' => "Ajoutez le Json pour les delegate",
+    'page callback' => 'delegate_get_theme',
+    'access arguments' => array('administer DDD'),
+  );
+    $items['agenda-list'] = array(
+    'title' => 'Events',
+    'page callback' => 'ddd_refonte_agenda_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+    $items['nous-rejoindre'] = array(
+    'title' => 'Join us',
+    'page callback' => 'ddd_refonte_rejoindre_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+  $items['outils-list'] = array(
+    'title' => 'Tools',
+    'page callback' => 'ddd_refonte_outils_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+  $items['publications-list'] = array(
+    'title' => 'Publications',
+    'page callback' => 'ddd_refonte_publications_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+    $items['nous-contacter'] = array(
+    'title' => 'CONTACT THE RIGHTS DEFENDER',
+    'page callback' => 'ddd_refonte_contact_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.contact.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+    $items['delegate'] = array(
+    'title' => 'FIND A DELEGATE',
+    'page callback' => 'ddd_refonte_delegate_page',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.delegate.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+    $items['agenda/infos'] = array(
+    'title' => "Infos agenda footer",
+    'description' => "Infos agenda footer",
+    'page callback' => 'ddd_get_json_agenda',
+    'access arguments' => array('access content'),
+  );
+
+    $items['saisir-le-defenseur'] = array(
+    'page callback' => 'defenseur_get_theme',
+    'access arguments' => array('access content'),
+    'file' => 'ddd_refonte.page.defenseur.inc',
+    'file path' => drupal_get_path('module', 'ddd_refonte'),
+    'type' => MENU_CALLBACK
+  );
+    return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function ddd_refonte_permission()
+{
+    return array(
+    'administer DDD' => array(
+      'title' => t('BtoB Settings'),
+      'description' => t('Permission pour acceder à la coniguration du DDD'),
+    )
+  );
+}
+
+// PARTIE JSON
+function dd_delegate_form($form, &$form_state)
+{
+    // CONTACT
+  $form['json'] = array(
+    '#type' => 'managed_file',
+    '#title' => t('Choisir un fichier json'),
+    '#description' => t('Authorized extensions: *.json'),
+    '#default_value' => !empty(variable_get('urljson')) ? variable_get('urljson') : '',
+    '#upload_location' => 'public://contacts/',
+    '#upload_validators' => array(
+      'file_validate_extensions' => array('json'),
+    ),
+  );
+
+    $form['txt'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Enter the body content'),
+    '#default_value' => !empty(variable_get('txt')) ? variable_get('txt') : '',
+     );
+
+
+    $form['#type'] = 'actions';
+    $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+    return $form;
+}
+
+function dd_delegate_form_submit($form, &$form_states)
+{
+    if (isset($form_states['values']["json"])) {
+        $file = file_load($form_states['values']["json"]);
+        $file->status = FILE_STATUS_PERMANENT;
+        file_save($file);
+        variable_set("urljson", $form_states['values']["json"]);
+    }
+    if (isset($form_states['values']["txt"]['value'])) {
+        variable_set("txt", $form_states['values']["txt"]['value']);
+    }
+}
+
+function delegate_get_theme()
+{
+    $variable = drupal_get_form('dd_delegate_form');
+    return theme('_theme_dd_recherche_block_delegate', array('vars' => $variable));
+}
+// Partie JSONFIN
+
+
+//Partie Contact
+function dd_contact_form($form, &$form_state)
+{
+    $form['#parents'] = array();
+    $form['group_tabs'] = array(
+    '#type'     => 'horizontal_tabs',
+    '#attached' => array('library' => array(array('field_group', 'horizontal-tabs'))), // Converts fieldsets into tabs
+  );
+  // BLOCK CONTACT
+  $form['group_contact'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('Block Tel'),
+    '#group' => 'group_tabs',
+  );
+  // CONTACT
+  $form['group_contact']['tel']['file1'] = array(
+    '#type' => 'managed_file',
+    '#title' => t('Choose a picture'),
+    '#description' => t('Authorized extension: *.gif, *.png, *.jpg, et *.jpeg'),
+    '#default_value' => !empty(variable_get('file1')) ? variable_get('file1') : '',
+    '#upload_location' => 'public://contacts/',
+    '#upload_validators' => array(
+      'file_validate_extensions' => array('gif png jpg jpeg'),
+    ),
+  );
+    $form['group_contact']['tel']['body1'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Enter the body content'),
+    '#default_value' => !empty(variable_get('body1')) ? variable_get('body1') : '',
+     );
+
+  // BLOCK MEET
+  $form['group_meet'] = array(
+    '#type'  => 'fieldset',
+    '#title' => t('Block Meet'),
+    '#group' => 'group_tabs',
+     );
+    $form['group_meet']['meet']['file2'] = array(
+       '#type' => 'managed_file',
+       '#title' => t('Choose a picture'),
+       '#description' => t('Authorized extensions: *.gif, *.png, *.jpg, et *.jpeg'),
+       '#default_value' => !empty(variable_get('file2')) ? variable_get('file2') : '',
+       '#upload_location' => 'public://contacts/',
+       '#upload_validators' => array(
+         'file_validate_extensions' => array('gif png jpg jpeg'),
+       ),
+     );
+    $form['group_meet']['meet']['body2'] = array(
+       '#type' => 'text_format',
+       '#title' => t('Enter the body content'),
+       '#default_value' => !empty(variable_get('body2')) ? variable_get('body2') : '',
+        );
+    //BLOCK MAIL
+    $form['group_mail'] = array(
+      '#type'  => 'fieldset',
+      '#title' => t('Block Mail'),
+      '#group' => 'group_tabs',
+       );
+    $form['group_mail']['mail']['file3'] = array(
+         '#type' => 'managed_file',
+         '#title' => t('Choose a picture'),
+         '#description' => t('Authorized extensions: *.gif, *.png, *.jpg, et *.jpeg'),
+         '#default_value' => !empty(variable_get('file3')) ? variable_get('file3') : '',
+         '#upload_location' => 'public://contacts/',
+         '#upload_validators' => array(
+           'file_validate_extensions' => array('gif png jpg jpeg'),
+         ),
+       );
+    $form['group_mail']['mail']['body3'] = array(
+         '#type' => 'text_format',
+         '#title' => t('Enter the body content'),
+         '#default_value' => !empty(variable_get('body3')) ? variable_get('body3') : '',
+          );
+
+          //BLOCK FORM
+          $form['group_form'] = array(
+            '#type'  => 'fieldset',
+            '#title' => t('Block Form'),
+            '#group' => 'group_tabs',
+             );
+    $form['group_form']['form']['file4'] = array(
+               '#type' => 'managed_file',
+               '#title' => t('Choose a picture'),
+               '#description' => t('Authorized extensions: *.gif, *.png, *.jpg, et *.jpeg'),
+               '#default_value' => !empty(variable_get('file4')) ? variable_get('file4') : '',
+               '#upload_location' => 'public://contacts/',
+               '#upload_validators' => array(
+                 'file_validate_extensions' => array('gif png jpg jpeg'),
+               ),
+             );
+    $form['group_form']['form']['body4'] = array(
+               '#type' => 'text_format',
+               '#title' => t('Enter the body content'),
+               '#default_value' => !empty(variable_get('body4')) ? variable_get('body4') : '',
+                );
+
+    $form['#type'] = 'actions';
+    $form['submit'] = array(
+       '#type' => 'submit',
+       '#value' => t('Save'),
+     );
+
+    return $form;
+}
+
+function dd_contact_form_submit($form, &$form_states)
+{
+    for ($i=1; $i < 5 ; $i++) {
+        $key1 = "body".$i;
+        $key2 = "file".$i;
+        if (isset($form_states['values'][$key1]['value'])) {
+            variable_set($key1, $form_states['values'][$key1]['value']);
+        }
+        if (isset($form_states['values'][$key2])&&!empty($form_states['values'][$key2])) {
+          $file = file_load($form_states['values'][$key2]);
+          $file->status = FILE_STATUS_PERMANENT;
+          file_save($file);
+          variable_set($key2, $form_states['values'][$key2]);
+        }
+    }
+}
+
+function contact_get_theme()
+{
+    $variable = drupal_get_form('dd_contact_form');
+    return theme('_theme_dd_recherche_block_contact', array('vars' => $variable));
+}
+
+// partie contact fin
+
+//Partie Multiform début
+function defenseur_multistep_form($form, &$form_state)
+{
+
+  // Defenseur
+  $form['step']['#value'] = 1;
+  // dpm($form_state['storage']);
+  if (isset($form_state['storage']['page_two'])) {
+    $options = array(
+      $res => $res,
+    );
+    $state = $form_state['storage'];
+    // dpm($state);
+    $val = ["Bien et service","Education","Emploi privé","Emploi public",
+            "Formation professionnelle","Logement privé","Logement privé",
+            "Service public","Autres"];
+    return defenseur_multistep_form_two($options,$val,$state);
+  }
+
+    $options = array(
+      '1' => '',
+      '2' => '',
+      '3' => '',
+      '4' => '',
+      '5' => '',
+    );
+
+    $form['radio'] = array(
+      '#type' => 'radios',
+      '#options' => $options,
+      '#attributes' => array('class' => array('none')),
+    );
+
+    $form['next'] = array(
+     '#prefix'=>'<div class="frstnxt" >',
+     '#type' => 'submit',
+     '#value' => 'VALIDEZ VOTRE CHOIX',
+     '#attributes'=> array('class' => array('col-md-2 col-xs-12')),
+     '#suffix'=>'</div>',
+    );
+
+    return $form;
+}
+
+function defenseur_multistep_form_two($options,$val,$state)
+{
+
+
+  if (isset($state['page_three'])) {
+      $val = ["Activité syndicale","Age"," Apparence physique",
+              "Conviction religieuse","Etat de santé","Génétique",
+              "Grossesse","Handicap","Identité sexuelle","Lieu de résidence",
+              "Moeurs","Nationalité","Opinion publique","Orientation sexuelle",
+              "Origine,race, ethnie","Patronyme","Sexe","Situation de famille",
+              "Vulnérabilité économique","Autres"];
+      return defenseur_multistep_form_three($val,$state);
+  }
+
+$form['step']['#value'] = 2;
+
+$size = sizeof($val);
+$form['btnsize']['#value'] = $size ;
+
+$options = [];
+  for ($i=0; $i < $size ; $i++) {
+    array_push($options, $val[$i]);
+  }
+
+  $form['check'] = array(
+    '#type' => 'checkboxes',
+    '#options' => $options,
+    '#id'=> 'check'.$i,
+  );
+
+  $form['prev'] = array(
+  '#prefix'=>'<div class="previousbtn">',
+  '#type' => 'submit',
+  '#value' => 'RETOUR',
+  '#attributes'=> array('class' => array('col-md-5 col-xs-12')),
+  '#suffix'=>'</div>',
+);
+
+  $form['next1'] = array(
+ '#prefix'=>'<div class="nxtbtn" >',
+ '#type' => 'submit',
+ '#value' => 'VALIDEZ VOTRE CHOIX',
+ '#attributes'=> array('class' => array('col-md-5 col-xs-12')),
+ '#suffix' =>'</div>',
+);
+    return $form;
+}
+
+function defenseur_multistep_form_three($val,$state)
+{
+
+  if (isset($state['page_final'])) {
+    return defenseur_multistep_form_final($state);
+  }
+    $form['step']['#value'] = 3;
+
+    $size = sizeof($val);
+    $form['btnsize']['#value'] = $size ;
+    $opt = [];
+      for ($i=0; $i < $size ; $i++) {
+        array_push($opt, $val[$i]);
+      }
+
+      $form['checksec'] = array(
+        '#type' => 'checkboxes',
+        '#options' => $opt,
+        '#id'=> 'check'.$i,
+      );
+
+    $form['prev1'] = array(
+      '#prefix'=>'<div class="previousbtn" >',
+      '#type' => 'submit',
+      '#value' => 'RETOUR',
+      '#attributes'=> array('class' => array('col-md-5 col-xs-12')),
+      '#suffix'=>'</div>',
+    );
+
+    $form['next2'] = array(
+      '#prefix'=>'<div class="nxtbtn" >',
+      '#type' => 'submit',
+      '#value' => 'VALIDEZ VOTRE CHOIX',
+      '#attributes'=> array('class' => array('col-md-5 col-xs-12')),
+      '#suffix'=>'</div>',
+    );
+    return $form;
+}
+
+function defenseur_multistep_form_final($state){
+    $form['step']['#value'] = 4;
+
+    $form['mail'] = array(
+    '#prefix'=>'<div class="finalbtn">',
+    '#type' => 'submit',
+    '#value' => 'SAISIR PAR COURIER',
+    '#attributes'=> array('class' => array('col-md-3 col-xs-12 col-lg-2')),
+    '#suffix'=>'</div>',
+  );
+
+    $form['sendform'] = array(
+    '#prefix'=>'<div class="finalbtn">',
+    '#type' => 'submit',
+    '#value' => 'ACCÉDER AU FORMULAIRE',
+    '#attributes'=> array('class' => array('col-md-3 col-xs-12 col-lg-2')),
+    '#suffix'=>'</div>',
+  );
+
+    $form['meet'] = array(
+    '#prefix'=>'<div class="finalbtn">',
+    '#type' => 'submit',
+    '#value' => 'RENCONTRER UN DÉLÉGUÉ',
+    '#attributes'=> array('class' => array('col-md-3 col-xs-12 col-lg-2')),
+    '#suffix'=>'</div>',
+  );
+  return $form;
+
+}
+
+//
+// function defenseur_multistep_form_submit($form, &$form_states)
+// {
+//     // if (isset($form_states['values']["json"])) {
+//     //     variable_set("urljson", $form_states['values']["json"]);
+//     // }
+//     // if (isset($form_states['values']["txt"]['value'])) {
+//     //     variable_set("txt", $form_states['values']["txt"]['value']);
+//     // }
+// }
+
+function defenseur_get_theme()
+{
+    drupal_add_js(drupal_get_path('module', 'ddd_refonte') . '/js/defenseur.js');
+    $variable['form'] = drupal_get_form('defenseur_multistep_form');
+    // dpm(drupal_get_form('defenseur_multistep_form'));
+
+    return theme('_theme_dd_defenseur_page', array('vars' => $variable));
+}
+
+function defenseur_multistep_form_clear($form, $form_state)
+{
+
+  // changed because
+  // second parameter
+  // causes fault
+  // when by value, even
+  // though it seems more
+  // correct
+  unset($form_state['values']);  // ensures fields are blank after reset
+                                  // button is clicked
+  unset($form_state['storage']); // ensures the reset button removes the
+                                  // another_name part
+  $form_state['rebuild'] = true;
+}
+
+function defenseur_multistep_form_validate($form, &$form_state) {
+  $step = $form_state['complete form']['step']['#value'];
+  $values = $form_state['values'];
+
+$clicked = $form_state['clicked_button']['#id'];
+  switch ($step) {
+    case '1':
+      if($values['radio'] == NUll && $clicked == 'edit-next'){
+        form_set_error('Radio', 'Veuillez selectionnez un menu');
+      }
+      break;
+    case '2':
+    if ( $clicked == 'edit-next1') {
+
+    $size = sizeof($values['check']);
+    for ($i=0; $i <= $size; $i++) {
+      if($values['check'][$i] != 0){
+        break;
+      }
+      if($i == $size ){
+        form_set_error('checkboxes', 'Veuillez selectionnez un ou plusieurs bouttons');
+      }
+    }
+}
+      break;
+    case '3':
+    if ( $clicked == 'edit-next2') {
+
+    $size = sizeof($values['checksec']);
+
+    for ($i=0; $i <= $size; $i++) {
+
+      if($values['checksec'][$i] != 0){
+        break;
+      }
+      if($i == $size ){
+        form_set_error('checkboxes', 'Veuillez selectionnez un ou plusieurs bouttons');
+      }
+    }
+  }
+      break;
+    // case '4':
+    //   dpm($form_state);
+    //   break;
+  }
+}
+
+
+function defenseur_multistep_form_submit($form, &$form_state)
+{
+    // Handle page 1 submissions
+  // dpm($form_state['values']);
+  switch ($form_state['clicked_button']['#id']){
+    case 'edit-next':
+      $form_state['storage']['page_two'] = TRUE; // We set this to determine
+                                                 // which elements to display
+                                                 // when the page reloads.
+      // Values below in the $form_state['storage'] array are saved
+      // to carry forward to subsequent pages in the form.
+      $form_state['storage']['page_one_values'] = $form_state['values'];
+      $form_state["rebuild"] = TRUE;   // Added
+      break;
+    case 'edit-prev':
+    $form_state['storage']['page_one'] = TRUE;
+    $form_state['storage']['page_two'] = FALSE;
+      break;
+    case 'edit-next1':
+    $form_state['storage']['page_one'] = FALSE;
+    $form_state['storage']['page_three'] = TRUE;
+    $form_state['storage']['page_two_values'] = $form_state['values'];
+    $form_state['storage']['page_two'] = FALSE;
+    $form_state["rebuild"] = TRUE;   // Added
+      break;
+    case 'edit-prev1':
+    $form_state['storage']['page_two'] = TRUE;
+    $form_state['storage']['page_one'] = FALSE;
+    $form_state['storage']['page_three'] = FALSE;
+    $form_state["rebuild"] = TRUE;   // Added
+      break;
+    case 'edit-next2':
+    $form_state['storage']['page_one'] = FALSE;
+    $form_state['storage']['page_two'] = FALSE;
+    $form_state['storage']['page_three_values'] = $form_state['values'];
+    $form_state['storage']['page_three'] = FALSE;
+    $form_state['storage']['page_final'] = TRUE;
+    $form_state["rebuild"] = TRUE;   // Added
+      break;
+
+  }
+
+  function saveall() {
+      /*
+     Normally, some code would go here to alter the database with the data
+     collected from the form. Sets a message with drupal_set_message()
+     to validate working code.
+     */
+      unset($form_state['storage']); // This value must be unset for
+                                    // redirection! This is because
+                                    // $form_state['rebuild'] gets set to TRUE
+                                    // when 'storage' is set. See code sample
+                                    // #9 for more on this.
+    $form_state['redirect'] = 'node'; // Redirects the user.
+  }
+}
+
+function ddd_refonte_form_alter(&$form, &$form_state, $form_id){
+  //dpm($form_id);
+  if($form_id == 'webform_client_form_23426'){
+    //dpm($form);
+    $form['submitted']['numero_de_telephone']['#attributes']['placeholder'] = 'Numéro de téléphone';
+    $form['submitted']['email_delegue']['#value'] = isset($_GET['email']) ? $_GET['email'] : '';
+  }
+  if($form_id == 'lang_dropdown_form'){
+    $form['lang_dropdown_select']['#attributes'] = array(
+      'class' => array('lang-dropdown-select-element'),
+      'aria-label' => array('Modifier la langue - rechargement automatique de la page')
+      );
+  }
+}
+
+function ddd_refonte_form_i18n_string_locale_translate_edit_form_alter(&$form, $form_state) {
+  unset($form['#validate']);
+}

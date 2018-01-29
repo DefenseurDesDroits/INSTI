@@ -1,0 +1,47 @@
+.sharethis-wrapper span, .sharethis-wrapper a,
+.sharethis-wrapper .st_print_custom{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+}
+.sharethis-wrapper span:last-child, .sharethis-wrapper a:last-child{
+  margin-right: 0;
+}
+.sharethis-wrapper span:hover, .sharethis-wrapper a:hover{
+  cursor: pointer;
+}
+
+.st_facebook_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/facebook.png");
+}
+
+.st_twitter_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/twitter.png");
+}
+
+.st_linkedin_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/linkedin.png");
+}
+
+.st_email_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/email.png");
+}
+.st_email_custom:hover{
+  background-image: url("../libraries/socialshare_ddd/PNG/email-h.png");
+}
+
+.st_print_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/print.png");
+}
+.st_print_custom:hover{
+  background-image: url("../libraries/socialshare_ddd/PNG/print-h.png");
+}
+
+.st_pdf_custom{
+  background-image: url("../libraries/socialshare_ddd/PNG/pdf.png");
+}
+.st_pdf_custom:hover{
+  background-image: url("../libraries/socialshare_ddd/PNG/pdf-h.png");
+}

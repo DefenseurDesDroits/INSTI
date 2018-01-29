@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680871" login="DNOEL">
+        <identite civilite="Monsieur" codeDep="973">
+            <nom>NOËL</nom>
+            <prenom>David</prenom>
+        </identite>
+        <email>david.noel@defenseurdesdroits.fr</email>
+        <photo>DNOEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Guyane</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Fiedmond</adresse>
+                <boitePostale>BP 7008</boitePostale>
+                <tel>05 94 39 45 00</tel>
+                <fax>05 94 31 80 73</fax>
+                <ville cp="97300"><value>CAYENNE</value></ville>
+                <poi>
+                    <longitude>-52.335243</longitude>
+                    <latitude>4.939447</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

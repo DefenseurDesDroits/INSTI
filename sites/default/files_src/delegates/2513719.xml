@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2513719" login="AFAYE">
+        <identite civilite="Monsieur" codeDep="83">
+            <nom>FAYE</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.faye@defenseurdesdroits.fr</email>
+        <photo>AFAYE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>Place Jean Mermoz</adresse>
+                <boitePostale />
+                <tel>04 94 86 65 10</tel>
+                <fax />
+                <ville cp="83470"><value>SAINT-MAXIMIN-LA-SAINTE-BAUME</value></ville>
+                <poi>
+                    <longitude>5.862034</longitude>
+                    <latitude>43.451198</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Brignoles</libelle>
+                <libelleSecondaire />
+                <adresse>2, rue de l&apos;Hôpital</adresse>
+                <boitePostale />
+                <tel>04 98 05 93 81</tel>
+                <fax />
+                <ville cp="83170"><value>BRIGNOLES</value></ville>
+                <poi>
+                    <longitude>6.064375</longitude>
+                    <latitude>43.405025</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

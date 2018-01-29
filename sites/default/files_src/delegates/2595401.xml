@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2595401" login="FLEGER">
+        <identite civilite="Madame" codeDep="973">
+            <nom>LEGER</nom>
+            <prenom>Francisca</prenom>
+        </identite>
+        <email>francisca.leger@defenseurdesdroits.fr</email>
+        <photo>FLEGER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Saint-Laurent-du-Maroni</libelle>
+                <libelleSecondaire />
+                <adresse>2 avenue Albert Sarrault</adresse>
+                <boitePostale />
+                <tel>05 94 34 16 31</tel>
+                <fax />
+                <ville cp="97320"><value>ST LAURENT DU MARONI</value></ville>
+                <poi>
+                    <longitude>-54.027581</longitude>
+                    <latitude>5.506261</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

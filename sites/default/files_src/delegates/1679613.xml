@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679613" login="SRANSAC">
+        <identite civilite="Madame" codeDep="84">
+            <nom>RANSAC</nom>
+            <prenom>Sylvie</prenom>
+        </identite>
+        <email>sylvie.ransac@defenseurdesdroits.fr</email>
+        <photo>SRANSAC.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Centre social Lou Tricadou</libelle>
+                <libelleSecondaire />
+                <adresse>35, rue du Collège </adresse>
+                <boitePostale>BP 59</boitePostale>
+                <tel>04 90 67 73 20</tel>
+                <fax />
+                <ville cp="84200"><value>CARPENTRAS</value></ville>
+                <poi>
+                    <longitude>5.046503</longitude>
+                    <latitude>44.053956</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Hôtel de Ville</libelle>
+                <libelleSecondaire />
+                <adresse>Place Joseph Guis </adresse>
+                <boitePostale />
+                <tel>04 90 71 24 18</tel>
+                <fax>04 90 76 11 61</fax>
+                <ville cp="84301"><value>CAVAILLON CEDEX</value></ville>
+                <poi>
+                    <longitude>5.037727</longitude>
+                    <latitude>43.835813</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

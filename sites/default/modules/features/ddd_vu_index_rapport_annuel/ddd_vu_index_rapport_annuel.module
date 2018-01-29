@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Vue index rapport annuel feature.
+ */
+
+include_once 'ddd_vu_index_rapport_annuel.features.inc';

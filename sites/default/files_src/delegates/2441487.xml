@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2441487" login="RCESARI">
+        <identite civilite="Monsieur" codeDep="17">
+            <nom>CESARI</nom>
+            <prenom>René</prenom>
+        </identite>
+        <email>rene.cesari@defenseurdesdroits.fr</email>
+        <photo>RCESARI.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison centrale de St-Martin-de-Ré</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="17410"><value>SAINT-MARTIN-DE-RÉ</value></ville>
+                <poi>
+                    <longitude>-1.368979</longitude>
+                    <latitude>46.199609</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1 sur 2 JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Charente-Maritime</libelle>
+                <libelleSecondaire />
+                <adresse>38, rue Réaumur</adresse>
+                <boitePostale> </boitePostale>
+                <tel>05 46 27 43 95</tel>
+                <fax>05 46 27 43 96</fax>
+                <ville cp="17017"><value>LA ROCHELLE CEDEX</value></ville>
+                <poi>
+                    <longitude>-1.157021</longitude>
+                    <latitude>46.157303</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

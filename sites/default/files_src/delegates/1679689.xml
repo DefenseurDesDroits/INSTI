@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679689" login="MNASS">
+        <identite civilite="Madame" codeDep="57">
+            <nom>NASS</nom>
+            <prenom>Marguerite</prenom>
+        </identite>
+        <email>marguerite.nass@defenseurdesdroits.fr</email>
+        <photo>MNASS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Metz</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue de la Seulhotte</adresse>
+                <boitePostale>BP 95020</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="57070"><value>METZ</value></ville>
+                <poi>
+                    <longitude>6.208059</longitude>
+                    <latitude>49.101204</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Woippy</libelle>
+                <libelleSecondaire />
+                <adresse>17, place Jean Perrin</adresse>
+                <boitePostale />
+                <tel>03 87 18 50 67</tel>
+                <fax>03 87 18 38 90</fax>
+                <ville cp="57140"><value>WOIPPY</value></ville>
+                <poi>
+                    <longitude>6.164313</longitude>
+                    <latitude>49.145238</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

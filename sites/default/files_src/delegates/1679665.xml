@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679665" login="GDUBOIS">
+        <identite civilite="Madame" codeDep="75">
+            <nom>DUBOIS</nom>
+            <prenom>Geneviève</prenom>
+        </identite>
+        <email>genevieve.dubois@defenseurdesdroits.fr</email>
+        <photo>GDUBOIS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 15ème arrondissement</libelle>
+                <libelleSecondaire />
+                <adresse>22, rue de la Saïda</adresse>
+                <boitePostale />
+                <tel>01 45 30 68 60 </tel>
+                <fax />
+                <ville cp="75015"><value>PARIS - 15</value></ville>
+                <poi>
+                    <longitude>2.295808</longitude>
+                    <latitude>48.831830</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

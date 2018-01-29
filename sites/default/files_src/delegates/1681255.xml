@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681255" login="HPOTIN">
+        <identite civilite="Monsieur" codeDep="93">
+            <nom>POTIN</nom>
+            <prenom>Henri</prenom>
+        </identite>
+        <email>henri.potin@defenseurdesdroits.fr</email>
+        <photo>HPOTIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Seine-Saint-Denis</libelle>
+                <libelleSecondaire />
+                <adresse>9, esplanade Jean Moulin</adresse>
+                <boitePostale />
+                <tel>01 41 60 56 11</tel>
+                <fax />
+                <ville cp="93000"><value>BOBIGNY</value></ville>
+                <poi>
+                    <longitude>2.450168</longitude>
+                    <latitude>48.905370</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680629" login="DDEVOTO">
+        <identite civilite="Madame" codeDep="34">
+            <nom>DEVOTO</nom>
+            <prenom>Dominique</prenom>
+        </identite>
+        <email>dominique.devoto@defenseurdesdroits.fr</email>
+        <photo>DDEVOTO.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Béziers</libelle>
+                <libelleSecondaire />
+                <adresse>861, route de Saint-Pons</adresse>
+                <boitePostale>CS 10692</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="34500"><value>BÉZIERS</value></ville>
+                <poi>
+                    <longitude>3.236064</longitude>
+                    <latitude>43.359415</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus - 1e et 3e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit d&apos;Agde</libelle>
+                <libelleSecondaire>Espace Mirabel</libelleSecondaire>
+                <adresse>1 rue de la Solidarité</adresse>
+                <boitePostale />
+                <tel>04 67 35 83 60</tel>
+                <fax>04 67 35 83 61</fax>
+                <ville cp="34300"><value>AGDE</value></ville>
+                <poi>
+                    <longitude>3.479530</longitude>
+                    <latitude>43.313622</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison René Cassin</libelle>
+                <libelleSecondaire />
+                <adresse>6, rue Serge Gousseault</adresse>
+                <boitePostale />
+                <tel>04 67 76 04 91</tel>
+                <fax />
+                <ville cp="34500"><value>BÉZIERS</value></ville>
+                <poi>
+                    <longitude>3.252145</longitude>
+                    <latitude>43.337531</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681062" login="MCHANESAN">
+        <identite civilite="Monsieur" codeDep="974">
+            <nom>CHANE SAN</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.chane-san@defenseurdesdroits.fr</email>
+        <photo>MCHANESAN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit de La Possession</libelle>
+                <libelleSecondaire>ZAC Saint-Laurent</libelleSecondaire>
+                <adresse>29, place Foshan - Les Frontons </adresse>
+                <boitePostale />
+                <tel>02 62 32 75 82</tel>
+                <fax />
+                <ville cp="97419"><value>LA POSSESSION</value></ville>
+                <poi>
+                    <longitude>55.3357</longitude>
+                    <latitude>-20.93299</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

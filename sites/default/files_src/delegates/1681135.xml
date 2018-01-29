@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681135" login="JCLASSOUT">
+        <identite civilite="Monsieur" codeDep="25">
+            <nom>LASSOUT</nom>
+            <prenom>Jean-Claude</prenom>
+        </identite>
+        <email>jean-claude.lassout@defenseurdesdroits.fr</email>
+        <photo>JCLASSOUT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Association d&apos;aide aux victimes - Pôle services publics</libelle>
+                <libelleSecondaire />
+                <adresse>8, avenue Aristide Briand</adresse>
+                <boitePostale />
+                <tel>03 81 91 70 07</tel>
+                <fax />
+                <ville cp="25400"><value>AUDINCOURT</value></ville>
+                <poi>
+                    <longitude>6.841898</longitude>
+                    <latitude>47.481878</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Espace Associatif et d&apos;Animation des Bains Douches</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue de l&apos;École </adresse>
+                <boitePostale />
+                <tel>03 81 41 57 58</tel>
+                <fax />
+                <ville cp="25000"><value>BESANÇON</value></ville>
+                <poi>
+                    <longitude>6.019016</longitude>
+                    <latitude>47.240165</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 2e et 3e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de quartier de Planoise</libelle>
+                <libelleSecondaire>Centre Nelson Mandela </libelleSecondaire>
+                <adresse>13, avenue Ile-de-France</adresse>
+                <boitePostale />
+                <tel>03 81 87 81 20</tel>
+                <fax />
+                <ville cp="25000"><value>BESANÇON</value></ville>
+                <poi>
+                    <longitude>5.967758</longitude>
+                    <latitude>47.221406</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

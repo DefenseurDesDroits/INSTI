@@ -1,0 +1,71 @@
+
+.pagination{
+  border: 1px solid @bor_pagination;
+  display: inline-block;
+  margin: 0 auto 10px auto;
+  padding: 0;
+    
+  li{
+    list-style: none;
+    font-weight: bold;
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0px;
+    vertical-align: top;
+    border-right: 1px solid @bor_pagination;
+    &:last-child{
+      border: none;
+    }
+  }
+  
+  a{
+    background-color: @bg_pagination;
+    color: @txt_pagination;
+    display: block;
+    line-height: 2.2em;
+    font-size: 0.9em;
+    padding: 1px 10px 0px 10px;
+    
+    &:hover{
+      background-color: @bg_pagination_h;
+      color: @txt_pagination_h;
+    }
+    
+    &:active{
+      background-color: @bg_pagination_a;
+      color: @txt_pagination_a;
+    }
+  }
+  .active a, .active a:hover, .active a:active{
+    background-color: @bg_pagination_a;
+    color: @txt_pagination_a;
+    text-decoration: none;
+    cursor: default;
+  }
+  
+  .next, .prev{
+    a{
+      width: 28px;
+      overflow: hidden;
+      padding-left: 28px;
+      padding-right: 0;
+      background-repeat: no-repeat;
+      background-color: @bg_pagination_prevnext;
+      background-image: url("@{dir_img}/content/puce-pagination.png");
+      &:hover{
+        background-color: @bg_pagination_h;
+      }
+    }
+  }
+  
+  .next a{
+    background-position: bottom left;
+  }
+  
+  .prev a{
+    background-position: top left;
+  }
+  
+  
+}

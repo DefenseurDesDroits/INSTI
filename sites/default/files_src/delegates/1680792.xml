@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680792" login="DHERMENT">
+        <identite civilite="Monsieur" codeDep="68">
+            <nom>HERMENT</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.herment@defenseurdesdroits.fr</email>
+        <photo>DHERMENT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Haut-Rhin</libelle>
+                <libelleSecondaire />
+                <adresse>11, avenue de la République</adresse>
+                <boitePostale>BP 10489</boitePostale>
+                <tel>03 89 29 21 12</tel>
+                <fax>03 89 29 21 18</fax>
+                <ville cp="68020"><value>COLMAR CEDEX</value></ville>
+                <poi>
+                    <longitude>7.351341</longitude>
+                    <latitude>48.074121</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

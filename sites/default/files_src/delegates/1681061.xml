@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681061" login="HCORNETTEDESAINTCYR">
+        <identite civilite="Monsieur" codeDep="987">
+            <nom>CORNETTE-DE-SAINT-CYR</nom>
+            <prenom>Henri</prenom>
+        </identite>
+        <email>henri.cornette-de-saint-cyr@defenseurdesdroits.fr</email>
+        <photo>HCORNETTEDESAINTCYR.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Ecole de voile d&apos;Arue</libelle>
+                <libelleSecondaire />
+                <adresse />
+                <boitePostale>BP 14235</boitePostale>
+                <tel>(689) 78 20 11</tel>
+                <fax />
+                <ville cp="98701"><value>ARUE</value></ville>
+                <poi>
+                    <longitude>-149.533556</longitude>
+                    <latitude>-17.524021</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>du LUNDI au VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

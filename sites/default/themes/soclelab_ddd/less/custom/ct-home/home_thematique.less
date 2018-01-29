@@ -1,0 +1,217 @@
+
+.liste-accueil-logo img{
+  margin-bottom: 18px;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.view-id-vue_publications{
+  .node{
+    .clearfix;
+  }
+}
+.taxo-acc-bot{
+  background-color: @bg_home_taxo;
+  z-index: 10;
+  position: relative;
+}
+.view-display-id-block_liste_accueil{
+  
+  .bg-img{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .bg-img > div{
+    position: relative;
+    right: 50%;
+    text-align: center;
+    img{
+      display: inline-block;
+      margin-right: -100%;
+    }
+  }
+  .container{
+    position: relative;
+    z-index: 10;
+    height: 487px;
+  }
+  .vignette-title a {
+    font-size: 2.1em;
+    line-height: 1.25em;
+    font-weight: normal;
+    color: @txt_home_taxo_title;
+    display: block;
+  }
+  .vignette-date{
+    font-size: 1.33em;
+    color: @txt_home_taxo_title;
+  }
+  .container-text{
+    position: absolute;
+    padding-bottom: 79px;
+    bottom: 0;
+  }
+  .vignette-bloc-text{
+    position: absolute;
+    width: 430px;
+    right: 135px;
+    padding: 0 15px;
+    bottom: 0;
+    top: 0;
+    background-image: url("@{dir_img}/accueil/bg-vignette-homethema.png");
+      .container-text{
+          @media @scr_mobile{
+              position: relative;
+          }
+      }
+    @media @scr_mobile{
+      width: auto;
+      position: relative;
+      bottom: auto;
+      right: auto;
+      padding-top: 50px;
+    }
+  }
+  .vignette-chapo{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: @txt_home_taxo_chapo;
+  }
+  .node{
+    height: 487px;
+  }
+}
+
+.acc-taxo-link{
+  background-color: @bg_home_taxo_link;
+  text-align: center;
+  background-image: url("@{dir_img}/accueil/link-taxo-more.png");
+  background-repeat: no-repeat;
+  background-position: center 44px;
+  a{
+    color: @txt_home_taxo_link;
+    padding-top: 96px;
+    font-size: 0.85em;
+    display: block;
+    min-height: 130px;
+  }
+}
+.acc-taxo-title{
+  color: @txt_home_taxo_link;
+  font-size: 2em;
+  line-height: 1.15em;
+  padding-top: 32px;
+  font-family: @font-family-lato-lig;
+  
+  h2{
+      font-size: 1em;
+      margin : 0;
+  }
+  
+  @media @scr_tablet{
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    .def-droit-title{
+      display: inline-block;
+    }
+  }
+  
+  @media @scr_mobile{
+   padding-bottom: 20px;  
+  }
+  
+  .def-droit-title{
+    font-size: 0.8em;
+  }
+}
+.acc-taxo-node{
+  color: @txt_home_taxo_link;
+  background-color: @bg_home_taxo_chapo_small;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  min-height: 130px;
+  .vignette-date{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;  
+    width: 129px;
+    background-color: @bg_home_taxo_date_small;
+    text-align: center;
+    margin-bottom: 0;
+    color: @txt_home_taxo_link;
+    a{
+      color: @txt_home_taxo_link;
+      display: block;
+      text-decoration: none;
+    }
+    &:hover{
+      background-color: @bg_agenda_2;
+    }
+  }
+  .vignette-title{
+    padding-left: 144px;
+    margin-bottom: 0;
+    a{
+      color: @txt_home_taxo_link;
+      font-size: 0.9em;
+      font-weight: normal;
+      line-height: 1.2em;
+      display: block;
+    }
+  }
+  .date-day{
+    font-size: 2.8em;
+    line-height: 1em;
+    padding-top: 35px;
+  }
+  .date-month-year{
+    font-size: 0.8em;
+    padding-bottom: 40px;
+  }
+}
+.big-font{ 
+  .acc-taxo-node{
+    min-height: 185px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    
+    .vignette-title{
+      padding-left: 125px;
+      a{
+        font-size: 0.85em;
+      }
+    }
+  }
+  .acc-taxo-link{ 
+    padding: 0;
+    a{
+      min-height: 185px;
+      font-size: 0.7em;
+    }
+    
+  }
+  .acc-taxo-title .def-droit-title{
+    font-size: 0.6em;
+    line-height: 1.2em;
+  }
+}
+#block-sl-ct-accueil-block-liste-taxo{
+  margin-bottom: 54px;
+  outline: none;
+  position: relative;
+}
+
+.view-display-id-block_liste_accueil_2 .view-content{
+  @media @scr_mobile{
+    .clearfix;
+  }
+}

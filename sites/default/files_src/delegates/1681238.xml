@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681238" login="JLVERMOTGAUCHY">
+        <identite civilite="Monsieur" codeDep="25">
+            <nom>VERMOT-GAUCHY</nom>
+            <prenom>Jean-Louis</prenom>
+        </identite>
+        <email>jean-louis.vermot-gauchy@defenseurdesdroits.fr</email>
+        <photo>JLVERMOTGAUCHY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Doubs</libelle>
+                <libelleSecondaire />
+                <adresse>8 bis rue Charles Nodier</adresse>
+                <boitePostale />
+                <tel>03 81 25 11 71</tel>
+                <fax />
+                <ville cp="25000"><value>BESANÇON</value></ville>
+                <poi>
+                    <longitude>6.021933</longitude>
+                    <latitude>47.233471</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

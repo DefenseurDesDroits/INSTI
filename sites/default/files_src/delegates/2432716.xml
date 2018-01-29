@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2432716" login="XDUCASSE">
+        <identite civilite="Monsieur" codeDep="47">
+            <nom>DUCASSE</nom>
+            <prenom>Xavier</prenom>
+        </identite>
+        <email>xavier.ducasse@defenseurdesdroits.fr</email>
+        <photo>XDUCASSE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit</libelle>
+                <libelleSecondaire />
+                <adresse>6 rue Général Blagniac</adresse>
+                <boitePostale />
+                <tel>07 89 29 38 78</tel>
+                <fax />
+                <ville cp="47300"><value>VILLENEUVE SUR LOT</value></ville>
+                <poi>
+                    <longitude>0.705751</longitude>
+                    <latitude>44.407963</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

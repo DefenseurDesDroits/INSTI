@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679589" login="DMEREAU">
+        <identite civilite="Madame" codeDep="76">
+            <nom>MÉREAU</nom>
+            <prenom>Delphine</prenom>
+        </identite>
+        <email>delphine.mereau@defenseurdesdroits.fr</email>
+        <photo>DMEREAU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit du Havre-Caucriauville</libelle>
+                <libelleSecondaire />
+                <adresse>8, rue Emile Sicre</adresse>
+                <boitePostale />
+                <tel>02 35 45 32 62</tel>
+                <fax>02 35 45 03 72</fax>
+                <ville cp="76620"><value>LE HAVRE</value></ville>
+                <poi>
+                    <longitude>0.174749</longitude>
+                    <latitude>49.512558</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de quartier Brindeau</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Gustave Brindeau</adresse>
+                <boitePostale />
+                <tel>02 35 45 32 62</tel>
+                <fax />
+                <ville cp="76600"><value>LE HAVRE</value></ville>
+                <poi>
+                    <longitude>0.141314</longitude>
+                    <latitude>49.490581</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

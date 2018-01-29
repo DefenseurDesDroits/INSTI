@@ -1,0 +1,14 @@
+name = DdD VU Thème
+description = Filtre des taxonomies pour décisions
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_theme
+dependencies[] = ctools
+dependencies[] = ddd_taxo_autorite
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = ddd_vu_theme
+mtime = 1443629559
+project path = sites/default/modules/features

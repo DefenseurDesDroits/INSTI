@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681066" login="GBRION">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>BRION</nom>
+            <prenom>Gérard</prenom>
+        </identite>
+        <email>gerard.brion@defenseurdesdroits.fr</email>
+        <photo>GBRION.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Isère</libelle>
+                <libelleSecondaire />
+                <adresse>12, place Verdun</adresse>
+                <boitePostale>BP 1046</boitePostale>
+                <tel>04 76 60 32 83</tel>
+                <fax />
+                <ville cp="38021"><value>GRENOBLE CEDEX 1</value></ville>
+                <poi>
+                    <longitude>5.733005</longitude>
+                    <latitude>45.188443</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679524" login="JCASTELLAZZI">
+        <identite civilite="Monsieur" codeDep="55">
+            <nom>CASTELLAZZI</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.castellazzi@defenseurdesdroits.fr</email>
+        <photo>JCASTELLAZZI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Meuse</libelle>
+                <libelleSecondaire />
+                <adresse>40, rue du Bourg</adresse>
+                <boitePostale />
+                <tel>03 29 77 56 50</tel>
+                <fax>03 29 77 56 69</fax>
+                <ville cp="55000"><value>BAR-LE-DUC</value></ville>
+                <poi>
+                    <longitude>5.158191</longitude>
+                    <latitude>48.773716</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

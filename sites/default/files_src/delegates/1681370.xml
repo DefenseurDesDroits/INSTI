@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681370" login="FNEBLAI">
+        <identite civilite="Monsieur" codeDep="64">
+            <nom>NÉBLAI</nom>
+            <prenom>Frantz</prenom>
+        </identite>
+        <email>frantz.neblai@defenseurdesdroits.fr</email>
+        <photo>FNEBLAI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Pyrénées-Atlantiques</libelle>
+                <libelleSecondaire />
+                <adresse>2, avenue du Maréchal Joffre</adresse>
+                <boitePostale />
+                <tel>05 59 98 24 90</tel>
+                <fax>05 59 98 24 99</fax>
+                <ville cp="64000"><value>PAU</value></ville>
+                <poi>
+                    <longitude>-0.369375</longitude>
+                    <latitude>43.296419</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

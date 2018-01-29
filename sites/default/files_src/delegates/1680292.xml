@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680292" login="OANDRIEU">
+        <identite civilite="Monsieur" codeDep="35">
+            <nom>ANDRIEU</nom>
+            <prenom>Olivier</prenom>
+        </identite>
+        <email>olivier.andrieu@defenseurdesdroits.fr</email>
+        <photo>OANDRIEU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Espace municipal Jean Jaurès</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue des Douves</adresse>
+                <boitePostale />
+                <tel>02 99 71 22 97</tel>
+                <fax />
+                <ville cp="35600"><value>REDON</value></ville>
+                <poi>
+                    <longitude>-2.085842</longitude>
+                    <latitude>47.650416</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>A la demande - du LUNDI au VENDREDI</jour>
+                        <horaire />
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Espace social commun du Gros-Chêne</libelle>
+                <libelleSecondaire />
+                <adresse>11C, rue du Gros Chêne</adresse>
+                <boitePostale />
+                <tel>02 99 29 59 30</tel>
+                <fax />
+                <ville cp="35700"><value>RENNES</value></ville>
+                <poi>
+                    <longitude>-1.660552</longitude>
+                    <latitude>48.124608</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Pôle social du Blosne</libelle>
+                <libelleSecondaire />
+                <adresse>7, bld de Yougoslavie</adresse>
+                <boitePostale />
+                <tel>02 99 29 59 30</tel>
+                <fax />
+                <ville cp="35200"><value>RENNES</value></ville>
+                <poi>
+                    <longitude>-1.658001</longitude>
+                    <latitude>48.088250</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

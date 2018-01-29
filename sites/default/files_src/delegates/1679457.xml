@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679457" login="CDELMAS">
+        <identite civilite="Monsieur" codeDep="23">
+            <nom>DELMAS</nom>
+            <prenom>Christian</prenom>
+        </identite>
+        <email>christian.delmas@defenseurdesdroits.fr</email>
+        <photo>CDELMAS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Creuse</libelle>
+                <libelleSecondaire />
+                <adresse>Place Louis Lacrocq</adresse>
+                <boitePostale>BP 79</boitePostale>
+                <tel>05 55 51 58 00</tel>
+                <fax>05 55 52 48 61</fax>
+                <ville cp="23000"><value>GUÉRET</value></ville>
+                <poi>
+                    <longitude>1.869525</longitude>
+                    <latitude>46.168830</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,7 @@
+name = DdD - Content
+description = Module de gestion des contenus
+core = 7.x
+package = DdD - Content Type
+version = 7.x-1.0-dev1
+project = ddd_content
+project path = sites/default/modules/custom

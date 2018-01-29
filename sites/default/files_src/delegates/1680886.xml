@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680886" login="MHAZOTTE">
+        <identite civilite="Monsieur" codeDep="54">
+            <nom>HAZOTTE</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.hazotte@defenseurdesdroits.fr</email>
+        <photo>MHAZOTTE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Nancy-Maxéville</libelle>
+                <libelleSecondaire />
+                <adresse>300, rue de l&apos;Abbé Haltebourg</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="54320"><value>MAXÉVILLE</value></ville>
+                <poi>
+                    <longitude>6.152964</longitude>
+                    <latitude>48.706900</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture de Meurthe-et-Moselle</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Préfet Claude Erignac</adresse>
+                <boitePostale>CO 60031</boitePostale>
+                <tel>03 83 34 27 99</tel>
+                <fax>03 83 30 52 34</fax>
+                <ville cp="54038"><value>NANCY CEDEX</value></ville>
+                <poi>
+                    <longitude>6.184298</longitude>
+                    <latitude>48.693342</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

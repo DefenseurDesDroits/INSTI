@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680379" login="JMHAUQUIN">
+        <identite civilite="Monsieur" codeDep="33">
+            <nom>HAUQUIN</nom>
+            <prenom>Jean-Michel</prenom>
+        </identite>
+        <email>jean-michel.hauquin@defenseurdesdroits.fr</email>
+        <photo>JMHAUQUIN.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire Bordeaux-Gradignan</libelle>
+                <libelleSecondaire />
+                <adresse>17, rue du Chouiney</adresse>
+                <boitePostale>BP 109</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="33170"><value>GRADIGNAN</value></ville>
+                <poi>
+                    <longitude>-0.598008</longitude>
+                    <latitude>44.781376</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison des droits de l&apos;homme et du citoyen</libelle>
+                <libelleSecondaire>Bâtiment Drôme </libelleSecondaire>
+                <adresse>221, avenue Thouars</adresse>
+                <boitePostale />
+                <tel>05 56 84 64 10</tel>
+                <fax>05 56 04 62 06</fax>
+                <ville cp="33400"><value>TALENCE</value></ville>
+                <poi>
+                    <longitude>-0.591773</longitude>
+                    <latitude>44.788688</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

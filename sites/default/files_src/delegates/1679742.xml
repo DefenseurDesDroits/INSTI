@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679742" login="ATAVERNIER">
+        <identite civilite="Monsieur" codeDep="92">
+            <nom>TAVERNIER</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.tavernier@defenseurdesdroits.fr</email>
+        <photo>ATAVERNIER.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Nanterre</libelle>
+                <libelleSecondaire />
+                <adresse>133, avenue de la Commune de Paris</adresse>
+                <boitePostale>BP 1414</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="92000"><value>NANTERRE</value></ville>
+                <poi>
+                    <longitude>2.207277</longitude>
+                    <latitude>48.905200</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Point d&apos;Accès au Droit</libelle>
+                <libelleSecondaire />
+                <adresse>39, rue Victor Hugo</adresse>
+                <boitePostale />
+                <tel>01 71 05 74 44</tel>
+                <fax />
+                <ville cp="92400"><value>COURBEVOIE</value></ville>
+                <poi>
+                    <longitude>2.256772</longitude>
+                    <latitude>48.893959</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

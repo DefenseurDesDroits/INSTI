@@ -1,0 +1,15 @@
+name = Socle Lab' feature - views taxonomy
+description = Feature de gestion des vues spécifiques aux taxonomies
+core = 7.x
+package = SocleLAB - Views
+version = 7.x-1.0-rc1
+project = sl_vu_taxonomy
+dependencies[] = entity
+dependencies[] = views
+dependencies[] = views_data_export
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = vue_taxonomy
+features_exclude[dependencies][ctools] = ctools
+mtime = 1444147237
+project path = profiles/soclelab/modules/features

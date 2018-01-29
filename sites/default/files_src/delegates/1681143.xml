@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681143" login="AELUCAS">
+        <identite civilite="Madame" codeDep="65">
+            <nom>LUCAS</nom>
+            <prenom>Anne-Elisabeth</prenom>
+        </identite>
+        <email>anne-elisabeth.lucas@defenseurdesdroits.fr</email>
+        <photo>AELUCAS.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison des personnes handicapées</libelle>
+                <libelleSecondaire />
+                <adresse>Place Ferré</adresse>
+                <boitePostale />
+                <tel>05 62 56 73 50</tel>
+                <fax />
+                <ville cp="65000"><value>TARBES</value></ville>
+                <poi>
+                    <longitude>0.075503</longitude>
+                    <latitude>43.228326</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture des Hautes-Pyrénées</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue des Ursulines</adresse>
+                <boitePostale />
+                <tel>05 62 56 63 82</tel>
+                <fax />
+                <ville cp="65000"><value>TARBES</value></ville>
+                <poi>
+                    <longitude>0.068098</longitude>
+                    <latitude>43.233840</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681301" login="JLCHAIZY">
+        <identite civilite="Monsieur" codeDep="89">
+            <nom>CHAIZY</nom>
+            <prenom>Jean-Luc</prenom>
+        </identite>
+        <email>jean-luc.chaizy@defenseurdesdroits.fr</email>
+        <photo>JLCHAIZY.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Yonne</libelle>
+                <libelleSecondaire />
+                <adresse>Place de la Préfecture</adresse>
+                <boitePostale />
+                <tel>03 86 72 78 11</tel>
+                <fax>03 86 51 02 48</fax>
+                <ville cp="89000"><value>AUXERRE</value></ville>
+                <poi>
+                    <longitude>3.573030</longitude>
+                    <latitude>47.798262</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

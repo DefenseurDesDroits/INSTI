@@ -1,0 +1,182 @@
+  <?php
+/**
+ * @file
+ * Formulaire de recherche.
+ */
+
+ /**
+  *Form info.
+  */
+function dd_recherche_help($path, $arg)
+{
+    switch ($path) {
+     case "admin/help#recherche":
+       return '' . t("Show content created on the same date") . '';
+       break;
+   }
+}
+/**
+ *Form.
+ */
+function dd_recherche_form($form, &$form_state)
+{
+    $form['#attributes']['class'][] = 'search-form';
+    $form['#attributes']['role'][] = 'search';
+    $form['search'] = array(
+    '#type' => 'textfield', //you can find a list of available types in the form api
+    //'#title' => 'Rechercher ?',
+    '#required' => true, //make this field required
+    '#id'=> 'search',
+    '#attributes' => array(
+      'placeholder' => t('What are you looking for?'),
+      'aria-label'  => t('What are you looking for?'),
+    ),
+  );
+    return $form;
+}
+
+function dd_recherche_form_validate($form, &$form_state){}
+
+function dd_recherche_form_submit($form, &$form_state)
+{
+    /*
+  $result = $form_state['values']['search'];
+  $path="/search-page";
+  $query = array('query' => array('keys' => $result));
+  drupal_goto($path, $query);
+*/
+}
+
+
+/**
+ *Création du custom block
+ */
+function dd_recherche_block_info()
+{
+    $blocks['recherche'] = array(
+    // The name that will appear in the block list.
+    // Default setting.
+    'info' => t('Recherche'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+    return $blocks;
+}
+
+/**
+ *Envoi du form dans le theme.
+ */
+function recherche_get_theme()
+{
+    //drupal_add_js(drupal_get_path('module', 'dd_recherche') . '/js/typing.js');
+  $cat = array();
+    $cat['article'] = get_tids_by_parent_tid('3');
+    $cat['publications'] = get_tids_by_parent_tid('30');
+    $cat['faq'] = get_tids_by_parent_tid('23');
+    $cat['tradresult'] = t("View All Results");
+    $cat['tradresult2'] = t("Show all answers");
+    $cat['tradnoresult'] = t("There are no results");
+    //
+    drupal_add_js(drupal_get_path('module', 'dd_recherche') . '/js/search.js');
+    drupal_add_js(array('cat' => $cat), 'setting');
+    $variable["form"] = drupal_get_form('dd_recherche_form');
+    return theme('_theme_dd_recherche_block_recherche', array('vars' => $variable));
+}
+
+function get_tids_by_parent_tid($tid)
+{
+    $tids = taxonomy_get_children($tid);
+    $list = $tid . '+';
+    foreach ($tids as $key => $t) {
+        $list .= $t->tid . '+';
+    }
+    $list = rtrim($list, '+');
+    return $list;
+}
+
+function dd_recherche_page()
+{
+    $argument = '';
+    if (isset($_GET['cat'])) {
+        switch ($_GET['cat']) {
+      case 'article':
+        $argument = get_tids_by_parent_tid('3');
+        break;
+      case 'faq':
+        $argument = get_tids_by_parent_tid('23');
+        break;
+      case 'publications':
+        $argument = get_tids_by_parent_tid('30');
+        break;
+      case 'all':
+        $argument = get_tids_by_parent_tid('3') . '+' . get_tids_by_parent_tid('23') . '+' . get_tids_by_parent_tid('30');
+        break;
+    }
+    }
+
+    $view = views_get_view('search_categorie');
+    $view->set_display('embed_2');
+    if (!empty($argument)) {
+        $view->set_arguments(array($argument));
+    }
+    if (!empty($_GET['title'])) {
+        $filter = $view->get_item('embed_2', 'filter', 'title');
+        $filter['value'] = $_GET['title'];
+        $view->set_item('embed_2', 'filter', 'title', $filter);
+    }
+    $view->pre_execute();
+    $view->execute();
+    $variables['view'] = $view->render();
+    $variables['count'] = $view->total_rows;
+    return theme('_theme_dd_recherche_page_recherche', array('vars' => $variables));
+}
+
+/**
+ *Envoie du form dans le custom block.
+ */
+function dd_recherche_block_view($delta = '')
+{
+  // The $delta parameter tells us which block is being requested.
+  $block = array();
+    switch ($delta) {
+    case 'recherche':
+      // Create your block content here
+      $block['content'] = recherche_get_theme();
+      break;
+  }
+    return $block;
+}
+
+function dd_recherche_menu()
+{
+    $items['ma-recherche'] = array(
+    'title' => 'My search',
+    'page callback' => 'dd_recherche_page',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK
+  );
+    return $items;
+}
+
+/**
+ *Envoie du theme dans le template.
+ */
+function dd_recherche_theme()
+{
+    return array(
+    '_theme_dd_recherche_block_recherche' => array(
+      'path' => drupal_get_path('module', 'dd_recherche') . "/templates/blocks/",
+      'template' => 'block-recherche-hp',  // + .tpl.php
+      'variables' => array('vars' => null),
+    ),
+    '_theme_dd_recherche_page_recherche' => array(
+      'path' => drupal_get_path('module', 'dd_recherche') . "/templates/pages/",
+      'template' => 'page-recherche',  // + .tpl.php
+      'variables' => array('vars' => null),
+    ),
+    'dd_recherche_form' => array(
+      'render element' => 'form',
+      'template' => 'ddd-recherche-form',
+      'path' => drupal_get_path('module', 'dd_recherche') . '/templates/forms',
+    ),
+  );
+}

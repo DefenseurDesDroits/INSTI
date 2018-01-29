@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681320" login="JPDOUSSEAU">
+        <identite civilite="Monsieur" codeDep="19">
+            <nom>DOUSSEAU</nom>
+            <prenom>Jean-Pierre</prenom>
+        </identite>
+        <email>jean-pierre.dousseau@defenseurdesdroits.fr</email>
+        <photo>JPDOUSSEAU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Brive-la-Gaillarde</libelle>
+                <libelleSecondaire />
+                <adresse>Place Jacques Cartier</adresse>
+                <boitePostale />
+                <tel>05 55 74 98 31</tel>
+                <fax />
+                <ville cp="19100"><value>BRIVE-LA-GAILLARDE</value></ville>
+                <poi>
+                    <longitude>1.498612</longitude>
+                    <latitude>45.156820</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

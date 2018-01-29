@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681014" login="ADEBRU">
+        <identite civilite="Madame" codeDep="76">
+            <nom>DEBRU</nom>
+            <prenom>Andrée</prenom>
+        </identite>
+        <email>andree.debru@defenseurdesdroits.fr</email>
+        <photo>ADEBRU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Rouen</libelle>
+                <libelleSecondaire />
+                <adresse>169 boulevard de l&apos;Europe</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="76000"><value>ROUEN</value></ville>
+                <poi>
+                    <longitude>1.076176</longitude>
+                    <latitude>49.433354</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Rouen</libelle>
+                <libelleSecondaire>Les Hauts de Rouen </libelleSecondaire>
+                <adresse>Place Alfred de Musset </adresse>
+                <boitePostale />
+                <tel>02 35 12 29 20</tel>
+                <fax>02 35 12 29 29</fax>
+                <ville cp="76000"><value>ROUEN</value></ville>
+                <poi>
+                    <longitude>1.134251</longitude>
+                    <latitude>49.461794</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

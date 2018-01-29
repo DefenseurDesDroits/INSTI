@@ -1,0 +1,308 @@
+<?php
+
+
+/**
+ *  Function-name : slutil_get_img
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function slutil_get_img($atom_sid, $style, $is_deco = false){ // Début slutil_get_img
+  if($atom_sid != ""){
+    $atom = scald_fetch($atom_sid);
+    if (isset($atom->file_source)) {
+      $alt_img = $atom->title;
+      if ($is_deco) { $alt_img = ""; }
+      return theme('image_style', array('path' => $atom->file_source,'style_name' => $style, 'alt' => $alt_img));
+    }else{
+      return "";
+    }
+  }
+} // Fin slutil_get_img
+
+/**
+ *  Function-name : slutil_get_img_path
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function slutil_get_img_path($atom_sid, $style){ // Début slutil_get_img_path
+  if($atom_sid != ""){
+    $atom = scald_fetch($atom_sid);
+    if (isset($atom->file_source)) {
+      $alt_img = $atom->title;
+      return image_style_url($style, $atom->file_source);
+    }else{
+      return "";
+    }
+  }
+} // Fin slutil_get_img_path
+
+function slutil_get_atom($atom_sid){
+  $carac_output = array();
+  $atom = scald_fetch($atom_sid);
+  $author_obj = "";
+  
+  if($atom != null && $atom->scald_authors){
+    $taxonomy_user = taxonomy_term_load_multiple(array($atom->scald_authors['und'][0]['tid']), array());
+    foreach ($taxonomy_user as $key => $current_taxo) {
+      $author_obj = $current_taxo;
+    }
+  }
+  $carac_output = $atom;
+  if ($author_obj != ""){
+     $carac_output->data[] = $author_obj;
+  }
+  return $carac_output;
+}
+
+/**
+ *  Function-name : slutil_get_video
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function slutil_get_video($id_atom){  // Début slutil_get_video
+  $url_video = "";  // Variable de retour
+  $vid_atom = scald_atom_load($id_atom);    // Recupère l'atom de la vidéo
+    
+  switch($vid_atom->provider){
+    case 'scald_youtube': $url_video = "http://www.youtube.com/embed/";
+      break;
+    case 'scald_dailymotion': $url_video = "//www.dailymotion.com/embed/video/";
+      break;
+  }
+  
+  if($url_video!= ""){
+    $url_video = $url_video . $vid_atom->base_id;
+    $iframe  = "<iframe src='" . $url_video . "' frameborder=\"0\"></iframe>";
+    return $iframe;
+  }else{
+    return "";
+  }
+} // Fin slutil_get_video
+
+/**
+ *  Function-name : slutil_truncate_str
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function slutil_truncate_str($str_to_trunk, $size, $show_point=true){  // Début slutil_truncate_str
+  $str_return = ""; // Variable de retour
+
+  $str_return = strip_tags($str_to_trunk);        // Supprime les balises HTML de la chaine de charactère
+  $str_return = truncate_utf8($str_return, $size);    // Tronque la chaine de charactère
+  if($show_point && strlen($str_to_trunk) > $size){
+    if(strpos($str_return, " ")!=null){           // Si la chaine possède un espace
+      $str_return = substr($str_return, 0, strrpos($str_return, " ", 0));
+    }
+    $str_return = $str_return . "..."; 
+  }
+  return $str_return;
+} // Fin slutil_truncate_str
+
+/**
+ *  Function-name : spm_utilities_encode_title
+ *  Input :     
+ *  Output :    
+ *  Description :   
+ */
+function slutil_encode_title($str_to_encode){
+  $str_to_encode = strip_tags($str_to_encode);
+  $new_str_encode = htmlentities($str_to_encode, ENT_NOQUOTES, 'UTF-8');
+
+  $new_str_encode = str_replace( "\"", "", $new_str_encode);
+  return $new_str_encode;
+}
+
+function slutil_get_imglegend($atom_sid){
+  $legend_output = "";
+  $atom = scald_fetch($atom_sid);
+    
+  $author = "";
+  if (isset($atom->scald_authors['und'][0]['tid'])) {
+    $i = 0;
+    foreach ($atom->scald_authors['und'] as $key => $current_taxo){
+      $taxonomy_user = taxonomy_term_load($current_taxo['tid']);
+
+      $author .= " " . $taxonomy_user->name;
+      if($i != count($atom->scald_authors['und']) -1){ $author .= ", ";}
+      $i=$i+1;
+    }
+  }
+
+  $legend_output .= '<div class="legende-image">';
+    if(isset($atom->title)){ $legend_output .= $atom->title; }
+    if($author != ""){ $legend_output .= '<div class="copyright-image">&copy;' . $author . '</div>'; }
+  $legend_output .= '</div>';
+
+  return $legend_output;
+}
+
+
+function slutil_get_taxo_link($tid){
+  $array_return = array();
+   
+  if($tid != null){
+    $current_taxo = taxonomy_term_load($tid);
+    $current_taxo_trad = null;
+    
+   if ( getCurLang() != "fr" ){
+      $translated_term = i18n_taxonomy_localize_terms($current_taxo);
+      if($translated_term){ $current_taxo_trad = $translated_term; }
+    }
+    if ( $current_taxo_trad == null ) { $current_taxo_trad = $current_taxo; }
+        
+    $taxonomy_path = "taxonomy/term/" . $tid;
+    $taxonomy_path_alias = drupal_lookup_path('alias', $taxonomy_path);
+    $taxonomy_path_alias = str_replace("publications-taxo", "publications", $taxonomy_path_alias);
+    $taxonomy_path_alias = str_replace("outils-taxo", "outils", $taxonomy_path_alias);
+    $taxonomy_path_alias = str_replace("blog-taxo", "blog", $taxonomy_path_alias);
+    $array_return["url"] = (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . $taxonomy_path_alias;
+    $array_return["title"] = slutil_encode_title(t("Display the page") . " ". $current_taxo_trad->name);
+    $array_return["name"] = $current_taxo_trad->name;
+    
+    
+    if (isset($current_taxo->field_url_redirect['und'][0]['url'])) {
+      $array_return['url'] = (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . $current_taxo->field_url_redirect['und'][0]['url']; 
+    }
+  }
+  
+  return $array_return;
+}
+
+function slutil_get_node_link($nid){
+  $array_return = array();
+   
+  $current_node = node_load(getNidTrad($nid));
+  if (isset($current_node->nid) && isset($current_node->title)) {
+    $array_return['url'] = (getCurLang() !== "" ? "/" . getCurLang() : "") . "/" . drupal_get_path_alias( 'node/' . $current_node->nid, getCurLang());
+    $array_return['title'] = slutil_encode_title( t("Display the article:") . " " . $current_node->title);
+    $array_return['name'] = $current_node->title;
+  }
+  
+  return $array_return;
+}
+
+function slutil_get_list_tid($tid){
+  $str_return = array();
+  $list_parent_trad = array();
+  $list_link = array();
+    
+  if($tid != null || $tid != ""){
+    $list_parent = taxonomy_get_parents_all($tid);
+    foreach ($list_parent as $key_taxo => $current_taxo) {
+      $link_taxo = slutil_get_taxo_link($current_taxo->tid);
+      
+      $current_link = "<a href=\"" . $link_taxo['url'] ."\" title=\"" . $link_taxo['title'] . "\">" . $link_taxo['name'] . "</a>";
+      $list_link[] = $current_link;
+    }
+  }
+
+  $str_return[] = array_reverse($list_parent);
+  $str_return[] = array_reverse($list_link);  
+
+  return $str_return;
+}
+
+function slutil_get_txtvignette($field, $field_alt, $size = 200, $add_elipsis = true, $additional_param = '<strong><em>'){
+  $str_return = "";
+
+  if ( isset($field['und'][0]['value']) && $field['und'][0]['value'] != ""){
+    $str_return = $field['und'][0]['value'];
+  }elseif ( isset($field_alt['und'][0]['value']) && $field_alt['und'][0]['value'] != ""){
+    $str_return = $field_alt['und'][0]['value'];
+  }
+
+  $str_return = _filter_htmlcorrector( truncate_utf8(strip_tags($str_return, $additional_param), $size, true, $add_elipsis) );
+  return $str_return;
+}
+
+function slutil_get_galerie($galerie_field){
+  $list_image = array();
+  
+  if ($galerie_field != null) {
+    foreach($galerie_field as $count_sid => $cur_img){
+      if(isset($cur_img['sid'])) {
+        $cur_img_toadd = array();
+        $atom = scald_atom_load($cur_img['sid']);
+        
+        $author = "";
+        if($atom != null && $atom->scald_authors){
+          $i = 0;
+          if(isset($atom->scald_authors['und'])){
+            foreach ($atom->scald_authors['und'] as $key => $current_taxo){
+                $taxonomy_user = taxonomy_term_load($current_taxo['tid']);
+      
+                $author .= " " . $taxonomy_user->name;
+                if($i != count($atom->scald_authors['und']) -1){ $author .= ", ";}
+                $i=$i+1;
+            }
+          }
+        }
+
+        $cur_img_toadd['copyright'] = $author;
+        $cur_img_toadd['title'] = $atom->title;
+        $cur_img_toadd['image'] = theme('image_style', array('path' => $atom->file_source, 'style_name' => 'article_galerie','alt' => $atom->title));
+        $cur_img_toadd['src'] = url($atom->file_source);  
+        $cur_img_toadd['atom'] = $atom;
+        
+        $list_image[] = $cur_img_toadd;
+      }
+    }
+  }
+  
+  return $list_image;
+}
+
+function slutil_embed_view($viewname, $display) {
+  $args = func_get_args();
+  
+  array_shift($args); // remove $name
+  if (count($args)) {
+    array_shift($args); // remove $display_id
+  }
+  
+  $view = views_get_view($viewname);
+  $output = $view->preview($display,$args);
+
+  // At least in $view->result is the result.
+  if ($view->result) {
+    return $output;
+  }
+  return "";
+}
+
+function slutil_embed_view_args($view, $block, $args){
+  $view = views_get_view($view);
+  $view->set_display($block);
+  $view->set_arguments($args);
+  $view->pre_execute();
+  $view->execute();
+  $content = $view->render();
+  // At least in $view->result is the result.
+  if ($view->result) {
+    return $content;
+  }
+  return "";
+}
+
+
+/************************************************************************************/
+/*                                GESTION DES LANGUES                               */
+/************************************************************************************/
+
+function getCurLang() {
+  global $language; 
+  //if(isset($language->provider) && $language->provider != "locale-url"){ return ""; }
+  return strtolower($language->language);
+}
+
+function getNidTrad($nid) {
+  $traductions = translation_node_get_translations($nid);
+    if (isset($traductions[getCurLang()]) && $traductions[getCurLang()]) {
+      return $traductions[getCurLang()]->nid;
+  }
+  return $nid; 
+}

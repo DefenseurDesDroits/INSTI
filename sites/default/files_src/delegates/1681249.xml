@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681249" login="MSBOSONI">
+        <identite civilite="Madame" codeDep="93">
+            <nom>BOSONI</nom>
+            <prenom>Michèle-Sophie</prenom>
+        </identite>
+        <email>michele-sophie.bosoni@defenseurdesdroits.fr</email>
+        <photo>MSBOSONI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Pantin</libelle>
+                <libelleSecondaire />
+                <adresse>25 ter, rue du Pré-Saint-Gervais</adresse>
+                <boitePostale />
+                <tel>01 41 83 66 40</tel>
+                <fax />
+                <ville cp="93500"><value>PANTIN</value></ville>
+                <poi>
+                    <longitude>2.403236</longitude>
+                    <latitude>48.889938</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Point d&apos;accès au droit de Tremblay-en-France</libelle>
+                <libelleSecondaire />
+                <adresse>18, boulevard de l&apos;Hôtel de Ville</adresse>
+                <boitePostale />
+                <tel>01 49 63 70 81</tel>
+                <fax />
+                <ville cp="93290"><value>TREMBLAY-EN-FRANCE</value></ville>
+                <poi>
+                    <longitude>2.571628</longitude>
+                    <latitude>48.951644</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681071" login="JSIMON">
+        <identite civilite="Monsieur" codeDep="988">
+            <nom>SIMON</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.simon@defenseurdesdroits.fr</email>
+        <photo>JSIMON.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Haut-Commissariat</libelle>
+                <libelleSecondaire />
+                <adresse>1, avenue du Maréchal Foch</adresse>
+                <boitePostale>BP C5</boitePostale>
+                <tel>00 687 26 63 00</tel>
+                <fax />
+                <ville cp="98844"><value>NOUMÉA CEDEX</value></ville>
+                <poi>
+                    <longitude>166.442466</longitude>
+                    <latitude>-22.270528</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>du LUNDI au VENDREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

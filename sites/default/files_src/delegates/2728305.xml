@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2728305" login="JMENJOZ">
+        <identite civilite="Monsieur" codeDep="73">
+            <nom>MENJOZ</nom>
+            <prenom>Jacques</prenom>
+        </identite>
+        <email>jacques.menjoz@defenseurdesdroits.fr</email>
+        <photo>JMENJOZ.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire d&apos;Aiton</libelle>
+                <libelleSecondaire />
+                <adresse>Les Gabelins</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="73220"><value>AIGUEBELLE</value></ville>
+                <poi>
+                    <longitude>6.304251</longitude>
+                    <latitude>45.536006</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>4e - Réservée aux détenus JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit d&apos;Albertville</libelle>
+                <libelleSecondaire />
+                <adresse>2 avenue Victor Hugo</adresse>
+                <boitePostale />
+                <tel>06 38 61 12 71</tel>
+                <fax />
+                <ville cp="73200"><value>ALBERTVILLE</value></ville>
+                <poi>
+                    <longitude>6.387508</longitude>
+                    <latitude>45.674890</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de St Jean de Maurienne</libelle>
+                <libelleSecondaire />
+                <adresse>Rue de la Sous-préfecture</adresse>
+                <boitePostale />
+                <tel>06 38 61 12 71</tel>
+                <fax />
+                <ville cp="73300"><value>ST JEAN DE MAURIENNE</value></ville>
+                <poi>
+                    <longitude>6.344618</longitude>
+                    <latitude>45.276511</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture d&apos;Albertville</libelle>
+                <libelleSecondaire />
+                <adresse>86, rue Jean-Baptiste Mathias</adresse>
+                <boitePostale>BP 112</boitePostale>
+                <tel>04 79 10 41 41</tel>
+                <fax />
+                <ville cp="73200"><value>ALBERTVILLE</value></ville>
+                <poi>
+                    <longitude>6.387928</longitude>
+                    <latitude>45.674013</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

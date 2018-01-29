@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680833" login="FJACOB">
+        <identite civilite="Monsieur" codeDep="54">
+            <nom>JACOB</nom>
+            <prenom>Francis</prenom>
+        </identite>
+        <email>francis.jacob@defenseurdesdroits.fr</email>
+        <photo>FJACOB.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Antenne de justice de Luneville</libelle>
+                <libelleSecondaire />
+                <adresse>16 bis, place Notre Dame</adresse>
+                <boitePostale />
+                <tel>03 83 71 23 60</tel>
+                <fax />
+                <ville cp="54300"><value>LUNÉVILLE</value></ville>
+                <poi>
+                    <longitude>6.491772</longitude>
+                    <latitude>48.593846</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1 sur 2 JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Centre de détention d&apos;Ecrouves</libelle>
+                <libelleSecondaire />
+                <adresse>323, route de Pagney</adresse>
+                <boitePostale>BP 311</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="54200"><value>ÉCROUVES</value></ville>
+                <poi>
+                    <longitude>5.851151</longitude>
+                    <latitude>48.681384</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1 sur 2 LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Centre de détention de Toul </libelle>
+                <libelleSecondaire />
+                <adresse>804, rue Maréchal Lyautey</adresse>
+                <boitePostale>BP 305</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="54200"><value>TOUL</value></ville>
+                <poi>
+                    <longitude>5.884262</longitude>
+                    <latitude>48.659681</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 1 sur 2 LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Vandoeuvre</libelle>
+                <libelleSecondaire>Centre Commercial Les Villes de France</libelleSecondaire>
+                <adresse>5, place de Paris</adresse>
+                <boitePostale />
+                <tel>03 83 55 10 34</tel>
+                <fax />
+                <ville cp="54500"><value>VANDOEUVRE-LÈS-NANCY</value></ville>
+                <poi>
+                    <longitude>6.172970</longitude>
+                    <latitude>48.660905</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1 sur 2 LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

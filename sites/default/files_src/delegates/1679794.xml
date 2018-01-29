@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679794" login="ICARRIERE">
+        <identite civilite="Madame" codeDep="59">
+            <nom>CARRIÈRE</nom>
+            <prenom>Isabelle</prenom>
+        </identite>
+        <email>isabelle.carriere@defenseurdesdroits.fr</email>
+        <photo>ICARRIERE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Roubaix</libelle>
+                <libelleSecondaire />
+                <adresse>71, avenue de Verdun</adresse>
+                <boitePostale />
+                <tel>03 20 99 10 05</tel>
+                <fax />
+                <ville cp="59100"><value>ROUBAIX</value></ville>
+                <poi>
+                    <longitude>3.200764</longitude>
+                    <latitude>50.685048</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

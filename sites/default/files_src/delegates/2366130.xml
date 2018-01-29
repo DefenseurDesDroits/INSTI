@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2366130" login="MFONTENELLE">
+        <identite civilite="Madame" codeDep="77">
+            <nom>FONTENELLE</nom>
+            <prenom>Marie-Thérèse</prenom>
+        </identite>
+        <email>marie-therese.fontenelle@defenseurdesdroits.fr</email>
+        <photo>MFONTENELLE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Chelles</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Sainte-Bathilde</adresse>
+                <boitePostale />
+                <tel>01 64 26 06 67</tel>
+                <fax>01 64 26 06 68</fax>
+                <ville cp="77500"><value>CHELLES</value></ville>
+                <poi>
+                    <longitude>2.592177</longitude>
+                    <latitude>48.877448</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Noisiel</libelle>
+                <libelleSecondaire />
+                <adresse>4, place Gaston Defferre</adresse>
+                <boitePostale />
+                <tel>01 60 95 16 90</tel>
+                <fax />
+                <ville cp="77186"><value>NOISIEL</value></ville>
+                <poi>
+                    <longitude>2.615009</longitude>
+                    <latitude>48.843803</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

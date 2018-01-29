@@ -1,0 +1,44 @@
+.front{ 
+  .region-baspage, #page-highlighted{
+    .block-block{
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      margin-bottom: 47px;
+      font-size: 1.25em;
+      line-height: 1.4em;
+      color: @txt_home_block;
+      @media @scr_tablet{ width: 75%; }
+      @media @scr_mobile{ width: 100%; }
+      font-family: @font-family-lato-reg;
+      .block-title{
+        margin: 0 0 24px 0;
+        font-weight: normal;
+        font-size: 1.6em;
+        color: @txt_home_block_title;
+        font-family: @font-family-lato-lig;
+      }
+    }
+  }
+}
+
+
+#page-baspage{
+  .block-block{
+    padding: 0 7.5%;
+    color: @txt_home_block_bas;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    h2{
+      .front .region-baspage .block-block .block-title;
+      font-size: 1.6em;
+      margin-bottom: 38px;
+    }
+    p{
+      margin-bottom: 22px;
+    }
+    img{
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680689" login="NVILLEDIEU">
+        <identite civilite="Madame" codeDep="50">
+            <nom>VILLEDIEU</nom>
+            <prenom>Nicole</prenom>
+        </identite>
+        <email>nicole.villedieu@defenseurdesdroits.fr</email>
+        <photo>NVILLEDIEU.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Manche</libelle>
+                <libelleSecondaire />
+                <adresse>3, place de la Préfecture</adresse>
+                <boitePostale>70522</boitePostale>
+                <tel>02 33 75 47 67</tel>
+                <fax />
+                <ville cp="50002"><value>ST LO CEDEX</value></ville>
+                <poi>
+                    <longitude>-1.095619</longitude>
+                    <latitude>49.116206</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

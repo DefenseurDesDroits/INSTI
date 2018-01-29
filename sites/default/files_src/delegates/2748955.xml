@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2748955" login="OGUIHAL">
+        <identite civilite="Madame" codeDep="44">
+            <nom>GUIHAL</nom>
+            <prenom>Odile</prenom>
+        </identite>
+        <email>odile.guihal@defenseurdesdroits.fr</email>
+        <photo>OGUIHAL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Nantes Centre-ville</libelle>
+                <libelleSecondaire>A.Postal: BP 33515 - 44035 Nantes Cedex </libelleSecondaire>
+                <adresse>5A, rue Maurice Duval</adresse>
+                <boitePostale />
+                <tel>02 40 08 00 34</tel>
+                <fax />
+                <ville cp="44000"><value>NANTES</value></ville>
+                <poi>
+                    <longitude>-1.553651</longitude>
+                    <latitude>47.220117</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

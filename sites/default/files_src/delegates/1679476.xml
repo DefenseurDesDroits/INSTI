@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679476" login="MROUXGRANADEL">
+        <identite civilite="Monsieur" codeDep="31">
+            <nom>ROUX-GRANADEL</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.roux-granadel@defenseurdesdroits.fr</email>
+        <photo>MROUXGRANADEL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Garonne</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Saint-Etienne</adresse>
+                <boitePostale />
+                <tel>05 34 45 37 17</tel>
+                <fax />
+                <ville cp="31038"><value>TOULOUSE CEDEX 9</value></ville>
+                <poi>
+                    <longitude>1.450412</longitude>
+                    <latitude>43.598659</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,16 @@
+name = Socle Lab' feature taxonomie - Type de contenu
+description = Feature de gestion des taxonomies Themes du site
+core = 7.x
+package = SocleLAB - Taxonomy
+version = 7.x-1.0-rc1
+project = sl_tx_themes
+dependencies[] = atom_reference
+dependencies[] = features
+dependencies[] = sl_tx_typecontenu
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_instance][] = taxonomy_term-v_theme-field_taxo_logo
+features[taxonomy][] = v_theme
+features_exclude[field_base][field_taxo_logo] = field_taxo_logo
+mtime = 1444147234
+project path = profiles/soclelab/modules/features

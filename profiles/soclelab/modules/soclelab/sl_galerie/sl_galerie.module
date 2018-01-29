@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature article feature.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function sl_galerie_preprocess_page(&$variables){
+  if (isset($variables['node'])){
+    $module_path = drupal_get_path('module', 'sl_galerie');
+    
+    if($module_path != "" && isset($variables['node']->type) && $variables['node']->type == "article"){
+       if(isset($variables['node']->field_article_galerie['und'][0]['sid'])) { 
+         drupal_add_js(drupal_get_path('module', 'sl_galerie') .'/js/sl_galerie_image.js'); // Ajout du JS de gestion de la galerie d'images
+       }
+    }
+  }
+}

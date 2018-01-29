@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679550" login="MPRIMOT">
+        <identite civilite="Madame" codeDep="63">
+            <nom>PRIMOT</nom>
+            <prenom>Monique</prenom>
+        </identite>
+        <email>monique.primot@defenseurdesdroits.fr</email>
+        <photo>MPRIMOT.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Puy-de-Dôme</libelle>
+                <libelleSecondaire>4ème étage - porte 423</libelleSecondaire>
+                <adresse>1, rue d&apos;Assas </adresse>
+                <boitePostale />
+                <tel>04 73 98 63 15</tel>
+                <fax>04 73 98 61 07</fax>
+                <ville cp="63000"><value>CLERMONT-FERRAND</value></ville>
+                <poi>
+                    <longitude>3.083944</longitude>
+                    <latitude>45.775939</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

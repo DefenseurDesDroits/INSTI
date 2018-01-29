@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680540" login="ASIBILLAUD">
+        <identite civilite="Madame" codeDep="31">
+            <nom>SIBILLAUD</nom>
+            <prenom>Aurore</prenom>
+        </identite>
+        <email>aurore.sibillaud@defenseurdesdroits.fr</email>
+        <photo>ASIBILLAUD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Saint-Gaudens</libelle>
+                <libelleSecondaire />
+                <adresse>2, avenue Général Leclerc</adresse>
+                <boitePostale>BP 169</boitePostale>
+                <tel>05 61 94 67 67</tel>
+                <fax />
+                <ville cp="31800"><value>SAINT-GAUDENS</value></ville>
+                <poi>
+                    <longitude>0.727289</longitude>
+                    <latitude>43.108739</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Description : 
+ * Date of last update : 04/02/2015
+ * Developer : PAUTREL Bruno
+ *
+ */
+
+function ddd_importfeed_cronapi($op, $job = NULL) {
+  $items['feed_actions_cron'] = array('description' => 'Ajout/Mise à jour des taxonomies du vocabulaire Actions', );
+  return $items;
+}
+
+function feed_actions_cron() {
+  $uri = 'public://feeds/ddd_feed_actions.csv';
+  if (file_exists($uri)) {
+    //Import des magistrats
+    $importer_id = 'ddd_feed_tx_actions';
+    $source = feeds_source($importer_id);
+    $fetcher_config = $source->getConfigFor($source->importer->fetcher);
+    $fetcher_config['source'] = $uri;
+    $source -> setConfigFor($source->importer->fetcher, $fetcher_config);
+    $source -> save();
+    $source -> startImport();
+  }
+}
+
+ 

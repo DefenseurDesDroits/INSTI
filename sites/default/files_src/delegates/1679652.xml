@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679652" login="GBENNS">
+        <identite civilite="Madame" codeDep="973">
+            <nom>BENNS</nom>
+            <prenom>Gaëtane</prenom>
+        </identite>
+        <email>gaetane.benns@defenseurdesdroits.fr</email>
+        <photo>GBENNS.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Saint-Laurent-du-Maroni</libelle>
+                <libelleSecondaire />
+                <adresse>2, avenue Albert Sarrault</adresse>
+                <boitePostale />
+                <tel>05 94 34 16 31</tel>
+                <fax />
+                <ville cp="97320"><value>SAINT-LAURENT-DU-MARONI</value></ville>
+                <poi>
+                    <longitude>-54.027375</longitude>
+                    <latitude>5.505926</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

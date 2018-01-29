@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680854" login="JSCHMIT">
+        <identite civilite="Monsieur" codeDep="27">
+            <nom>SCHMIT</nom>
+            <prenom>Joseph</prenom>
+        </identite>
+        <email>joseph.schmit@defenseurdesdroits.fr</email>
+        <photo>JSCHMIT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention de Val-de-Reuil</libelle>
+                <libelleSecondaire>Les Vignettes</libelleSecondaire>
+                <adresse>Chaussée de l&apos;Andelle</adresse>
+                <boitePostale />
+                <tel />
+                <fax />
+                <ville cp="27100"><value>VAL-DE-REUIL</value></ville>
+                <poi>
+                    <longitude>1.2173</longitude>
+                    <latitude>49.288605</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Louviers</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue Pierre le Massif</adresse>
+                <boitePostale />
+                <tel>02 32 50 86 51</tel>
+                <fax />
+                <ville cp="27400"><value>LOUVIERS</value></ville>
+                <poi>
+                    <longitude>1.167556</longitude>
+                    <latitude>49.214761</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

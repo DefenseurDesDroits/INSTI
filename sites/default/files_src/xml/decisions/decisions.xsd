@@ -1,0 +1,72 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="TEXTE_DDD">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="META">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="META_COMMUN">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:short" name="ID"/>
+                                        <xs:element type="xs:string" name="ORIGINE"/>
+                                        <xs:element type="xs:anyURI" name="URL"/>
+                                        <xs:element type="xs:string" name="NATURE"/>
+                                        <xs:element type="xs:string" name="THEMATIQUE"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="META_SPEC">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="META_DDD">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="TITRE"/>
+                                                    <xs:element type="xs:date" name="DATE_DEC"/>
+                                                    <xs:element type="xs:string" name="NUMERO"/>
+                                                    <xs:element type="xs:string" name="NATURE_QUALIFIEE"/>
+                                                    <xs:element type="xs:string" name="MOTS_CLES"/>
+                                                    <xs:element type="xs:string" name="CLASSEMENT"/>
+                                                    <xs:element name="SUIVI">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="ITEM" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="ID"/>
+                                                                            <xs:element type="xs:string" name="DATE"/>
+                                                                            <xs:element type="xs:string" name="TITRE"/>
+                                                                            <xs:element type="xs:anyURI" name="URL_DDD"/>
+                                                                            <xs:element type="xs:string" name="RESUME"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element type="xs:anyURI" name="URL_DDD"/>
+                                                    <xs:element type="xs:string" name="AGORA"/>
+                                                    <xs:element type="xs:string" name="NOR"/>
+                                                    <xs:element type="xs:string" name="ECLI"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TEXTE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="RESUME"/>
+                            <xs:element type="xs:string" name="CONTENU"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

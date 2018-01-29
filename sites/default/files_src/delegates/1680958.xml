@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680958" login="EMAZLOUM">
+        <identite civilite="Monsieur" codeDep="75">
+            <nom>MAZLOUM</nom>
+            <prenom>Elie</prenom>
+        </identite>
+        <email>elie.mazloum@defenseurdesdroits.fr</email>
+        <photo>EMAZLOUM.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au droit du 19ème arrondissement</libelle>
+                <libelleSecondaire>Escalier 48</libelleSecondaire>
+                <adresse>53, rue Compans</adresse>
+                <boitePostale />
+                <tel>01 53 38 62 30</tel>
+                <fax>01 42 06 47 61</fax>
+                <ville cp="75019"><value>PARIS - 19</value></ville>
+                <poi>
+                    <longitude>2.392149</longitude>
+                    <latitude>48.878459</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679626" login="MBOUZIANE">
+        <identite civilite="Monsieur" codeDep="92">
+            <nom>BOUZIANE</nom>
+            <prenom>Mohammed</prenom>
+        </identite>
+        <email>mohammed.bouziane@defenseurdesdroits.fr</email>
+        <photo>MBOUZIANE.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accueil citoyen</libelle>
+                <libelleSecondaire />
+                <adresse>18-20, place Henri Neveu</adresse>
+                <boitePostale />
+                <tel>01 47 60 41 33</tel>
+                <fax />
+                <ville cp="92700"><value>COLOMBES</value></ville>
+                <poi>
+                    <longitude>2.255421</longitude>
+                    <latitude>48.922621</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>SAMEDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,191 @@
+#block-sl-feature-accueil-block-carousel{
+  margin-bottom: 0;
+}
+
+.carousel-opacity{ // Remove this part if you don't want an opacity transition
+  .item{
+    left: 0 !important;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    #alpha > .opacity(0, @iealpha: 0);
+    #transition > .opacity(500ms);
+  }
+  
+  .active, .next{
+    z-index: 10;
+    #alpha > .opacity(1, @iealpha: 100);
+  }
+}
+
+
+.small-img-slide, .big-img-slide{
+  position:relative;
+  right:50%;
+  text-align:center;
+  img{
+    display: inline-block;
+    margin-right:-100%;
+  }
+}
+
+.big-img-slide{
+  img{
+    
+  }  
+}
+
+.small-img-slide{
+  img{
+  }
+}
+
+.carousel-inner{
+  height: 487px;
+  
+  .node{
+    height: 487px;
+  }
+  @media @scr_mobile{
+    height: 487px;
+    
+    .node{
+      height: 487px;
+    }
+  }
+}
+#banniere-home .item{
+  position: relative;
+  
+}
+.carousel-logo{
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  height: 487px;
+  @media @scr_mobile{
+    height: 415px;
+  }
+}
+#vignette-bandeau-home .carousel-logo{
+  height: 572px;
+}
+#block-sl-ct-accueil-block-carousel .carousel-logo{
+  overflow: hidden;
+}
+
+.carousel-text{
+  width: 505px;
+  position: absolute;
+  bottom: 0px;
+  padding: 43px 30px 58px 30px;
+  top: 0;  
+  z-index: 10;
+  color: @txt_carousel_title;
+  
+  @media @scr_mobile{
+    top: auto;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 5.5em;
+  }
+  
+  div{
+    position: relative;
+    z-index: 5;
+  } 
+    
+  .link-more-wrap{
+    position: absolute;
+    bottom: 119px;
+    z-index: 10;
+    left: 630px;
+    width: 220px;
+    
+    @media @scr_mobile{
+      bottom: 30px;
+      right: 15px;
+      left: 15px;
+      width: auto;
+    }
+    
+    @media @scr_tablet{
+      bottom: 30px;
+      right: 0;
+      left: auto;
+    }
+    .link-more{
+      @media @scr_mobile{
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+    
+  .bg-slider{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: @bg_carousel_overlay;
+  }
+  .carousel-title{
+    font-size: 1.75em;
+    line-height: 1.26em;
+    margin-bottom: 5px;
+    
+    @media @scr_mobile{
+      line-height: 35px;  
+    }
+    
+    a{
+      color: @txt_carousel_title;
+    }
+  }
+  
+  .carousel-date{
+    
+  }
+  
+  .carousel-chapo{
+    margin-bottom: 5px;
+    
+    @media @scr_mobile{
+      display: none;
+    }
+  }
+  
+  .carousel-type{
+    color: @txt_carousel_type;  
+    font-size: 2.1em;
+    margin-bottom: 27px;
+    a, a:hover{
+      color: @txt_carousel_type_h;
+    }
+    @media @scr_mobile{
+      display: none;
+    }
+  }
+  
+}
+
+
+.region-highlighted{
+  #block-sl-ct-accueil-block-carousel{
+    margin: -35px -15px 35px -15px;
+    .carousel-text{
+      left: 80px;
+    }
+    .carousel-indicators {
+      left: 270px;
+    }
+  }
+    @media @scr_mobile{ padding:0 15px; }
+}

@@ -1,0 +1,17 @@
+name = DdD - View Decision
+description = Vue décision
+core = 7.x
+package = DdD - Views (Features)
+version = 7.x-1.0-rc1
+project = ddd_vu_decision
+dependencies[] = ctools
+dependencies[] = ddd_cf_blocks
+dependencies[] = ddd_ct_decision
+dependencies[] = ddd_vu_theme
+dependencies[] = entity
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = decisions
+mtime = 1442840162
+project path = sites/default/modules/features

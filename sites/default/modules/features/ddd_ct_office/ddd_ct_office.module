@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD CT Office feature.
+ */
+
+include_once 'ddd_ct_office.features.inc';

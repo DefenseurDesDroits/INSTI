@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679646" login="CKARILA">
+        <identite civilite="Monsieur" codeDep="95">
+            <nom>KARILA</nom>
+            <prenom>Claude</prenom>
+        </identite>
+        <email>claude.karila@defenseurdesdroits.fr</email>
+        <photo>CKARILA.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Sarcelles</libelle>
+                <libelleSecondaire />
+                <adresse>31 bis, avenue du 8 mai 1945</adresse>
+                <boitePostale />
+                <tel>01 39 94 96 22</tel>
+                <fax>01 39 92 51 42</fax>
+                <ville cp="95200"><value>SARCELLES</value></ville>
+                <poi>
+                    <longitude>2.371021</longitude>
+                    <latitude>48.977523</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

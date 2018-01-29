@@ -1,0 +1,6 @@
+name = DdD view mode
+description = Module de gestion des modes d'affichages
+core = 7.x
+package = DdD - Configuration
+version = 7.x-1.0
+project = ddd_viewmode

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681021" login="MDAVID">
+        <identite civilite="Monsieur" codeDep="65">
+            <nom>DAVID</nom>
+            <prenom>Michel</prenom>
+        </identite>
+        <email>michel.david@defenseurdesdroits.fr</email>
+        <photo>MDAVID.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Hautes-Pyrénées</libelle>
+                <libelleSecondaire />
+                <adresse>3, rue des Ursulines</adresse>
+                <boitePostale />
+                <tel>05 62 56 63 01</tel>
+                <fax>05 62 51 20 10</fax>
+                <ville cp="65000"><value>TARBES</value></ville>
+                <poi>
+                    <longitude>0.068098</longitude>
+                    <latitude>43.233840</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

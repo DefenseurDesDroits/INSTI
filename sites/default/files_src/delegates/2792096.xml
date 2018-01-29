@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2792096" login="PLAHOCHE">
+        <identite civilite="Monsieur" codeDep="08">
+            <nom>LAHOCHE</nom>
+            <prenom>Pascal</prenom>
+        </identite>
+        <email>pascal.lahoche@defenseurdesdroits.fr</email>
+        <photo>PLAHOCHE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de justice et du droit de Sedan</libelle>
+                <libelleSecondaire />
+                <adresse>6 rue Clin</adresse>
+                <boitePostale />
+                <tel>03 24 22 78 91</tel>
+                <fax />
+                <ville cp="08200"><value>SEDAN</value></ville>
+                <poi>
+                    <longitude>4.940830</longitude>
+                    <latitude>49.701795</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>3e MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture des Ardennes</libelle>
+                <libelleSecondaire>Cité administrative</libelleSecondaire>
+                <adresse>Place Lucien Hubert</adresse>
+                <boitePostale />
+                <tel>03 24 32 33 69</tel>
+                <fax />
+                <ville cp="08000"><value>CHARLEVILLE-MÉZIÈRES</value></ville>
+                <poi>
+                    <longitude>4.719820</longitude>
+                    <latitude>49.761301</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>sauf le 3e mercredi après-midi - MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

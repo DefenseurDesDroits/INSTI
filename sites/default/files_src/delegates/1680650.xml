@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680650" login="YCARRIERE">
+        <identite civilite="Monsieur" codeDep="59">
+            <nom>CARRIÈRE</nom>
+            <prenom>Yves</prenom>
+        </identite>
+        <email>yves.carriere@defenseurdesdroits.fr</email>
+        <photo>YCARRIERE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre pénitentiaire de Lille-Annoeullin</libelle>
+                <libelleSecondaire />
+                <adresse>Voie RD 41 B Lieu-dit Canton du pommier</adresse>
+                <boitePostale>BP 10028</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="59112"><value>ANNOEULLIN</value></ville>
+                <poi>
+                    <longitude>2.223069</longitude>
+                    <latitude>50.730101</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - un sur deux JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Mairie de Loos</libelle>
+                <libelleSecondaire />
+                <adresse>104, rue du Maréchal Foch</adresse>
+                <boitePostale />
+                <tel>03 20 50 00 02</tel>
+                <fax>03 20 10 40 59</fax>
+                <ville cp="59120"><value>LOOS</value></ville>
+                <poi>
+                    <longitude>3.014740</longitude>
+                    <latitude>50.615034</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt de Lille Sequedin</libelle>
+                <libelleSecondaire />
+                <adresse>Chemin de la Plaine</adresse>
+                <boitePostale>BP 179</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="59320"><value>SEQUEDIN</value></ville>
+                <poi>
+                    <longitude>2.966960</longitude>
+                    <latitude>50.620511</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - un sur deux JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Maison du Citoyen de Lomme</libelle>
+                <libelleSecondaire />
+                <adresse>343, avenue de Dunkerque Lomme</adresse>
+                <boitePostale />
+                <tel>03 20 08 90 30</tel>
+                <fax />
+                <ville cp="59160"><value>LAMBERSART</value></ville>
+                <poi>
+                    <longitude>3.018642</longitude>
+                    <latitude>50.640576</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>un sur deux JEUDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681133" login="ALASSOUT">
+        <identite civilite="Madame" codeDep="39">
+            <nom>LASSOUT</nom>
+            <prenom>Arlette</prenom>
+        </identite>
+        <email>arlette.lassout@defenseurdesdroits.fr</email>
+        <photo>ALASSOUT.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Point info familles</libelle>
+                <libelleSecondaire />
+                <adresse>215, avenue d&apos;Offenbourg</adresse>
+                <boitePostale />
+                <tel>03 84 47 58 15</tel>
+                <fax />
+                <ville cp="39000"><value>LONS-LE-SAUNIER</value></ville>
+                <poi>
+                    <longitude>5.569357</longitude>
+                    <latitude>46.676831</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Dole</libelle>
+                <libelleSecondaire />
+                <adresse>23, place de la Sous-préfecture</adresse>
+                <boitePostale />
+                <tel>03 84 79 44 00</tel>
+                <fax />
+                <ville cp="39100"><value>DOLE</value></ville>
+                <poi>
+                    <longitude>5.493542</longitude>
+                    <latitude>47.094007</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e VENDREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

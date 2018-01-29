@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681209" login="PAHOPITAL">
+        <identite civilite="Monsieur" codeDep="27">
+            <nom>HOPITAL</nom>
+            <prenom>Pierre-André</prenom>
+        </identite>
+        <email>pierre-andre.hopital@defenseurdesdroits.fr</email>
+        <photo>PAHOPITAL.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Eure</libelle>
+                <libelleSecondaire />
+                <adresse>Boulevard Georges Chauvin</adresse>
+                <boitePostale />
+                <tel>02 32 78 26 36</tel>
+                <fax>02 32 78 27 44</fax>
+                <ville cp="27000"><value>ÉVREUX</value></ville>
+                <poi>
+                    <longitude>1.142460</longitude>
+                    <latitude>49.025492</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

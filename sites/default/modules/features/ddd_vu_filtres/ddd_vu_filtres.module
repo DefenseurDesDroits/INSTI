@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - View Filtres BO feature.
+ */
+
+include_once 'ddd_vu_filtres.features.inc';

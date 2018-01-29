@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681311" login="WPAULET">
+        <identite civilite="Monsieur" codeDep="79">
+            <nom>PAULET</nom>
+            <prenom>William</prenom>
+        </identite>
+        <email>william.paulet@defenseurdesdroits.fr</email>
+        <photo>WPAULET.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture des Deux-Sèvres</libelle>
+                <libelleSecondaire />
+                <adresse>4, rue Du Guesclin</adresse>
+                <boitePostale />
+                <tel>05 49 08 69 95</tel>
+                <fax>05 49 08 69 04</fax>
+                <ville cp="79099"><value>NIORT CEDEX 9</value></ville>
+                <poi>
+                    <longitude>-0.465515</longitude>
+                    <latitude>46.324550</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

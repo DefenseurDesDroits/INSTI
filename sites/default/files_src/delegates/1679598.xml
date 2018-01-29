@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679598" login="AAFATHI">
+        <identite civilite="Monsieur" codeDep="78">
+            <nom>FATHI</nom>
+            <prenom>Ali</prenom>
+        </identite>
+        <email>ali.fathi@defenseurdesdroits.fr</email>
+        <photo>AAFATHI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Point d&apos;accès au Droit</libelle>
+                <libelleSecondaire>Mairie annexe</libelleSecondaire>
+                <adresse>118, avenue Georges Clémenceau</adresse>
+                <boitePostale />
+                <tel>01 61 04 20 99</tel>
+                <fax />
+                <ville cp="78500"><value>SARTROUVILLE</value></ville>
+                <poi>
+                    <longitude>2.197711</longitude>
+                    <latitude>48.942091</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

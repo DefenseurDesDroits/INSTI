@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD CT Décision feature.
+ */
+
+include_once 'ddd_ct_decision.features.inc';

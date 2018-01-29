@@ -1,0 +1,31 @@
+.sharethis-wrapper span, .sharethis-wrapper a{
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+}
+
+.sharethis-wrapper span:hover, .sharethis-wrapper a:hover{
+  cursor: pointer;
+}
+
+.st_facebook_custom{
+  background-image: url("../libraries/socialshare_lab/PNG/facebook.png");
+}
+
+.st_twitter_custom{
+  background-image: url("../libraries/socialshare_lab/PNG/twitter.png");
+}
+
+.st_linkedin_custom{
+  background-image: url("../libraries/socialshare_lab/PNG/linkedin.png");
+}
+
+.st_email_custom{
+  background-image: url("../libraries/socialshare_lab/PNG/email.png");
+}
+
+.st_print_custom{
+  background-image: url("../libraries/socialshare_lab/PNG/print.png");
+}

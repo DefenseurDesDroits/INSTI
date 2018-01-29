@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2400401" login="MCOLIN">
+        <identite civilite="Madame" codeDep="14">
+            <nom>COLIN</nom>
+            <prenom>Marie-Odile</prenom>
+        </identite>
+        <email>marie-odile.colin@defenseurdesdroits.fr</email>
+        <photo>MCOLIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Sous-préfecture de Bayeux</libelle>
+                <libelleSecondaire />
+                <adresse>7, place Charles de Gaulle</adresse>
+                <boitePostale>BP 26237</boitePostale>
+                <tel>02 31 51 40 66</tel>
+                <fax />
+                <ville cp="14400"><value>BAYEUX</value></ville>
+                <poi>
+                    <longitude>-0.708097</longitude>
+                    <latitude>49.275508</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e - 3e et 4e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="NON">
+                <libelle>Sous-préfecture de Vire</libelle>
+                <libelleSecondaire />
+                <adresse>7, rue des Cordeliers</adresse>
+                <boitePostale>BP 60154</boitePostale>
+                <tel>02 31 66 37 10</tel>
+                <fax />
+                <ville cp="14504"><value>VIRE CEDEX</value></ville>
+                <poi>
+                    <longitude>-0.895208</longitude>
+                    <latitude>48.838544</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

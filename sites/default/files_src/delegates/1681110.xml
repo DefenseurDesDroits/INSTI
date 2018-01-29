@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1681110" login="CDIPP">
+        <identite civilite="Madame" codeDep="973">
+            <nom>DIPP</nom>
+            <prenom>Cécile </prenom>
+        </identite>
+        <email>cecile.dipp@defenseurdesdroits.fr</email>
+        <photo>CDIPP.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Villa des palmistes de la préfecture</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Fiedmond</adresse>
+                <boitePostale />
+                <tel>06 46 41 32 54</tel>
+                <fax />
+                <ville cp="97300"><value>CAYENNE</value></ville>
+                <poi>
+                    <longitude>-52.335262</longitude>
+                    <latitude>4.939450</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680496" login="ABARBAZANGE">
+        <identite civilite="Monsieur" codeDep="19">
+            <nom>BARBAZANGE</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.barbazange@defenseurdesdroits.fr</email>
+        <photo>ABARBAZANGE.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Centre de détention d&apos;Uzerche</libelle>
+                <libelleSecondaire />
+                <adresse>Route d&apos;Eyburie</adresse>
+                <boitePostale>BP 02</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="19140"><value>UZERCHE</value></ville>
+                <poi>
+                    <longitude>1.583124</longitude>
+                    <latitude>45.430565</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>Réservée aux détenus - 2e et 4e VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Cité administrative</libelle>
+                <libelleSecondaire />
+                <adresse>Place Martial Brigouleix</adresse>
+                <boitePostale>BP 314</boitePostale>
+                <tel>05 55 20 55 20</tel>
+                <fax />
+                <ville cp="19000"><value>TULLE</value></ville>
+                <poi>
+                    <longitude>1.768279</longitude>
+                    <latitude>45.264005</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

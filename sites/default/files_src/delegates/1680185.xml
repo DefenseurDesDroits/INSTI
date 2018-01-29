@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680185" login="ABELHADJ">
+        <identite civilite="Monsieur" codeDep="18">
+            <nom>BELHADJ</nom>
+            <prenom>Alain</prenom>
+        </identite>
+        <email>alain.belhadj@defenseurdesdroits.fr</email>
+        <photo>ABELHADJ.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture du Cher</libelle>
+                <libelleSecondaire />
+                <adresse>Place Marcel Plaisant</adresse>
+                <boitePostale />
+                <tel>02 48 67 34 45</tel>
+                <fax />
+                <ville cp="18000"><value>BOURGES</value></ville>
+                <poi>
+                    <longitude>2.396399</longitude>
+                    <latitude>47.080951</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

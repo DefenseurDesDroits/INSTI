@@ -1,0 +1,3 @@
+name = DDD Purge Atoms
+description = A module that purge the atoms of unpublished content.
+core = 7.x

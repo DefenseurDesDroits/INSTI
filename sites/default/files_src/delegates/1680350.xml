@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680350" login="JPGUILLOTEAU">
+        <identite civilite="Monsieur" codeDep="49">
+            <nom>GUILLOTEAU</nom>
+            <prenom>Jean-Paul</prenom>
+        </identite>
+        <email>jean-paul.guilloteau@defenseurdesdroits.fr</email>
+        <photo>JPGUILLOTEAU.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison d&apos;arrêt d&apos;Angers</libelle>
+                <libelleSecondaire />
+                <adresse>1, place Olivier Giran</adresse>
+                <boitePostale>BP 4134</boitePostale>
+                <tel />
+                <fax />
+                <ville cp="49000"><value>ANGERS</value></ville>
+                <poi>
+                    <longitude>-0.541181</longitude>
+                    <latitude>47.475000</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>réservée aux détenus MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit d&apos;Angers - Loire Métropole</libelle>
+                <libelleSecondaire>Centre commercial du Chapeau de Gendarme</libelleSecondaire>
+                <adresse>Avenue Winston Churchill</adresse>
+                <boitePostale />
+                <tel>02 41 45 34 00</tel>
+                <fax />
+                <ville cp="49000"><value>ANGERS</value></ville>
+                <poi>
+                    <longitude>-0.555953</longitude>
+                    <latitude>47.451206</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679499" login="GMICHELIN">
+        <identite civilite="Monsieur" codeDep="38">
+            <nom>MICHELIN</nom>
+            <prenom>Gilbert</prenom>
+        </identite>
+        <email>gilbert.michelin@defenseurdesdroits.fr</email>
+        <photo>GMICHELIN.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Grenoble</libelle>
+                <libelleSecondaire />
+                <adresse>25, rue de Constantine</adresse>
+                <boitePostale />
+                <tel>06 09 57 14 40</tel>
+                <fax />
+                <ville cp="38100"><value>GRENOBLE</value></ville>
+                <poi>
+                    <longitude>5.734027</longitude>
+                    <latitude>45.160068</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>VENDREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

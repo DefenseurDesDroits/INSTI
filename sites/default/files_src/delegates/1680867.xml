@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680867" login="JCARNEL">
+        <identite civilite="Monsieur" codeDep="62">
+            <nom>CARNEL</nom>
+            <prenom>Jean</prenom>
+        </identite>
+        <email>jean.carnel@defenseurdesdroits.fr</email>
+        <photo>JCARNEL.jpg</photo>
+        <structures>
+            <structure principal="NON">
+                <libelle>Maison de service de proximité Marie-Thérèse Lenoir</libelle>
+                <libelleSecondaire />
+                <adresse>1, rue Charles Péguy</adresse>
+                <boitePostale />
+                <tel>03 21 59 55 29</tel>
+                <fax />
+                <ville cp="62000"><value>ARRAS</value></ville>
+                <poi>
+                    <longitude>2.748604</longitude>
+                    <latitude>50.301613</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>1e et 3e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+            <structure principal="OUI">
+                <libelle>Préfecture du Pas-de-Calais</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Ferdinand Buisson</adresse>
+                <boitePostale />
+                <tel>03 21 21 21 39</tel>
+                <fax />
+                <ville cp="62000"><value>ARRAS</value></ville>
+                <poi>
+                    <longitude>2.765174</longitude>
+                    <latitude>50.292398</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>2e et 4e LUNDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

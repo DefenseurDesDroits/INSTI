@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680810" login="GLASCHAMP">
+        <identite civilite="Monsieur" codeDep="43">
+            <nom>LASCHAMP</nom>
+            <prenom>Guy</prenom>
+        </identite>
+        <email>guy.laschamp@defenseurdesdroits.fr</email>
+        <photo>GLASCHAMP.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de la Haute-Loire</libelle>
+                <libelleSecondaire />
+                <adresse>6, avenue du Général de Gaulle</adresse>
+                <boitePostale>BP 321</boitePostale>
+                <tel>04 71 09 91 25</tel>
+                <fax>04 71 09 90 96</fax>
+                <ville cp="43000"><value>LE PUY-EN-VELAY</value></ville>
+                <poi>
+                    <longitude>3.883971</longitude>
+                    <latitude>45.041066</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD View mediatheque feature.
+ */
+
+include_once 'ddd_vu_mediatheque.features.inc';

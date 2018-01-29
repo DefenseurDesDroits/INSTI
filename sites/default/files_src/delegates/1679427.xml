@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1679427" login="MBOYER">
+        <identite civilite="Monsieur" codeDep="04">
+            <nom>BOYER</nom>
+            <prenom>Maurice</prenom>
+        </identite>
+        <email>maurice.boyer@defenseurdesdroits.fr</email>
+        <photo>MBOYER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Immeuble départemental - Pôle Solidarités</libelle>
+                <libelleSecondaire />
+                <adresse>Place des Récollets</adresse>
+                <boitePostale />
+                <tel>04 92 32 20 53</tel>
+                <fax>04 92 30 00 51</fax>
+                <ville cp="04000"><value>DIGNE-LES-BAINS</value></ville>
+                <poi>
+                    <longitude>6.239353</longitude>
+                    <latitude>44.092142</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>MATIN</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

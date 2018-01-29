@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680042" login="CLEPVRIER">
+        <identite civilite="Madame" codeDep="27">
+            <nom>LEPVRIER</nom>
+            <prenom>Chantal</prenom>
+        </identite>
+        <email>chantal.lepvrier@defenseurdesdroits.fr</email>
+        <photo>CLEPVRIER.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Eure</libelle>
+                <libelleSecondaire />
+                <adresse>Boulevard Georges Chauvin</adresse>
+                <boitePostale />
+                <tel>02 32 78 26 36</tel>
+                <fax />
+                <ville cp="27000"><value>ÉVREUX</value></ville>
+                <poi>
+                    <longitude>1.142460</longitude>
+                    <latitude>49.025492</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680480" login="DKELAI">
+        <identite civilite="Monsieur" codeDep="68">
+            <nom>KELAI</nom>
+            <prenom>Daniel</prenom>
+        </identite>
+        <email>daniel.kelai@defenseurdesdroits.fr</email>
+        <photo>DKELAI.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Carré des Associations</libelle>
+                <libelleSecondaire />
+                <adresse>100, avenue de Colmar</adresse>
+                <boitePostale />
+                <tel>06 42 05 84 08</tel>
+                <fax />
+                <ville cp="68100"><value>MULHOUSE</value></ville>
+                <poi>
+                    <longitude>7.336743</longitude>
+                    <latitude>47.756709</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>MARDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

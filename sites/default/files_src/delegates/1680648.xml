@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="1680648" login="BLABEAUME">
+        <identite civilite="Monsieur" codeDep="07">
+            <nom>LABEAUME</nom>
+            <prenom>Bernard</prenom>
+        </identite>
+        <email>bernard.labeaume@defenseurdesdroits.fr</email>
+        <photo>BLABEAUME.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Préfecture de l&apos;Ardèche</libelle>
+                <libelleSecondaire />
+                <adresse>Rue Pierre Filliat </adresse>
+                <boitePostale>BP 721</boitePostale>
+                <tel>04 75 66 50 52</tel>
+                <fax>04 75 64 61 36</fax>
+                <ville cp="07000"><value>PRIVAS</value></ville>
+                <poi>
+                    <longitude>4.599886</longitude>
+                    <latitude>44.736127</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>JEUDI</jour>
+                        <horaire>JOURNEE</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>

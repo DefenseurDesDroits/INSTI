@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * Code for the Socle Lab' feature - Menus feature.
+ */
+
+include_once 'sl_cf_menus.features.inc';
+
+function sl_cf_menus_pre_features_revert($component) {
+  if($component == 'menu_links') {
+    // Delete all menu before reverting
+    menu_delete_links('main-menu');
+    menu_delete_links('menu-footer');
+    menu_delete_links('menu-menu-utilitaire');
+  }
+}

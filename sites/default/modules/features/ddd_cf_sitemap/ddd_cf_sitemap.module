@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DdD - Plan du site feature.
+ */
+
+include_once 'ddd_cf_sitemap.features.inc';

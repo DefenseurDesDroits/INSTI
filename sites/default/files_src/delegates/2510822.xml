@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+    <delegue etat="NOMME" id="2510822" login="NROUCHAUD">
+        <identite civilite="Madame" codeDep="974">
+            <nom>ROUCHAUD</nom>
+            <prenom>Nicole</prenom>
+        </identite>
+        <email>nicole.rouchaud@defenseurdesdroits.fr</email>
+        <photo>NROUCHAUD.jpg</photo>
+        <structures>
+            <structure principal="OUI">
+                <libelle>Maison de justice et du droit de Saint-Paul</libelle>
+                <libelleSecondaire />
+                <adresse>30, quai Gilbert</adresse>
+                <boitePostale />
+                <tel>02 62 45 42 98</tel>
+                <fax>02 62 45 90 93</fax>
+                <ville cp="97460"><value>ST PAUL</value></ville>
+                <poi>
+                    <longitude>55.270780</longitude>
+                    <latitude>-21.007473</latitude>
+                </poi>
+                <permanences>
+                    <permanence>
+                        <jour>LUNDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                    <permanence>
+                        <jour>MERCREDI</jour>
+                        <horaire>APRES-MIDI</horaire>
+                    </permanence>
+                </permanences>
+            </structure>
+        </structures>
+    </delegue>
+</ROOT>
