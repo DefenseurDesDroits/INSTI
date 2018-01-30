@@ -137,7 +137,6 @@ $handler->display->display_options['fields']['nothing']['ui_name'] = 'Date et lo
 $handler->display->display_options['fields']['nothing']['label'] = '';
 $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
 $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class=\'agenda-created\'>
-<div class="date">[created]<span class="color:blue"> /</span></div>
 <div class="localisation">[field_event_lieu]<span class="color:blue"> /</span></div>
 </div>';
 $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;

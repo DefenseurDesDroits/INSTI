@@ -83,10 +83,10 @@ $secondp ="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR 
 
 
 $finalp .="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
-          <p class='subtitle-text'>Vous semblez avoir été victime de Discrimination.</p>
-          <p class='subtitle-text'>Le Défenseur des droits promeut l'égalité des droits.</p>
+          <p class='subtitle-text'>Merci d'avoir répondu à ces quelques questions.</p>
+          <p class='subtitle-text'>Voici un résumé de vos informations :</p>
           <br>
-          <p class='text-center'>Votre réclamation concerne le domaine:</p>
+          <p class='text-center'>Vous souhaitez saisir le Défenseur des droits au titre de sa compétence</p>
           <div class='col-lg-offset-5 col-md-offset-5 col-sm-offset-4 col-xs-offset-2'>";
 
           foreach ($form['valueone']['#value']as $etape1){
@@ -110,18 +110,21 @@ $finalp .="<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR 
 
 $finalp.= "
           <br /><br />
-          <p class='subtitle-text' style='text-decoration: underline;'><a href='#' onclick='window.print();' class='print'>Imprimer ma réclamation</a></p>
-          <br /><br />
-          <p class='text-center'>Vous pouvez des à présent compléter votre demande de saisie pré-remplie au Défenseur des Droits</p>
-          <p class='text-center'>Votre histoire est importante, nous sommes là pour vous accompagner dans vos démarches.</p>
+          <p class='text-center'>Si ces informations sont correctes, vous pouvez poursuivre votre saisine en ligne</p>
+          <p class='text-center'>Votre histoire est importante. Nous sommes là pour vous accompagner dans vos démarches.</p>
           <br><div class='btnanswer text-center'>"
-          .drupal_render($form['sendform'])."<br />
+          .drupal_render($form['sendform'])."<br /><br />
+          <p class='subtitle-text' style='text-decoration: underline;'><a href='#' onclick='window.print();' class='print'>Imprimer mes informations</a></p>
+          <br />
           </div>
           <div class='col-md-12 col-xs-12 col-lg-10 col-lg-offset-1'>
           <div class='col-md-4 col-xs-12 col-lg-4'>
           <div class='picto-mail picto'></div>
           <h2 class='text-center titleanswer'>SAISIR PAR COURRIER</h2>
-          <p class='text-center'>Près de 400 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.
+          <p class='text-center'>Vous pouvez saisir le Défenseur des droits par courrier gratuit, sans affranchissement en écrivant à :<br />
+          Défenseur des droits – Libre réponse 71120 – 75342 Paris Cedex 07.<br />
+          N'hésitez pas à joindre vos informations à votre courrier
+          <p class='subtitle-text' style='text-decoration: underline;'><a href='#' onclick='window.print();' class='print'>Imprimer mes informations</a></p>
           <div class='btnanswer text-center'>
           <a href=''#' class='btn btn-default form-submit'>SAISIR PAR COURRIER</a>
           </div>
@@ -129,16 +132,17 @@ $finalp.= "
           </div><div class='col-md-4 col-xs-12 col-lg-4'>
           <div class='picto-delegue picto'></div>
           <h2 class='text-center titleanswer'>RENCONTRER UN DÉLÉGUÉ</h2>
-          <p class='text-center'>Près de 400 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.
+          <p class='text-center'>Près de 500 délégués du Défenseur des droits vous accueillent gratuitement dans plus de 800 permanences partout en France et Outre-mer. Ils vous accueillent, vous écoutent et vous orientent dans vos démarches. N'hésitez pas à imprimer vos informations pour les transmettre au délégué
+          <p class='subtitle-text' style='text-decoration: underline;'><a href='#' onclick='window.print();' class='print'>Imprimer mes informations</a></p>
           <div class='btnanswer text-center'>
-          <a href=''#' class='btn btn-default form-submit'>RENCONTRER UN DÉLÉGUÉ</a>
+          <a href='/saisir/delegues' class='btn btn-default form-submit'>RENCONTRER UN DÉLÉGUÉ</a>
             </div></p>
           </div>
           <div class='col-md-4 col-xs-12 col-lg-4'>
             <div class='picto-tel picto'></div>
             <h2 class='text-center titleanswer'>DIRECTEMENT PAR TÉLÉPHONE</h2>
             <p class='text-center'>
-            Nos conseillers ovus répondent du lundi au vendred de 8h00 à 20h00 (coût d'un appel local) au:
+            Vous souhaitez avoir des informations sur l'institution ? Savoir si votre situation peut faire l'objet d'une réclamation ? Vous pouvez contacter l'institution du lundi au vendredi de 8h à 19h (prix d'un appel local) au :
             </p>
             <h2 class='text-center titleanswer tel-color'>09 69 39 00 00</h2>
             <br /><br /><br />
