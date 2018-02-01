@@ -2,7 +2,7 @@
   $nodes = $form['node'];
 
   $firstp = "<h1 class='page-header' style='padding-bottom:0;'>POUVEZ-VOUS SAISIR LE DÉFENSEUR DES DROITS ?</h1>
-    <p class='subtitle-text'>Le Défenseur des Droits agit sur 5 missions distinctes.</p>
+    <p class='subtitle-text'>Le Défenseur des Droits agit sur 5 domaines de compétence.</p>
     <p class='subtitle-text'>Votre réclamation concerne:</p>
     <br><br>
     <div class='row wrapper-etape-1'>";

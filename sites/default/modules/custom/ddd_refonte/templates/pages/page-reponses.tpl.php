@@ -28,7 +28,7 @@
         <div class='col-md-12 col-xs-12 col-lg-12 col-lg-offset-1'>
         <div class='col-md-4 col-xs-12 col-lg-2 col-lg-offset-1'>
         <h2 class='text-center titleanswer'>TROUVEZ UN DÉLÉGUÉ PROCHE DE CHEZ VOUS</h2>
-        <p class='text-center'>Près de 400 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.</p>
+        <p class='text-center'>Près de 500 délégués répartis sur l'ensemble du territoire national vous informent sur vos droits et peuvent proposer des solutions amiables ou engager une procédure.</p>
         <div class="btnanswer text-center" style="margin-top:27px;">
           <button class="btn btn-default" id="sendbtn">TROUVEZ VOTRE DÉLÉGUÉ</button>
         </div>
