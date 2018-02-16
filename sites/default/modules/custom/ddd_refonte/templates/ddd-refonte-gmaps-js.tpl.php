@@ -81,11 +81,10 @@
         }
 
         contentString += '<p class="txt-delegue">';
-        contentString += delegate.email;
 
         // Check if there's a mobile phone.
         if (delegate.mobile.length > 0) {
-          contentString += '<br>Mobile:' + delegate.mobile;
+          contentString += 'Mobile:' + delegate.mobile;
         }
 
         // Close the "txt-delegue" paragraph.
@@ -123,7 +122,7 @@
       if ($(window).width() < 768) {
         defaultZoom = 4;
         if (window.innerHeight > window.innerWidth) {
-          $('#map').removeClass('embed-responsive-16by9').addClass('embed-responsive-4by3');
+          $('#map').removeClass('embed-responsive-21by9').addClass('embed-responsive-4by3');
         }
       }
 

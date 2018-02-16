@@ -12,7 +12,10 @@
         </button>
       </div>
     </div>
-    <div id="map" class="embed-responsive embed-responsive-16by9"></div>
+    <style>
+      .embed-responsive-21by9{padding-bottom: 42.857143%;}
+    </style>
+    <div id="map" class="embed-responsive embed-responsive-21by9"></div>
     <?php if (!empty($vars['gmaps_js'])): ?>
       <?php print $vars['gmaps_js']; ?>
     <?php endif; ?>
