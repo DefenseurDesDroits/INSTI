@@ -150,9 +150,6 @@
       var autocomplete = new google.maps.places.Autocomplete(input, options);
 
       // Listen to the "place_changed" event.
-      google.maps.event.addListener('clusterclick', ()=>{
-        placeChanged = true;
-      });
 
       google.maps.event.addListener(autocomplete, 'place_changed', function() {
         var place = autocomplete.getPlace();
@@ -217,9 +214,9 @@
 
         // This event will be triggered once map becomes idle.
       google.maps.event.addListener(map, 'idle', function() {
-        if (!placeChanged) {
+        /* if (!placeChanged) {
           return;
-        }
+        } */
         // Check to see if we can update the bottom listing with the delegates
         // within the bounds.
         var delegatesFound = 0;
