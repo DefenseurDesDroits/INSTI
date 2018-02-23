@@ -150,6 +150,10 @@
       var autocomplete = new google.maps.places.Autocomplete(input, options);
 
       // Listen to the "place_changed" event.
+      google.maps.event.addListener(markerCluster, 'clusterclick', function(cluster) {
+        placeChanged = true;
+      });
+
       google.maps.event.addListener(autocomplete, 'place_changed', function() {
         var place = autocomplete.getPlace();
         if (!place.geometry) {
