@@ -150,7 +150,7 @@
       var autocomplete = new google.maps.places.Autocomplete(input, options);
 
       // Listen to the "place_changed" event.
-      google.maps.event.addListener(markerCluster, 'clusterclick', function(cluster) {
+      google.maps.event.addListener('clusterclick', ()=>{
         placeChanged = true;
       });
 
