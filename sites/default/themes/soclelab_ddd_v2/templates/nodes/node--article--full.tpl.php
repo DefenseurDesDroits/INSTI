@@ -83,7 +83,7 @@
   global $language;
   $prev_url =  drupal_get_path_alias("node/" . $content['flippy_pager']['#list']['prev']['nid'], $language->language);
   $next_url =  drupal_get_path_alias("node/" . $content['flippy_pager']['#list']['next']['nid'], $language->language);
-  $url = url(NULL, array('absolute' => TRUE));
+  $url = url($node_url, array('absolute' => TRUE));
   $key_name = '';
   $domaine_institution = '';
   if(isset($node->field_article_keyword['und'][0])){
@@ -164,7 +164,7 @@
       <div class="picto-link">
         <p class="social-networks"><a href="http://twitter.com/intent/tweet?status=<?=$title?>+<?=$url?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><span class="element-invisible">Partager sur Twitter (nouvelle fenêtre)</span></a></p>
         <p class="social-networks"><a href="http://www.facebook.com/share.php?u=<?=$url?>&title=<?=$title?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i><span class="element-invisible">Partager sur Facebook (nouvelle fenêtre)</span></a></p>
-        <p class="social-networks"><a href="mailto:subject=<?=$title ?>" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="element-invisible">Envoyer par mail (nouvelle fenêtre)</span></a></p>
+        <p class="social-networks"><a href="mailto:subject=<?=$title ?>&body=<?=$url?>" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i><span class="element-invisible">Envoyer par mail (nouvelle fenêtre)</span></a></p>
         <p class="social-networks"><a href="javascript:window.print()" target="_blank"><i class="fa fa-print" aria-hidden="true"></i><span class="element-invisible">Imprimer l'article (nouvelle fenêtre)</span></a></p>
       </div>
       <div class="desc-articles">

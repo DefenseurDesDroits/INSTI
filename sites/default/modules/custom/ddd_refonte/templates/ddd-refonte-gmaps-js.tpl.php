@@ -41,7 +41,7 @@
       for (var x = 0; x < value.del[i].duty.length; x++) {
         htmlfinal += "                  <p class='perm-delegue'>" + permanenceString + " : " + value.del[i].duty[x].day + " (" + value.del[i].duty[x].time + ")" + "</p>"
       }
-      htmlfinal += "                  <p class='txt-delegue'>" + value.del[i].mobile + " " + value.del[i].email + "</p>"
+      htmlfinal += "                  <p class='txt-delegue'>" + value.del[i].mobile + "</p>"
       htmlfinal += '                  <div class="lls contact-delegue"><a href="/contacter-un-delegue?title=' + value.name + '&city=' + value.city + '&name=' + value.del[i].firstname + ' ' + value.del[i].lastname +'&email=' + value.del[i].email + '">' + contactDelegate + '</a><span class="slash-blue"></span></div>';
       htmlfinal += "              </div>";
       htmlfinal += "          </div>";
