@@ -212,11 +212,15 @@
         placeChanged = true;
       });
 
+      google.maps.event.addListener(map, 'zoom_changed', function() {
+        placeChanged = true;
+      });
+
         // This event will be triggered once map becomes idle.
       google.maps.event.addListener(map, 'idle', function() {
-        /* if (!placeChanged) {
+        if (!placeChanged) {
           return;
-        } */
+        }
         // Check to see if we can update the bottom listing with the delegates
         // within the bounds.
         var delegatesFound = 0;
