@@ -1,3 +1,7 @@
+sites/*/settings*.php
+sites/*/files
+sites/*/private
+
 ### WINDOWS
 
 # Windows thumbnail cache files
