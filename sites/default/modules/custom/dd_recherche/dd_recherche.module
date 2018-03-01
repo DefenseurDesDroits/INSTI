@@ -169,8 +169,9 @@ function dd_recherche_menu()
 }
 
 function ddd_recherche_xml($recherche){
-  if($conf['proxy']){
-    stream_context_set_default(["http"=>["proxy"=>$conf['proxy']]]);
+  if(variable_get('proxy', NULL)){
+    $proxy=variable_get('proxy', NULL);
+    stream_context_set_default(["http"=>["proxy"=>$proxy]]);
   }
   $content = array();
   $values = array();
