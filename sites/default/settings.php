@@ -1,1 +1,0 @@
-/WEBS/dila/bo.insti.ext.ssl-gouv.fr/docs/sharing/settings.php
