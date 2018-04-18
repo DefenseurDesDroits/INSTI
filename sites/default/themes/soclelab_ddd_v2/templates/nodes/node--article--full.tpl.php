@@ -83,7 +83,7 @@
   global $language;
   $prev_url =  drupal_get_path_alias("node/" . $content['flippy_pager']['#list']['prev']['nid'], $language->language);
   $next_url =  drupal_get_path_alias("node/" . $content['flippy_pager']['#list']['next']['nid'], $language->language);
-  $url = url($node_url, array('absolute' => TRUE));
+  $url = url(current_path(), array('absolute' => TRUE));
   $key_name = '';
   $domaine_institution = '';
   if(isset($node->field_article_keyword['und'][0])){
