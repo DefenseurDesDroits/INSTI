@@ -203,6 +203,9 @@ h1, h2, h3, h4 {
   border-right: none;
 }
 
+.header .header-top-left li{
+	list-style-type:none;
+}
 .menu_access {text-transform:uppercase;}
 .menu_access li {display: inline-block;margin:0 2px;}
 .menu_access button{background-color:transparent;border:0;height:28px;margin:0 5px;}
