@@ -136,7 +136,7 @@ h1, h2, h3, h4 {
 
 .header .header-top {
   font-size: 1.3rem;
-  padding: 5px 0;
+  padding: 15px 0;
 }
 .header-bottom .navbar-header { padding: 10px 0 10px 0; }
 .header .header-bottom .menu.nav { text-align: center; }
@@ -202,6 +202,24 @@ h1, h2, h3, h4 {
   padding-right: 0;
   border-right: none;
 }
+
+.menu_access {text-transform:uppercase;}
+.menu_access li {display: inline-block;margin:0 2px;}
+.menu_access button{background-color:transparent;border:0;height:28px;margin:0 5px;}
+.menu_access .button_label{display:none;}
+.menu_access .access-visuel::before{
+content:url(/sites/default/files/picto-visuel.png)
+}
+.menu_access .access-falc::before{
+content:url(/sites/default/files/picto-falc.png)
+}
+.menu_access .access-lsf::before{
+content:url(/sites/default/files/picto-lsf.png)
+}
+.menu_access .access-facil::before{
+content:url(/sites/default/files/picto-faciliti.png)}
+
+
 a#text_resize_decrease,
 a#text_resize_increase {
   background: none;
