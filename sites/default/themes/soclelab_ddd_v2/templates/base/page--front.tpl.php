@@ -110,7 +110,7 @@ $path_saisir = translation_path_get_translations('node/23436');
   <div class="main-content container-wrapper" <?php if(isset($url_image_bandeau)){ print 'style="background-image: url('.$url_image_bandeau.');"';} ?>>
     <div class="container-fluid">
       <div class="col-md-12">
-        <div class="logo"><img alt="Accueil" src="<?=$logo?>" /></div>
+        <div class="logo"><img alt="Défenseur des droits - République Française" src="<?=$logo?>" /></div>
         <div class="title-home-hide"><h1>Défenseur des Droits</h1></div>
       </div>
       <div class="col-md-12">
