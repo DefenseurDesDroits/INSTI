@@ -26,10 +26,16 @@
     htmlfinal += "      <div class='col-md-12'>";
     htmlfinal += "          <div class='top-delegue'>";
     htmlfinal += "              <p class='titre-delegue'>" + value.name + " - <span class='ville-delegue'>" + value.city + "</span></p>";
+	if(value.nameComplement != ""){
+	  htmlfinal += "              <p class='txt-delegue'>" + value.nameComplement + "</p>";
+	}
     htmlfinal += "              <p class='txt-delegue'>" + value.address + " " + value.zipcode + " " + value.city + "</p>";
-    htmlfinal += "              <p class='txt-delegue'>" + phoneString + " : " + value.tel + " " + " - Fax : " + value.fax + "</p>";
+    if(value.addressComplement != ""){
+	  htmlfinal += "              <p class='txt-delegue'>" + value.addressComplement + "</p>";
+	}
+	htmlfinal += "              <p class='txt-delegue'>" + phoneString + " : " + value.tel + " " + " - Fax : " + value.fax + "</p>";
     htmlfinal += "          </div>";
-    htmlfinal += "      </div>";
+    htmlfinal += "      </div>";  
     for (var i = 0; i < value.del.length; i++) {
       htmlfinal += "      <div class='col-xs-12 col-sm-6 col-md-6'>"
       htmlfinal += "          <div class='delegue col-xs-12 col-sm-4 col-md-3'>"
@@ -49,17 +55,23 @@
     }
     htmlfinal += "  </div>";
     return htmlfinal;
-  }
-
+  } // Copied from delegate.js.
+ 
   // Build the infoWindow content.
   function buildInfoWindow(value) {
     var contentString = '';
     (function($) {
       contentString+=  '<div class="top-delegue">';
       contentString += '<p class="titre-delegue">' + value.name + ' - <span class="ville-delegue">' + value.city + '</span></p>';
+	  if(value.nameComplement != ""){
+         contentString += "              <p class='txt-delegue'>" + value.nameComplement + "</p>";
+      }
       contentString += '<p class="txt-delegue">' + value.address + ' ' + value.zipcode + ' ' + value.city + '</p>';
-      contentString += '<p class="txt-delegue">' + phoneString + ' : ' + value.tel + ' - Fax: ' + value.fax + '</p>';
-
+      if(value.addressComplement != ""){
+		contentString += "              <p class='txt-delegue'>" + value.addressComplement + "</p>";
+	  }
+	  contentString += '<p class="txt-delegue">' + phoneString + ' : ' + value.tel + ' - Fax: ' + value.fax + '</p>';
+      
       // Close the "top-delegue" div.
       contentString += '</div>';
 
@@ -108,19 +120,22 @@
       var $autocomplete = $('#gmaps-autocomplete');
       var $button = $('#gmaps-autocomplete-container button');
       var delegatesListing = $('#delegates');
-      var defaultPosition = {lat: 47.1945424, lng: 1};
+      //var defaultPosition = {lat: 47.1945424, lng: 1};
+	  var defaultPosition =	{lat: 25, lng: 45};
       // Initialize an array that will hold the markers.
       var markers = [];
       var jsonData = [];
       var infoWindow = new google.maps.InfoWindow();
       var bounds = new google.maps.LatLngBounds();
-      var defaultZoom = 6;
+      //var defaultZoom = 6;
+	  var defaultZoom = 3;
       var zipCode = '';
       var placeChanged = false;
 
       // Change the zoom for small screens.
       if ($(window).width() < 768) {
         defaultZoom = 4;
+		defaultPosition = {lat: 47.1945424, lng: 1};
         if (window.innerHeight > window.innerWidth) {
           $('#map').removeClass('embed-responsive-21by9').addClass('embed-responsive-4by3');
         }
@@ -144,7 +159,8 @@
 
       var options = {
         componentRestrictions: {
-          country: 'fr'
+          //country: 'fr'
+		  country: ["fr", "gp", "mq", "gf", "re", "pm", "yt", "nc", "pf", "mf", "tf"]
         }
       };
       var autocomplete = new google.maps.places.Autocomplete(input, options);
@@ -229,14 +245,14 @@
         var center = map.getCenter();
         for (var i = 0; i < markers.length; i++) {
           if (map.getBounds().contains(markers[i].getPosition())) {
-            if (!zipCodeEntered || (zipCodeEntered && markers[i].zipcode.match("^" + zipCode))) {
+            //if (!zipCodeEntered || (zipCodeEntered && markers[i].zipcode.match("^" + zipCode))) {
               markers[i].distance = google.maps.geometry.spherical.computeDistanceBetween(center, markers[i].getPosition());
               if (!markers[i].hasOwnProperty('listHtml')) {
                 markers[i].listHtml = insert_html(jsonData[i]);
               }
               delegatesFound++;
               newMarkers.push(markers[i]);
-            }
+            //}
           }
         }
         // Empty the zip code so that it's not matched accidentally next time.
