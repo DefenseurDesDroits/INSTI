@@ -31,17 +31,12 @@ $path_saisir = translation_path_get_translations('node/23436');
           <div class="row">
             <div class="col-sm-6 col-lg-4 col-lg-push-4">
               <div class="header-top-left">
-                <?php print t('You have a question? Call'); ?> <strong><a href="tel:0969390000" aria-describedby="info-tel"><?php print t('09 69 39 00 00'); ?><sup>*</sup></a></strong>
+                <p><?php print t('You have a question? Call'); ?> <strong><a href="tel:0969390000" aria-describedby="info-tel"><?php print t('09 69 39 00 00'); ?><sup>*</sup></a></strong></p>
+				<p><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('faq', $language->language);?>"><?php print t('Need help ?') ?></a></p>
               </div>
-            </div>
-            <div class='col-sm-6 col-lg-4 col-lg-push-4'>
-              <div class="header-top-right">
-                <ul class='header-links'>
-                  <li><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('faq', $language->language);?>"><?php print t('Need help ?') ?></a></li>
-                  <li><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('presse', $language->language);?>"><?php print t('PRESSE') ?></a></li>
-                </ul>
-                <?php print render($page['header_language']); ?>
-              </div>
+			  <div class="col-sm-6 col-lg-4 col-lg-push-4">
+			   <?php print render($page['header_language']); ?>
+			   </div>
             </div>
           </div>
         </div> <!-- header-top -->
