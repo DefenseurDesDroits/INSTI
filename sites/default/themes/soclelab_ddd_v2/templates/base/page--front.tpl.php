@@ -34,9 +34,12 @@ $path_saisir = translation_path_get_translations('node/23436');
                 <p><?php print t('You have a question? Call'); ?> <strong><a href="tel:0969390000" aria-describedby="info-tel"><?php print t('09 69 39 00 00'); ?><sup>*</sup></a></strong></p>
 				<p><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('faq', $language->language);?>"><?php print t('Need help ?') ?></a></p>
               </div>
-			  <div class="col-sm-6 col-lg-4 col-lg-push-4">
+			</div>
+			<div class="col-sm-6 col-lg-4 col-lg-push-4">
+			   <div class="header-top-right">
 			   <?php print render($page['header_language']); ?>
 			   </div>
+			 </div>
             </div>
           </div>
         </div> <!-- header-top -->
