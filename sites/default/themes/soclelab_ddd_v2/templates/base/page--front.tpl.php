@@ -29,16 +29,16 @@ $path_saisir = translation_path_get_translations('node/23436');
       <div class="col-sm-12 col-md-12">
         <div class='header-top'>
           <div class="row">
-            <div class="col-sm-6 col-lg-4 col-lg-push-4">
-              <div class="header-top-left">
+            <div class="col-sm-6 col-lg-6 col-lg-push-2">
+              <div class="row"><div class="header-top-left">
                 <ul><li><span><?php print t('You have a question? Call'); ?> <strong><a href="tel:0969390000" aria-describedby="info-tel"><?php print t('09 69 39 00 00'); ?><sup>*</sup></a></strong></span></li>
 				<li><span><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('faq', $language->language);?>"><?php print t('Need help ?') ?></a></span></li></ul>
-              </div>
+              </div></div>
 			</div>
-			<div class="col-sm-6 col-lg-4 col-lg-push-4">
-			   <div class="header-top-right">
+			<div class="col-sm-6 col-lg-6 col-lg-push-0">
+			   <div class="row"><div class="header-top-right">
 			   <?php print render($page['header_language']); ?>
-			   </div>
+			   </div></div>
 			 </div>
             </div>          
         </div> <!-- header-top -->
