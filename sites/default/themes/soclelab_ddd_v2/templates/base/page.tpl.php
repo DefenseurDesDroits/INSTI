@@ -38,7 +38,7 @@ $path_saisir = translation_path_get_translations('node/23436');
 				<li><span><a href="/<?php print $language->language; ?>/<?php print drupal_get_path_alias('faq', $language->language);?>"><?php print t('Need help ?') ?></a></span></li></ul>
               </div></div>
 			</div>
-			<div class="col-sm-6 col-lg-6 col-lg-push-0">
+			<div class="col-sm-6 col-lg-5 col-lg-push-1">
 			  <div class="row"><div class="header-top-right">
 			   <?php print render($page['header_language']); ?>
 			   </div></div>
