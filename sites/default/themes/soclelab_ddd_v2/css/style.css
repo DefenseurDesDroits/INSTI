@@ -148,24 +148,6 @@ h1, h2, h3, h4 {
   line-height: 20px;
   vertical-align: bottom;
 }
-.header .header-top-left li{
-	list-style-type:none;
-}
-.menu_access {text-transform:uppercase;}
-.menu_access li {display: inline-block;margin:0 2px;}
-.menu_access button{background-color:transparent;border:0;height:28px;margin:0 5px;}
-.menu_access .button_label{display:none;}
-.menu_access .access-visuel::before{
-content:url(/sites/default/files/picto-visuel.png)
-}
-.menu_access .access-falc::before{
-content:url(/sites/default/files/picto-falc.png)
-}
-.menu_access .access-lsf::before{
-content:url(/sites/default/files/picto-lsf.png)
-}
-.menu_access .access-facil::before{
-content:url(/sites/default/files/picto-faciliti.png)}
 
 @media (min-width: 768px) {
   .header .header-top {
@@ -195,7 +177,8 @@ content:url(/sites/default/files/picto-faciliti.png)}
 .header .header-top-right * {
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
 }
 .header .header-top-right ul.header-links li {
@@ -221,6 +204,28 @@ content:url(/sites/default/files/picto-faciliti.png)}
   padding-right: 0;
   border-right: none;
 }
+
+.header .header-top-left li{
+	list-style-type:none;
+}
+.menu_access {text-transform:uppercase;}
+.menu_access li {display: inline-block;margin:0 2px;}
+.menu_access button{background-color:transparent;border:0;height:28px;margin:0 5px;}
+.menu_access .button_label{display:none;}
+.menu_access .access-visuel::before{
+content:url(/sites/default/files/picto-visuel.png)
+}
+.menu_access .access-falc::before{
+content:url(/sites/default/files/picto-falc.png)
+}
+.menu_access .access-lsf::before{
+content:url(/sites/default/files/picto-lsf.png)
+}
+.menu_access .access-facil::before{
+content:url(/sites/default/files/picto-faciliti.png)}
+
+
+
 a#text_resize_decrease,
 a#text_resize_increase {
   background: none;
