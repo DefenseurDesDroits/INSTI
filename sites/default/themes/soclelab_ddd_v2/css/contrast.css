@@ -53,6 +53,7 @@
     border: MidnightBlue !important;
 }
 
+
 .contrast input[type=text],
 .contrast input[type=password],
 .contrast input[type=url],
@@ -69,6 +70,74 @@
     background: white !important;
     border: 1px solid white !important;
     color: MidnightBlue !important;
+}
+
+
+
+
+
+
+.contrast .footer a{
+    color: White !important;
+	text-decoration:underline;
+	background: MidnightBlue !important;
+}
+.contrast .footer a:hover{
+    color: White !important;
+	text-decoration:none;
+	background: MidnightBlue !important;
+}
+.contrast .footer button,
+.contrast .footer input[type=button],
+.contrast .footer input[type=reset],
+.contrast .footer input[type=submit] {
+    background: MidnightBlue !important;
+    color: White !important;
+    border: MidnightBlue !important;
+}
+
+
+.contrast .footer input[type=text],
+.contrast .footer input[type=password],
+.contrast .footer input[type=url],
+.contrast .footer input[type=search],
+.contrast .footer input[type=email],
+.contrast .footer input[type=tel],
+.contrast .footer input[type=date],
+.contrast .footer input[type=month],
+.contrast .footer input[type=week],
+.contrast .footer input[type=datetime],
+.contrast .footer input[type=datetime-local],
+.contrast .footer textarea,
+.contrast .footer input[type=number] {
+    background: MidnightBlue !important;
+    border: 1px solid white !important;
+    color: White !important;
+}
+
+.contrast .footer h1,
+.contrast .footer h2,
+.contrast .footer h3,
+.contrast .footer h4,
+.contrast .footer h5,
+.contrast .footer h6,
+.contrast .footer p,
+.contrast .footer label,
+.contrast .footer strong,
+.contrast .footer em,
+.contrast .footer cite,
+.contrast .footer q,
+.contrast .footer i,
+.contrast .footer b,
+.contrast .footer u,
+.contrast .footer span {
+    color: White !important;
+}
+
+.contrast,
+.footer {
+    background: MidnightBlue !important;
+    color: White !important;
 }
 
 .contrast img.on-contrast-force-gray {
