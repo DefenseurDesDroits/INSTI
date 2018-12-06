@@ -1,4 +1,4 @@
-name = Défenseur des Droits
+﻿name = Défenseur des Droits
 description = Boostrap sub-theme.
 core = 7.x
 base theme = bootstrap
@@ -64,6 +64,7 @@ stylesheets[all][] = css/mobile.css
 scripts[] = 'jquery.bxslider/jquery.bxslider.min.js'
 scripts[] = 'jquery.matchHeight/jquery.matchHeight-min.js'
 scripts[] = 'js/soclelab_ddd_v2.js'
+scripts[] = 'js/high-contrast.js'
 ;;scripts[] = 'js/menu.js'
 ;scripts[] = 'js/bootstrap.min.js'
 ;scripts[] = 'bootstrap/js/affix.js'
