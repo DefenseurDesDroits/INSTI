@@ -47,7 +47,9 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <link rel="stylesheet" type="text/css" media="all" href="/sites/default/themes/soclelab_ddd/css/ie-style.css" />
   <![endif]-->
-  <?php print $scripts; ?>
+  <script type="text/javascript" src="https://core.xvox.fr/Clients/DEFENSEURDESDROITS/core/xvox.min.js"></script>
+<link rel="stylesheet" type="text/css » href="https://core.xvox.fr/Clients/DEFENSEURDESDROITS/design/player.css"/>
+ <?php print $scripts; ?>
   <noscript>
     <style>li.expanded.dropdown:hover > .dropdown-menu{ display: block; }</style>
   </noscript>
