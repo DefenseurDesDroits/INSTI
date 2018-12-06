@@ -12,7 +12,7 @@
 .contrast aside,
 .contrast article {
     background: white !important;
-    color: MidnightBlue !important;
+    color: #0b1026 !important;
 }
 
 .contrast h1,
@@ -31,16 +31,16 @@
 .contrast b,
 .contrast u,
 .contrast span {
-    color: MidnightBlue !important;
+    color: #0b1026 !important;
 }
 
 .contrast a{
-    color: MidnightBlue !important;
+    color: #0b1026 !important;
 	text-decoration:underline;
 	background: white !important;
 }
 .contrast a:hover{
-    color: MidnightBlue !important;
+    color: #0b1026 !important;
 	text-decoration:none;
 	background: white !important;
 }
@@ -49,8 +49,8 @@
 .contrast input[type=reset],
 .contrast input[type=submit] {
     background: white !important;
-    color: MidnightBlue !important;
-    border: MidnightBlue !important;
+    color: #0b1026 !important;
+    border: #0b1026 !important;
 }
 
 
@@ -69,7 +69,7 @@
 .contrast input[type=number] {
     background: white !important;
     border: 1px solid white !important;
-    color: MidnightBlue !important;
+    color: #0b1026 !important;
 }
 
 
@@ -80,20 +80,20 @@
 .contrast #page-footer a{
     color: White !important;
 	text-decoration:underline;
-	background: MidnightBlue !important;
+	background: #0b1026 !important;
 }
 .contrast #page-footer a:hover{
     color: White !important;
 	text-decoration:none;
-	background: MidnightBlue !important;
+	background: #0b1026 !important;
 }
 .contrast #page-footer button,
 .contrast #page-footer input[type=button],
 .contrast #page-footer input[type=reset],
 .contrast #page-footer input[type=submit] {
-    background: MidnightBlue !important;
+    background: #0b1026 !important;
     color: White !important;
-    border: MidnightBlue !important;
+    border: #0b1026 !important;
 }
 
 
@@ -110,13 +110,13 @@
 .contrast #page-footer input[type=datetime-local],
 .contrast #page-footer textarea,
 .contrast #page-footer input[type=number] {
-    background: MidnightBlue !important;
+    background: #0b1026 !important;
     border: 1px solid white !important;
     color: White !important;
 }
 
 .contrast #page-footer,
-.contrast nav #page-footer,
+.contrast #page-footer nav,
 .contrast #page-footer div,
 .contrast #page-footer li,
 .contrast #page-footer ol,
@@ -126,7 +126,7 @@
 .contrast #page-footer main,
 .contrast #page-footer aside,
 .contrast #page-footer article {
-    background: MidnightBlue !important;
+    background: #0b1026 !important;
     color: white !important;
 }
 .contrast #page-footer h1,
