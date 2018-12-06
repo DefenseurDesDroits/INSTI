@@ -115,6 +115,20 @@
     color: White !important;
 }
 
+.contrast #page-footer,
+.contrast nav #page-footer,
+.contrast #page-footer div,
+.contrast #page-footer li,
+.contrast #page-footer ol,
+.contrast #page-footer header,
+.contrast #page-footer footer,
+.contrast #page-footer section,
+.contrast #page-footer main,
+.contrast #page-footer aside,
+.contrast #page-footer article {
+    background: MidnightBlue !important;
+    color: white !important;
+}
 .contrast #page-footer h1,
 .contrast #page-footer h2,
 .contrast #page-footer h3,
@@ -131,12 +145,6 @@
 .contrast #page-footer b,
 .contrast #page-footer u,
 .contrast #page-footer span {
-    color: White !important;
-}
-
-.contrast,
-#page-footer {
-    background: MidnightBlue !important;
     color: White !important;
 }
 
