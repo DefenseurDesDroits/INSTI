@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: 'Bebas Neue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue.woff2") format("woff2"), url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.ttf") format("truetype"), url("../fonts/BebasNeue.svg#BebasNeue") format("svg");
@@ -2844,48 +2844,7 @@ a.print{
 #defenseur-multistep-form ul{
   list-style: none;
 }
-/* ..................................................................................................... */
-/* ALTO CONTRASTE */
-.contrast,
-.contrast nav,
-.contrast div,
-.contrast li,
-.contrast ol,
-.contrast header,
-.contrast footer,
-.contrast section,
-.contrast main,
-.contrast aside,
-.contrast article {
-    background: black !important;
-    color: white !important;
-}
 
-.contrast h1,
-.contrast h2,
-.contrast h3,
-.contrast h4,
-.contrast h5,
-.contrast h6,
-.contrast p,
-.contrast label,
-.contrast strong,
-.contrast em,
-.contrast cite,
-.contrast q,
-.contrast i,
-.contrast b,
-.contrast u,
-.contrast span {
-    color: white !important;
-}
-
-.contrast a{
-    color: yellow !important;
-}
-
-.contrast button,
-.contrast input[type=button],
 .contrast input[type=reset],
 .contrast input[type=submit] {
     background: black !important;
