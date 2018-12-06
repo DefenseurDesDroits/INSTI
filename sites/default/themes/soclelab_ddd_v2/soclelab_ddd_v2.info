@@ -46,6 +46,7 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = css/style_gle.css
 stylesheets[all][] = css/mobile.css
 stylesheets[all][] = css/contrast.css
+stylesheets[all][] = https://core.xvox.fr/Clients/DEFENSEURDESDROITS/design/player.css
 ;stylesheets[print][] = css/print.css
 ;stylesheets[all][] = css/bootstrap.min.css
 ;stylesheets[all][] = css/bootstrap.min.css.map
@@ -64,6 +65,7 @@ stylesheets[all][] = css/contrast.css
 ; 
 scripts[] = 'jquery.bxslider/jquery.bxslider.min.js'
 scripts[] = 'jquery.matchHeight/jquery.matchHeight-min.js'
+scripts[] = 'https://core.xvox.fr/Clients/DEFENSEURDESDROITS/core/xvox.min.js'
 scripts[] = 'js/soclelab_ddd_v2.js'
 scripts[] = 'js/high-contrast.js'
 ;;scripts[] = 'js/menu.js'
