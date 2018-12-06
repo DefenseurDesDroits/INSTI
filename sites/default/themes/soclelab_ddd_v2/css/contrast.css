@@ -77,65 +77,65 @@
 
 
 
-.contrast .footer a{
+.contrast #page-footer a{
     color: White !important;
 	text-decoration:underline;
 	background: MidnightBlue !important;
 }
-.contrast .footer a:hover{
+.contrast #page-footer a:hover{
     color: White !important;
 	text-decoration:none;
 	background: MidnightBlue !important;
 }
-.contrast .footer button,
-.contrast .footer input[type=button],
-.contrast .footer input[type=reset],
-.contrast .footer input[type=submit] {
+.contrast #page-footer button,
+.contrast #page-footer input[type=button],
+.contrast #page-footer input[type=reset],
+.contrast #page-footer input[type=submit] {
     background: MidnightBlue !important;
     color: White !important;
     border: MidnightBlue !important;
 }
 
 
-.contrast .footer input[type=text],
-.contrast .footer input[type=password],
-.contrast .footer input[type=url],
-.contrast .footer input[type=search],
-.contrast .footer input[type=email],
-.contrast .footer input[type=tel],
-.contrast .footer input[type=date],
-.contrast .footer input[type=month],
-.contrast .footer input[type=week],
-.contrast .footer input[type=datetime],
-.contrast .footer input[type=datetime-local],
-.contrast .footer textarea,
-.contrast .footer input[type=number] {
+.contrast #page-footer input[type=text],
+.contrast #page-footer input[type=password],
+.contrast #page-footer input[type=url],
+.contrast #page-footer input[type=search],
+.contrast #page-footer input[type=email],
+.contrast #page-footer input[type=tel],
+.contrast #page-footer input[type=date],
+.contrast #page-footer input[type=month],
+.contrast #page-footer input[type=week],
+.contrast #page-footer input[type=datetime],
+.contrast #page-footer input[type=datetime-local],
+.contrast #page-footer textarea,
+.contrast #page-footer input[type=number] {
     background: MidnightBlue !important;
     border: 1px solid white !important;
     color: White !important;
 }
 
-.contrast .footer h1,
-.contrast .footer h2,
-.contrast .footer h3,
-.contrast .footer h4,
-.contrast .footer h5,
-.contrast .footer h6,
-.contrast .footer p,
-.contrast .footer label,
-.contrast .footer strong,
-.contrast .footer em,
-.contrast .footer cite,
-.contrast .footer q,
-.contrast .footer i,
-.contrast .footer b,
-.contrast .footer u,
-.contrast .footer span {
+.contrast #page-footer h1,
+.contrast #page-footer h2,
+.contrast #page-footer h3,
+.contrast #page-footer h4,
+.contrast #page-footer h5,
+.contrast #page-footer h6,
+.contrast #page-footer p,
+.contrast #page-footer label,
+.contrast #page-footer strong,
+.contrast #page-footer em,
+.contrast #page-footer cite,
+.contrast #page-footer q,
+.contrast #page-footer i,
+.contrast #page-footer b,
+.contrast #page-footer u,
+.contrast #page-footer span {
     color: White !important;
 }
 
 .contrast,
-.footer {
+#page-footer {
     background: MidnightBlue !important;
     color: White !important;
 }
