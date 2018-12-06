@@ -136,7 +136,7 @@ h1, h2, h3, h4 {
 
 .header .header-top {
   font-size: 1.3rem;
-  padding: 5px 0;
+  padding: 15px;
 }
 .header-bottom .navbar-header { padding: 10px 0 10px 0; }
 .header .header-bottom .menu.nav { text-align: center; }

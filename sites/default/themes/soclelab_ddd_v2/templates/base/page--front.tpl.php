@@ -38,7 +38,7 @@ $path_saisir = translation_path_get_translations('node/23436');
 			<div class="col-sm-6 col-lg-4 col-lg-push-4">
 			  <div class="row"><div class="header-top-right">
 			   <?php print render($page['header_language']); ?>
-			   </div></div>
+			   </div>
 			 </div>
             </div>
           </div>
