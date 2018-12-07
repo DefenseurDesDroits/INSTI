@@ -73,10 +73,6 @@
 }
 
 
-
-
-
-
 .contrast #page-footer a{
     color: White !important;
 	text-decoration:underline;
@@ -95,7 +91,6 @@
     color: White !important;
     border: #0b1026 !important;
 }
-
 
 .contrast #page-footer input[type=text],
 .contrast #page-footer input[type=password],
@@ -149,9 +144,18 @@
 }
 
 .contrast img.on-contrast-force-gray {
-    filter: grayscale(100%) contrast(120%);
+	filter:contrast(150%);
 }
 
 .contrast img.on-contrast-force-white {
     filter: brightness(0) invert(1);
+}
+
+.contrast #sliding-popup, 
+.contrast #sliding-popup div, 
+.contrast #sliding-popup h2,
+.contrast #sliding-popup p
+{
+    background: #0b1026 !important;
+    color: White !important;	
 }
