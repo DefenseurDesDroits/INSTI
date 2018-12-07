@@ -149,7 +149,7 @@ h1, h2, h3, h4 {
   vertical-align: bottom;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .header .header-top {
     border-bottom:1px solid #ccc;
   }
@@ -163,13 +163,13 @@ h1, h2, h3, h4 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header .header-top-right {
     margin-top: 15px;
     text-align: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .header .header-top-right {
     text-align: right;
   }
@@ -252,7 +252,7 @@ a#text_resize_increase {
 
 /* Primary menu */
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
   .header .header-bottom .navbar {
     margin: 0;
@@ -363,7 +363,7 @@ a#text_resize_increase {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header .navbar-toggle {
     margin: 0;
     padding: 0;
@@ -493,7 +493,7 @@ a#text_resize_increase {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .search-form .form-submit.btn {
     display: block;
     margin-top: 10px;
@@ -501,7 +501,7 @@ a#text_resize_increase {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .search-container {
     padding-left: 30px;
     padding-right: 30px;
@@ -510,7 +510,7 @@ a#text_resize_increase {
 
 /* Droits */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .btn-droits a {
     display: block;
     margin-top: 25px;
@@ -2538,7 +2538,7 @@ font-size: 1.75em;
 
 }
 
-@media(min-width: 768px) {
+@media(min-width: 767px) {
   .col5{
   width: 20%;
   float: left;
@@ -2568,7 +2568,7 @@ font-size: 1.75em;
   margin-bottom:10px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
   .frstnxt button{
     background-color: #0876B5 !important;
@@ -2607,7 +2607,7 @@ font-size: 1.75em;
     width: 20%;
     float: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 .col-sm-5th {
         width: 20%;
         float: left;
@@ -2788,7 +2788,7 @@ h3.text-res{
   float: left;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .col-sm-15 {
     width: 20%;
     float: left;
