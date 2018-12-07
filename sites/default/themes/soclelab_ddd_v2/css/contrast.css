@@ -72,6 +72,11 @@
     color: #0b1026 !important;
 }
 
+.contrast .navbar-header div, .contrast .navbar-default, .contrast .navbar-header div, .contrast .navbar div,  .contrast .navbar a{
+background:none !important;
+}
+
+
 
 .contrast #page-footer a{
     color: White !important;
@@ -144,7 +149,7 @@
 }
 
 .contrast img.on-contrast-force-gray {
-	filter:contrast(150%);
+	filter: contrast(150%);
 }
 
 .contrast img.on-contrast-force-white {
@@ -157,5 +162,10 @@
 .contrast #sliding-popup p
 {
     background: #0b1026 !important;
-    color: White !important;	
+    color: white !important;	
+}
+.contrast .btn-droits a,.contrast .btn-histoires a, .contrast .btn-reponses a
+{
+    background: #0b1026 !important;
+    color: white !important;	
 }
