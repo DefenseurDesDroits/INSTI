@@ -1982,7 +1982,9 @@ p { color:#71716e; text-align: justify; }
   height: auto;
   display: inline;
 }
-.img-vue-competences { text-align: center; }
+.img-vue-competences { text-align: center;
+max-width:220px;
+margin:auto; }
 .title-vue-competences {
   text-align: center;
   font-family: "Bebas Neue";

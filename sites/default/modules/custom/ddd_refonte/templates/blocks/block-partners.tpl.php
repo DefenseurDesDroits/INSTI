@@ -1,5 +1,5 @@
 <div class="row">
-	<nav class="navbar navbar-default">
+	<div class="navbar navbar-default">
 			<!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
@@ -14,15 +14,16 @@
 		    </div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse-6 navbar-collapse collapse" id="bs-example-navbar-collapse-6">
-					<div class="items">
+					<ul class="items">
 						<?php foreach($vars['partenaires'] as $partenaire) : ?>
 							<?php if(!empty($partenaire['title'])) : ?>
-								<div class="item col-sm-6 col-md-3 col-lg-3">
+								<li class="item col-sm-6 col-md-3 col-lg-3">
 								  <?php print l('<div><img src="' . $partenaire['img_url'] . '" alt="' . $partenaire['title'] .'"/></div><span>' . $partenaire['title'] . '</span>', $partenaire['url'], array('html' => true)); ?>
-								</div>
+								  
+								</li>
 							<?php endif; ?>
 						<?php endforeach; ?>
-					</div>
+					</ul>
 			</div><!-- /.navbar-collapse -->
-	</nav>
+	</div>
 </div>
