@@ -588,7 +588,7 @@ a#text_resize_increase {
   /*outline: 0px;*/
   outline-offset: 0px;
 }
-.block-ddd-faq li {
+.block-ddd-faq panel {
   list-style-type:none
 }
 /* Decisionpage    */
@@ -1985,10 +1985,10 @@ p { color:#71716e; text-align: justify; }
   display: inline;
 }
 .view-nodequeue-1 li {
-  list-type-style:none;
+  list-style-type:none;
 }
 #block-views-vue-actualites-block-actu-hp li{
-  list-type-style:none;	
+  list-style-type:none;	
 }
 .img-vue-competences { text-align: center;
 max-width:220px;
