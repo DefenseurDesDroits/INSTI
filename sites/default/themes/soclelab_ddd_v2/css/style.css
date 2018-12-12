@@ -588,7 +588,7 @@ a#text_resize_increase {
   /*outline: 0px;*/
   outline-offset: 0px;
 }
-.block-ddd-faq panel {
+.block-ddd-faq .panel {
   list-style-type:none
 }
 /* Decisionpage    */
