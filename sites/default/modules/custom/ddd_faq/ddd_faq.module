@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 define('DDD_FAQ_TID', 23);
 
@@ -82,7 +82,7 @@ function ddd_faq_get_info_block_questions_hp($nb_items = '', $cols = ''){
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $output .= '<div class="col-sm-12 col-md-' . $cols . ' col-lg-' . $cols . '">';
     $output .= '<h2 class="faq-' . $term->tid . ' title-h3">' . $translate->name . '</h2>';
-    $output .= '<div class="panel-group faq-group" id="faq-' . $term->tid . '">';
+    $output .= '<ul class="panel-group faq-group" id="faq-' . $term->tid . '">';
     
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node');
@@ -97,7 +97,7 @@ function ddd_faq_get_info_block_questions_hp($nb_items = '', $cols = ''){
       $nids = array_keys($result['node']);
       $nodes = entity_load('node', $nids);
       foreach ($nodes as $node) {
-        $output .= '<div class="panel">';
+        $output .= '<li class="panel">';
         $output .= '  <div class="panel-heading">';
         $output .= '    <h3 class="panel-title">';
         $output .= '      <a data-toggle="collapse" data-parent="#faq-' . $term->tid . '" href="#collapse-' . $node->nid . '" class="collapsed" role="button">' . $node->title . '<i class="fa fa-plus-circle" aria-hidden="true"></i><i class="fa fa-minus-circle" aria-hidden="true"></i></a>';
@@ -107,11 +107,11 @@ function ddd_faq_get_info_block_questions_hp($nb_items = '', $cols = ''){
           'label' => 'hidden'
         ));
         $output .= '  <div id="collapse-' . $node->nid . '" class="panel-collapse collapse">' . render($content_field) . '</div>';
-        $output .= '</div>';
+        $output .= '</li>';
       }
     }
     
-    $output .= '</div>';
+    $output .= '</ul>';
     $output .= '</div>';
     
     if($closerow) {

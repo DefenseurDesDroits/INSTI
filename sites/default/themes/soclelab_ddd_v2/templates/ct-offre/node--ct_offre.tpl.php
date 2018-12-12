@@ -115,7 +115,7 @@
           <div class="prec-agenda col-xs-4 col-sm-4">
             <a href="/<?=$prev_url?>">
               <i class="fa fa-angle-left pict-agenda-left" aria-hidden="true"></i>
-              <p class="prec"><?php print t('Prev Tools'); ?></p>
+              <p class="prec"><?php print t('Previous'); ?></p>
             </a>
           </div>
         <?php endif; ?>
@@ -129,7 +129,7 @@
           <div class="prec-agenda col-xs-4 col-sm-4">
             <a href="/<?=$next_url?>">
               <i class="fa fa-angle-right pict-agenda-right" aria-hidden="true"></i>
-              <p class="prec"><?php print t('Next Tools'); ?></p>
+              <p class="prec"><?php print t('Next'); ?></p>
             </a>
           </div>
         <?php endif; ?>
