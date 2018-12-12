@@ -585,10 +585,12 @@ a#text_resize_increase {
 }
 .block-ddd-faq a:focus {
   outline: thin dotted;
-  outline: 0px;
+  /*outline: 0px;*/
   outline-offset: 0px;
 }
-
+.block-ddd-faq li {
+  list-style-type:none
+}
 /* Decisionpage    */
 
 .node-decision { padding: 10px 0 10px 0; }
@@ -1981,6 +1983,12 @@ p { color:#71716e; text-align: justify; }
   width: 75%;
   height: auto;
   display: inline;
+}
+.view-nodequeue-1 li {
+  list-type-style:none;
+}
+#block-views-vue-actualites-block-actu-hp li{
+  list-type-style:none;	
 }
 .img-vue-competences { text-align: center;
 max-width:220px;
