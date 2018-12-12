@@ -1665,6 +1665,9 @@ div.zabuto_calendar .table tr td.event div.day, div.zabuto_calendar ul.legend li
 #block-ddd-refonte-ddd-partners .block-content {
   text-align: center;
 }
+#block-ddd-refonte-ddd-partners .block-content li{
+  list-style-type:none;
+}
 #block-ddd-refonte-ddd-partners .block-content a {
   display: block;
 }
