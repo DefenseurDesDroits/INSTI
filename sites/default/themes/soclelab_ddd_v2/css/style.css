@@ -323,7 +323,7 @@ a#text_resize_increase {
     display: block;
     padding: 0 15px;
     background: #fff;
-    color: #aaa;
+    color: #4c4c4b;
     font-size: 1.3rem;
     line-height: 35px;
     text-transform: none;
@@ -437,7 +437,7 @@ a#text_resize_increase {
 }
 .search-form .col-first i {
   font-size: 7rem;
-  color: #aaaaaa;
+  color: #4c4c4b;
 }
 .search-form .form-text {
   border-color: #e4e1da;
@@ -1862,7 +1862,7 @@ p { color:#71716e; text-align: justify; }
 .sf-single-items-3 .menuparent li a {
   font-family: "Aileron";
   text-decoration: none;
-  color: #aaaaaa;
+  color: #4c4c4b;
   font-size: 0.75em;
   border-top: 3px solid #fff;
   background-color: #fff;
