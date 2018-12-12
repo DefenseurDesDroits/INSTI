@@ -588,6 +588,9 @@ a#text_resize_increase {
   /*outline: 0px;*/
   outline-offset: 0px;
 }
+.block-ddd-faq .panel-group{
+	padding:0;
+}
 .block-ddd-faq .panel {
   list-style-type:none
 }
@@ -1986,6 +1989,9 @@ p { color:#71716e; text-align: justify; }
   width: 75%;
   height: auto;
   display: inline;
+}
+.view-nodequeue-1 ul {
+  padding:0;
 }
 .view-nodequeue-1 li {
   list-style-type:none;
