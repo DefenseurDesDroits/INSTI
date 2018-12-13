@@ -614,19 +614,47 @@ a#text_resize_increase {
 .header .navbar-default .navbar-toggle { padding: 10px 0; }
 .page-header {
   font-size: 2.625em;
-  font-family: 'Bebas Neue';
   text-transform: uppercase;
   text-align: center;
   border-bottom: none;
   padding: 20px 5% 20px 5%;
+  font-weight:normal;font-family:'Aileron';
 }
+
+/***************************/
+.region-content h2{
+text-transform:uppercase;
+font-weight:normal;
+width:100%; text-align:center;
+margin:20px 0;
+}
+.region-content h3{
+font-weight:normal;
+}
+.region-content h4{
+text-transform:uppercase;
+font-weight:normal;
+font-size:1.4em;
+}
+.region-content h5{
+font-size:1.2em;
+color: #1e274a;
+    font-weight: bold;
+}
+.region-content h6{
+font-size:1.2em;
+    font-weight: bold;
+}
+/*****************************************************/
+
 .region-content { padding: 0 5% 50px 5%; }
 .view-header a { text-decoration: underline; }
 .field-name-field-article-body a { text-decoration: underline; }
 .field-name-field-article-body a { text-decoration: underline; }
 .page-node .field-name-field-page-image-accroche {
   margin: auto;
-  width: 299px;
+  /*width: 299px;*/
+  width:150px;
 }
 /* Contactpage    */
 

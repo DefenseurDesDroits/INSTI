@@ -18,7 +18,7 @@
 						<?php foreach($vars['partenaires'] as $partenaire) : ?>
 							<?php if(!empty($partenaire['title'])) : ?>
 								<li class="item col-sm-6 col-md-3 col-lg-3">
-								  <?php print l('<div><img src="' . $partenaire['img_url'] . '" alt="' . $partenaire['title'] .'"/></div><span>' . $partenaire['title'] . '</span>', $partenaire['url'], array('html' => true)); ?>
+								  <?php print l('<div><img src="' . $partenaire['img_url'] . '" alt="" /></div><span>' . $partenaire['title'] . '</span>', $partenaire['url'], array('html' => true)); ?>
 								  
 								</li>
 							<?php endif; ?>
