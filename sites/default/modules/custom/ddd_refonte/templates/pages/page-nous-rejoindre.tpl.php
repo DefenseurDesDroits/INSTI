@@ -8,7 +8,14 @@
 			        <span class="sr-only"></span>
 			        <i class="fa fa-chevron-right" aria-hidden="true"></i>
 			      </button>
+				             <?php foreach($vars['menu'] as $m) : ?>
+                                                  <?php if($m['active'] == TRUE) : ?>
+                                                          <p class="navbar-brand"><?=$m['name']?></p>
+                                                  <?php  endif; ?>
+                                                  <?php endforeach; ?>
+												  <!--
 			      <p class="navbar-brand"><?php print(t("All")); ?></p>
+				  -->
 			    </div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-102">
@@ -22,7 +29,11 @@
 				</div>
 			</div>
 		</nav>
+		
 	</div>
+</div>
+<div class="row">
+  <div class="col-md-12"><?php print render($vars['filter']); ?></div>
 </div>
 <div class="txt-resultats col-md-12"><?php print $vars['nb_result'] . t(' Result(s) for ') . '"' . $vars['name'] . '"'; ?></div>
 <?php print $vars['view']; ?>
