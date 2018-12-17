@@ -8,7 +8,7 @@
 			        <span class="sr-only"></span>
 			        <i class="fa fa-chevron-right" aria-hidden="true"></i>
 			      </button>
-			      <p class="navbar-brand"><?php print(t("Leaflets")); ?></p>
+			      <p class="navbar-brand"><?php print(t("All")); ?></p>
 			    </div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-102">
