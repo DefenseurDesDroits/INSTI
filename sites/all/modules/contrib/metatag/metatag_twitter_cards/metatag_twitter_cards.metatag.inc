@@ -12,7 +12,7 @@ function metatag_twitter_cards_metatag_bundled_config_alter(array &$configs) {
     switch ($config->instance) {
       case 'global':
         $config->config += array(
-          'twitter:card' => array('value' => 'summmary'),
+          'twitter:card' => array('value' => 'summary'),
           'twitter:title' => array('value' => '[current-page:title]'),
           'twitter:url' => array('value' => '[current-page:url:absolute]'),
         );

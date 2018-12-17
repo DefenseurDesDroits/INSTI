@@ -55,7 +55,7 @@
             <span class="sr-only">Toggle navigation</span>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
-          <p class="navbar-brand">Lutte contre les discriminations</p>
+          <p class="navbar-brand"><?php print t('All') ?></p>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-100">
