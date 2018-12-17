@@ -51,7 +51,7 @@ function ddd_refonte_rejoindre_page(){
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;
     $recrutement = taxonomy_get_children('1583');
-    $tid = '';
+    $tid = '1583';
     $is_active = TRUE;
   }
   $i=0;
