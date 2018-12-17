@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 function ddd_refonte_agenda_page() {
   if(isset($_GET['month'])){
@@ -37,7 +37,7 @@ function ddd_refonte_rejoindre_page(){
   $lang_name = $language->language;
   
   $variable = '';
-  $tid = '';
+  //$tid = '';
   if(isset($_GET['tid'])){
     $term = taxonomy_term_load($_GET['tid']);
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
