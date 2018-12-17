@@ -74,7 +74,7 @@ function ddd_refonte_rejoindre_page(){
   $variable['view'] = $view->render();
   $variable['nb_result'] = $view->total_rows;  
   $variable['name'] = $name;
-  $variable['filter'] = drupal_get_form('ddd_refonte_filter_form');
+  //$variable['filter'] = drupal_get_form('ddd_refonte_filter_form');
   return theme('_theme_ddd_refonte_page_rejoindre', array('vars' => $variable));
 }
 
