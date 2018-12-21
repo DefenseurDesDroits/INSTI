@@ -600,6 +600,14 @@ function soclelab_ddd_v2_form_alter(&$form, &$form_state, $form_id){
 function soclelab_ddd_v2_html_head_alter(&$head_elements) {
     $remove = array(
         'system_meta_generator',
+		'system_meta_content_type',
+		'og_type',
+		'og_url',
+		'og_description',
+		'twitter_description',
+		'twitter_card',
+		'twitter_title',
+		'og_title',
         'metatag_canonical',
         'metatag_shortlink'
     );
