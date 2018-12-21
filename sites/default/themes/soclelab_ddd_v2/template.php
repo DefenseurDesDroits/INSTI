@@ -607,9 +607,7 @@ function soclelab_ddd_v2_html_head_alter(&$head_elements) {
 		'twitter_description',
 		'twitter_card',
 		'twitter_title',
-		'og_title',
-        'metatag_canonical',
-        'metatag_shortlink'
+		'og_title'
     );
 
     foreach ($remove as $key) {
@@ -619,11 +617,11 @@ function soclelab_ddd_v2_html_head_alter(&$head_elements) {
     }
 
     // Use this loop to find out which keys are available.
-    /* -- Delete this line to execute this loop */
+     /* -- Delete this line to execute this loop 
     echo '<pre>';
     foreach ($head_elements as $key => $element) {
         echo $key ."\n";
     }
     echo '</pre>';
-    /* -- Delete this line to execute this loop */
+    //// */
 }
