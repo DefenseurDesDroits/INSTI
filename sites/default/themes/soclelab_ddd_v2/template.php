@@ -4,6 +4,40 @@
  * @file
  * template.php
  */
+ 
+ 
+ /*******
+ fonction remove balises meta
+ 
+ *******/
+ /**
+ * Used to remove certain elements from the $head output within html.tpl.php
+ *
+ * @see http://api.drupal.org/api/drupal/modules--system--system.api.php/function/hook_html_head_alter/7
+ * @param array $head_elements
+ */
+function soclelab_ddd_v2_html_head_alter(&$head_elements) {
+    $remove = array(
+        'system_meta_generator',
+        'metatag_canonical',
+        'metatag_shortlink'
+    );
+
+    foreach ($remove as $key) {
+        if (isset($head_elements[$key])) {
+            unset($head_elements[$key]);
+        }
+    }
+
+    // Use this loop to find out which keys are available.
+    /* -- Delete this line to execute this loop
+    echo '<pre>';
+    foreach ($head_elements as $key => $element) {
+        echo $key ."\n";
+    }
+    echo '</pre>';
+    // */
+}
 
 function soclelab_ddd_v2_preprocess_html(&$variables) {
    if(arg(0) == 'agenda-list'){
