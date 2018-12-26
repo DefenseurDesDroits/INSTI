@@ -536,9 +536,7 @@ function soclelab_ddd_v2_status_messages($variables) {
       }else{
         $output .= '<h4 class="element-invisible">' . _bootstrap_filter_xss($status_heading[$type]) . "</h4>\n";        
       }
-
     }
-
     if (count($messages) > 1) {
       $output .= " <ul>\n";
       foreach ($messages as $message) {
@@ -549,7 +547,6 @@ function soclelab_ddd_v2_status_messages($variables) {
     else {
       $output .= $messages[0];
     }
-
     $output .= "</div>\n";
   }
   return $output;*/
@@ -588,15 +585,13 @@ function soclelab_ddd_v2_form_alter(&$form, &$form_state, $form_id){
 }
 
 /*******
- fonction remove balises meta
- 
- *******/
- /**
- * Used to remove certain elements from the $head output within html.tpl.php
- *
- * @see http://api.drupal.org/api/drupal/modules--system--system.api.php/function/hook_html_head_alter/7
- * @param array $head_elements
- */
+* fonction remove balises meta - EVITER REDONDANCE AVEC MODULE METATAG
+*
+* Used to remove certain elements from the $head output within html.tpl.php
+*
+* @see http://api.drupal.org/api/drupal/modules--system--system.api.php/function/hook_html_head_alter/7
+* @param array $head_elements
+*/
 function soclelab_ddd_v2_html_head_alter(&$head_elements) {
     $remove = array(
         'system_meta_generator',
@@ -616,12 +611,12 @@ function soclelab_ddd_v2_html_head_alter(&$head_elements) {
         }
     }
 
-    // Use this loop to find out which keys are available.
-     /* -- Delete this line to execute this loop 
-    echo '<pre>';
-    foreach ($head_elements as $key => $element) {
-        echo $key ."\n";
-    }
-    echo '</pre>';
-    //// */
+// Use this loop to find out which keys are available.
+/* -- Delete this line to execute this loop 
+echo '<pre>';
+foreach ($head_elements as $key => $element) {
+echo $key ."\n";
+}
+echo '</pre>';
+//// */
 }
