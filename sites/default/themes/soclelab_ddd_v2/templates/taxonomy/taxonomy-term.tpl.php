@@ -60,8 +60,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-100">
           <ul class="nav navbar-nav menu-taxo-vues">
-          <?php foreach($vars['menu'] as $m) : ?>
-		  <?php  // foreach($menu as $m) : ?>
+		  <?php  foreach($menu as $m) : ?>
             <li role="presentation">
               <a href="<?=$m['path']?>" <?php print ($m['active'] == TRUE ? 'class="active"' : '')?>><?=$m['name']?></a>
             </li>
