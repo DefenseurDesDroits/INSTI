@@ -77,6 +77,7 @@
   <div class="txt-resultats col-md-12"><?php print $count . t(' Result(s) for ') . '"' . $name . '"'; ?></div>
   <div class="row">
     <div class="col-md-12"><?php print $view_actualites->render(); ?></div>
+	<!--- ICI --->
   </div>
 
 </div>
@@ -87,7 +88,7 @@
   <?php if (!$page): ?>
     <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
   <?php endif; ?>
-
+<!--- LA --->
   <div class="content">
     <?php print render($content); ?>
   </div>
