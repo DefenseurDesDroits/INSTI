@@ -153,6 +153,7 @@ function ddd_refonte_get_info_block_agenda()
     $day_before = date('Y-m-d h:i:s', strtotime('+6 days', time()));
     $block = block_load('ddd_refonte', 'ddd_agenda');
     $title = $block->title;
+    $url = $block->url;
     $variable['titre'] = t($title);
     $query = new EntityFieldQuery();
     $result = $query
