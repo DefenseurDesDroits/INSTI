@@ -170,9 +170,19 @@ function ddd_refonte_get_info_block_agenda()
         //dpm($res);
       $node = node_load($res);
         if ($i < $c) {
+            $variable['event_left'][$i]['tid'] = $node->tid;
+            $variable['event_left'][$i]['url'] = $node->url;
+            $variable['event_left'][$i]['link'] = $node->link;
+            $variable['event_left'][$i]['path'] = $node->path;
+            $variable['event_left'][$i]['alias'] = $node->alias;
             $variable['event_left'][$i]['title'] = $node->title;
             $variable['event_left'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         } else {
+            $variable['event_right'][$i]['tid'] = $node->tid;
+            $variable['event_right'][$i]['url'] = $node->url;
+            $variable['event_right'][$i]['link'] = $node->link;
+            $variable['event_right'][$i]['path'] = $node->path;
+            $variable['event_right'][$i]['alias'] = $node->alias;
             $variable['event_right'][$i]['title'] = $node->title;
             $variable['event_right'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         }
