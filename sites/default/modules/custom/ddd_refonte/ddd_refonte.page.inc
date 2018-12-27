@@ -49,13 +49,14 @@ function ddd_refonte_rejoindre_page(){
 $tids = ddd_refonte_get_tids_children($_GET['tid']);
     $variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'1583','nous-rejoindre');
   } else {
+  $tid = '1583';
     $term = taxonomy_term_load('1583');
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;
     $recrutement = taxonomy_get_children('1583');
     $is_active = TRUE;
 $tids = ddd_refonte_get_tids_children('1583');
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'1583','nous-rejoindre');
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy('1583', TRUE,'1583','nous-rejoindre');
   }
 /*
   $i=0;
