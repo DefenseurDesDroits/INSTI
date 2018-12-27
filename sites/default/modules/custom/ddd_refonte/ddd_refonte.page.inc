@@ -41,17 +41,13 @@ function ddd_refonte_rejoindre_page(){
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;
     $tids = ddd_refonte_get_tids_children_recrut();
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut('', TRUE);
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'2','nous-rejoindre');
-
-
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'1583','nous-rejoindre');
   } else {
     $term = taxonomy_term_load($_GET['tid']);
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;    
     $tids = $_GET['tid'];
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut($_GET['tid'], FALSE);
-$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'2','nous-rejoindre');
+$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'1583','nous-rejoindre');
   }
   $nids = isset($_GET['title']) ? ddd_refonte_get_nids($tids, 'ct_offre', $_GET['title']) : ddd_refonte_get_nids($tids, 'ct_offre');
   if(isset($_GET['month']) && isset($_GET['year']) || isset($_GET['month']) && !isset($_GET['year']) || !isset($_GET['month']) && isset($_GET['year'])){
