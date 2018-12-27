@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 //require_once(drupal_get_path('module', 'ddd_refonte') . '/lib/twitter/TwitterOAuth.php');
 
@@ -170,9 +170,11 @@ function ddd_refonte_get_info_block_agenda()
         //dpm($res);
       $node = node_load($res);
         if ($i < $c) {
+            $variable['event_left'][$i]['url'] = $node->url;
             $variable['event_left'][$i]['title'] = $node->title;
             $variable['event_left'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         } else {
+            $variable['event_left'][$i]['url'] = $node->url;
             $variable['event_right'][$i]['title'] = $node->title;
             $variable['event_right'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         }
