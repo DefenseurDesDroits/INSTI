@@ -40,8 +40,8 @@ function ddd_refonte_rejoindre_page(){
   $tid = '';
   if(isset($_GET['tid'])){
     $term = taxonomy_term_load($_GET['tid']);
-    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
-    $name = $translate->name;
+    //$translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    //$name = $translate->name;
     $tid = $_GET['tid'];
     $parent = taxonomy_get_parents($tid);
     $parent = array_values($parent);
@@ -51,9 +51,9 @@ $tids = ddd_refonte_get_tids_children($_GET['tid']);
   } else {
   $tid = '1583';
     $term = taxonomy_term_load('1583');
-    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
-    $name = $translate->name;
-    $recrutement = taxonomy_get_children('1583');
+    //$translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    //$name = $translate->name;
+    //$recrutement = taxonomy_get_children('1583');
     $is_active = TRUE;
 $tids = ddd_refonte_get_tids_children('1583');
     $variable['menu'] = ddd_refonte_get_menu_taxonomy('1583', TRUE,'1583','nous-rejoindre');
