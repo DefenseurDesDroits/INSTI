@@ -67,7 +67,7 @@ $variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'1583','no
   }
   $nb_result = explode('+', $nids);
   $view = views_get_view('nous_rejoindre');
-  $view->set_display('block_1');
+  $view->set_display('block_2');
   $view->set_arguments(array($nids));
   $view->pre_execute();
   $view->execute();
