@@ -9,6 +9,7 @@ function ddd_refonte_agenda_page() {
     $last_minute = mktime(23, 59, 59, date('m'), date('t', $first_minute), date('Y'));
   }
   $variable['name_month'] = format_date($first_minute, 'custom', t('F', array(), array('context' => 'php date format')));
+  $variable['name_year'] = date('Y');
   $start_date = date('Y-m-d h:i:s', $first_minute);
   $end_date = date('Y-m-d h:i:s', $last_minute);
 
