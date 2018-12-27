@@ -40,23 +40,23 @@ function ddd_refonte_rejoindre_page(){
   $tid = '';
   if(isset($_GET['tid'])){
     $term = taxonomy_term_load($_GET['tid']);
-    //$translate = i18n_taxonomy_localize_terms($term,$lang_name);
-    //$name = $translate->name;
+    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    $name = $translate->name;
     $tid = $_GET['tid'];
     $parent = taxonomy_get_parents($tid);
     $parent = array_values($parent);
     $recrutement = taxonomy_get_children($parent[0]->tid);
-$tids = ddd_refonte_get_tids_children($_GET['tid']);
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'1583','nous-rejoindre');
+    $tids = ddd_refonte_get_tids_children($_GET['tid']);
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut($_GET['tid'], FALSE,'1583','nous-rejoindre');
   } else {
-  $tid = '1583';
+    $tid = '1583';
     $term = taxonomy_term_load('1583');
-    //$translate = i18n_taxonomy_localize_terms($term,$lang_name);
-    //$name = $translate->name;
+    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    $name = $translate->name;
     //$recrutement = taxonomy_get_children('1583');
     $is_active = TRUE;
-$tids = ddd_refonte_get_tids_children('1583');
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy('1583', TRUE,'1583','nous-rejoindre');
+    $tids = ddd_refonte_get_tids_children('1583');
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut('1583', TRUE,'1583','nous-rejoindre');
   }
 /*
   $i=0;
@@ -86,6 +86,34 @@ $tids = ddd_refonte_get_tids_children('1583');
   $variable['nb_result'] = $view->total_rows;
   $variable['name'] = $name;
   return theme('_theme_ddd_refonte_page_rejoindre', array('vars' => $variable));
+}
+
+function ddd_refonte_get_menu_taxonomy_recrut($tid, $is_parent,$typeid='1583',$path_type='nous-rejoindre'){
+  global $language;
+  $lang_name = $language->language;
+
+  $children = taxonomy_get_children($typeid);
+  $menu[0]['path'] = $language->language . '/'.$path_type.'/';
+  $menu[0]['name'] = t('All');
+  $menu[0]['active'] = ($is_parent == TRUE) ? TRUE : FALSE;
+  $i=1;
+  foreach($children as $a){
+    //$menu[$i]['path'] = $language->language . '/'.$path_type.'?tid=' . $a->tid;
+	$menu[$i]['path'] = $path_type.'?tid=' . $a->tid;
+    $translate = i18n_taxonomy_localize_terms($a,$lang_name);
+    $menu[$i]['name'] = $translate->name;
+    if($is_parent == FALSE){
+      if($tid == $a->tid){
+        $menu[$i]['active'] = TRUE;
+      } else {
+        $menu[$i]['active'] = FALSE;
+      }
+    } else {
+      $menu[$i]['active'] = FALSE;
+    }
+    $i++;
+  }
+  return $menu;
 }
 
 function ddd_refonte_get_tids_children($tid){
