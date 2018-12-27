@@ -17,6 +17,13 @@
 			<div class="row">
 					<div id="events">
 					<div class="col-sm-6 col-md-5 col-lg-4">
+	<?php				
+					echo '<pre>';
+foreach ($event_left as $key => $element) {
+echo $key ."\n";
+}
+echo '</pre>';
+?>
 					<?php foreach($vars['event_left'] as $event_left) : ?>
 						<div class="content-event">
 							<p class="event-date"><a href="<?php print $event_left['url']; ?>" /><?php print $event_left['date']; ?></a></p>
@@ -27,10 +34,10 @@
 				</div>
 					<div id="events">
 					<div class="col-sm-6 col-md-5 col-lg-4">
-					<?php foreach($vars['event_right'] as $event_left) : ?>
+					<?php foreach($vars['event_right'] as $event_right) : ?>
 						<div class="content-event">
-							<p class="event-date"><a href="<?php print $event_left['url']; ?>" /><?php print $event_left['date']; ?></a></p>
-							<p class="event-body"><?php print $event_left['title']; ?></p>
+							<p class="event-date"><a href="<?php print $event_right['url']; ?>" /><?php print $event_right['date']; ?></a></p>
+							<p class="event-body"><?php print $event_right['title']; ?></p>
 						</div>
 					<?php endforeach; ?>
 					</div>

@@ -153,7 +153,6 @@ function ddd_refonte_get_info_block_agenda()
     $day_before = date('Y-m-d h:i:s', strtotime('+6 days', time()));
     $block = block_load('ddd_refonte', 'ddd_agenda');
     $title = $block->title;
-    $url = $block->url;
     $variable['titre'] = t($title);
     $query = new EntityFieldQuery();
     $result = $query
@@ -171,11 +170,9 @@ function ddd_refonte_get_info_block_agenda()
         //dpm($res);
       $node = node_load($res);
         if ($i < $c) {
-            $variable['event_left'][$i]['url'] = $node->url;
             $variable['event_left'][$i]['title'] = $node->title;
             $variable['event_left'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         } else {
-            $variable['event_left'][$i]['url'] = $node->url;
             $variable['event_right'][$i]['title'] = $node->title;
             $variable['event_right'][$i]['date'] = isset($node->field_event_date['und']) ? format_date(strtotime($node->field_event_date['und'][0]['value']), $type = 'socle_long_h') : '';
         }
