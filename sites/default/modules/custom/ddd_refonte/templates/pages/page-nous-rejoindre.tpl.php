@@ -8,13 +8,6 @@
 			        <span class="sr-only"></span>
 			        <i class="fa fa-chevron-right" aria-hidden="true"></i>
 			      </button>
-				  
-				  	  <?php  foreach($menu as $m) : ?>
-            <li role="presentation">
-              <a href="<?=$m['path']?>" <?php print ($m['active'] == TRUE ? 'class="active"' : '')?>><?=$m['name']?></a>
-            </li>
-            <?php endforeach; ?> 
-			
 				             <?php foreach($vars['menu'] as $m) : ?>
                                                   <?php if($m['active'] == TRUE) : ?>
                                                           <p class="navbar-brand"><?=$m['name']?></p>
