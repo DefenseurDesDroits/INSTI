@@ -19,7 +19,7 @@
 					<div class="col-sm-6 col-md-5 col-lg-4">
 					<?php foreach($vars['event_left'] as $event_left) : ?>
 						<div class="content-event">
-							<p class="event-date"><a href="<?php print $event_left['id']; ?>" /><?php print $event_left['date']; ?> | <?php print $event_left['id']; ?> | <?php print $event_left['url']; ?> | <?php print $event_left['link']; ?> | <?php print $event_left['path']; ?> | <?php print $event_left['alias']; ?></a></p>
+							<p class="event-date"><?php print $event_left['date']; ?></p>
 							<p class="event-body"><?php print $event_left['title']; ?></p>
 						</div>
 					<?php endforeach; ?>
@@ -29,8 +29,7 @@
 					<div class="col-sm-6 col-md-5 col-lg-4">
 					<?php foreach($vars['event_right'] as $event_right) : ?>
 						<div class="content-event">
-							<p class="event-date"><a href="<?php print $event_right['id']; ?>" /><?php print $event_right['date']; ?></a></p>
-							<p class="event-date"><a href="<?php print $event_right['id']; ?>" /><?php print $event_right['date']; ?> | <?php print $event_right['id']; ?> | <?php print $event_right['url']; ?> | <?php print $event_right['link']; ?> | <?php print $event_right['path']; ?> | <?php print $event_right['alias']; ?></a></p>
+							<p class="event-date"><?php print $event_right['date']; ?></p>
 							<p class="event-body"><?php print $event_right['title']; ?></p>
 						</div>
 					<?php endforeach; ?>
