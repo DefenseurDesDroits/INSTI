@@ -42,12 +42,16 @@ function ddd_refonte_rejoindre_page(){
     $name = $translate->name;
     $tids = ddd_refonte_get_tids_children_recrut();
     $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut('', TRUE);
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'2','nous-rejoindre');
+
+
   } else {
     $term = taxonomy_term_load($_GET['tid']);
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;    
     $tids = $_GET['tid'];
     $variable['menu'] = ddd_refonte_get_menu_taxonomy_recrut($_GET['tid'], FALSE);
+$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'2','nous-rejoindre');
   }
   $nids = isset($_GET['title']) ? ddd_refonte_get_nids($tids, 'ct_offre', $_GET['title']) : ddd_refonte_get_nids($tids, 'ct_offre');
   if(isset($_GET['month']) && isset($_GET['year']) || isset($_GET['month']) && !isset($_GET['year']) || !isset($_GET['month']) && isset($_GET['year'])){
@@ -74,7 +78,7 @@ function ddd_refonte_rejoindre_page(){
   $variable['view'] = $view->render();
   $variable['nb_result'] = $view->total_rows;  
   $variable['name'] = $name;
-  $variable['filter'] = drupal_get_form('ddd_refonte_filter_form');
+  //$variable['filter'] = drupal_get_form('ddd_refonte_filter_form');
   return theme('_theme_ddd_refonte_page_rejoindre', array('vars' => $variable));
 }
 
