@@ -34,49 +34,47 @@ function ddd_refonte_agenda_page() {
 
 function ddd_refonte_rejoindre_page(){
   global $language;
-  $lang_name = $language->language;
-  
-  $variable = '';
-  $tid = '';
-  if(isset($_GET['tid'])){
-    $term = taxonomy_term_load($_GET['tid']);
-    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
-    $name = $translate->name;
-    $tid = $_GET['tid'];
-    $parent = taxonomy_get_parents($tid);
-    $parent = array_values($parent);
-    $recrutement = taxonomy_get_children($parent[0]->tid);
-  } else {
+  $lang_name = $language->language;  
+
+  if(!isset($_GET['tid'])){
     $term = taxonomy_term_load('1583');
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;
-    $recrutement = taxonomy_get_children('1583');
-    $is_active = TRUE;
+    $tids = ddd_refonte_get_tids_children_recrut();
+    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'1583','nous-rejoindre');
+  } else {
+    $term = taxonomy_term_load($_GET['tid']);
+    $translate = i18n_taxonomy_localize_terms($term,$lang_name);
+    $name = $translate->name;    
+    $tids = $_GET['tid'];
+$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'1583','nous-rejoindre');
   }
-  $i=0;
-  foreach($recrutement as $r){
-    $menu[$i]['path'] = '?tid=' . $r->tid;
-    $menu[$i]['name'] = $r->name;
-    if($is_active == TRUE && $i == 0){
-      $tid = $r->tid;
-      $menu[$i]['active'] = TRUE;
-    } else if ($r->tid == $tid){
-      $menu[$i]['active'] = TRUE;
-    } else{
-      $menu[$i]['active'] = FALSE;
+  $nids = isset($_GET['title']) ? ddd_refonte_get_nids($tids, 'ct_offre', $_GET['title']) : ddd_refonte_get_nids($tids, 'ct_offre');
+  if(isset($_GET['month']) && isset($_GET['year']) || isset($_GET['month']) && !isset($_GET['year']) || !isset($_GET['month']) && isset($_GET['year'])){
+    $times = ddd_refonte_get_time($_GET['month'], $_GET['year']);
+    $ids = explode('+', $nids);
+    $start_date = date('Y-m-d h:i:s', $times['start']);
+    $end_date = date('Y-m-d h:i:s', $times['end']);
+    $query = db_query("SELECT entity_id FROM {field_data_field_article_date} t WHERE t.field_article_date_value > :start_date AND t.field_article_date_value < :end_date AND t.entity_id IN (:ids)", array(':start_date' => $start_date, ':end_date' => $end_date, ':ids' => $ids));
+    $result = $query->fetchAll();
+    $nids = '';
+    $nb_result=0;
+    foreach($result as $r){
+      $nids .= $r->entity_id . '+';
+      $nb_result++;
     }
-    $i++;
+    $nids = rtrim($nids, "+");
   }
-  $variable['menu'] = $menu;
-  //$variable['view'] = views_embed_view('nous_rejoindre', 'block_1', $tid);
+  $nb_result = explode('+', $nids);
   $view = views_get_view('nous_rejoindre');
-  $view->set_display('block_1');
-  $view->set_arguments(array($tid));
+  $view->set_display('block_2');
+  $view->set_arguments(array($nids));
   $view->pre_execute();
   $view->execute();
   $variable['view'] = $view->render();
-  $variable['nb_result'] = $view->total_rows;
+  $variable['nb_result'] = $view->total_rows;  
   $variable['name'] = $name;
+  $variable['filter'] = drupal_get_form('ddd_refonte_filter_form');
   return theme('_theme_ddd_refonte_page_rejoindre', array('vars' => $variable));
 }
 
@@ -85,6 +83,16 @@ function ddd_refonte_get_tids_children($tid){
   foreach($children as $c){
     $values[] = $c->tid;
   }
+  return $values;
+}
+
+function ddd_refonte_get_tids_children_recrut($tid='1583'){
+  $values = array($tid);
+  $children = taxonomy_get_children($tid);
+  foreach($children as $c){
+    $tmp_tids = ddd_refonte_get_tids_children_publications($c->tid);
+    $values = array_merge($values,$tmp_tids);
+  }    
   return $values;
 }
 
@@ -199,6 +207,33 @@ function ddd_refonte_filter_form_submit($form, &$form_states){
     $params['tid'] = $_GET['tid'];
   }
   drupal_goto('/outils-list', array('query' => $params));
+}
+
+function ddd_refonte_get_menu_taxonomy_recrut($tid, $is_parent,$typeid='1583',$path_type='nous-rejoindre'){
+  global $language;
+  $lang_name = $language->language;
+
+  $children = taxonomy_get_children($typeid);
+  $menu[0]['path'] = $language->language . '/'.$path_type.'/';
+  $menu[0]['name'] = t('All');
+  $menu[0]['active'] = ($is_parent == TRUE) ? TRUE : FALSE;
+  $i=1;
+  foreach($children as $a){
+    $menu[$i]['path'] = $language->language . '/'.$path_type.'?tid=' . $a->tid;
+    $translate = i18n_taxonomy_localize_terms($a,$lang_name);
+    $menu[$i]['name'] = $translate->name;
+    if($is_parent == FALSE){
+      if($tid == $a->tid){
+        $menu[$i]['active'] = TRUE;
+      } else {
+        $menu[$i]['active'] = FALSE;
+      }
+    } else {
+      $menu[$i]['active'] = FALSE;
+    }
+    $i++;
+  }
+  return $menu;
 }
 
 function ddd_refonte_get_menu_taxonomy($tid, $is_parent,$typeid='1579',$path_type='outils-list'){
