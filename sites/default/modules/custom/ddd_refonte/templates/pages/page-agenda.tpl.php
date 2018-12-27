@@ -1,6 +1,6 @@
 <div class="col-xs-12 col-sm-12">
 	<div id="month-name">
-		<h1><?php print $vars['name_month']; print $vars['year']; ?></h1>
+		<h2><?php print $vars['name_month'];  ?></h2>
 	</div>
 </div>
 <div class="agenda col-md-12">
