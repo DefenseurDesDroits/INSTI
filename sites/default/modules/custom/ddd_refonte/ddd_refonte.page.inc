@@ -85,11 +85,14 @@ function ddd_refonte_get_tids_children($tid){
   }
   return $values;
 }
-function ddd_refonte_get_tids_children_recrut($tid){
-  $children = taxonomy_get_children('1583');
+
+function ddd_refonte_get_tids_children_recrut($tid='1583'){
+  $values = array($tid);
+  $children = taxonomy_get_children($tid);
   foreach($children as $c){
-    $values[] = $c->tid;
-  }
+    $tmp_tids = ddd_refonte_get_tids_children_publications($c->tid);
+    $values = array_merge($values,$tmp_tids);
+  }    
   return $values;
 }
 
