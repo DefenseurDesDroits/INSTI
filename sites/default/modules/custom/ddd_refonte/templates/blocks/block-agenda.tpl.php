@@ -26,7 +26,7 @@ echo '</pre>';
 ?>
 					<?php foreach($vars['event_left'] as $event_left) : ?>
 						<div class="content-event">
-							<p class="event-date"><a href="<?php print $event_left['url']; ?>" /><?php print $event_left['date']; ?></a></p>
+							<p class="event-date"><a href="<?php print $event_left['tid']; ?>" /><?php print $event_left['date']; ?></a></p>
 							<p class="event-body"><?php print $event_left['title']; ?></p>
 						</div>
 					<?php endforeach; ?>
@@ -36,7 +36,7 @@ echo '</pre>';
 					<div class="col-sm-6 col-md-5 col-lg-4">
 					<?php foreach($vars['event_right'] as $event_right) : ?>
 						<div class="content-event">
-							<p class="event-date"><a href="<?php print $event_right['url']; ?>" /><?php print $event_right['date']; ?></a></p>
+							<p class="event-date"><a href="<?php print $event_right['tid']; ?>" /><?php print $event_right['date']; ?></a></p>
 							<p class="event-body"><?php print $event_right['title']; ?></p>
 						</div>
 					<?php endforeach; ?>
