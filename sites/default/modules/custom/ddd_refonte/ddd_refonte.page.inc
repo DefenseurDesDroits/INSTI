@@ -93,7 +93,7 @@ function ddd_refonte_get_menu_taxonomy_recrut($tid, $is_parent,$typeid='1583',$p
   $lang_name = $language->language;
 
   $children = taxonomy_get_children($typeid);
-  $menu[0]['path'] = $language->language . '/'.$path_type.'/';
+  $menu[0]['path'] = $path_type.'/';
   $menu[0]['name'] = t('All');
   $menu[0]['active'] = ($is_parent == TRUE) ? TRUE : FALSE;
   $i=1;
