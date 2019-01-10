@@ -78,7 +78,7 @@ $path_saisir = translation_path_get_translations('node/23436');
                       <br>
                       <?php print t('Call'); ?> <strong><?php print t('09 69 39 00 00'); ?><sup>*</sup></strong>
                       <div class="num-vert-menu"><a href="tel:0969390000"><img src="/sites/default/themes/soclelab_ddd_v2/img/accueil/num-vert-menu.png" /></a></div>
-                      <div class="horaires-standart"><sup>*</sup><?php print t('Monday to Friday, 8AM to 8PM (local call cost from France)'); ?></div>
+                      <div class="horaires-standart"><sup>*</sup><?php print t('Monday to Friday, 8:30AM to 7:30PM (local call cost from France)'); ?></div>
                       <hr>
                       <div class="call-menu-footer">
                         <?php $menu = menu_navigation_links('menu-footer-menu-v2');
