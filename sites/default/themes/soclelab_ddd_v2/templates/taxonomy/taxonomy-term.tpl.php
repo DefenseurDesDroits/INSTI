@@ -89,13 +89,7 @@
     <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
   <?php endif; ?>
    <div class="content">
-    <?php //print render($content); ?>
-	<?php if(($GET_term='1583')||($GET_term='1583')||($GET_term='1583')):?>
-	<div class="row">
-    <div class="col-md-12"><?php print $view_nous_rejoindre->render(); ?></div>	
-  </div>
-
-	<?php endif; ?>
+    <?php print render($content); ?>
   </div>
 
 </div>
