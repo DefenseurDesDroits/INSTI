@@ -80,9 +80,15 @@
   </div>
 
 </div>
-<?php elseif(isset($view_nous_rejoindre)): ?> ?>
 
-<div class="row">
+<?php else : ?>
+
+<div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
+
+  <?php if (!$page): ?>
+    <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
+  <?php endif; ?>
+  <div class="row">
 	<div class="col-md-12">
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -122,14 +128,6 @@
 <div class="txt-resultats col-md-12"><?php print $vars['nb_result'] . t(' Result(s) for ') . '"' . $vars['name'] . '"'; ?></div>
 <?php print $vars['view']; ?>
 
-
-<?php else : ?>
-
-<div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
-
-  <?php if (!$page): ?>
-    <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
-  <?php endif; ?>
   <div class="content">
     <?php print render($content); ?>
   </div>
