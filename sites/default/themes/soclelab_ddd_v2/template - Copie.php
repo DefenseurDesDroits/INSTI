@@ -150,12 +150,6 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
   if($variables['tid'] == '28' || $parent[0]->tid == '28'){
      $type_histoire = TRUE;
   }
-  
-  $type_recrutement = FALSE;
-  if($variables['tid'] == '1583' || $parent[0]->tid == '1583'){
-     $type_recrutement = TRUE;
-  }
-  
   if(check_taxonomy_actualites($actus, $variables['tid'])){
     $children = taxonomy_get_children($variables['tid']);
     $menu[0]['path'] = url('taxonomy/term/' . $variables['tid']);
@@ -174,12 +168,7 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
     if($type_histoire == TRUE){
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);  
-    } 
-	elseif( $type_recrutement == TRUE){
-		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid'])->total_rows;
-      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid']);  
-	}
-	else {
+    } else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
   }
@@ -205,12 +194,7 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
     if($type_histoire == TRUE){
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);
-    }
-	elseif( $type_recrutement == TRUE){
-		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid'])->total_rows;
-      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid']);  
-	}
-	else {
+    } else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
   }
