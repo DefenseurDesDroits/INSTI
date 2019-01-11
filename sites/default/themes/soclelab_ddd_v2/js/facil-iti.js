@@ -1,4 +1,4 @@
-﻿<script type="text/javascript">
+<script type="text/javascript">
 (function(w, d, s, f) {
 w[f] = w[f] || {conf: function () { (w[f].data = w[f].data || []).push(arguments);}};
 var l = d.createElement(s), e = d.getElementsByTagName(s)[0];
