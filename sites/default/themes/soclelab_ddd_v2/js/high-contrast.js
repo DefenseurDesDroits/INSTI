@@ -1,4 +1,4 @@
-function () {
+(function () {
     var Contrast = {
         storage: 'contrastState',
         cssClass: 'contrast',
@@ -43,4 +43,4 @@ function () {
     function toogleContrast() {
         this.setState(!this.currentState);
     }
-};
+})();
