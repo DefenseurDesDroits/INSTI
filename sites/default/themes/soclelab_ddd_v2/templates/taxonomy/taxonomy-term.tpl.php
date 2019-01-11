@@ -55,12 +55,12 @@
             <span class="sr-only">Toggle navigation</span>
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
-          <p class="navbar-brand"><?php print t('All') ?></p>
+          <p class="navbar-brand">Lutte contre les discriminations</p>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-100">
           <ul class="nav navbar-nav menu-taxo-vues">
-		  <?php  foreach($menu as $m) : ?>
+            <?php foreach($menu as $m) : ?>
             <li role="presentation">
               <a href="<?=$m['path']?>" <?php print ($m['active'] == TRUE ? 'class="active"' : '')?>><?=$m['name']?></a>
             </li>
@@ -76,11 +76,10 @@
   <?php endif; ?>
   <div class="txt-resultats col-md-12"><?php print $count . t(' Result(s) for ') . '"' . $name . '"'; ?></div>
   <div class="row">
-    <div class="col-md-12"><?php print $view_actualites->render(); ?></div>	
+    <div class="col-md-12"><?php print $view_actualites->render(); ?></div>
   </div>
 
 </div>
-
 <?php else : ?>
 
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
@@ -88,7 +87,8 @@
   <?php if (!$page): ?>
     <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
   <?php endif; ?>
-   <div class="content">
+
+  <div class="content">
     <?php print render($content); ?>
   </div>
 
