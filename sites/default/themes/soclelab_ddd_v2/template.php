@@ -150,12 +150,12 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
   if($variables['tid'] == '28' || $parent[0]->tid == '28'){
      $type_histoire = TRUE;
   }
-  
+   /* Début Ajout MANU 1/3 */
   $type_recrutement = FALSE;
   if($variables['tid'] == '1583' || $parent[0]->tid == '1583'){
      $type_recrutement = TRUE;
   }
-  
+ /* Fin ajout MANU 1/3 */  
   if(check_taxonomy_actualites($actus, $variables['tid'])){
     $children = taxonomy_get_children($variables['tid']);
     $menu[0]['path'] = url('taxonomy/term/' . $variables['tid']);
@@ -175,10 +175,12 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);  
     } 
+	   /* Début Ajout MANU 2/3 */
 	elseif( $type_recrutement == TRUE){
-		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid'])->total_rows;
-      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid']);  
+		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid']);  
 	}
+	   /* Fin Ajout MANU 2/3 */
 	else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
@@ -206,10 +208,12 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);
     }
+	   /* Début Ajout MANU 3/3 */
 	elseif( $type_recrutement == TRUE){
-		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid'])->total_rows;
-      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_1', $variables['tid']);  
+		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid']);  
 	}
+	   /* Début Ajout MANU 3/3 */
 	else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
