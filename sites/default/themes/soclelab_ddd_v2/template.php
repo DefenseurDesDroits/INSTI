@@ -151,11 +151,11 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
      $type_histoire = TRUE;
   }
    /* Début Ajout MANU 1/3 */
-  /* $type_recrutement = FALSE;
+  $type_recrutement = FALSE;
   if($variables['tid'] == '1583' || $parent[0]->tid == '1583'){
      $actus = taxonomy_get_children('1583');
 	 $type_recrutement = TRUE;
-  }*/
+  }
  /* Fin ajout MANU 1/3 */  
   if(check_taxonomy_actualites($actus, $variables['tid'])){
     $children = taxonomy_get_children($variables['tid']);
