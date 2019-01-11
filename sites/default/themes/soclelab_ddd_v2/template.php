@@ -157,6 +157,7 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
   }
  /* Fin ajout MANU 1/3 */  
   if(check_taxonomy_actualites($actus, $variables['tid'])){
+  $actus = taxonomy_get_children('1583');
     $children = taxonomy_get_children($variables['tid']);
     $menu[0]['path'] = url('taxonomy/term/' . $variables['tid']);
     $menu[0]['name'] = t('ALL');
