@@ -176,6 +176,8 @@ function ddd_refonte_filter_form($form, &$form_states){
   );
   $year = array(
     'annee'=> t('Year'),
+    '2019' => '2019',
+    '2018' => '2018',
     '2017' => '2017',
     '2016' => '2016',
     '2015' => '2015',
@@ -235,10 +237,12 @@ function ddd_refonte_filter_form_submit($form, &$form_states){
   if(isset($_GET['tid'])){
     $params['tid'] = $_GET['tid'];
   }
-  drupal_goto('/outils-list', array('query' => $params));
+  //drupal_goto('/outils-list', array('query' => $params));
+  drupal_goto('/outils/', array('query' => $params));
 }
 
-function ddd_refonte_get_menu_taxonomy($tid, $is_parent,$typeid='1579',$path_type='outils-list'){
+//function ddd_refonte_get_menu_taxonomy($tid, $is_parent,$typeid='1579',$path_type='outils-list'){
+function ddd_refonte_get_menu_taxonomy($tid, $is_parent,$typeid='1579',$path_type='outils'){
   global $language;
   $lang_name = $language->language;
 
@@ -249,6 +253,7 @@ function ddd_refonte_get_menu_taxonomy($tid, $is_parent,$typeid='1579',$path_typ
   $i=1;
   foreach($children as $a){
     $menu[$i]['path'] = $language->language . '/'.$path_type.'?tid=' . $a->tid;
+	//$menu[$i]['path'] = $language->language . '/'.$path_type.'/' . $a->tid;
     $translate = i18n_taxonomy_localize_terms($a,$lang_name);
     $menu[$i]['name'] = $translate->name;
     if($is_parent == FALSE){
@@ -330,6 +335,8 @@ function ddd_refonte_filter_publications_form($form, &$form_states){
   );
   $year = array(
     'annee'=> t('Year'),
+    '2019' => '2019',
+    '2018' => '2018',
     '2017' => '2017',
     '2016' => '2016',
     '2015' => '2015',
@@ -401,13 +408,15 @@ function ddd_refonte_publications_page(){
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;
     $tids = ddd_refonte_get_tids_children_publications();
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'2','publications-list');
+    //$variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'2','publications-list');
+	$variable['menu'] = ddd_refonte_get_menu_taxonomy('', TRUE,'2','publications');
   } else {
     $term = taxonomy_term_load($_GET['tid']);
     $translate = i18n_taxonomy_localize_terms($term,$lang_name);
     $name = $translate->name;    
     $tids = ddd_refonte_get_tids_children_publications($_GET['tid']);
-    $variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'2','publications-list');
+    //$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'2','publications-list');
+	$variable['menu'] = ddd_refonte_get_menu_taxonomy($_GET['tid'], FALSE,'2','publications');
   }  
   
   $nids = isset($_GET['title']) ? ddd_refonte_get_nids($tids, 'publications', $_GET['title']) : ddd_refonte_get_nids($tids, 'publications');

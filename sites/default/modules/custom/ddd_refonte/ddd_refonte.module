@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 //require_once(drupal_get_path('module', 'ddd_refonte') . '/lib/twitter/TwitterOAuth.php');
 
@@ -723,7 +723,7 @@ function ddd_refonte_menu()
     'access arguments' => array('administer DDD'),
   );
   $items['admin/config/ddd/config'] = array(
-    'title' => "Options de configruation",
+    'title' => "Options de configuration",
     'description' => "variable d'état général au site",
     'page callback' => 'drupal_get_form',
     'page arguments' => array('ddd_refonte_admin_config'),

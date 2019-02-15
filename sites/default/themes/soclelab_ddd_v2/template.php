@@ -4,9 +4,6 @@
  * @file
  * template.php
  */
- 
- 
- 
 
 function soclelab_ddd_v2_preprocess_html(&$variables) {
    if(arg(0) == 'agenda-list'){
@@ -93,7 +90,7 @@ function soclelab_ddd_v2_breadcrumb($variables) {
   /* Début Ajout CAPGEMINI */
   $output = "";
   foreach ($breadcrumb as $key => $cur_bread) { // Parcour des élément du fil d'ariane
-    if(!is_array($cur_bread)){  // Récupè uniquement les string
+    if(!is_array($cur_bread)){  // Récupère uniquement les string
       if($key == 0){  // Ajout du lien Accueil
         global $language;
         if(isset($language->provider) && $language->provider != "locale-url"){ $cur_lang = ""; } else { $cur_lang = $language->language;}
@@ -146,10 +143,28 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
   $actus = taxonomy_get_children('1584');
   $parent = taxonomy_get_parents($variables['tid']);
   $parent = array_values($parent);
+  
   $type_histoire = FALSE;
+  /* Début Ajout MANU 1/3 */
+  $type_recrutement = FALSE;
+  $type_outils = FALSE;
+  $type_publications = FALSE;
+ /* Fin ajout MANU 1/3 */
   if($variables['tid'] == '28' || $parent[0]->tid == '28'){
      $type_histoire = TRUE;
   }
+  /* MANU 2/3 */
+	elseif($variables['tid'] == '1583' || $parent[0]->tid == '1583'){
+	 $type_recrutement = TRUE;
+  }elseif($variables['tid'] == '1579' || $parent[0]->tid == '1579'){
+	 $actus = taxonomy_get_children('1579');
+	 $type_outils = TRUE;
+  }elseif($variables['tid'] == '2' || $parent[0]->tid == '2'){
+   $actus = taxonomy_get_children('2');
+	$type_publications = TRUE;
+  }
+ /* Fin ajout MANU 2/3 */
+ 
   if(check_taxonomy_actualites($actus, $variables['tid'])){
     $children = taxonomy_get_children($variables['tid']);
     $menu[0]['path'] = url('taxonomy/term/' . $variables['tid']);
@@ -168,8 +183,21 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
     if($type_histoire == TRUE){
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);  
-    } 
-	else {
+    } /* Début Ajout MANU 2/3 */
+	elseif( $type_recrutement == TRUE){
+	  $variables['count'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid']);  
+	}
+	elseif( $type_outils == TRUE){
+	  $variables['count'] = get_views_actualite('block_outils', 'block_1', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('block_outils', 'block_1', $variables['tid']);  
+	}
+	elseif( $type_publications == TRUE){
+	  $variables['count'] = get_views_actualite('publications', 'block_1', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('publications', 'block_1', $variables['tid']);
+	}
+	   /* Fin Ajout MANU 2/3 */
+	 else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
   }
@@ -196,7 +224,21 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
       $variables['count'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid'])->total_rows;
       $variables['view_actualites'] = get_views_actualite('nodequeue_2', 'histoires_vecues', $variables['tid']);
     }
-	else {
+	   /* Début Ajout MANU 3/3 */
+	elseif( $type_recrutement == TRUE){
+		$variables['count'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid'])->total_rows;
+      $variables['view_actualites'] = get_views_actualite('nous_rejoindre', 'block_3', $variables['tid']);  
+	}
+	elseif( $type_outils == TRUE){
+		$variables['count'] = get_views_actualite('block_outils', 'block_1', $variables['tid'])->total_rows;
+		$variables['view_actualites'] = get_views_actualite('block_outils', 'block_1', $variables['tid']);  
+	}
+	elseif( $type_publications == TRUE){
+		$variables['count'] = get_views_actualite('publications', 'block_1', $variables['tid'])->total_rows;
+		$variables['view_actualites'] = get_views_actualite('publications', 'block_1', $variables['tid']);  
+	}
+	   /* Début Ajout MANU 3/3 */
+	 else {
       $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_v2', $variables['tid']);
     }
   }
@@ -220,10 +262,49 @@ function soclelab_ddd_v2_preprocess_taxonomy_term(&$variables) {
     $variables['count'] = get_views_actualite('vue_actualites', 'block_actu_full')->total_rows;
     $variables['view_actualites'] = get_views_actualite('vue_actualites', 'block_actu_full');
   }
+  /*  ajout MANU 5/5 */
+   elseif($variables['tid'] == '1579' || $parent[0]->tid == '1579'){
+    $filter = array('Affiches', 'Dépliants', 'Fiches thématiques', 'Guides', 'Vidéos');
+    $menu = array();
+    $menu[0]['path'] = url('taxonomy/term/1579');
+    $menu[0]['name'] = t('All');
+    $menu[0]['active'] = TRUE;
+    $i=1;
+    foreach($actus as $a){
+      if(in_array($a->name, $filter)){
+        $menu[$i]['path'] = url('taxonomy/term/' . $a->tid);
+        $translate = i18n_taxonomy_localize_terms($a,$lang_name);
+        $menu[$i]['name'] = $translate->name;
+        $menu[$i]['active'] = FALSE;
+		$i++;	
+      }
+    }	
+    $variables['menu'] = $menu;
+	$variables['filter'] = drupal_get_form('ddd_refonte_filter_form');
+	$variables['count'] = get_views_actualite('block_outils', 'block_1', $variables['tid'])->total_rows;
+	$variables['view_actualites'] = get_views_actualite('block_outils', 'block_1', $variables['tid']);
+  }
+	elseif($variables['tid'] == '2' || $parent[0]->tid == '2'){
+    $filter = array('Rapports', 'Rapports annuels', 'Études et recherches', 'Actes de rencontre',);
+    $menu = array();
+    $menu[0]['path'] = url('taxonomy/term/2');
+    $menu[0]['name'] = t('All');
+    $menu[0]['active'] = TRUE;
+    $i=1;
+    foreach($actus as $a){
+      if(in_array($a->name, $filter)){
+        $menu[$i]['path'] = url('taxonomy/term/' . $a->tid);
+        $translate = i18n_taxonomy_localize_terms($a,$lang_name);
+        $menu[$i]['name'] = $translate->name;
+        $menu[$i]['active'] = FALSE;
+        $i++;
+      }
+    }
+    $variables['menu'] = $menu;
+    $variables['count'] = get_views_actualite('publications', 'block_1', $variables['tid'])->total_rows;
+	$variables['view_actualites'] = get_views_actualite('publications', 'block_1', $variables['tid']);	
+  }/*  fin ajout MANU 5/5 */
 }
-
-
-  
 
 function soclelab_ddd_v2_preprocess_page(&$variables){
   //dpm($variables);

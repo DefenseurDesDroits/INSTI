@@ -2893,3 +2893,12 @@ a.print{
 #defenseur-multistep-form ul{
   list-style: none;
 }
+.type-discours .block-content .desc-articles,.type-discours .block-content .body-articles,.type-discours .block-content .doc-articles{
+	font-size:1.2em; max-width:940px; margin:auto;
+}
+.type-discours .block-content .focus1{
+margin:0 35px 25px -45px; font-size:1.6em; color:#191b3b; max-width:550px; float:left;
+}
+.type-discours .block-content .focus2{
+margin:0 -45px 25px 35px; font-size:1.6em; color:#005b98; max-width:550px; float:right;
+}

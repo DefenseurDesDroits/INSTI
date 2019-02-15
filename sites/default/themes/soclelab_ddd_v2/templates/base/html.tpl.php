@@ -54,7 +54,7 @@
     <style>li.expanded.dropdown:hover > .dropdown-menu{ display: block; }</style>
   </noscript>
 </head>
-<body class="<?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?>>
+<body class="<?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?> <?php print $content_attributes; ?>>
   <div id="top-link">
     <a href="#page-menu" class="element-invisible element-focusable"><?php print t('Skip to menu'); ?></a>
     <?php if(drupal_is_front_page()) {?>
