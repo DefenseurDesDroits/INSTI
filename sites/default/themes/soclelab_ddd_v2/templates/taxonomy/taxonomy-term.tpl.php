@@ -78,13 +78,9 @@
   <div class="row">
     <div class="col-md-12"><?php print $view_actualites->render(); ?></div>	
   </div>
-
 </div>
-
 <?php else : ?>
-
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
-
   <?php if (!$page): ?>
     <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
   <?php endif; ?>
