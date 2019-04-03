@@ -47,14 +47,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <link rel="stylesheet" type="text/css" media="all" href="/sites/default/themes/soclelab_ddd/css/ie-style.css" />
   <![endif]-->
-  <script type="text/javascript" src="https://core.xvox.fr/Clients/DEFENSEURDESDROITS/core/xvox.min.js"></script>
+<script type="text/javascript" src="https://core.xvox.fr/Clients/DEFENSEURDESDROITS/core/xvox.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://core.xvox.fr/Clients/DEFENSEURDESDROITS/design/player.css" />
- <?php print $scripts; ?>
+<?php print $scripts; ?>
   <noscript>
     <style>li.expanded.dropdown:hover > .dropdown-menu{ display: block; }</style>
   </noscript>
 </head>
-<body class="<?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?>>
+<body class=" <?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?> <?php print $content_attributes; ?>>
   <div id="top-link">
     <a href="#page-menu" class="element-invisible element-focusable"><?php print t('Skip to menu'); ?></a>
     <?php if(drupal_is_front_page()) {?>
@@ -65,8 +65,10 @@
     <a href="#dd-recherche-form" class="element-invisible element-focusable"><?php print t('Skip to search'); ?></a>
     <a href="#page-footer" class="element-invisible element-focusable"><?php print t('Skip to footer'); ?></a>
   </div>
+  <?php print $accessibilite; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <script type="text/javascript" src="/sites/default/themes/soclelab_ddd_v2/js/high_contrast.js"></script>
 </body>
 </html>

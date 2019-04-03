@@ -169,3 +169,14 @@ background:none !important;
     background: #0b1026 !important;
     color: white !important;	
 }
+
+body.dyslexicFont{
+  font-family: openDyslexic-Regular, Arial, sans-serif;
+}
+body.dyslexicFont h1,
+body.dyslexicFont h2,
+body.dyslexicFont h3,
+body.dyslexicFont p,
+body.dyslexicFont a{
+  font-family: openDyslexic-Regular, Arial, sans-serif !important;
+}

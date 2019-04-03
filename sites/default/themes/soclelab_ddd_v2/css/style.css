@@ -33,6 +33,23 @@
   font-weight: bold;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Aileron';
+  src: url("../fonts/Aileron-Bold.eot");
+  src: url("../fonts/Aileron-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Aileron-Bold.woff2") format("woff2"), url("../fonts/Aileron-Bold.woff") format("woff"), url("../fonts/Aileron-Bold.ttf") format("truetype"), url("../fonts/Aileron-Bold.svg#Aileron-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+	font-family: 'openDyslexic-Bold';
+	src: url('../fonts/OpenDyslexic-Bold.woff') format('woff'),  url('../fonts/OpenDyslexic-Bold.ttf') format('truetype');
+	font-weight: normal; font-style: normal;
+}
+@font-face {
+	font-family: 'openDyslexic-Regular';
+	src: url('../fonts/OpenDyslexic-Regular.woff') format('woff'), url('../fonts/OpenDyslexic-Regular.ttf') format('truetype');
+	font-weight: normal; font-style: normal;
+}
 /* ******** */
 /* Global   */
 /* ******** */
@@ -204,13 +221,42 @@ h1, h2, h3, h4 {
   padding-right: 0;
   border-right: none;
 }
-
 .header .header-top-left li{
 	list-style-type:none;
 }
+a.top-link-accessibilite{
+    background-color: #dd0a32;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    font-family: "Lucida Grande",Verdana,sans-serif;
+    font-size: small;
+    line-height: 20px;
+    right:100px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 499;
+}
+#barre_access_top * { 
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+#barre_access_top{
+	text-align:right;vertical-align:baseline;
+	padding-bottom:5px;
+	border-bottom:1px solid #dd0a32;
+	margin-bottom:0;
+}
+#barre_access_top li{
+	display:inline-block;
+	height:30px;
+}
 .menu_access {text-transform:uppercase;}
-.menu_access li {display: inline-block;margin:0 2px;}
-.menu_access button{background-color:transparent;border:0;height:28px;margin:0 5px;}
+.menu_access li {display: inline-block;margin:0 3px;}
+.menu_access button{background-color:transparent;border:0;height:28px;margin:0 3px;}
 .menu_access .button_label{display:none;}
 .menu_access .access-visuel::before{
 content:url(/sites/default/files/picto-visuel.png)
@@ -224,7 +270,28 @@ content:url(/sites/default/files/picto-lsf.png)
 .menu_access .access-facil::before{
 content:url(/sites/default/files/picto-faciliti.png)}
 
+.menu_access .access-dyslexie::before{
+content:url(/sites/default/files/dys.png)}
 
+.menu_access_bottom {text-transform:uppercase;color:#fff;text-align:right;vertical-align:middle;}
+.menu_access_bottom a, .menu_access_bottom span {color:#fff;}
+.menu_access_bottom li {display: inline-block;margin:0 5px;}
+.menu_access_bottom button{background-color:transparent;border:0;height:28px;margin:0 5px;}
+.menu_access_bottom .button_label{display:none;}
+.menu_access_bottom .access-visuel::before{
+content:url(/sites/default/files/picto-visuel_w.png)
+}
+.menu_access_bottom .access-falc::before{
+content:url(/sites/default/files/picto-falc.png)
+}
+.menu_access_bottom .access-lsf::before{
+content:url(/sites/default/files/picto-lsf_w.png)
+}
+.menu_access_bottom .access-facil::before{
+content:url(/sites/default/files/picto-faciliti.png)}
+
+.menu_access_bottom .access-dyslexie::before{
+content:url(/sites/default/files/dys_w.png)}
 
 a#text_resize_decrease,
 a#text_resize_increase {
@@ -2892,4 +2959,13 @@ a.print{
 
 #defenseur-multistep-form ul{
   list-style: none;
+}
+.type-discours .block-content .desc-articles,.type-discours .block-content .body-articles,.type-discours .block-content .doc-articles{
+	font-size:1.2em; max-width:940px; margin:auto;
+}
+.type-discours .block-content .focus1{
+margin:0 35px 25px -45px; font-size:1.6em; color:#191b3b; max-width:550px; float:left;
+}
+.type-discours .block-content .focus2{
+margin:0 -45px 25px 35px; font-size:1.6em; color:#005b98; max-width:550px; float:right;
 }

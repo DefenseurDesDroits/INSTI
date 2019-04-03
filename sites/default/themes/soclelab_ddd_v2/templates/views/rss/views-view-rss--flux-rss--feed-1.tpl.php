@@ -5,9 +5,8 @@
  *
  * @ingroup views_templates
  */
-
- ?>
-<?php echo '<?xml version="1.0" encoding="utf-8" ?>'; ?>
+?>
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <rss version="2.0" xml:base="<?php echo $link; ?>"<?php echo $namespaces; ?>>
   <channel>
     <title><?php echo variable_get("site_name", ''); ?></title>

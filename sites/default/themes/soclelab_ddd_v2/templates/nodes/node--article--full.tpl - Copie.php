@@ -157,8 +157,8 @@
           <?php endforeach; ?>
          </p>
       </div>
-	  <div class="img-articles coucou">
-        <?php print render($content['field_article_logo']); ?>
+      <div class="img-articles">
+        <div class="field field-name-field-article-logo field-type-atom-reference field-label-hidden"><div class="field-items"><div class="field-item even"><!-- scald=4624:full --><img typeof="foaf:Image" class="img-responsive" src="<?=$atom->rendered->file_transcoded_url; ?>" width="3000" height="1089"><div class="field field-name-field-scald-mediatheque field-type-list-boolean field-label-above"><div class="field-label">Mediatheque:&nbsp;</div><div class="field-items"><div class="field-item even">non</div></div></div><!-- END scald=4624 --></div></div></div>
       </div>
       <?php endif; ?>
       <div class="picto-link">
