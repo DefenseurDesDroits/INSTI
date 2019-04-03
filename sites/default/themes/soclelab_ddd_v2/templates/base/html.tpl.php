@@ -54,7 +54,7 @@
     <style>li.expanded.dropdown:hover > .dropdown-menu{ display: block; }</style>
   </noscript>
 </head>
-<body class=" <?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?> <?php print $content_attributes; ?>>
+<body class="<?php print $classes; ?> <?php print "lang-" . getCurLang(); ?>" <?php print $attributes;?> <?php print $content_attributes; ?>>
   <div id="top-link">
     <a href="#page-menu" class="element-invisible element-focusable"><?php print t('Skip to menu'); ?></a>
     <?php if(drupal_is_front_page()) {?>
@@ -68,7 +68,6 @@
   <?php print $accessibilite; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
-  <?php print $page_bottom; ?>
-  <script type="text/javascript" src="/sites/default/themes/soclelab_ddd_v2/js/high_contrast.js"></script>
+  <?php print $page_bottom; ?>  
 </body>
 </html>
