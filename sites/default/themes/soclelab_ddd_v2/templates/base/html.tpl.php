@@ -65,6 +65,7 @@
     <a href="#dd-recherche-form" class="element-invisible element-focusable"><?php print t('Skip to search'); ?></a>
     <a href="#page-footer" class="element-invisible element-focusable"><?php print t('Skip to footer'); ?></a>
   </div>
+  <?php print $accessibilite; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
