@@ -9,17 +9,19 @@
  * Menu callback; presents the sitemap settings page.
  */
 function site_map_admin_settings_form() {
-  
-  if (module_exists('locale')) {
-    $langs = locale_language_list();
-  }
 
   // Field to set site map page title.
   $form['site_map_page_title'] = array(
     '#type' => 'textfield',
     '#title' => t('Page title'),
-    '#default_value' => variable_get('site_map_page_title', t('Site map')),
-    '#description' => t('Page title that will be used on the <a href="@link">site map page</a>.', array('@link' => url('sitemap'))),
+    '#default_value' => variable_get('site_map_page_title', FALSE),
+    '#description' => t(
+      'Page title that will be used on the <a href="@link">site map page</a>. Leave blank for the default "Site map" in English. It will be available for translation in the <a href="@translation">translation interface</a> (after loading the site map page in another language) unless you override it here. After changing it, it will be necessary to wait for all caches to clear, or they will have to be cleared manually.',
+      array(
+        '@link' => url('sitemap'),
+        '@translation' => url('admin/config/regional/translate/translate'),
+      )
+    ),
   );
   // Field to set site map message.
   $site_map_message = variable_get('site_map_message', array('value' => '', 'format' => NULL));
@@ -77,29 +79,14 @@ function site_map_admin_settings_form() {
 
   $menu_options = array();
   $menu_options = menu_get_menus();
-  
-if ($langs) {
-    foreach ($langs as $lang_code => $lang_name) {
-      $form['site_map_content']["site_map_show_menus_$lang_code"] = array(
-        '#type' => 'select',
-        '#title' => t('Menus to include in the site map for !lang (code !code)', array('!lang' => $lang_name, '!code' => $lang_code)),
-        '#default_value' => variable_get("site_map_show_menus_$lang_code", array()),
-        '#options' => $menu_options,
-        '#multiple' => TRUE,
-        '#description' => t('Ctrl-click (Windows) or Command-click (Mac) to select more than one value.'),
-      );
-    }
-  }
-  else {
-    $form['site_map_content']['site_map_show_menus'] = array(
-      '#type' => 'select',
-      '#title' => t('Menus to include in the site map'),
-      '#default_value' => variable_get('site_map_show_menus', array()),
-      '#options' => $menu_options,
-      '#multiple' => TRUE,
-      '#description' => t('Ctrl-click (Windows) or Command-click (Mac) to select more than one value.'),
-    );
-  }
+
+  $form['site_map_content']['site_map_show_menus'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Menus to include in the site map'),
+    '#default_value' => variable_get('site_map_show_menus', array()),
+    '#options' => $menu_options,
+    '#multiple' => TRUE,
+  );
   // Thanks for fix by zhuber at https://drupal.org/node/1331104#comment-5200266
   $form['site_map_content']['site_map_show_menus_hidden'] = array(
     '#type' => 'checkbox',

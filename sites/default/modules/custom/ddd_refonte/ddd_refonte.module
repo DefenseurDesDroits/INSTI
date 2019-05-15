@@ -1,5 +1,4 @@
-﻿<?php
-
+<?php
 //require_once(drupal_get_path('module', 'ddd_refonte') . '/lib/twitter/TwitterOAuth.php');
 
 function ddd_documents_associes()
@@ -37,7 +36,6 @@ function ddd_refonte_get_info_block_actualite_hp()
     global $language;
     $variable['title'] = t('Latest News');
     $variables['taxonomie_actualites'] = 'taxo';
-
     $actus = taxonomy_get_children('1584');
     $actus = i18n_taxonomy_localize_terms($actus);
     $filter = array('3','1705','47','1706','1708');
@@ -54,7 +52,6 @@ function ddd_refonte_get_info_block_actualite_hp()
             $i++;
         }
     }
-
     $variable['link'] = drupal_get_path_alias($path = "taxonomy/term/1584", $path_language = $language->language);
     $variable['taxo'] = $menu;
     $variable['view_actualites'] = views_embed_view('vue_actualites', 'block_actu_hp_v2');
@@ -149,6 +146,7 @@ function get_file_url($fid)
 function ddd_refonte_get_info_block_agenda()
 {
     global $language;
+	$i=0;
     $today = date('Y-m-d h:i:s', strtotime('yesterday midnight'));
     $day_before = date('Y-m-d h:i:s', strtotime('+6 days', time()));
     $block = block_load('ddd_refonte', 'ddd_agenda');
@@ -254,8 +252,8 @@ function ddd_refonte_block_view($delta='')
     case 'ddd_agenda':
       $block['content'] = ddd_refonte_get_info_block_agenda();
       break;
-    case 'ddd_twitter_feed':
-      $block['content'] = render(views_embed_view('tweets', 'block'));
+    case 'ddd_twitter_feed':      
+	  $block['content'] = render(views_embed_view('tweets', 'block'));
       break;
     case 'ddd_figures':
       $block['content'] = ddd_refonte_get_info_block_figures();
@@ -723,7 +721,7 @@ function ddd_refonte_menu()
     'access arguments' => array('administer DDD'),
   );
   $items['admin/config/ddd/config'] = array(
-    'title' => "Options de configruation",
+    'title' => "Options de configuration",
     'description' => "variable d'état général au site",
     'page callback' => 'drupal_get_form',
     'page arguments' => array('ddd_refonte_admin_config'),
@@ -1630,7 +1628,6 @@ function dossier_get_theme()
   }
 
 }
-
 
 function defenseur_dossier_form($form, &$form_state)
 {

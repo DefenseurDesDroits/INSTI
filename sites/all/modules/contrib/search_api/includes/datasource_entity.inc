@@ -278,7 +278,7 @@ class SearchApiEntityDataSourceController extends SearchApiAbstractDataSourceCon
     $form['bundles'] = array(
       '#type' => 'checkboxes',
       '#title' => t('Bundles'),
-      '#description' => t('Restrict the entity bundles that will be included in this index. Leave blank to include all bundles. This setting cannot be changed for existing indexes.'),
+      '#description' => t('Restrict the entity bundles that will be included in this index. Leave blank to include all bundles. This setting cannot be changed for enabled indexes.'),
       '#options' => array_map('check_plain', $options),
       '#attributes' => array('class' => array('search-api-checkboxes-list')),
       '#disabled' => !empty($form_state['index']) && $form_state['index']->enabled,

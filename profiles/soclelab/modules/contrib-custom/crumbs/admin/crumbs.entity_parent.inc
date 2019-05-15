@@ -83,7 +83,9 @@ EOT;
       $form['crumbs_' . $entity_type . '_parent_patterns'][$bundle_key] = array(
         '#title' => t($bundle['label']),
         '#description' => t('Crumbs parent path for !plural of type "!bundle_label" (!bundle_key)', array(
-          '!plural' => t($info['plural label']),
+          '!plural' => isset($info['plural label'])
+            ? t($info['plural label'])
+            : t('!type entities', array('!type' => t($info['label']))),
           '!bundle_label' => t($bundle['label']),
           '!bundle_key' => $bundle_key,
         )),
@@ -94,15 +96,10 @@ EOT;
 
   if (module_exists('token')) {
     $form['token_help'] = array(
-      '#title' => t('Replacement patterns'),
-      '#type' => 'fieldset',
-      '#collapsible' => TRUE,
-      '#collapsed' => TRUE,
-    );
-
-    $form['token_help']['help'] = array(
+      /* @see theme_token_tree() */
       '#theme' => 'token_tree',
       '#token_types' => array($info['token type']),
+      '#dialog' => TRUE,
     );
   }
 

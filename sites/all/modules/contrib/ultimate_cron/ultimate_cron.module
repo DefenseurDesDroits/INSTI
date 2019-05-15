@@ -973,19 +973,24 @@ function ultimate_cron_permission() {
  */
 function ultimate_cron_cron_queue_info() {
   $debug = debug_backtrace();
-  if (!empty($debug[3]['function']) && $debug['3']['function'] == 'drupal_cron_run') {
-    if (!empty($debug[4])) {
+  $cron_debug_level = 3;
+  if (version_compare(PHP_VERSION, '7.0.0', '>=')) {
+    // PHP 7 will not include call_user_func_array in the backtrace.
+    $cron_debug_level--;
+  }
+  if (!empty($debug[$cron_debug_level]['function']) && $debug[$cron_debug_level]['function'] == 'drupal_cron_run') {
+    if (!empty($debug[$cron_debug_level + 1])) {
       try {
-        if ($debug['4']['function'] == 'install_finished') {
+        if ($debug[$cron_debug_level + 1]['function'] == 'install_finished') {
           // Looks like drupal_cron_run() was called unexpectedly.
           watchdog('ultimate_cron', 'Running cron in compatibility mode during site install.', array(), WATCHDOG_DEBUG);
         }
         else {
           // Looks like drupal_cron_run() was called unexpectedly.
           watchdog('ultimate_cron', 'drupal_cron_run() called unexpectedly by @file:@line function @function. Running core in compatibility mode.', array(
-            '@function' => $debug['4']['function'],
-            '@line' => $debug['3']['line'],
-            '@file' => $debug['3']['file'],
+            '@function' => $debug[$cron_debug_level + 1]['function'],
+            '@line' => $debug[$cron_debug_level]['line'],
+            '@file' => $debug[$cron_debug_level]['file'],
           ), WATCHDOG_DEBUG);
         }
 
@@ -1606,12 +1611,19 @@ function ultimate_cron_run_scheduled_page($dest = NULL) {
  *   Set Drupal system message instead of watchdog logging.
  */
 function ultimate_cron_run_scheduled($set_message = TRUE) {
-  if (!variable_get('maintenance_mode', 0)) {
-    ultimate_cron_run_launchers();
+  if (variable_get('ultimate_cron_disable_scheduled', 0)) {
+    ultimate_cron_watchdog_message('ultimate_cron', 'Cannot launch scheduled jobs while ultimate_cron_disable_scheduled variable is set!', array(), WATCHDOG_NOTICE, 'error', $set_message);
+
+    return;
   }
-  else {
+
+  if (variable_get('maintenance_mode', 0)) {
     ultimate_cron_watchdog_message('ultimate_cron', 'Cannot launch scheduled jobs while in maintenance mode!', array(), WATCHDOG_NOTICE, 'error', $set_message);
+
+    return;
   }
+
+  ultimate_cron_run_launchers();
 }
 
 /**
@@ -1733,4 +1745,43 @@ function _ultimate_cron_get_class($name) {
     'signal' => 'UltimateCronSignal',
   );
   return variable_get('ultimate_cron_class_' . $name, $defaults[$name]);
+}
+
+/**
+ * Logs a Throwable.
+ *
+ * This is a copy of watchdog_exception() except that $exception is Throwable.
+ *
+ * @param $type
+ *   The category to which this message belongs.
+ * @param $exception
+ *   The exception that is going to be logged.
+ * @param $message
+ *   The message to store in the log. If empty, a text that contains all useful
+ *   information about the passed-in exception is used.
+ * @param $variables
+ *   Array of variables to replace in the message on display. Defaults to the
+ *   return value of _drupal_decode_exception().
+ * @param $severity
+ *   The severity of the message, as per RFC 3164.
+ * @param $link
+ *   A link to associate with the message.
+ *
+ * @see watchdog_exception()
+ * @see _drupal_decode_exception()
+ */
+function ultimate_cron_watchdog_throwable($type, Throwable $exception, $message = NULL, $variables = array(), $severity = WATCHDOG_ERROR, $link = NULL) {
+  // Use a default value if $message is not set.
+  if (empty($message)) {
+    // The exception message is run through check_plain() by _drupal_decode_exception().
+    $message = '%type: !message in %function (line %line of %file).';
+  }
+  // $variables must be an array so that we can add the exception information.
+  if (!is_array($variables)) {
+    $variables = array();
+  }
+
+  require_once DRUPAL_ROOT . '/includes/errors.inc';
+  $variables += _drupal_decode_exception($exception);
+  watchdog($type, $message, $variables, $severity, $link);
 }

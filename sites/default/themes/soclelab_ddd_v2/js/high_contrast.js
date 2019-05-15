@@ -1,4 +1,4 @@
-(function () {
+ (function () {
     var Contrast = {
         storage: 'contrastState',
         cssClass: 'contrast',
@@ -29,18 +29,62 @@
     }
 
     function updateViewContrast() {
-        var body = document.body;
-
+        var body = document.body;  
         if (this.currentState === null)
-            this.currentState = this.getState();
-
+			this.currentState = this.getState();
         if (this.currentState)
-            body.classList.add(this.cssClass);
+			body.classList.add(this.cssClass);
         else
-            body.classList.remove(this.cssClass);
+			body.classList.remove(this.cssClass);
     }
 
     function toogleContrast() {
+        this.setState(!this.currentState);
+    }
+})();
+
+
+(function (){
+    var Dyslexic = {
+        storage: 'fontState',
+        cssClass: 'dyslexicFont',
+        currentState: null,
+        check: checkFont,
+        getState: getFontState,
+        setState: setFontState,
+        toogle: toogleFont,
+        updateFont: updateViewFont
+    };
+
+    window.toggleFont = function () { Dyslexic.toogle(); };
+
+    Dyslexic.check();
+
+    function checkFont() {
+        this.updateFont();
+    }
+
+    function getFontState() {
+        return localStorage.getItem(this.storage) === 'true';
+    }
+
+    function setFontState(state) {
+        localStorage.setItem(this.storage, '' + state);
+        this.currentState = state;
+        this.updateFont();
+    }
+
+    function updateViewFont() {
+        var body = document.body;  
+        if (this.currentState === null)
+			this.currentState = this.getState();
+        if (this.currentState)
+			body.classList.add(this.cssClass);
+        else
+			body.classList.remove(this.cssClass);
+    }
+
+    function toogleFont() {
         this.setState(!this.currentState);
     }
 })();

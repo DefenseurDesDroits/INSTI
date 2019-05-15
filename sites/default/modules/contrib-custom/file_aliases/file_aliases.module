@@ -94,9 +94,7 @@ function file_aliases_load_fid($fid) {
     ->execute()
     ->fetchAll();
   $result = current($results);
-  
-  $result->uri = utf8_decode($result->uri);
-  
+
   // Render Image Style preset if applicable.
   $uri = explode('?', request_uri());
   if (isset($uri[1]) && strpos($result->filemime, 'image') === 0) {

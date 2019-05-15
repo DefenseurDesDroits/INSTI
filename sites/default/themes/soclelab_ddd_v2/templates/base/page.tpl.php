@@ -109,14 +109,15 @@ $path_saisir = translation_path_get_translations('node/23436');
   <div class="main-content container-wrapper">
     <div class="container-fluid">
       <?php /*<section<?php print $content_column_class; ?>>*/ ?>
-        <div class="xvox_skip_voc"><?php if (!empty($breadcrumb)): print $breadcrumb; endif;?></div>
+        <div class="region">
+		<div class="xvox_skip_voc"><?php if (!empty($breadcrumb)): print $breadcrumb; endif;?></div>
 		<div id="xvox_core">
 			<a accesskey="L" id="xvox_listen_link" title="Ecouter la page" href="https://core.xvox.fr?voice=Aurelie&amp;language=fr-FR&amp;idContent=page-main&amp;idPlayer=xvox_player">
 				<img id="xvox_listen_btn_img" src="https://core.xvox.fr/customer_area/imgs/Player/xvox_listen_btn.png" alt="Ecouter la page" />
 				<img id="xvox_listen_arrow" src="https://core.xvox.fr/customer_area/imgs/Player/Generic/xvox_listen_arrow.png" alt="Ecouter la page" />
 			</a>
 			<div id="xvox_player"></div>
-		</div>
+		</div></div>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if (!empty($title)): ?>

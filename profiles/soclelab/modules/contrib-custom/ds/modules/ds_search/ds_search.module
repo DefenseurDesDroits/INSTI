@@ -54,6 +54,10 @@ function ds_search_theme() {
  * Search page theming.
  */
 function theme_ds_search_page($build) {
+  // fix for Drupal 7.33+
+  if(isset($build['theme_hook_original'])) {
+    unset($build['theme_hook_original']);
+  }
 
   // Check on empty search results.
   if (empty($build['search_results'])) {
@@ -68,6 +72,7 @@ function theme_ds_search_page($build) {
   }
 
   $build['search_results']['#sorted'] = TRUE;
+
   return $build;
 }
 
@@ -217,14 +222,6 @@ function ds_search_invoke_node_search($hook) {
  */
 function ds_entity_view_fallback($entity_type, $entities, $view_mode = 'full', $langcode = NULL, $page = NULL) {
 
-  if ($entity_type=="scald_atom") { //TODO 
-    $cur_array_atom = json_decode(json_encode($entities), true);
-    $atom_solr = array('atom' => array('#sorted' => TRUE));
-    foreach ($cur_array_atom as $sid => $atom_val) {
-      $atom_solr['atom'][$sid] = $atom_val;
-    }
-    return $atom_solr;
-  }
   // Use the entity module in case it's enabled.
   if (module_exists('entity')) {
     return entity_view($entity_type, $entities, $view_mode, $langcode, $page);
@@ -268,31 +265,14 @@ function ds_search_search_page($results) {
           '#markup' => theme('search_result', array('result' => $result->original_result, 'module' => 'apachesolr_search')),
         );
         continue;
-      } elseif ($result->entity_type == 'scald_atom' && isset($result->base_id)) { // TODO
-        $vars_atom = array('vars' => array(
-            'file_id'      => $result->base_id,
-            'file_source'  => $result->scald_file['und'][0]['uri'],
-            'file_title'   => check_plain($result->title),
-          ));
-        
-        $build['search_results'][] = array(
-          '#weight' => $i++,
-          '#markup' => theme('scald_file_render', $vars_atom),
-        );
-        continue;
       }
       $entity_type = isset($result->entity_type) ? $result->entity_type : 'node';
       $data = ds_entity_view_fallback($entity_type, array($result->entity_id => $result), variable_get('ds_search_view_mode', 'search_result'));
       // Check that we got an actual result back.
-      if ($data) { //TODO 
+      if ($data) {
         $data = reset($data);
-        if(isset($result->entity_type) && isset($result->sid) && $result->entity_type == "scald_atom"){ 
-          $data[$result->sid]['#weight'] = $i++;
-          $build['search_results'][] = $data[$result->sid];
-        } else {
-          $data[$result->entity_id]['#weight'] = $i++;
-          $build['search_results'][] = $data[$result->entity_id];
-        }
+        $data[$result->entity_id]['#weight'] = $i++;
+        $build['search_results'][] = $data[$result->entity_id];
       }
     }
   }
@@ -331,6 +311,7 @@ function ds_search_search_page($results) {
   if (variable_get('ds_search_apachesolr_multisite') && variable_get('ds_search_apachesolr_multisite_group') && variable_get('ds_search_type', 'node') == 'apachesolr_search') {
     _ds_search_group_by_type_multisearch($build);
   }
+
   return theme('ds_search_page', $build);
 }
 
@@ -519,7 +500,7 @@ function node_ds_search_execute($keys = NULL, $conditions = NULL) {
       // Render the node.
       $rendered = drupal_render($build);
       // Attach extra information to the rendered output.
-      $rendered .= ' ' . $node->search_extra;
+      $rendered .= ' ' . implode('', $node->search_extra);
       // Generate the snippet based on rendered content.
       $node->snippet = search_excerpt($keys, $rendered);
     }
@@ -588,7 +569,7 @@ function ds_build_shared_page_variables(&$build) {
   if (variable_get('ds_search_variables', 'none') != 'none') {
     $build['search_extra'] = array('#markup' => '<div class="ds-search-extra">' . ds_search_extra_variables(arg(2)) . '</div>');
   }
-  
+
   // Search results.
   $build['search_results'] = array();
 
@@ -727,6 +708,11 @@ function ds_search_process_results($results) {
 
       $load = entity_load($result['fields']['entity_type'], array($result['fields']['entity_id']));
       $entity = reset($load);
+      if (!$entity) {
+        watchdog('ds_search', "Empty entity loaded from results, possibly corrupt solr index? (@entity_type, @id)", array('@entity_type' => $result['fields']['entity_type'], '@id' => $result['fields']['entity_id']), WATCHDOG_DEBUG);
+        continue;
+      }
+
       // Add the snippet, url and extra info on the object.
       $entity->search_snippet = $result['snippet'];
       $entity->search_extra = $result['extra'];

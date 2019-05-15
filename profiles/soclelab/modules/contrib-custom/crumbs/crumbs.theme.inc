@@ -27,25 +27,8 @@ function crumbs_theme_breadcrumb($variables) {
   if ($variables['crumbs_separator_span']) {
     $separator = '<span class="crumbs-separator">' . $separator . '</span>';
   }
-  
-  /* Début Ajout CAPGEMINI */
-  $output = "";
-  foreach ($breadcrumb as $key => $cur_bread) { // Parcour des élément du fil d'ariane
-    if(!is_array($cur_bread)){  // Récupè uniquement les string
-      if($key == 0){  // Ajout du lien Accueil
-        global $language; 
-        if(isset($language->provider) && $language->provider != "locale-url"){ $cur_lang = ""; } else { $cur_lang = $language->language;}
-        
-        $output .= '<a href="' . ($cur_lang !== "" ? "/" . $cur_lang : "") . "/" . '" title="' . t("Display the homepage") . '" >' . t("Home") . '</a>' . $separator; 
-      }
-      $output .= $cur_bread;
-      if($key != count($breadcrumb) -2){ $output .= $separator; }
-    }
-  }
-  /* Fin Ajout CAPGEMINI - Remplace les instruction suivante */
-  // $output = implode($separator, $breadcrumb); 
-  /* Fin des instruction remplacées*/
-  
+
+  $output = implode($separator, $breadcrumb);
   if ($variables['crumbs_trailing_separator']) {
     $output .= $separator;
   }
@@ -70,7 +53,7 @@ function theme_crumbs_breadcrumb_link(array $item) {
   }
   else {
     $options = isset($item['localized_options']) ? $item['localized_options'] : array();
-    return l($item['title'], $item['href'], $options);
+    return l($item['title'], $item['link_path'], $options);
   }
 }
 
@@ -88,7 +71,7 @@ function theme_crumbs_breadcrumb_current_page(array $variables) {
       return '<span class="crumbs-current-page">' . check_plain($item['title']) . '</span>';
     case CRUMBS_SHOW_CURRENT_PAGE_LINK:
       $options = isset($item['localized_options']) ? $item['localized_options'] : array();
-      return l($item['title'], $item['href'], $options);
+      return l($item['title'], $item['link_path'], $options);
     default:
       return check_plain($item['title']);
   }
