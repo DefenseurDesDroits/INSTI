@@ -19,18 +19,22 @@
 ?>
   <div class="row">
   <div class="col-md-4 col-md-offset-4">
+	<?php print drupal_render($form['progressbar']);?>
+  </div>
+  <div class="col-md-4 col-md-offset-4">
     <div class="demande-info"><?php print drupal_render($form['submitted']['type']);?></div>
     <?php print drupal_render($form['submitted']['prenom']);?>
     <?php print drupal_render($form['submitted']['nom']);?>
     <?php print drupal_render($form['submitted']['email']);?>
     <?php print drupal_render($form['submitted']['numero_de_telephone']);?>
-    <br>
+	<?php print drupal_render($form['submitted']['adresse_postale']);?>
+	<br />
   </div>
   <div class="col-md-6 col-md-offset-3">
     <?php print drupal_render($form['submitted']['votre_message']);?>
   </div>
   <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5">
-    <?php print drupal_render($form['submitted']);?>
+	<?php // print drupal_render($form['submitted']);?>    
     <?php print drupal_render_children($form);?>
   </div>
 </div>
